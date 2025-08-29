@@ -7,8 +7,6 @@ class User(AbstractUser):
     class Role(TextChoices):
         VIEWER = 'viewer', 'Viewer'
         EDITOR = 'editor', 'Editor'
-        UPLOADER = 'uploader', 'Uploader'
-        OTP_CREATOR = 'otp_creator', 'OtpCreator'
 
     phone = CharField(max_length=11, null=True, unique=True)
     role = CharField(max_length=255, choices=Role.choices, default=Role.VIEWER)
