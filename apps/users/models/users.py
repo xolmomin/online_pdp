@@ -5,8 +5,10 @@ from django.db.models.fields import CharField
 
 class User(AbstractUser):
     class Role(TextChoices):
-        VIEWER = 'viewer', 'Viewer'
-        EDITOR = 'editor', 'Editor'
+        ADMIN = 'viewer', 'Viewer'
+        MODERATOR = 'moderator', 'Viewer'
+        TEACHER = 'teacher', 'Viewer'
+        STUDENT = 'viewer', 'Viewer'
 
     phone = CharField(max_length=11, null=True, unique=True)
-    role = CharField(max_length=255, choices=Role.choices, default=Role.VIEWER)
+    role = CharField(max_length=255, choices=Role.choices, default=Role.STUDENT)

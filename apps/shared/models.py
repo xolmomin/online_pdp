@@ -12,7 +12,7 @@ class UUIDBaseModel(Model):
 
 
 class CreatedBaseModel(Model):
-    update_at = DateTimeField(auto_now=True)
+    updated_at = DateTimeField(auto_now=True)
     created_at = DateTimeField(auto_now_add=True)
 
     class Meta:
