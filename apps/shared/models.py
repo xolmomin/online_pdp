@@ -1,7 +1,7 @@
 import uuid
 
 from django.db.models import Model
-from django.db.models.fields import DateTimeField, UUIDField
+from django.db.models.fields import DateTimeField, UUIDField, IntegerField
 
 
 class UUIDBaseModel(Model):
@@ -14,6 +14,13 @@ class UUIDBaseModel(Model):
 class CreatedBaseModel(UUIDBaseModel):
     updated_at = DateTimeField(auto_now=True)
     created_at = DateTimeField(auto_now_add=True)
+
+    class Meta:
+        abstract = True
+
+
+class OrderBaseModel(Model):
+    order_number = IntegerField()
 
     class Meta:
         abstract = True

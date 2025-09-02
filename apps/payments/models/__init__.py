@@ -1,1 +1,1 @@
-from payments.models.base import UUIDBaseModel, CreatedBaseModel
+from apps.shared.models import UUIDBaseModel, CreatedBaseModel

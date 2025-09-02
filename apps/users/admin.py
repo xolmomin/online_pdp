@@ -2,11 +2,8 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
-
 from apps.users.models import User
-
-
-# Register your models here.
+from users.models import Course, Lesson, Section, Topic
 
 
 @admin.register(User)
@@ -37,3 +34,20 @@ class UserModelAdmin(UserAdmin):
             },
         ),
     )
+    ordering = ('phone',)
+
+@admin.register(Course)
+class CourseModelAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Lesson)
+class LessonModelAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Section)
+class SectionModelAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Topic)
+class TopicModelAdmin(admin.ModelAdmin):
+    pass

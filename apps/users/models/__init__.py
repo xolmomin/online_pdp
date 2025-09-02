@@ -1,3 +1,3 @@
-from apps.users.models.users import User
-from users.models.courses import Course, Section, Lesson, Topic
+from apps.users.models.user import User
+from apps.users.models.courses import Course, Section, Lesson, Topic
 
