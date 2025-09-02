@@ -1,7 +1,7 @@
 from django.db.models import TextChoices
 from django.db.models.fields import CharField, DecimalField, IntegerField
 
-from payments.models import UUIDBaseModel, CreatedBaseModel
+from apps.shared.models import UUIDBaseModel, CreatedBaseModel
 
 
 class Plan(UUIDBaseModel, CreatedBaseModel):

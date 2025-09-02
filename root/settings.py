@@ -3,6 +3,9 @@ import sys
 
 from pathlib import Path
 
+from dotenv import load_dotenv
+load_dotenv('.env')
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(os.path.join(BASE_DIR, 'apps'))
 
@@ -60,9 +63,13 @@ WSGI_APPLICATION = "root.wsgi.application"
 AUTH_USER_MODEL = "users.User"
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME' : os.getenv('DB_NAME'),
+        'HOST' : os.getenv('HOST'),
+        'PORT' : os.getenv('PORT'),
+        "USER" : os.getenv('USER'),
+        "PASSWORD" : os.getenv('POSTGRES_PASSWORD')
     }
 }
 
@@ -93,6 +100,9 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = "static/"
-# TODO static va media root larni yozib qoyish
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
