@@ -4,7 +4,7 @@ from django.db.models.fields import CharField, DecimalField, IntegerField
 from apps.shared.models import UUIDBaseModel, CreatedBaseModel
 
 
-class Plan(UUIDBaseModel, CreatedBaseModel):
+class Plan(CreatedBaseModel):
     class Status(TextChoices):
         ANNUAL = 'annual', 'Annual'
         MONTH = 'month', 'Month'

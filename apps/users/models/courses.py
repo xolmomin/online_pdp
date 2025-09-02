@@ -4,20 +4,20 @@ from django.db.models.fields import CharField, TextField, IntegerField, BooleanF
 from apps.shared.models import UUIDBaseModel, CreatedBaseModel
 
 
-class Topic(UUIDBaseModel):
+class Topic(CreatedBaseModel):
     name = CharField(max_length=255)
-    course = ForeignKey('users.Course', CASCADE)
 
-class Course(UUIDBaseModel):
+
+class Course(CreatedBaseModel):
     class Level(TextChoices):
         BEGINNER = 'beginner', 'Beginner'
         ELEMENTARY = 'elementary', 'Elementary'
         INTERMEDIATE = 'intermediate', 'Intermediate'
-        ADVANCE = 'advance', 'Advance'
+        ADVANCED = 'advanced', 'Advanced'
 
     name = CharField(max_length=255)
     level = CharField(max_length=20, choices=Level.choices)
-    description = TextField()
+    description = TextField()  # TODO ckeditor qoshish
     has_certificate = BooleanField(db_default=True)
     has_support = BooleanField()
     practice_count = IntegerField()
@@ -26,22 +26,25 @@ class Course(UUIDBaseModel):
     rating = IntegerField()
     video_count = IntegerField()
     video_duration = IntegerField()
+    topic = ForeignKey('users.Topic', CASCADE)
+
     teachers = ManyToManyField('users.User', blank=True)
-    section = ForeignKey('users.Section', CASCADE)
 
 
-class Section(UUIDBaseModel):
+class Section(CreatedBaseModel):
     class Status(TextChoices):
         PUBLISHED = 'published', 'Published'
 
     name = CharField(max_length=255)
-    order_number = IntegerField()
+    order_number = IntegerField()  # TODO ordering_number OrderBase
     status = CharField(max_length=20, choices=Status.choices, default=Status.PUBLISHED)
-    lesson = ForeignKey('users.Lesson', CASCADE)
+    course = ForeignKey('users.Course', CASCADE)
 
-class Lesson(UUIDBaseModel, CreatedBaseModel):
+
+class Lesson(CreatedBaseModel):
     class Status(TextChoices):
         PUBLISHED = 'published', 'Published'
+        # TODO UNPUBLISHED
 
     class AccessType(TextChoices):
         PRIVATE = 'private', 'Private'
@@ -52,5 +55,6 @@ class Lesson(UUIDBaseModel, CreatedBaseModel):
     status = CharField(max_length=20, choices=Status.choices, default=Status.PUBLISHED)
     access_type = CharField(max_length=20, choices=AccessType.choices, default=AccessType.PRIVATE)
     video_duration = IntegerField()
-    # video_link  TODO
+    section = ForeignKey('users.Section', CASCADE)
 
+    # video_link  TODO
