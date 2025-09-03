@@ -9,7 +9,7 @@ from shared.manager import UserManager
 
 
 class User(AbstractUser, UUIDBaseModel):
-    class Role(TextChoices):
+    class Type(TextChoices):
         ADMIN = 'admin', 'Admin'
         MODERATOR = 'moderator', 'Moderator'
         TEACHER = 'teacher', 'Teacher'
@@ -17,7 +17,7 @@ class User(AbstractUser, UUIDBaseModel):
 
     username = None
     phone = CharField(max_length=15, null=True, unique=True)
-    role = CharField(max_length=20, choices=Role.choices, default=Role.STUDENT)
+    type = CharField(max_length=20, choices=Type.choices, default=Type.STUDENT)
 
     USERNAME_FIELD = 'phone'
     REQUIRED_FIELDS = []
@@ -25,14 +25,11 @@ class User(AbstractUser, UUIDBaseModel):
     objects = UserManager()
 
     def check_phone(self):
-        pattern = re.compile(
-            r'^(?:\+?998[\s-]*)?(\d{2})[\s-]*(\d{3})[\s-]*(\d{2,4})(?:[\s-]*(\d{2}))?$'
-        )
+        pattern = re.compile(r'^(?:\+?998[\s-]*)?(\d{2})[\s-]*(\d{3})[\s-]*(\d{2,4})(?:[\s-]*(\d{2}))?$')
         m = pattern.match(self.phone)
         if not m:
             raise ValueError(f"Invalid UZ number: {self.phone}")
-        parts = [g for g in m.groups() if g]  # keep only non-empty groups
-        return "".join(parts)
+        return "".join(g for g in m.groups() if g)
 
     def full_clean(self, exclude=None, validate_unique=True, validate_constraints=True):
         if self.phone:
@@ -48,5 +45,8 @@ class UserCourse(CreatedBaseModel):
     user = ForeignKey('users.User', CASCADE)
     course = ForeignKey('users.Course', CASCADE)
     status = CharField(max_length=15, choices=Status.choices, default=Status.IN_PROGRESS)
-    start_at = DateTimeField(auto_now_add=True)
-    finish_at = DateTimeField()
+    started_at = DateTimeField(null=True, blank=True)
+    finished_at = DateTimeField(null=True, blank=True)
+
+
+# TODO https://api.dasturjon.uz/api/v1/proverb/public/random shu apidagi modelni yozish

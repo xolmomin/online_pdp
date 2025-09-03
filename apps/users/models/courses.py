@@ -57,5 +57,6 @@ class Lesson(CreatedBaseModel, OrderBaseModel):
     access_type = CharField(max_length=20, choices=AccessType.choices, default=AccessType.PRIVATE)
     video_duration = IntegerField()
     section = ForeignKey('users.Section', CASCADE)
+    # content = ?
 
-    # video_link  TODO
+    # video_id  TODO

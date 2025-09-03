@@ -71,3 +71,36 @@ Habibulloh
 4. online-pdp [drf]
 xolmomin +
 mirjalol
+
+https://videohub.uz/course-detail/spring-core/b62b723f-b3d6-4118-a768-40008096a1ce
+	{
+		"id": "c8ae335c-ab72-4b42-8461-9a6a86bc2d24",
+		"name": "About Course",
+		"order_number": 1,
+		"status": "PUBLISHED",
+		"type": "VIDEO_LINK",
+		"access_type": "PUBLIC",
+		"videoDuration": 164
+	},
+
+
+lesson id berilganda video link qaytadi
+https://api.videohab.uz/api/v1/course-lesson/public/c8ae335c-ab72-4b42-8461-9a6a86bc2d24
+{
+    "message": null,
+    "code": 200,
+    "isError": false,
+    "data": {
+        "id": "c8ae335c-ab72-4b42-8461-9a6a86bc2d24",
+        "name": "About Course",
+        "orderNumber": 1,
+        "status": "PUBLISHED",
+        "type": "VIDEO_LINK",
+        "accessType": "PUBLIC",
+        "videoDuration": 164,
+        "courseSectionId": "413c6bda-1c21-4fc0-9c01-d74cdef58487",
+        "content": "",
+        "videoId": "https://www.youtube.com/embed/SExRwYdSUYc?si=uO8ITIgvmhMhjeVG",
+        "createdDate": "2023-10-09T22:49:51.429986"
+    }
+}

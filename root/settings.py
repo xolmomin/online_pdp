@@ -5,12 +5,12 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-load_dotenv('.env')
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(os.path.join(BASE_DIR, 'apps'))
 
-SECRET_KEY = "django-insecure-b#t*l)z_03&ppz-@9c1t=c1*!fn=z&l(s@%dbcqix53nho6sk4"
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
@@ -25,9 +25,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     # My apps
-    'apps.users',
-    'apps.shared',
-    'apps.payments',
+    'users',
+    'shared',
+    'payments',
 
     # Third-party
     'django_ckeditor_5',
@@ -66,10 +66,10 @@ AUTH_USER_MODEL = "users.User"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
-        "USER": os.getenv('DB_USER'),
+        'NAME': os.getenv('POSTGRES_NAME'),
+        'HOST': os.getenv('POSTGRES_HOST'),
+        'PORT': os.getenv('POSTGRES_PORT'),
+        "USER": os.getenv('POSTGRES_USER'),
         "PASSWORD": os.getenv('POSTGRES_PASSWORD')
     }
 }
@@ -94,7 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Tashkent"
 
 USE_I18N = True
 

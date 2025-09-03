@@ -20,7 +20,9 @@ class CreatedBaseModel(UUIDBaseModel):
 
 
 class OrderBaseModel(Model):
-    order_number = IntegerField()
+    order_number = IntegerField(db_default=0)
 
     class Meta:
         abstract = True
+
+
