@@ -1,4 +1,4 @@
-from django.db.models import TextChoices, ForeignKey, CASCADE, ManyToManyField
+from django.db.models import TextChoices, ForeignKey, CASCADE, ManyToManyField, URLField, FileField
 from django.db.models.fields import CharField, IntegerField, BooleanField, DecimalField
 from django_ckeditor_5.fields import CKEditor5Field
 
@@ -57,6 +57,12 @@ class Lesson(CreatedBaseModel, OrderBaseModel):
     access_type = CharField(max_length=20, choices=AccessType.choices, default=AccessType.PRIVATE)
     video_duration = IntegerField()
     section = ForeignKey('users.Section', CASCADE)
-    # content = ?
+    video_link = URLField()
+    video = FileField(upload_to='videos/')
 
-    # video_id  TODO
+    def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
+
+        print(123)
+        super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+
+    # content = ?
