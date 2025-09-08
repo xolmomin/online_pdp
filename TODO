@@ -151,6 +151,7 @@ nano online_pdp
 server {
     listen 8000;
     server_name 143.198.81.242;
+    server_name online_pdp.fil.uz;
 
     location /static/ {
         alias /var/www/online_pdp/static/;
@@ -172,3 +173,17 @@ ln -s /etc/nginx/sites-available/online_pdp /etc/nginx/sites-enabled/
 
 nginx -t
 systemctl restart nginx.service
+
+
+sudo certbot --nginx -d xolmomin.fil.uz
+
+crontab
+
+
+docker compose
+github cicd
+k8s
+
+
+
+
