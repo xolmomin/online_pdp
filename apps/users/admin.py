@@ -36,17 +36,21 @@ class UserModelAdmin(UserAdmin):
     )
     ordering = ('phone',)
 
+
 @admin.register(Course)
 class CourseModelAdmin(admin.ModelAdmin):
     pass
+
 
 @admin.register(Lesson)
 class LessonModelAdmin(admin.ModelAdmin):
     pass
 
+
 @admin.register(Section)
 class SectionModelAdmin(admin.ModelAdmin):
     pass
+
 
 @admin.register(Topic)
 class TopicModelAdmin(admin.ModelAdmin):

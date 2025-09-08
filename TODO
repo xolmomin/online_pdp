@@ -110,3 +110,65 @@ https://api.videohab.uz/api/v1/course-lesson/public/c8ae335c-ab72-4b42-8461-9a6a
 password yangi
 video yuklaganda duration
 
+
+
+systemctl enabled service_name
+systemctl start service_name
+systemctl restart service_name
+systemctl stop service_name
+systemctl status service_name
+
+/var/www
+
+
+gunicorn
+uvicorn
+
+
+cd /etc/systemd/system/
+nano online_pdp.service
+
+[Unit]
+Description=Online pdp
+After=network.target
+
+[Service]
+WorkingDirectory=/var/www/online_pdp
+ExecStart=/var/www/online_pdp/.venv/bin/gunicorn --workers 3 --bind unix:/var/www/online_pdp/online_pdp.sock root.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+systemctl enable online_pdp.service
+systemctl start online_pdp.service
+systemctl status online_pdp.service
+
+
+cd /etc/nginx/sites-available/
+
+nano online_pdp
+
+server {
+    listen 8000;
+    server_name 143.198.81.242;
+
+    location /static/ {
+        alias /var/www/online_pdp/static/;
+        expires 30d; # Cache static files for 30 days
+    }
+
+    location /media/ {
+        alias /var/www/online_pdp/media/;
+        expires 30d; # Cache media files for 30 days
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/var/www/online_pdp/online_pdp.sock; # socket
+    }
+}
+
+ln -s /etc/nginx/sites-available/online_pdp /etc/nginx/sites-enabled/
+
+nginx -t
+systemctl restart nginx.service

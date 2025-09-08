@@ -32,6 +32,10 @@ class Course(CreatedBaseModel):
 
     teachers = ManyToManyField('users.User', blank=True)
 
+    class Meta:
+        verbose_name = 'Kurs'
+        verbose_name_plural = 'Kurslar'
+
 
 class Section(CreatedBaseModel, OrderBaseModel):
     class Status(TextChoices):
@@ -61,7 +65,6 @@ class Lesson(CreatedBaseModel, OrderBaseModel):
     video = FileField(upload_to='videos/')
 
     def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
-
         print(123)
         super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
 
