@@ -186,4 +186,22 @@ k8s
 
 
 
+container, image, network, volume
+
+
+uv pip compile pyproject.toml --output-file requirements.txt
+
+docker build -t online_pdp .
+docker build -t online_pdp -f dockerjon .
+
+
+docker run --name pdp -p 8000:8000 online_pdp
+
+ssh-keygen -t rsa -b 4096
+
+ssh root@143.198.81.242
+p30_MultiProject
+
+
+ssh key
 
