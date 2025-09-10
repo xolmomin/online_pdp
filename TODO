@@ -199,9 +199,23 @@ docker run --name pdp -p 8000:8000 online_pdp
 
 ssh-keygen -t rsa -b 4096
 
-ssh root@143.198.81.242
+cat ~/.ssh/id_rsa
+
+nano ~/.ssh/authorized_keys
+
+ssh -p 2025 root@143.198.81.242
 p30_MultiProject
 
 
+
+
+nano /etc/ssh/sshd_config
+
 ssh key
+
+ufw
+
+
+docker compose + github cicd
+
 
