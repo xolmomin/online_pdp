@@ -32,9 +32,9 @@ class Course(CreatedBaseModel):
 
     teachers = ManyToManyField('users.User', blank=True)
 
-    class Meta:
-        verbose_name = 'Kurs'
-        verbose_name_plural = 'Kurslar'
+    # class Meta:
+    #     verbose_name = 'Kurs'
+    #     verbose_name_plural = 'Kurslar'
 
 
 class Section(CreatedBaseModel, OrderBaseModel):

@@ -1,14 +1,22 @@
 import uuid
 
-from django.db.models import Model
+from django.db.models import Model, Func
 from django.db.models.fields import DateTimeField, UUIDField, IntegerField
 
+class GenRandomUUID(Func):
+    """
+    Represents the PostgreSQL gen_random_uuid() function.
+    """
+    function = "gen_random_uuid"
+    template = "%(function)s()"  # no args
+    output_field = UUIDField()
 
 class UUIDBaseModel(Model):
-    id = UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = UUIDField(primary_key=True, db_default=GenRandomUUID(), editable=False)
 
     class Meta:
         abstract = True
+        required_db_vendor = 'postgresql'
 
 
 class CreatedBaseModel(UUIDBaseModel):

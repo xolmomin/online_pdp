@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from users.models import User, Course, Lesson, Section, Topic
+from users.models import User, Course, Lesson, Section, Topic, Blog, SectionInterview, Part, Step
 
 
 @admin.register(User)
@@ -53,6 +53,26 @@ class SectionModelAdmin(admin.ModelAdmin):
 
 @admin.register(Topic)
 class TopicModelAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Blog)
+class BlogModelAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(SectionInterview)
+class SectionInterviewModelAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Part)
+class PartModelAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Step)
+class StepModelAdmin(admin.ModelAdmin):
     pass
 
 
