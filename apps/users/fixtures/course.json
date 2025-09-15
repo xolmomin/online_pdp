@@ -2074,162 +2074,162 @@
     }
   },
   {
-        "type": "MAIN",
-        "url": "telegram-bot-yaratish",
-        "title": "Telegram Bot yaratish",
-        "data": {
-    "id": "61a24436-41f5-498a-90b3-bc1ad4f27ee4",
+    "type": "MAIN",
+    "url": "telegram-bot-yaratish",
     "title": "Telegram Bot yaratish",
-    "introVideoUrl": "Telegram Bot yaratish",
-    "description": "Telegram Bot yaratish",
-    "lessonCount": 7,
-    "customCourseParts": [
+    "data": {
+      "id": "61a24436-41f5-498a-90b3-bc1ad4f27ee4",
+      "title": "Telegram Bot yaratish",
+      "introVideoUrl": "Telegram Bot yaratish",
+      "description": "Telegram Bot yaratish",
+      "lessonCount": 7,
+      "customCourseParts": [
         {
-            "id": "6b4eea4a-e7af-4b8f-87d5-443146ef6309",
-            "amount": 500000.0,
-            "amountOnsite": 0.0,
-            "oldAmount": 0.0,
-            "oldAmountOnsite": 0.0,
-            "title": "Create Telegram Bot",
-            "description": "Telegram Bot yaratish",
-            "lessons": [
+          "id": "6b4eea4a-e7af-4b8f-87d5-443146ef6309",
+          "amount": 500000.0,
+          "amountOnsite": 0.0,
+          "oldAmount": 0.0,
+          "oldAmountOnsite": 0.0,
+          "title": "Create Telegram Bot",
+          "description": "Telegram Bot yaratish",
+          "lessons": [
+            {
+              "id": "7b67d24e-6551-4a12-8f9b-637531ee0997",
+              "title": "Introduction ",
+              "url": "introduction-",
+              "description": "Introduction ",
+              "parts": [
                 {
-                    "id": "7b67d24e-6551-4a12-8f9b-637531ee0997",
-                    "title": "Introduction ",
-                    "url": "introduction-",
-                    "description": "Introduction ",
-                    "parts": [
-                        {
-                            "id": "418bd74a-9f8b-4e5d-9a1f-7bcc01ff2658",
-                            "description": "Kirish - kurs nima haqida, mentor haqida umumiy ma'lumot\nUmumiy kurs haqida, kursdan nimalar oladi. ",
-                            "mediaCode": "hnEayKCz",
-                            "mediaUrl": "https://play.boomstream.com/hnEayKCz",
-                            "title": "Introduction",
-                            "ord": 1
-                        }
-                    ],
-                    "ord": 1
-                },
-                {
-                    "id": "22c4827e-dcd9-4373-b29b-5a9da2986031",
-                    "title": "Setup",
-                    "url": "setup",
-                    "description": "Setup",
-                    "parts": [
-                        {
-                            "id": "168d8fbe-665e-483b-8b9a-284d339d57e9",
-                            "description": "IntelliJ IDEA - download, setup, run\nCreate a new Java project in IntelliJ IDEA\nTelegramBot kutubxonalarini import qilish\nBot qanday yaratiladi",
-                            "mediaCode": "HT7kDnYi",
-                            "mediaUrl": "https://play.boomstream.com/HT7kDnYi",
-                            "title": "Setup",
-                            "ord": 1
-                        }
-                    ],
-                    "ord": 2
-                },
-                {
-                    "id": "d9a78259-563b-445f-ac6d-77dad2b767ba",
-                    "title": "Bot Programming",
-                    "url": "bot-programming",
-                    "description": "Bot Programming",
-                    "parts": [
-                        {
-                            "id": "bd10fdab-b2b1-48ac-aac0-79033fc8faf9",
-                            "description": "Bot Tokenlarini o'rnatish\nUpdate Object\nReply to Messages\nShartli javoblar berish\nButtonlar yaratish\nButtonlar bilan ishlash\nChat commandlarini yaratish\nTg telefon nomerini olish\nEmojilar jo'natish\nYuzaga kelishi mumkin bo'lgan muammolarni sanab o'tish va ularga yechimlar berish",
-                            "mediaCode": "IKptCaMZ",
-                            "mediaUrl": "https://play.boomstream.com/IKptCaMZ",
-                            "title": "Bot Programming",
-                            "ord": 1
-                        }
-                    ],
-                    "ord": 3
-                },
-                {
-                    "id": "306d2c4e-3588-4a93-be23-b1cbf1e8bdef",
-                    "title": "Ma'lumotni JSON filega yozish va o'qish ",
-                    "url": "malumotni-json-filega-yozish-va-oqish-",
-                    "description": "Ma'lumotni JSON filega yozish va o'qish ",
-                    "parts": [
-                        {
-                            "id": "65e50ef9-3ce2-46a1-bbe0-51f94bb21dcc",
-                            "description": "Data Persistence'ga kirish\nSetup MongoDB\nMongoDB collection yaratish va user malumotlarini document ko'rinishida saqlash\nSaqlangan userlarni topish va yangi user kiritish\nSaqlangan user malumotlaridan foydalanish",
-                            "mediaCode": "VDBgJTkY",
-                            "mediaUrl": "https://play.boomstream.com/VDBgJTkY",
-                            "title": "Ma'lumotni JSON filega yozish va o'qish ",
-                            "ord": 1
-                        }
-                    ],
-                    "ord": 4
-                },
-                {
-                    "id": "9aac35c7-7ebb-4fb6-b0ab-eb4352819723",
-                    "title": "Pizza Bot (I Project)",
-                    "url": "pizza-bot-i-project",
-                    "description": "Pizza Bot (I Project)",
-                    "parts": [
-                        {
-                            "id": "9c3114c0-f411-40fb-b367-f271aba6a7b8",
-                            "description": "Intro - proekt haqida umumiy malumot berish\nPlanning and Design (UML)\nIntro to Maven\nCreating Pizza Bot Maven Project\nPizza Bot Maven Project Setup and Adding Dependencies\nCoding Pizza Bot",
-                            "mediaCode": "HVhAMp4U",
-                            "mediaUrl": "https://play.boomstream.com/HVhAMp4U",
-                            "title": "Pizza Bot (I Project)",
-                            "ord": 1
-                        }
-                    ],
-                    "ord": 5
-                },
-                {
-                    "id": "4d9f06a5-0088-4614-b212-cf2eafc2e5a9",
-                    "title": "Customer Support Bot (II Project)",
-                    "url": "customer-support-bot-ii-project",
-                    "description": "Customer Support Bot (II Project)",
-                    "parts": [
-                        {
-                            "id": "72bd44d1-945b-4993-9081-24e5062fd8fb",
-                            "description": "Intro \nHow to Navigate Code Project Using Git\nSetting up Customer Support Chat Bot\nReading Bot Username and Token From External File\nSetting Up Responder Class\nBot Main Menu for Customer Support\nChecking Order Status\nGetting Information About Product\nRedirecting Customer to Human Support",
-                            "mediaCode": "Nr5whdvw",
-                            "mediaUrl": "https://play.boomstream.com/Nr5whdvw",
-                            "title": "Customer Support Bot (II Project)",
-                            "ord": 1
-                        }
-                    ],
-                    "ord": 6
-                },
-                {
-                    "id": "7f3f0f9a-af5c-4b96-9024-2becb9ce048a",
-                    "title": "Bot Deployment to a Server",
-                    "url": "bot-deployment-to-a-server",
-                    "description": "Bot Deployment to a Server",
-                    "parts": [
-                        {
-                            "id": "1ed5dc17-7488-48cf-a1cb-897dd7a5e55b",
-                            "description": "Deploying Bot to a Server\nUnderstanding Files Required for Deployment\nBot Deployment to GUI Server\nBot Deployment to Server Without GUI",
-                            "mediaCode": "QqjCDisB",
-                            "mediaUrl": "https://play.boomstream.com/QqjCDisB",
-                            "title": "Bot Deployment to a Server",
-                            "ord": 1
-                        }
-                    ],
-                    "ord": 7
+                  "id": "418bd74a-9f8b-4e5d-9a1f-7bcc01ff2658",
+                  "description": "Kirish - kurs nima haqida, mentor haqida umumiy ma'lumot\nUmumiy kurs haqida, kursdan nimalar oladi. ",
+                  "mediaCode": "hnEayKCz",
+                  "mediaUrl": "https://play.boomstream.com/hnEayKCz",
+                  "title": "Introduction",
+                  "ord": 1
                 }
-            ],
-            "supportDays": 25,
-            "stopped": null,
-            "currentLessonUrl": "",
-            "sale": true
+              ],
+              "ord": 1
+            },
+            {
+              "id": "22c4827e-dcd9-4373-b29b-5a9da2986031",
+              "title": "Setup",
+              "url": "setup",
+              "description": "Setup",
+              "parts": [
+                {
+                  "id": "168d8fbe-665e-483b-8b9a-284d339d57e9",
+                  "description": "IntelliJ IDEA - download, setup, run\nCreate a new Java project in IntelliJ IDEA\nTelegramBot kutubxonalarini import qilish\nBot qanday yaratiladi",
+                  "mediaCode": "HT7kDnYi",
+                  "mediaUrl": "https://play.boomstream.com/HT7kDnYi",
+                  "title": "Setup",
+                  "ord": 1
+                }
+              ],
+              "ord": 2
+            },
+            {
+              "id": "d9a78259-563b-445f-ac6d-77dad2b767ba",
+              "title": "Bot Programming",
+              "url": "bot-programming",
+              "description": "Bot Programming",
+              "parts": [
+                {
+                  "id": "bd10fdab-b2b1-48ac-aac0-79033fc8faf9",
+                  "description": "Bot Tokenlarini o'rnatish\nUpdate Object\nReply to Messages\nShartli javoblar berish\nButtonlar yaratish\nButtonlar bilan ishlash\nChat commandlarini yaratish\nTg telefon nomerini olish\nEmojilar jo'natish\nYuzaga kelishi mumkin bo'lgan muammolarni sanab o'tish va ularga yechimlar berish",
+                  "mediaCode": "IKptCaMZ",
+                  "mediaUrl": "https://play.boomstream.com/IKptCaMZ",
+                  "title": "Bot Programming",
+                  "ord": 1
+                }
+              ],
+              "ord": 3
+            },
+            {
+              "id": "306d2c4e-3588-4a93-be23-b1cbf1e8bdef",
+              "title": "Ma'lumotni JSON filega yozish va o'qish ",
+              "url": "malumotni-json-filega-yozish-va-oqish-",
+              "description": "Ma'lumotni JSON filega yozish va o'qish ",
+              "parts": [
+                {
+                  "id": "65e50ef9-3ce2-46a1-bbe0-51f94bb21dcc",
+                  "description": "Data Persistence'ga kirish\nSetup MongoDB\nMongoDB collection yaratish va user malumotlarini document ko'rinishida saqlash\nSaqlangan userlarni topish va yangi user kiritish\nSaqlangan user malumotlaridan foydalanish",
+                  "mediaCode": "VDBgJTkY",
+                  "mediaUrl": "https://play.boomstream.com/VDBgJTkY",
+                  "title": "Ma'lumotni JSON filega yozish va o'qish ",
+                  "ord": 1
+                }
+              ],
+              "ord": 4
+            },
+            {
+              "id": "9aac35c7-7ebb-4fb6-b0ab-eb4352819723",
+              "title": "Pizza Bot (I Project)",
+              "url": "pizza-bot-i-project",
+              "description": "Pizza Bot (I Project)",
+              "parts": [
+                {
+                  "id": "9c3114c0-f411-40fb-b367-f271aba6a7b8",
+                  "description": "Intro - proekt haqida umumiy malumot berish\nPlanning and Design (UML)\nIntro to Maven\nCreating Pizza Bot Maven Project\nPizza Bot Maven Project Setup and Adding Dependencies\nCoding Pizza Bot",
+                  "mediaCode": "HVhAMp4U",
+                  "mediaUrl": "https://play.boomstream.com/HVhAMp4U",
+                  "title": "Pizza Bot (I Project)",
+                  "ord": 1
+                }
+              ],
+              "ord": 5
+            },
+            {
+              "id": "4d9f06a5-0088-4614-b212-cf2eafc2e5a9",
+              "title": "Customer Support Bot (II Project)",
+              "url": "customer-support-bot-ii-project",
+              "description": "Customer Support Bot (II Project)",
+              "parts": [
+                {
+                  "id": "72bd44d1-945b-4993-9081-24e5062fd8fb",
+                  "description": "Intro \nHow to Navigate Code Project Using Git\nSetting up Customer Support Chat Bot\nReading Bot Username and Token From External File\nSetting Up Responder Class\nBot Main Menu for Customer Support\nChecking Order Status\nGetting Information About Product\nRedirecting Customer to Human Support",
+                  "mediaCode": "Nr5whdvw",
+                  "mediaUrl": "https://play.boomstream.com/Nr5whdvw",
+                  "title": "Customer Support Bot (II Project)",
+                  "ord": 1
+                }
+              ],
+              "ord": 6
+            },
+            {
+              "id": "7f3f0f9a-af5c-4b96-9024-2becb9ce048a",
+              "title": "Bot Deployment to a Server",
+              "url": "bot-deployment-to-a-server",
+              "description": "Bot Deployment to a Server",
+              "parts": [
+                {
+                  "id": "1ed5dc17-7488-48cf-a1cb-897dd7a5e55b",
+                  "description": "Deploying Bot to a Server\nUnderstanding Files Required for Deployment\nBot Deployment to GUI Server\nBot Deployment to Server Without GUI",
+                  "mediaCode": "QqjCDisB",
+                  "mediaUrl": "https://play.boomstream.com/QqjCDisB",
+                  "title": "Bot Deployment to a Server",
+                  "ord": 1
+                }
+              ],
+              "ord": 7
+            }
+          ],
+          "supportDays": 25,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": true
         }
-    ],
-    "requirements": [],
-    "online": true,
-    "onsite": false,
-    "offline": false,
-    "discountAmountOnline": 0,
-    "discountAmountOnsite": 0,
-    "metaTitle": "Telegram Bot yaratish",
-    "metaDescription": "Telegram Bot yaratish",
-    "canonicalUrl": "https://pdp.uz/course/telegram-bot-yaratish",
-    "metaImg": null,
-    "mentors": []
-}
+      ],
+      "requirements": [],
+      "online": true,
+      "onsite": false,
+      "offline": false,
+      "discountAmountOnline": 0,
+      "discountAmountOnsite": 0,
+      "metaTitle": "Telegram Bot yaratish",
+      "metaDescription": "Telegram Bot yaratish",
+      "canonicalUrl": "https://pdp.uz/course/telegram-bot-yaratish",
+      "metaImg": null,
+      "mentors": []
     }
+  }
 ]

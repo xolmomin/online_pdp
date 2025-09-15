@@ -34,7 +34,7 @@ class Blog(CreatedBaseModel):
         return super().delete(using, keep_parents)
 
 
-class Step(UUIDBaseModel):
+class Step(UUIDBaseModel): # TODO ?
     title = CharField(max_length=255)
     description = CKEditor5Field()
     blog = ForeignKey('users.Blog', CASCADE)

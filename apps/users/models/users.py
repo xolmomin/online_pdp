@@ -4,8 +4,8 @@ from django.contrib.auth.models import AbstractUser
 from django.db.models import TextChoices, ForeignKey, CASCADE
 from django.db.models.fields import CharField, DateTimeField
 
-from shared.models import CreatedBaseModel, UUIDBaseModel
 from shared.manager import UserManager
+from shared.models import CreatedBaseModel, UUIDBaseModel
 
 
 class User(AbstractUser, UUIDBaseModel):
@@ -47,6 +47,5 @@ class UserCourse(CreatedBaseModel):
     status = CharField(max_length=15, choices=Status.choices, default=Status.IN_PROGRESS)
     started_at = DateTimeField(null=True, blank=True)
     finished_at = DateTimeField(null=True, blank=True)
-
 
 # TODO https://api.dasturjon.uz/api/v1/proverb/public/random shu apidagi modelni yozish

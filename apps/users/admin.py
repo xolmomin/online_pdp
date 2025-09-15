@@ -38,7 +38,7 @@ class UserModelAdmin(UserAdmin):
 
 @admin.register(Course)
 class CourseModelAdmin(admin.ModelAdmin):
-    pass
+    readonly_fields = ('practice_count', 'rating', 'video_duration', 'video_count')
 
 
 @admin.register(Lesson)
