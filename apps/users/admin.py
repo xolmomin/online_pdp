@@ -38,17 +38,19 @@ class UserModelAdmin(UserAdmin):
 
 @admin.register(Course)
 class CourseModelAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name',)
     readonly_fields = ('practice_count', 'rating', 'video_duration', 'video_count')
 
 
 @admin.register(Lesson)
 class LessonModelAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'name',)
+    readonly_fields = ('video_duration',)
 
 
 @admin.register(Section)
 class SectionModelAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'name',)
 
 
 @admin.register(Topic)

@@ -1,0 +1,650 @@
+[
+  {
+    "model": "users.section",
+    "pk": "443a9e5b-7287-41b3-bc99-687335b3bf1c",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 1,
+      "name": "Python ga kirish, o’zgaruvchilar, o’zgarmaslar va Pycharmni o’rnatish",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "c0c37a43-ba4a-4299-ba2e-23189acfec21",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 2,
+      "name": "Data typelar va ularning turlari, methodlari",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "d964143b-1d76-40df-98ed-f34fb4793e2f",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 3,
+      "name": "set va dict methodlari va ularni qo’llanilishi",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "3a7889d6-9bdf-4c2c-bf2a-f8867ef58222",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 4,
+      "name": "raw and f string, string methodlari",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "7dd0e540-2d4b-4e67-b4b9-b8bca48e423d",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 5,
+      "name": "Arifmetik va ikkilik operatorlari",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "46bf3b28-ebb3-4721-a82e-085c5de4300e",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 6,
+      "name": "loop & condition amallari",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "36b9267f-e706-42f3-8718-8c1941e88359",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 7,
+      "name": "built-in funksiyalar (collections, itertools)",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "8e102d93-68e3-4932-9147-f45a863dfa33",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 8,
+      "name": "Funksiyalar va lambda I",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "51f23228-f097-48b2-a9f4-2c0dbe75d0c4",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 9,
+      "name": "Funksiyalar va lambda II",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "6527f4dd-d59b-4b84-aeb5-41040fc65867",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 10,
+      "name": "Type hinting, mypy",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "392874ad-fa7d-46f8-8cf8-2dfce7378a24",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 11,
+      "name": "Cafe projecti (terminal orqali)",
+      "status": "unpublished",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "e7b626e1-8aaa-4499-a649-42d8370b0c44",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 1,
+      "name": "OOP kirish, Class & Object",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "b943fe42-d8e5-43b6-bfa5-babc5bb324f1",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 2,
+      "name": "Inheritance, Encapsulation, Polymorphism",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "c8285d4e-9bc9-4b2f-a6c4-725416a9323e",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 3,
+      "name": "Abstraction, Meta class",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "80ae32ba-84a5-4f3f-acb3-8571e06ca9ed",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 4,
+      "name": "Sending email,  Fayllar bilan ishlash,  Binary file",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "8f71c039-f64a-4a41-a9dc-2b32f8753293",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 5,
+      "name": "Iterator, Generator,  Context manager,  Decorator",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "4d751161-831e-4fcd-8441-425c2af49808",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 6,
+      "name": "os, pathlib, sys, logging, argparse",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "cb5294b8-b38d-41d1-8c85-212d238c350a",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 7,
+      "name": "Python Virtual  Muhitlari: venv,  pipenv & poetry",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "6dce9596-42af-4e64-9eea-c5783571ba58",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 8,
+      "name": "Multithreading, Multiprocessing",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "55b6d0c0-6dba-4a83-a8a8-00bf54c8cd19",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 9,
+      "name": "Async, Corountines",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "6efd21d7-4572-4544-8640-d2bec51f741f",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 10,
+      "name": "Publish own package on PyPI",
+      "status": "unpublished",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "2eb24994-2168-4a9a-af0f-38aa192db773",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 1,
+      "name": "Telegram bot ga kirish, basic methods",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "28977de9-f0a9-42cf-9168-a98dcf2e30d5",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 2,
+      "name": "Chat action, Button & InlineButton",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "f0a3fea0-f7c4-4bfe-9010-899911af359b",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 3,
+      "name": "Routers, Structure, Telegram Commands",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "08eb348e-5255-4dde-a513-e2754549b5c0",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 4,
+      "name": "FSM Context",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "cca2d633-7774-4bc2-8186-4582062aae82",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 5,
+      "name": "InlineMode",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "d2f441d3-f8f4-4ee8-92f2-343eed35f3cf",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 6,
+      "name": "Middleware",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "f6b7dfbd-bbff-42ba-ae0d-d5bd3f55b7ab",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 7,
+      "name": "i18n",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "607b5224-04a2-42f0-99cf-3bf53c6c1425",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 8,
+      "name": "Redis, Apscheduler",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "90e4e6c7-de3f-4055-984a-366fdd346038",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 9,
+      "name": "Deploy AWS, DigitalOcean",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "0f663a60-dd42-4375-a227-c48c28c8f481",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 10,
+      "name": "Reminder Telegram Bot (bajariladigan ishlarni eslatib turuvchi bot)",
+      "status": "unpublished",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "0024a5d4-c4fc-445b-b5e3-6bfe0951be9e",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 0,
+      "name": "SQLAlchemy ORM",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "88962858-23b2-4794-ade4-98ed57fed906",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 1,
+      "name": "Alembic with sqlalchemy",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "ae1f3c50-7ae6-45d2-aca2-4581788909aa",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 2,
+      "name": "Httpx, yaml, csv",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "88a4a102-db25-489f-ba16-b10817d7e4b3",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 3,
+      "name": "Dataclasses, pydantic",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "300205f6-d25d-4c25-b450-8c6a990e94ca",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 5,
+      "name": "AIO libs",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "e552a132-571f-47cb-9e05-e28e769b1d18",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 6,
+      "name": "AsyncIO, Aiohttp",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "b731adc9-1c7e-4a85-ab5c-5544a1e2bd65",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 7,
+      "name": "Docker & Docker compose",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "fe33823d-62a9-44e6-ace3-56f629b0a59d",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 8,
+      "name": "Online do’kon telegram boti 1-part (aiogram based)",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "56dade18-ec62-4035-be20-b8a94ead2c62",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 9,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 10,
+      "name": "Online do’kon telegram boti 3-part (aiogram based)",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "333d509c-e0c5-412c-838b-c7800db050d2",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 11,
+      "name": "Telegram botni deploy qilish webhook + ssl + nginx",
+      "status": "unpublished",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "52644e44-2b85-4524-a00a-19e9fc9950ec",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 1,
+      "name": "Backendga kirish",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "048e9418-53f3-4716-a941-045a5e0847da",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 2,
+      "name": "Template bilan ishlash, static fayllar, base.htmlga ajratish",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "8a060d71-dae8-4866-a09f-fed5614e4d20",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 3,
+      "name": "Django admin page",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "b16352bb-0b02-4b4f-a7c9-4365d9d6a37f",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 4,
+      "name": "Django ORM",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "85b3e9a4-3c1d-45c2-b0bf-896027e77728",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 5,
+      "name": "Django custom commands",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "826b1137-c8b0-4f47-aad3-237e0c7c59a3",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 6,
+      "name": "Django 3rd party packages - import-export, django filters, mptt, django-baton, django-crispy-form",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "140f7668-ed1f-4372-b00d-d8fb4dc6064e",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 7,
+      "name": "Minio, ckeditor5",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "d6a9e0d8-4899-4721-93d2-eec582442ec3",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 8,
+      "name": "Testing templated based",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "97a01c18-63dc-4dfc-9510-281d1f361a38",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 9,
+      "name": "Celery tasklar bilan ishlash",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "15ac47ee-e300-439e-93b9-836582d53bdc",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 10,
+      "name": "Celery-beat, celery-results",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "91dc5f43-ba90-45bf-b6ad-5f72bdcf1a3b",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 11,
+      "name": "Django publish own package",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.section",
+    "pk": "b46f57d3-49fc-4d3d-b5bf-e912b676af80",
+    "fields": {
+      "updated_at": "2025-09-15T05:25:15.065Z",
+      "created_at": "2025-09-15T05:25:15.065Z",
+      "order_number": 12,
+      "name": "Optimization with django-debug-toolbar",
+      "status": "unpublished",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  }
+]

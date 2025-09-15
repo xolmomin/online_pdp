@@ -1,0 +1,2834 @@
+[
+  {
+    "model": "users.lesson",
+    "pk": "17e94179-ab24-4080-95e4-64323e7bdcd5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Pythonga kirish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "443a9e5b-7287-41b3-bc99-687335b3bf1c",
+      "video_link": "https://play.boomstream.com/znKiJHcd",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "fb06961c-a981-460e-b3a7-93cd2003141d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Linuxda pycharm o'rnatish va to'g'rilash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "443a9e5b-7287-41b3-bc99-687335b3bf1c",
+      "video_link": "https://play.boomstream.com/C9QA7a3w",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "92e0a055-374d-48e5-80ec-41af65e28cbe",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Windows va Macda python, pycharm o'rnatish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "443a9e5b-7287-41b3-bc99-687335b3bf1c",
+      "video_link": "https://play.boomstream.com/rYHzgC6H",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f88aa0ad-a5ae-4296-b85e-b2039d89f042",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "Pythonda o'zgaruvchilar va o'zgarmaslar",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "443a9e5b-7287-41b3-bc99-687335b3bf1c",
+      "video_link": "https://play.boomstream.com/alIkWELB",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "269aecab-c865-46d9-b30a-1b3e57763574",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Data typelar va ularning turlari, methodlari I",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "c0c37a43-ba4a-4299-ba2e-23189acfec21",
+      "video_link": "https://play.boomstream.com/mW7HBiBg",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "4803022c-c390-4df1-a936-ce209213c994",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Data typelar va ularning turlari, methodlari II",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "c0c37a43-ba4a-4299-ba2e-23189acfec21",
+      "video_link": "https://play.boomstream.com/zhhWYd3H",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "a36fc9a4-0cb4-4141-b32e-7ea146e92e69",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Data typelar va ularning turlari, methodlari bo'yicha mashqlar",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "c0c37a43-ba4a-4299-ba2e-23189acfec21",
+      "video_link": "https://play.boomstream.com/RhrpGoJj",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "389efe53-e780-4c0f-97a6-15d12a1f073e",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Set va uning methodlari",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d964143b-1d76-40df-98ed-f34fb4793e2f",
+      "video_link": "https://play.boomstream.com/f0DkmsFy",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f235e216-fbce-42bf-ab9b-ccb94f8c3648",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Dict methods va builtin funksiyalari",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d964143b-1d76-40df-98ed-f34fb4793e2f",
+      "video_link": "https://play.boomstream.com/wBWd70eE",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "69d8686b-07cb-4fee-a37e-c54a762bad8d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Set va uning methodlari II",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d964143b-1d76-40df-98ed-f34fb4793e2f",
+      "video_link": "https://play.boomstream.com/BBAzM1i7",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6b9531bf-42e1-4ef9-beba-5d80fab2c2b5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "f, raw string va metodlari I",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "3a7889d6-9bdf-4c2c-bf2a-f8867ef58222",
+      "video_link": "https://play.boomstream.com/8BzwJ0PN",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f47e2f37-8f08-46f3-b4b0-62a4ad5acb3d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "String metodlari",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "3a7889d6-9bdf-4c2c-bf2a-f8867ef58222",
+      "video_link": "https://play.boomstream.com/xoZobqmH",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "b51f9b82-e0ca-4898-82ba-1dc0bbc719a2",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "String metodlari II",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "3a7889d6-9bdf-4c2c-bf2a-f8867ef58222",
+      "video_link": "https://play.boomstream.com/RdSJgO5h",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "9054dbf0-8a73-43ce-9528-31f809451533",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Pythonda operator turlari va sanoq sistemalari",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "7dd0e540-2d4b-4e67-b4b9-b8bca48e423d",
+      "video_link": "https://play.boomstream.com/l0ZsZD4G",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "4e824baf-9e6a-4229-a54f-bc513f2bb1a9",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Sanoq sistemalari",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "7dd0e540-2d4b-4e67-b4b9-b8bca48e423d",
+      "video_link": "https://play.boomstream.com/TSgF62vH",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "ef59a066-0371-4951-9679-3524d6fa0bc9",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Matematik amallar ustida mashqlar",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "7dd0e540-2d4b-4e67-b4b9-b8bca48e423d",
+      "video_link": "https://play.boomstream.com/DXcypXgT",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "7a1f31d8-1d34-4864-9c8d-f6720feb3d14",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Loop for va while",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "46bf3b28-ebb3-4721-a82e-085c5de4300e",
+      "video_link": "https://play.boomstream.com/9v9hx6Xf",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "50d292c0-b28b-4ec5-aca6-ecd2bdd6fe41",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Condition bilan ishlash (if, match case)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "46bf3b28-ebb3-4721-a82e-085c5de4300e",
+      "video_link": "https://play.boomstream.com/Emh5GbNH",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2081f170-bac6-4613-b089-4c055e24e306",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Matematik kutubxonaga doir misollar",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "46bf3b28-ebb3-4721-a82e-085c5de4300e",
+      "video_link": "https://play.boomstream.com/4N2LJy0q",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "509b270a-2bb0-49e3-b926-cd41b579a000",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Python itertools kutubxonasi 1",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "36b9267f-e706-42f3-8718-8c1941e88359",
+      "video_link": "https://play.boomstream.com/6HF7WLOb",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "35fbda04-6d98-4dad-b10e-8d4046bdbe51",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Python itertools kutubxonasi 2",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "36b9267f-e706-42f3-8718-8c1941e88359",
+      "video_link": "https://play.boomstream.com/gkcFVFtN",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "ec734335-346e-4fbf-8d36-bd5a394976d5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Collection kutubxonasi",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "36b9267f-e706-42f3-8718-8c1941e88359",
+      "video_link": "https://play.boomstream.com/nJDQk8WH",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f614c568-d14f-4f28-88ba-888f3408ea2b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Funksiya va anonim funksiya (lambda)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8e102d93-68e3-4932-9147-f45a863dfa33",
+      "video_link": "https://play.boomstream.com/ykZIFMMG",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "a6a90f0f-50d5-4200-ba30-84c8140f034d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "filter, map, zip, reduce funksiyalari",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8e102d93-68e3-4932-9147-f45a863dfa33",
+      "video_link": "https://play.boomstream.com/Plve6Kp7",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "78f88bc4-cb21-4221-8519-afe06ba9bd9d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Vaqtlar bilan ishlash - datetime",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "51f23228-f097-48b2-a9f4-2c0dbe75d0c4",
+      "video_link": "https://play.boomstream.com/kYscgukc",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f0f2672e-b4bd-447f-aeee-d8bc521f1511",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "timeit kutubxonasi bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "51f23228-f097-48b2-a9f4-2c0dbe75d0c4",
+      "video_link": "https://play.boomstream.com/9QyXNvae",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "57fa4f91-a345-4fce-9fbb-1f682d2f9279",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "mypy va type hinting haqida",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6527f4dd-d59b-4b84-aeb5-41040fc65867",
+      "video_link": "https://play.boomstream.com/CUzNgL4e",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e01897c5-5d2e-4401-8bd1-8b1ee5f2656a",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "matrix va string bo'yicha misollar I",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6527f4dd-d59b-4b84-aeb5-41040fc65867",
+      "video_link": "https://play.boomstream.com/tbvdwPnL",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f3625215-8dd8-4f9c-96cc-8630846bbeb0",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "matrix va string bo'yicha misollar II",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6527f4dd-d59b-4b84-aeb5-41040fc65867",
+      "video_link": "https://play.boomstream.com/YzKuSZ5W",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6b25666f-92dc-4dac-b98d-ebcfdfa0aae4",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Cafe loyihasini ishlab chiqish I ",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "392874ad-fa7d-46f8-8cf8-2dfce7378a24",
+      "video_link": "https://play.boomstream.com/FzI4OMui",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "0ddbbf58-97cf-4318-baca-7164245a8937",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Cafe loyihasini ishlab chiqish II",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "392874ad-fa7d-46f8-8cf8-2dfce7378a24",
+      "video_link": "https://play.boomstream.com/hyMT2G6I",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f76151ae-24ca-4fc5-b940-213f3115d7d5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "OOP ga kirish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "e7b626e1-8aaa-4499-a649-42d8370b0c44",
+      "video_link": "https://play.boomstream.com/T7MsaUJL",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "1f583977-dbe7-478a-bda0-6bef6ddc3b3c",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Class va Object 1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "e7b626e1-8aaa-4499-a649-42d8370b0c44",
+      "video_link": "https://play.boomstream.com/QGRekf6w",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "c1211b34-9cdd-4e3c-b9f5-317248ccd850",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Class va Object 2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "e7b626e1-8aaa-4499-a649-42d8370b0c44",
+      "video_link": "https://play.boomstream.com/hm5S9Iok",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "3a9c81bd-d3f0-493d-b568-c5435347667d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Inheritance, Encapsulation",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b943fe42-d8e5-43b6-bfa5-babc5bb324f1",
+      "video_link": "https://play.boomstream.com/IFRIbA8P",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "58f60f41-7349-4500-b32b-effea9d699f0",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Polymorphism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b943fe42-d8e5-43b6-bfa5-babc5bb324f1",
+      "video_link": "https://play.boomstream.com/52cJ66pJ",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "9b457d9c-fe11-494a-baed-868f7049fa84",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Amaliyot va metodlar",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b943fe42-d8e5-43b6-bfa5-babc5bb324f1",
+      "video_link": "https://play.boomstream.com/Q6Jr3ZvJ",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "805a41ff-e3e5-4402-a417-1241c2cd8844",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Abstraction",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "c8285d4e-9bc9-4b2f-a6c4-725416a9323e",
+      "video_link": "https://play.boomstream.com/J0p16AmI",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "91313269-751c-453f-9d9c-f165faf27824",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Metaclass",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "c8285d4e-9bc9-4b2f-a6c4-725416a9323e",
+      "video_link": "https://play.boomstream.com/BBRbbjBb",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "b174b266-5515-4202-bb60-798a84229882",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Praktika metaclass va abstraction",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "c8285d4e-9bc9-4b2f-a6c4-725416a9323e",
+      "video_link": "https://play.boomstream.com/dP3QBE5N",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "63b3ef5e-77a6-4f03-b370-e6ee42a0dd46",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Smptlib bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "80ae32ba-84a5-4f3f-acb3-8571e06ca9ed",
+      "video_link": "https://play.boomstream.com/3QAxFHv8",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "8c71e2dd-1e90-4cc8-bdd3-086e9a9d66fd",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Smptlik bilan ishlash davomi, fayl bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "80ae32ba-84a5-4f3f-acb3-8571e06ca9ed",
+      "video_link": "https://play.boomstream.com/U0ZpWvNm",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "242c7ddd-cbd2-437f-8673-8c1aaebe07a7",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "binary fayl, base64 praktika",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "80ae32ba-84a5-4f3f-acb3-8571e06ca9ed",
+      "video_link": "https://play.boomstream.com/0MTnn1eI",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e6d44eaf-1d97-4793-9d31-788b8aafd9d9",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Iterator va Generator",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8f71c039-f64a-4a41-a9dc-2b32f8753293",
+      "video_link": "https://play.boomstream.com/upaKyug6",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "15a7ca96-4e2b-48b7-87e1-bbca6e8a7d29",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Custom context manager",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8f71c039-f64a-4a41-a9dc-2b32f8753293",
+      "video_link": "https://play.boomstream.com/WiJysJfJ",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f8f8b49d-126a-427e-89fc-cc3c88974ed0",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Decorator",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8f71c039-f64a-4a41-a9dc-2b32f8753293",
+      "video_link": "https://play.boomstream.com/bOZpKly9",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f0718a62-9a54-4d33-8795-a1014f99b7d3",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "Decorator praktika",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8f71c039-f64a-4a41-a9dc-2b32f8753293",
+      "video_link": "https://play.boomstream.com/Yb4faB3M",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "45437651-c563-49e6-9c4f-2916ead2b183",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Oldingi mavzu takrori - (decorator) davomi",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "4d751161-831e-4fcd-8441-425c2af49808",
+      "video_link": "https://play.boomstream.com/ZNNL2LKh",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "50222025-3a90-47ec-b554-6780f59fe7e4",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "linux basic commands va os, path kutubxonasi",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "4d751161-831e-4fcd-8441-425c2af49808",
+      "video_link": "https://play.boomstream.com/YJ0SeC9e",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e5027cc9-ccf2-4d21-98bb-eabf46bf82be",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": " sys va logger bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "4d751161-831e-4fcd-8441-425c2af49808",
+      "video_link": "https://play.boomstream.com/o3GGKKET",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e1d4d027-1dd7-435a-a2ff-d0f1f32d7f89",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "argparse kutubxonasi",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "4d751161-831e-4fcd-8441-425c2af49808",
+      "video_link": "https://play.boomstream.com/9fdPfdC1",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "24a702ee-254b-4cd3-ad52-653b73d9e052",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Virtual muhit bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "cb5294b8-b38d-41d1-8c85-212d238c350a",
+      "video_link": "https://play.boomstream.com/eRUVYp3x",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "703902d5-582c-4101-8de0-30be071c46e5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "poetry va pipenv",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "cb5294b8-b38d-41d1-8c85-212d238c350a",
+      "video_link": "https://play.boomstream.com/dyr4XMn3",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "75ca37b4-2356-4365-a25b-74042e03faa0",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "json kutubxonasi bilan ishlash I",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "cb5294b8-b38d-41d1-8c85-212d238c350a",
+      "video_link": "https://play.boomstream.com/GeXnSNv3",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "b3998678-ada9-4885-b820-d03314a1b624",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Multithreading va Multiprocessing",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6dce9596-42af-4e64-9eea-c5783571ba58",
+      "video_link": "https://play.boomstream.com/8WrovjHt",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "a3896fd2-e3e0-465b-b2a5-e682a122356b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "threading kutubxonasi",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6dce9596-42af-4e64-9eea-c5783571ba58",
+      "video_link": "https://play.boomstream.com/42iuZReZ",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "54e1e5f6-5b64-4613-9383-6cc1fe494460",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "processing va debug bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6dce9596-42af-4e64-9eea-c5783571ba58",
+      "video_link": "https://play.boomstream.com/L0k5tHKB",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "8870d808-4d33-49de-96ca-af097d725fa8",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Async va Event loop",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "55b6d0c0-6dba-4a83-a8a8-00bf54c8cd19",
+      "video_link": "https://play.boomstream.com/NOxo4rW8",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "02282fc0-7119-45c1-94c0-74ae506aabfd",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Coroutines",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "55b6d0c0-6dba-4a83-a8a8-00bf54c8cd19",
+      "video_link": "https://play.boomstream.com/sEtsaDOc",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "a5cd7c28-62c5-4531-9278-6a1986d0a097",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Async code bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "55b6d0c0-6dba-4a83-a8a8-00bf54c8cd19",
+      "video_link": "https://play.boomstream.com/GmKmDUnI",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "8496443a-c5b7-4a84-b6e9-34f2dbd81665",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Pip bilan ishlash va kutubxona yaratish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6efd21d7-4572-4544-8640-d2bec51f741f",
+      "video_link": "https://play.boomstream.com/OVydhs5B",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e69f7a19-831a-42d9-858c-348b058db755",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Pip bilan ishlash va kutubxona yaratish 2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6efd21d7-4572-4544-8640-d2bec51f741f",
+      "video_link": "https://play.boomstream.com/Q9DjeAZF",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "123409c2-a651-444f-bcc9-780ccc51e027",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Fayllar va json bilan ishlaydigan kutubxona yaratish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "6efd21d7-4572-4544-8640-d2bec51f741f",
+      "video_link": "https://play.boomstream.com/wOUbfB9v",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "51c13501-3fd6-44c7-9d0a-73830d7f1ea3",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Telegram bot ga kirish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "2eb24994-2168-4a9a-af0f-38aa192db773",
+      "video_link": "https://play.boomstream.com/iI6QLOdt",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "861b67d8-c1e9-442e-9381-f2b29ed09831",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Telegram bot basic methods",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "2eb24994-2168-4a9a-af0f-38aa192db773",
+      "video_link": "https://play.boomstream.com/4ooPjh8o",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "877c8d4e-8b47-430f-aad5-da5bf0c110e6",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Telegram botda fayl yuborish va qabul qilish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "2eb24994-2168-4a9a-af0f-38aa192db773",
+      "video_link": "https://play.boomstream.com/lFFdIPao",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "4a6f7484-3d9b-4ff5-8333-81bc2afe5336",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Chat action va message bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "28977de9-f0a9-42cf-9168-a98dcf2e30d5",
+      "video_link": "https://play.boomstream.com/AZhVu1B0",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "424f7c77-ea09-42f7-a0bf-66e2d3d0d8b4",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Button & InlineButton ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "28977de9-f0a9-42cf-9168-a98dcf2e30d5",
+      "video_link": "https://play.boomstream.com/F4kd0iJ9",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "c923a289-b6de-43f4-8cbb-b7bb87c0c04a",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Button & InlineButton ishlashga doir misol 1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "28977de9-f0a9-42cf-9168-a98dcf2e30d5",
+      "video_link": "https://play.boomstream.com/hIibawbQ",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "23bdb902-0b36-4c14-bd66-21ce9a6ceda1",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Komanda va filterlar bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "f0a3fea0-f7c4-4bfe-9010-899911af359b",
+      "video_link": "https://play.boomstream.com/pKnMfAVe",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2e4100f2-64cb-432e-ae76-3bfc197c8e0f",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Custom filter yaratish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "f0a3fea0-f7c4-4bfe-9010-899911af359b",
+      "video_link": "https://play.boomstream.com/3DJ3qKLt",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e36632be-8767-4f92-82f3-a7259ffb8efe",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Router lar bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "f0a3fea0-f7c4-4bfe-9010-899911af359b",
+      "video_link": "https://play.boomstream.com/pKnMfAVe",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e001ff91-7bac-4fb3-ac21-488df17517bc",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "FSM Context bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "08eb348e-5255-4dde-a513-e2754549b5c0",
+      "video_link": "https://play.boomstream.com/IEc2iRFV",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "411bd615-6927-4221-9424-b3cfa782f4db",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Komandalar bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "08eb348e-5255-4dde-a513-e2754549b5c0",
+      "video_link": "https://play.boomstream.com/OYjBR4r6",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2783515c-8d4b-4707-b6aa-e1f725a9e60f",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Forward Message bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "08eb348e-5255-4dde-a513-e2754549b5c0",
+      "video_link": "https://play.boomstream.com/FPiiZFSq",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6ff3748f-2bb7-45f8-9f60-a8c6cc65fffa",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "InlineMode bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "cca2d633-7774-4bc2-8186-4582062aae82",
+      "video_link": "https://play.boomstream.com/j9m439Ji",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2eb356b1-b55d-45b5-91e4-68083945a846",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "InlineMode da fayl bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "cca2d633-7774-4bc2-8186-4582062aae82",
+      "video_link": "https://play.boomstream.com/RNtyu7Wa",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "d3e66251-5eb1-457b-8920-4cb8634229b0",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "startlink yaratish (referral bilan ishlash)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "cca2d633-7774-4bc2-8186-4582062aae82",
+      "video_link": "https://play.boomstream.com/QRh2UFHd",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "c4356acd-8e2c-43e5-b33b-32e778a00291",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Middleware, kanalga majburiy azo bot",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d2f441d3-f8f4-4ee8-92f2-343eed35f3cf",
+      "video_link": "https://play.boomstream.com/lOP6nL9b",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "95819604-59fd-4e39-9061-9d73722236ad",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Middleware bilan azolikni tekshirish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d2f441d3-f8f4-4ee8-92f2-343eed35f3cf",
+      "video_link": "https://play.boomstream.com/eOc2bTyO",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "902ff8d0-518f-4c95-9502-74c52c2afb80",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "RedisDict malumotlarni saqlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d2f441d3-f8f4-4ee8-92f2-343eed35f3cf",
+      "video_link": "https://play.boomstream.com/hKEGWzNW",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "fd8f0fbd-d232-4796-93c6-0b139ca8dcb9",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "i18n ga kirish va Makefile",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "f6b7dfbd-bbff-42ba-ae0d-d5bd3f55b7ab",
+      "video_link": "https://play.boomstream.com/UJvM6EMN",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6f737e92-7b19-476f-aaa6-8df02c50f45d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "i18n tarjimalarni kiritish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "f6b7dfbd-bbff-42ba-ae0d-d5bd3f55b7ab",
+      "video_link": "https://play.boomstream.com/W4sO489q",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "74e5dd9f-f44c-4a0a-afd8-6a9d67699a1e",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "i18n bilan ishlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "f6b7dfbd-bbff-42ba-ae0d-d5bd3f55b7ab",
+      "video_link": "https://play.boomstream.com/zam2cfUF",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "b5f6a1be-7ea5-4faf-922d-51cba40d4811",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Redis va redisdict state da ishlatish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "607b5224-04a2-42f0-99cf-3bf53c6c1425",
+      "video_link": "https://play.boomstream.com/nvDI3JIE",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "5ff80228-efb0-4e17-97e6-03ab3ae8b0a0",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "redisstorage da saqlash",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "607b5224-04a2-42f0-99cf-3bf53c6c1425",
+      "video_link": "https://play.boomstream.com/78CChSTC",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "01757310-34b8-4a3d-ab21-ee7f6864d9df",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "apscheduler va dispatchersiz bot",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "607b5224-04a2-42f0-99cf-3bf53c6c1425",
+      "video_link": "https://play.boomstream.com/oRmDzPi1",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "ee386971-9417-4c09-a2ac-57c847b1fd2b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Serverlar haqida",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "90e4e6c7-de3f-4055-984a-366fdd346038",
+      "video_link": "https://play.boomstream.com/WiZq7GUb",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "ca62e833-14f8-4e7e-803d-184992ea8921",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": " Serverni sozlash (nginx, service)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "90e4e6c7-de3f-4055-984a-366fdd346038",
+      "video_link": "https://play.boomstream.com/8Xn42MjN",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f444a911-1576-46d7-8659-fa88fc041bf4",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Serverga ssl qo'yish va botni webhook qilish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "90e4e6c7-de3f-4055-984a-366fdd346038",
+      "video_link": "https://play.boomstream.com/ZdqP2RLq",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "0d99b94b-4817-4519-b664-534ba954c348",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Reminder bot, user va admin handler ga ajratish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "0f663a60-dd42-4375-a227-c48c28c8f481",
+      "video_link": "https://play.boomstream.com/HL2JRk8b",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "42f6d013-c824-4153-ac97-2c492e1698c2",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Reminder botga baza ulash va tasklarni qo'shish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "0f663a60-dd42-4375-a227-c48c28c8f481",
+      "video_link": "https://play.boomstream.com/wievG04H",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "3cc76d59-ca40-4705-a7d0-d08f76648239",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Reminder bot da tasklarni eslatib turish",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "0f663a60-dd42-4375-a227-c48c28c8f481",
+      "video_link": "https://play.boomstream.com/x3OIe7zc",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e3f9bf5f-8675-4da4-868e-2963f3503f99",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "SQLAlchemy ORM",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "0024a5d4-c4fc-445b-b5e3-6bfe0951be9e",
+      "video_link": "https://play.boomstream.com/tzuUQLvu",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "8faa1ff7-6c57-45f2-a957-073fae6a121b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "SQLAlchemy ORM",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "0024a5d4-c4fc-445b-b5e3-6bfe0951be9e",
+      "video_link": "https://play.boomstream.com/TpZIuafx",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "4a1b38f4-5bc7-4e7d-9150-a74bd47259d4",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "SQLAlchemy ORM",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "0024a5d4-c4fc-445b-b5e3-6bfe0951be9e",
+      "video_link": "https://play.boomstream.com/O0HzIeT9",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "b4688f8a-317a-4655-b232-6e8625dd2c7b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "SQLAlchemy ORM",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "0024a5d4-c4fc-445b-b5e3-6bfe0951be9e",
+      "video_link": "https://play.boomstream.com/Bcc0SJdB",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "5977bae1-7aee-4088-bc3b-720a943596ef",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 5,
+      "name": "SQLAlchemy ORM",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "0024a5d4-c4fc-445b-b5e3-6bfe0951be9e",
+      "video_link": "https://play.boomstream.com/gBVfK59n",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "aa630c52-9446-4bce-8fe0-c65ee8dae175",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Alembic with sqlalchemy",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "88962858-23b2-4794-ade4-98ed57fed906",
+      "video_link": "https://play.boomstream.com/wzGtWuHR",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "5738a5c0-6b8f-453e-a1c6-92ed1f7baf95",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Alembic with sqlalchemy",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "88962858-23b2-4794-ade4-98ed57fed906",
+      "video_link": "https://play.boomstream.com/Ds89UiWU",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2fca2c8a-acc8-4a41-8b2f-194494574bf5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Alembic with sqlalchemy",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "88962858-23b2-4794-ade4-98ed57fed906",
+      "video_link": "https://play.boomstream.com/gyGdZIwY",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f172b919-f272-4ee0-89b3-3e7b30ffdf8f",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "httpx, yaml, csv",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "ae1f3c50-7ae6-45d2-aca2-4581788909aa",
+      "video_link": "https://play.boomstream.com/dWv1phZm",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "3e337674-4db2-4cf2-9acc-042abcc5f195",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "httpx, yaml, csv",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "ae1f3c50-7ae6-45d2-aca2-4581788909aa",
+      "video_link": "https://play.boomstream.com/fElbsez9",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "90a6cca8-090d-4ea0-a00d-54f65e217f75",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "httpx, yaml, csv",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "ae1f3c50-7ae6-45d2-aca2-4581788909aa",
+      "video_link": "https://play.boomstream.com/qmPlCmBk",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "cc2818d9-004f-4760-97ba-f837e0ea9cb5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Dataclasses, pydantic",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "88a4a102-db25-489f-ba16-b10817d7e4b3",
+      "video_link": "https://play.boomstream.com/sKsV2eO2",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e979aea1-f331-4648-9179-332a4e0fb1c8",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Dataclasses, pydantic",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "88a4a102-db25-489f-ba16-b10817d7e4b3",
+      "video_link": "https://play.boomstream.com/TC0he1f1",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e7b0f939-ffa0-4f76-ae18-7829b0c78673",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Dataclasses, pydantic",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "88a4a102-db25-489f-ba16-b10817d7e4b3",
+      "video_link": "https://play.boomstream.com/d0ss7XZp",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "9617d947-8bb5-4f20-b845-e1a0403df6b9",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "AIO libs",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "300205f6-d25d-4c25-b450-8c6a990e94ca",
+      "video_link": "https://play.boomstream.com/2MKUq4nu",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "d2f04df7-7585-4910-bcb1-d78617237b33",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "AIO libs",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "300205f6-d25d-4c25-b450-8c6a990e94ca",
+      "video_link": "https://play.boomstream.com/VgETXUBT",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f2ae7fcb-7166-43d6-a520-a38571dea049",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "AIO libs",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "300205f6-d25d-4c25-b450-8c6a990e94ca",
+      "video_link": "https://play.boomstream.com/XkHp3jB4",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "51118045-72c5-45be-adac-b48f9987a90b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "AsyncIO, Aiohttp",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "e552a132-571f-47cb-9e05-e28e769b1d18",
+      "video_link": "https://play.boomstream.com/2uI3tzic",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "a10ecff9-ba36-4b71-8f33-358ab1df46a5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "AsyncIO, Aiohttp",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "e552a132-571f-47cb-9e05-e28e769b1d18",
+      "video_link": "https://play.boomstream.com/j5T3E8g9",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "1be0a9b6-4eb1-41e2-874a-cf845e2c4b38",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "AsyncIO, Aiohttp",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "e552a132-571f-47cb-9e05-e28e769b1d18",
+      "video_link": "https://play.boomstream.com/bYdZDT12",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "cc87d02b-d0d1-46bf-bace-d9951f9ed3c8",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "AsyncIO, Aiohttp",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "e552a132-571f-47cb-9e05-e28e769b1d18",
+      "video_link": "https://play.boomstream.com/pi6lGYP4",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "55a31a77-102b-4d13-b8c5-8d18a99e9a29",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Docker & Docker compose",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b731adc9-1c7e-4a85-ab5c-5544a1e2bd65",
+      "video_link": "https://play.boomstream.com/VVpoXWew",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "8a426fac-d164-473a-885b-387f79fc3e71",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Docker & Docker compose",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b731adc9-1c7e-4a85-ab5c-5544a1e2bd65",
+      "video_link": "https://play.boomstream.com/xN8FS5G5",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "20f9d785-bdb9-4069-9633-9e0e176211c8",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Docker & Docker compose",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b731adc9-1c7e-4a85-ab5c-5544a1e2bd65",
+      "video_link": "https://play.boomstream.com/y5YpSc0a",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "db546e88-f5cf-4d0e-ab35-5d45c741bda8",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "Docker & Docker compose",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b731adc9-1c7e-4a85-ab5c-5544a1e2bd65",
+      "video_link": "https://play.boomstream.com/2TpUWZiM",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "495d3362-38ad-4615-a23c-f74f5e69216e",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Online do’kon telegram boti 1-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "fe33823d-62a9-44e6-ace3-56f629b0a59d",
+      "video_link": "https://play.boomstream.com/FjuZrPtG",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "ddbdcb13-1625-4577-a3a0-1a0485b9429a",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Online do’kon telegram boti 1-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "fe33823d-62a9-44e6-ace3-56f629b0a59d",
+      "video_link": "https://play.boomstream.com/DmI8O89v",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "0e614cff-f96a-4eb0-b2e2-88c1f2f97d9d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Online do’kon telegram boti 1-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "fe33823d-62a9-44e6-ace3-56f629b0a59d",
+      "video_link": "https://play.boomstream.com/GKyhLZOY",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "b79a78d8-32e0-4ac3-aa29-5aa9ef9e980c",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/sGuy5q2v",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f187000b-6029-47f0-b2ae-8c7e11d8cce4",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/QF6uzXs2",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "45c16a2a-9222-494e-b0de-172ed5f43435",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/wNBzQilf",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "1ce96875-169c-4e0e-9878-b9240f0fc0e1",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/MvAAVilD",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "aae5f606-a7fa-49c9-afc3-1988d9a6c7de",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 5,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/KL18RhAN",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "988711bd-63df-49a6-b352-1830eeba3a0b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 6,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/P1QO9jB0",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "bdc35d82-ba54-4a90-83ff-d281f0043efb",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 7,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/IRRngaI4",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "56da492c-0e85-49de-8d04-5c6ad1c2c661",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 8,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/AvKNGQ2u",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "7d1b7fb6-82a7-42fe-8143-af9b86b81204",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 9,
+      "name": "Online do’kon telegram boti 2-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "56dade18-ec62-4035-be20-b8a94ead2c62",
+      "video_link": "https://play.boomstream.com/aiYX4PhK",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2ddb133f-79fb-4884-bd9c-4dd2709aa1df",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Online do’kon telegram boti 3-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+      "video_link": "https://play.boomstream.com/zjozpbfH",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "47897f46-2309-42d5-9d4d-ce8e5a7f9a4e",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Online do’kon telegram boti 3-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+      "video_link": "https://play.boomstream.com/T33t54UN",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "90fc77ae-2f14-45ed-a6db-da4b4911a360",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Online do’kon telegram boti 3-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+      "video_link": "https://play.boomstream.com/oTVUPmkC",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "08d26070-1fbb-49e0-83c2-47164356aa29",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "Online do’kon telegram boti 3-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+      "video_link": "https://play.boomstream.com/f7vh8zvL",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "43187b7b-8261-4a7a-80bc-26c53c374d81",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 5,
+      "name": "Online do’kon telegram boti 3-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+      "video_link": "https://play.boomstream.com/5iA3onis",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f86d5138-6982-4e22-9104-87fba8e5742d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 6,
+      "name": "Online do’kon telegram boti 3-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+      "video_link": "https://play.boomstream.com/8AOcht6d",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "c3eb1151-bec4-4696-8720-f8b65b4c0efd",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 7,
+      "name": "Online do’kon telegram boti 3-part (aiogram based)",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+      "video_link": "https://play.boomstream.com/YS4tuHDS",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "428ea5c9-2b29-444a-80ce-593fa5276c7e",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "Telegram botni deploy qilish webhook + ssl + nginx",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "333d509c-e0c5-412c-838b-c7800db050d2",
+      "video_link": "https://play.boomstream.com/IMOKEeoL",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "0a8dc8ca-6d2c-4a7d-a2b8-af2b1cb2ae62",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "Telegram botni deploy qilish webhook + ssl + nginx",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "333d509c-e0c5-412c-838b-c7800db050d2",
+      "video_link": "https://play.boomstream.com/cRF2uvxW",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f304b4b2-e61c-4d08-b006-4e6602f9257e",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "Telegram botni deploy qilish webhook + ssl + nginx",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "333d509c-e0c5-412c-838b-c7800db050d2",
+      "video_link": "https://play.boomstream.com/extHKaj2",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "3f16d25d-9b26-489c-a90c-dba5293078ed",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 4,
+      "name": "Telegram botni deploy qilish webhook + ssl + nginx",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "333d509c-e0c5-412c-838b-c7800db050d2",
+      "video_link": "https://play.boomstream.com/yoGvOSXt",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "22b8ac4c-b757-4109-b4fa-d91f8d2c0526",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 5,
+      "name": "Telegram botni deploy qilish webhook + ssl + nginx",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "333d509c-e0c5-412c-838b-c7800db050d2",
+      "video_link": "https://play.boomstream.com/KAD2UOkU",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "90c38fcf-98c6-480a-af1e-d3180cdf3d51",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "52644e44-2b85-4524-a00a-19e9fc9950ec",
+      "video_link": "https://play.boomstream.com/ENKy0xVK",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6cb26cf3-12ab-44b1-a41b-50d5837025e6",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "52644e44-2b85-4524-a00a-19e9fc9950ec",
+      "video_link": "https://play.boomstream.com/kbB30Msk",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6e1dff6d-8d85-4ef0-893d-7aaff60fd127",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "52644e44-2b85-4524-a00a-19e9fc9950ec",
+      "video_link": "https://play.boomstream.com/ItDDVnPX",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e668acc2-2bef-4f10-a2ce-c2ae6cfaa957",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "048e9418-53f3-4716-a941-045a5e0847da",
+      "video_link": "https://play.boomstream.com/rdUJPoVI",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "0fb3f5e9-3b33-422e-bf44-8716b4793433",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "048e9418-53f3-4716-a941-045a5e0847da",
+      "video_link": "https://play.boomstream.com/j3REERPD",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2bdc2f72-6030-41c1-8d45-9edab0ab1cc3",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "048e9418-53f3-4716-a941-045a5e0847da",
+      "video_link": "https://play.boomstream.com/eXPxewCR",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "eae2a2b3-6df0-4c32-aafb-4cf3763daefd",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8a060d71-dae8-4866-a09f-fed5614e4d20",
+      "video_link": "https://play.boomstream.com/7SIeuceV",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "e0f6790e-d42f-4e00-8d45-38c6762927af",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8a060d71-dae8-4866-a09f-fed5614e4d20",
+      "video_link": "https://play.boomstream.com/99Mrrk6I",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "ba21193f-e9f7-4f03-b930-87aa65b8e9dd",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "8a060d71-dae8-4866-a09f-fed5614e4d20",
+      "video_link": "https://play.boomstream.com/tv5DQDe0",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6d9da0e2-6b95-4961-ba9e-6cc5f03a0b87",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b16352bb-0b02-4b4f-a7c9-4365d9d6a37f",
+      "video_link": "https://play.boomstream.com/EEUb7xFI",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "3327b785-5318-420e-b805-0760cf25f94e",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b16352bb-0b02-4b4f-a7c9-4365d9d6a37f",
+      "video_link": "https://play.boomstream.com/L5qXzezS",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "16d5760a-5993-4b5d-a429-182b54d44700",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b16352bb-0b02-4b4f-a7c9-4365d9d6a37f",
+      "video_link": "https://play.boomstream.com/A53N2eIW",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "a87cc669-a363-4afd-b59a-33ec92b5604d",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "85b3e9a4-3c1d-45c2-b0bf-896027e77728",
+      "video_link": "https://play.boomstream.com/MIUKPFfF",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "c5f0b0dd-402b-49a5-bb9c-6f502e44602a",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "85b3e9a4-3c1d-45c2-b0bf-896027e77728",
+      "video_link": "https://play.boomstream.com/ZJyOIf6W",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "0838b118-e40f-4b05-9b68-dda47b928544",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "85b3e9a4-3c1d-45c2-b0bf-896027e77728",
+      "video_link": "https://play.boomstream.com/MbyxtLp7",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "d1b1532d-42f7-46f4-a7d1-7b2411ceb96c",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "826b1137-c8b0-4f47-aad3-237e0c7c59a3",
+      "video_link": "https://play.boomstream.com/QH4DYJtr",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "f7a24518-1967-4098-a23e-606fbf3286c7",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "826b1137-c8b0-4f47-aad3-237e0c7c59a3",
+      "video_link": "https://play.boomstream.com/Hwr6vq8V",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2231e6ae-3c5a-432f-8314-32606cd971c3",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "826b1137-c8b0-4f47-aad3-237e0c7c59a3",
+      "video_link": "https://play.boomstream.com/04griRLM",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6344ecc5-68a9-4aa7-b1d0-7e90170a1202",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "140f7668-ed1f-4372-b00d-d8fb4dc6064e",
+      "video_link": "https://play.boomstream.com/VBTFztP0",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "0d49d0cb-c409-4c47-a71b-24a3c7088a97",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "140f7668-ed1f-4372-b00d-d8fb4dc6064e",
+      "video_link": "https://play.boomstream.com/WgFkW2W4",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "34b2606a-57ac-4e87-9a3e-9bf2a81ed7ff",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "140f7668-ed1f-4372-b00d-d8fb4dc6064e",
+      "video_link": "https://play.boomstream.com/EBvwAl4z",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6e19704c-df72-4e11-90c9-83698703f33e",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d6a9e0d8-4899-4721-93d2-eec582442ec3",
+      "video_link": "https://play.boomstream.com/fHXC2fqX",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "534f9570-40a6-4ef0-8d93-7ff54a74ade2",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d6a9e0d8-4899-4721-93d2-eec582442ec3",
+      "video_link": "https://play.boomstream.com/HIwA30Qn",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "2b54e37d-3ed2-4ff3-9ac3-1c94748e2567",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "d6a9e0d8-4899-4721-93d2-eec582442ec3",
+      "video_link": "https://play.boomstream.com/AIKtjGcL",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "d4079a16-8758-4878-bfeb-90725629aa67",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "97a01c18-63dc-4dfc-9510-281d1f361a38",
+      "video_link": "https://play.boomstream.com/dsTtWpT5",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "56af73e8-61b3-44fc-858c-494698ae5a52",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "97a01c18-63dc-4dfc-9510-281d1f361a38",
+      "video_link": "https://play.boomstream.com/ojjroV16",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "7ebf5aef-0102-4d4e-90a8-497a99052e4b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "97a01c18-63dc-4dfc-9510-281d1f361a38",
+      "video_link": "https://play.boomstream.com/BdA5s3K6",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "02980418-6101-41a1-bf89-b05db2ba7bd3",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "15ac47ee-e300-439e-93b9-836582d53bdc",
+      "video_link": "https://play.boomstream.com/HeOWkmPd",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "5b98fd8d-bff6-4ac9-a470-85112aede4a2",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "15ac47ee-e300-439e-93b9-836582d53bdc",
+      "video_link": "https://play.boomstream.com/XuZGN3ek",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "92d84b5c-d0c6-4644-b719-6a79dd292ab4",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "91dc5f43-ba90-45bf-b6ad-5f72bdcf1a3b",
+      "video_link": "https://play.boomstream.com/FXa3Sgfd",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "c4ed0965-c102-49d3-afda-77a44180c058",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "91dc5f43-ba90-45bf-b6ad-5f72bdcf1a3b",
+      "video_link": "https://play.boomstream.com/vy9xz4OT",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "6140babb-8b89-4091-b4a1-d94c6b19c50f",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "91dc5f43-ba90-45bf-b6ad-5f72bdcf1a3b",
+      "video_link": "https://play.boomstream.com/wss2osxu",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "d9612b23-57a1-4118-8d21-e13309dbf2d5",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 1,
+      "name": "1-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b46f57d3-49fc-4d3d-b5bf-e912b676af80",
+      "video_link": "https://play.boomstream.com/8kGPA00E",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "b5d608f8-9e7e-4850-b85b-e2cdb006bd6b",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 2,
+      "name": "2-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b46f57d3-49fc-4d3d-b5bf-e912b676af80",
+      "video_link": "https://play.boomstream.com/Dm88FX9i",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  },
+  {
+    "model": "users.lesson",
+    "pk": "19c89571-16b3-4fc7-9526-9063de1efa17",
+    "fields": {
+      "updated_at": "2025-09-15T06:17:07.324Z",
+      "created_at": "2025-09-15T06:17:07.324Z",
+      "order_number": 3,
+      "name": "3-qism",
+      "status": "unpublished",
+      "access_type": "private",
+      "video_duration": 0,
+      "section": "b46f57d3-49fc-4d3d-b5bf-e912b676af80",
+      "video_link": "https://play.boomstream.com/QaYJTR5v",
+      "video": "videos/2025/09/15/example_video_vMb6u3o.mp4"
+    }
+  }
+]

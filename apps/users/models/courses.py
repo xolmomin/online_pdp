@@ -59,7 +59,7 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     name = CharField(max_length=255)
     status = CharField(max_length=20, choices=Status.choices, default=Status.UNPUBLISHED)
     access_type = CharField(max_length=20, choices=AccessType.choices, default=AccessType.PRIVATE)
-    video_duration = IntegerField()
+    video_duration = IntegerField(db_default=0)
     section = ForeignKey('users.Section', CASCADE)
     video_link = URLField()
     video = FileField(upload_to='videos/%Y/%m/%d')  # TODO validation for video
