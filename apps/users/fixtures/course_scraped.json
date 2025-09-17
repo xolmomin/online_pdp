@@ -1,0 +1,2235 @@
+[
+  {
+    "type": "BACKEND",
+    "url": "python-development-2025",
+    "title": "Python Development 2025",
+    "data": {
+      "id": "cca8b866-465c-4563-a80c-d4adcfdd97b5",
+      "title": "Python Development 2025",
+      "introVideoUrl": "-",
+      "description": "Python Development 2025",
+      "lessonCount": 54,
+      "customCourseParts": [
+        {
+          "id": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1",
+          "amount": 590000.0,
+          "title": "Python Basic",
+          "description": "Modul 1",
+          "lessons": [
+            {
+              "id": "443a9e5b-7287-41b3-bc99-687335b3bf1c",
+              "title": "Python ga kirish, o’zgaruvchilar, o’zgarmaslar va Pycharmni o’rnatish",
+              "url": "python-ga-kirish-ozgaruvchilar-ozgarmaslar-va-pycharmni-ornatish",
+              "description": "Python ga kirish, o’zgaruvchilar, o’zgarmaslar va Pycharmni o’rnatish",
+              "parts": [
+                {
+                  "id": "17e94179-ab24-4080-95e4-64323e7bdcd5",
+                  "description": "Pythonga kirish",
+                  "mediaCode": "znKiJHcd",
+                  "mediaUrl": "https://play.boomstream.com/znKiJHcd",
+                  "title": "Pythonga kirish",
+                  "ord": 1
+                },
+                {
+                  "id": "fb06961c-a981-460e-b3a7-93cd2003141d",
+                  "description": "Linuxda pycharm o'rnatish va to'g'rilash",
+                  "mediaCode": "C9QA7a3w",
+                  "mediaUrl": "https://play.boomstream.com/C9QA7a3w",
+                  "title": "Linuxda pycharm o'rnatish va to'g'rilash",
+                  "ord": 2
+                },
+                {
+                  "id": "92e0a055-374d-48e5-80ec-41af65e28cbe",
+                  "description": "Windows va Macda python, pycharm o'rnatish",
+                  "mediaCode": "rYHzgC6H",
+                  "mediaUrl": "https://play.boomstream.com/rYHzgC6H",
+                  "title": "Windows va Macda python, pycharm o'rnatish",
+                  "ord": 3
+                },
+                {
+                  "id": "f88aa0ad-a5ae-4296-b85e-b2039d89f042",
+                  "description": "Pythonda o'zgaruvchilar va o'zgarmaslar",
+                  "mediaCode": "alIkWELB",
+                  "mediaUrl": "https://play.boomstream.com/alIkWELB",
+                  "title": "Pythonda o'zgaruvchilar va o'zgarmaslar",
+                  "ord": 4
+                }
+              ],
+              "ord": 1
+            },
+            {
+              "id": "c0c37a43-ba4a-4299-ba2e-23189acfec21",
+              "title": "Data typelar va ularning turlari, methodlari",
+              "url": "data-typelar-va-ularning-turlari-methodlari",
+              "description": "Data typelar va ularning turlari, methodlari",
+              "parts": [
+                {
+                  "id": "269aecab-c865-46d9-b30a-1b3e57763574",
+                  "description": "Data typelar va ularning turlari, methodlari I",
+                  "mediaCode": "mW7HBiBg",
+                  "mediaUrl": "https://play.boomstream.com/mW7HBiBg",
+                  "title": "Data typelar va ularning turlari, methodlari I",
+                  "ord": 1
+                },
+                {
+                  "id": "4803022c-c390-4df1-a936-ce209213c994",
+                  "description": "Data typelar va ularning turlari, methodlari II",
+                  "mediaCode": "zhhWYd3H",
+                  "mediaUrl": "https://play.boomstream.com/zhhWYd3H",
+                  "title": "Data typelar va ularning turlari, methodlari II",
+                  "ord": 2
+                },
+                {
+                  "id": "a36fc9a4-0cb4-4141-b32e-7ea146e92e69",
+                  "description": "Data typelar va ularning turlari, methodlari bo'yicha mashqlar",
+                  "mediaCode": "RhrpGoJj",
+                  "mediaUrl": "https://play.boomstream.com/RhrpGoJj",
+                  "title": "Data typelar va ularning turlari, methodlari bo'yicha mashqlar",
+                  "ord": 3
+                }
+              ],
+              "ord": 2
+            },
+            {
+              "id": "d964143b-1d76-40df-98ed-f34fb4793e2f",
+              "title": "set va dict methodlari va ularni qo’llanilishi",
+              "url": "set-va-dict-methodlari-va-ularni-qollanilishi",
+              "description": "set va dict methodlari va ularni qo’llanilishi",
+              "parts": [
+                {
+                  "id": "389efe53-e780-4c0f-97a6-15d12a1f073e",
+                  "description": "Set va uning methodlari",
+                  "mediaCode": "f0DkmsFy",
+                  "mediaUrl": "https://play.boomstream.com/f0DkmsFy",
+                  "title": "Set va uning methodlari",
+                  "ord": 1
+                },
+                {
+                  "id": "f235e216-fbce-42bf-ab9b-ccb94f8c3648",
+                  "description": "Dict methods va builtin funksiyalari",
+                  "mediaCode": "wBWd70eE",
+                  "mediaUrl": "https://play.boomstream.com/wBWd70eE",
+                  "title": "Dict methods va builtin funksiyalari",
+                  "ord": 1
+                },
+                {
+                  "id": "69d8686b-07cb-4fee-a37e-c54a762bad8d",
+                  "description": "Set va uning methodlari II",
+                  "mediaCode": "BBAzM1i7",
+                  "mediaUrl": "https://play.boomstream.com/BBAzM1i7",
+                  "title": "Set va uning methodlari II",
+                  "ord": 2
+                }
+              ],
+              "ord": 3
+            },
+            {
+              "id": "3a7889d6-9bdf-4c2c-bf2a-f8867ef58222",
+              "title": "raw and f string, string methodlari",
+              "url": "raw-and-f-string-string-methodlari",
+              "description": "raw and f string, string methodlari",
+              "parts": [
+                {
+                  "id": "6b9531bf-42e1-4ef9-beba-5d80fab2c2b5",
+                  "description": "f, raw string va metodlari I",
+                  "mediaCode": "8BzwJ0PN",
+                  "mediaUrl": "https://play.boomstream.com/8BzwJ0PN",
+                  "title": "f, raw string va metodlari I",
+                  "ord": 1
+                },
+                {
+                  "id": "f47e2f37-8f08-46f3-b4b0-62a4ad5acb3d",
+                  "description": "String metodlari",
+                  "mediaCode": "xoZobqmH",
+                  "mediaUrl": "https://play.boomstream.com/xoZobqmH",
+                  "title": "String metodlari",
+                  "ord": 2
+                },
+                {
+                  "id": "b51f9b82-e0ca-4898-82ba-1dc0bbc719a2",
+                  "description": "String metodlari II",
+                  "mediaCode": "RdSJgO5h",
+                  "mediaUrl": "https://play.boomstream.com/RdSJgO5h",
+                  "title": "String metodlari II",
+                  "ord": 3
+                }
+              ],
+              "ord": 4
+            },
+            {
+              "id": "7dd0e540-2d4b-4e67-b4b9-b8bca48e423d",
+              "title": "Arifmetik va ikkilik operatorlari",
+              "url": "arifmetik-va-ikkilik-operatorlari",
+              "description": "Arifmetik va ikkilik operatorlari",
+              "parts": [
+                {
+                  "id": "9054dbf0-8a73-43ce-9528-31f809451533",
+                  "description": "Pythonda operator turlari va sanoq sistemalari",
+                  "mediaCode": "l0ZsZD4G",
+                  "mediaUrl": "https://play.boomstream.com/l0ZsZD4G",
+                  "title": "Pythonda operator turlari va sanoq sistemalari",
+                  "ord": 1
+                },
+                {
+                  "id": "4e824baf-9e6a-4229-a54f-bc513f2bb1a9",
+                  "description": "Sanoq sistemalari",
+                  "mediaCode": "TSgF62vH",
+                  "mediaUrl": "https://play.boomstream.com/TSgF62vH",
+                  "title": "Sanoq sistemalari",
+                  "ord": 2
+                },
+                {
+                  "id": "ef59a066-0371-4951-9679-3524d6fa0bc9",
+                  "description": "Matematik amallar ustida mashqlar",
+                  "mediaCode": "DXcypXgT",
+                  "mediaUrl": "https://play.boomstream.com/DXcypXgT",
+                  "title": "Matematik amallar ustida mashqlar",
+                  "ord": 3
+                }
+              ],
+              "ord": 5
+            },
+            {
+              "id": "46bf3b28-ebb3-4721-a82e-085c5de4300e",
+              "title": "loop & condition amallari",
+              "url": "loop--condition-amallari",
+              "description": "loop & condition amallari",
+              "parts": [
+                {
+                  "id": "7a1f31d8-1d34-4864-9c8d-f6720feb3d14",
+                  "description": "Loop for va while",
+                  "mediaCode": "9v9hx6Xf",
+                  "mediaUrl": "https://play.boomstream.com/9v9hx6Xf",
+                  "title": "Loop for va while",
+                  "ord": 1
+                },
+                {
+                  "id": "50d292c0-b28b-4ec5-aca6-ecd2bdd6fe41",
+                  "description": "Condition bilan ishlash (if, match case)",
+                  "mediaCode": "Emh5GbNH",
+                  "mediaUrl": "https://play.boomstream.com/Emh5GbNH",
+                  "title": "Condition bilan ishlash (if, match case)",
+                  "ord": 2
+                },
+                {
+                  "id": "2081f170-bac6-4613-b089-4c055e24e306",
+                  "description": "Matematik kutubxonaga doir misollar",
+                  "mediaCode": "4N2LJy0q",
+                  "mediaUrl": "https://play.boomstream.com/4N2LJy0q",
+                  "title": "Matematik kutubxonaga doir misollar",
+                  "ord": 3
+                }
+              ],
+              "ord": 6
+            },
+            {
+              "id": "36b9267f-e706-42f3-8718-8c1941e88359",
+              "title": "built-in funksiyalar (collections, itertools)",
+              "url": "built-in-funksiyalar-collections-itertools",
+              "description": "built-in funksiyalar (collections, itertools)",
+              "parts": [
+                {
+                  "id": "509b270a-2bb0-49e3-b926-cd41b579a000",
+                  "description": "Python itertools kutubxonasi 1",
+                  "mediaCode": "6HF7WLOb",
+                  "mediaUrl": "https://play.boomstream.com/6HF7WLOb",
+                  "title": "Python itertools kutubxonasi 1",
+                  "ord": 1
+                },
+                {
+                  "id": "35fbda04-6d98-4dad-b10e-8d4046bdbe51",
+                  "description": "Python itertools kutubxonasi 2",
+                  "mediaCode": "gkcFVFtN",
+                  "mediaUrl": "https://play.boomstream.com/gkcFVFtN",
+                  "title": "Python itertools kutubxonasi 2",
+                  "ord": 2
+                },
+                {
+                  "id": "ec734335-346e-4fbf-8d36-bd5a394976d5",
+                  "description": "Collection kutubxonasi",
+                  "mediaCode": "nJDQk8WH",
+                  "mediaUrl": "https://play.boomstream.com/nJDQk8WH",
+                  "title": "Collection kutubxonasi",
+                  "ord": 3
+                }
+              ],
+              "ord": 7
+            },
+            {
+              "id": "8e102d93-68e3-4932-9147-f45a863dfa33",
+              "title": "Funksiyalar va lambda I",
+              "url": "funksiyalar-va-lambda-i",
+              "description": "Funksiyalar va lambda I",
+              "parts": [
+                {
+                  "id": "f614c568-d14f-4f28-88ba-888f3408ea2b",
+                  "description": "Funksiya va anonim funksiya (lambda)",
+                  "mediaCode": "ykZIFMMG",
+                  "mediaUrl": "https://play.boomstream.com/ykZIFMMG",
+                  "title": "Funksiya va anonim funksiya (lambda)",
+                  "ord": 1
+                },
+                {
+                  "id": "a6a90f0f-50d5-4200-ba30-84c8140f034d",
+                  "description": "filter, map, zip, reduce funksiyalari",
+                  "mediaCode": "Plve6Kp7",
+                  "mediaUrl": "https://play.boomstream.com/Plve6Kp7",
+                  "title": "filter, map, zip, reduce funksiyalari",
+                  "ord": 2
+                }
+              ],
+              "ord": 8
+            },
+            {
+              "id": "51f23228-f097-48b2-a9f4-2c0dbe75d0c4",
+              "title": "Funksiyalar va lambda II",
+              "url": "funksiyalar-va-lambda-ii",
+              "description": "Funksiyalar va lambda II",
+              "parts": [
+                {
+                  "id": "78f88bc4-cb21-4221-8519-afe06ba9bd9d",
+                  "description": "Vaqtlar bilan ishlash - datetime",
+                  "mediaCode": "kYscgukc",
+                  "mediaUrl": "https://play.boomstream.com/kYscgukc",
+                  "title": "Vaqtlar bilan ishlash - datetime",
+                  "ord": 1
+                },
+                {
+                  "id": "f0f2672e-b4bd-447f-aeee-d8bc521f1511",
+                  "description": "timeit kutubxonasi bilan ishlash",
+                  "mediaCode": "9QyXNvae",
+                  "mediaUrl": "https://play.boomstream.com/9QyXNvae",
+                  "title": "timeit kutubxonasi bilan ishlash",
+                  "ord": 2
+                }
+              ],
+              "ord": 9
+            },
+            {
+              "id": "6527f4dd-d59b-4b84-aeb5-41040fc65867",
+              "title": "Type hinting, mypy",
+              "url": "type-hinting-mypy",
+              "description": "Type hinting, mypy",
+              "parts": [
+                {
+                  "id": "57fa4f91-a345-4fce-9fbb-1f682d2f9279",
+                  "description": "mypy va type hinting haqida",
+                  "mediaCode": "CUzNgL4e",
+                  "mediaUrl": "https://play.boomstream.com/CUzNgL4e",
+                  "title": "mypy va type hinting haqida",
+                  "ord": 1
+                },
+                {
+                  "id": "e01897c5-5d2e-4401-8bd1-8b1ee5f2656a",
+                  "description": "matrix va string bo'yicha misollar I",
+                  "mediaCode": "tbvdwPnL",
+                  "mediaUrl": "https://play.boomstream.com/tbvdwPnL",
+                  "title": "matrix va string bo'yicha misollar I",
+                  "ord": 2
+                },
+                {
+                  "id": "f3625215-8dd8-4f9c-96cc-8630846bbeb0",
+                  "description": "matrix va string bo'yicha misollar II",
+                  "mediaCode": "YzKuSZ5W",
+                  "mediaUrl": "https://play.boomstream.com/YzKuSZ5W",
+                  "title": "matrix va string bo'yicha misollar II",
+                  "ord": 3
+                }
+              ],
+              "ord": 10
+            },
+            {
+              "id": "392874ad-fa7d-46f8-8cf8-2dfce7378a24",
+              "title": "Cafe projecti (terminal orqali)",
+              "url": "cafe-projecti-terminal-orqali",
+              "description": "Cafe projecti (terminal orqali)",
+              "parts": [
+                {
+                  "id": "6b25666f-92dc-4dac-b98d-ebcfdfa0aae4",
+                  "description": "Cafe loyihasini ishlab chiqish",
+                  "mediaCode": "FzI4OMui",
+                  "mediaUrl": "https://play.boomstream.com/FzI4OMui",
+                  "title": "Cafe loyihasini ishlab chiqish I ",
+                  "ord": 1
+                },
+                {
+                  "id": "0ddbbf58-97cf-4318-baca-7164245a8937",
+                  "description": "Cafe loyihasini ishlab chiqish II",
+                  "mediaCode": "hyMT2G6I",
+                  "mediaUrl": "https://play.boomstream.com/hyMT2G6I",
+                  "title": "Cafe loyihasini ishlab chiqish II",
+                  "ord": 2
+                }
+              ],
+              "ord": 11
+            }
+          ],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": true
+        },
+        {
+          "id": "c9864158-0e19-49ca-b181-fadf9f567686",
+          "amount": 690000.0,
+          "title": "Python Advanced",
+          "description": "OOP kirish, Class & Object",
+          "lessons": [
+            {
+              "id": "e7b626e1-8aaa-4499-a649-42d8370b0c44",
+              "title": "OOP kirish, Class & Object",
+              "url": "oop-kirish-class--object",
+              "description": "OOP kirish, Class & Object",
+              "parts": [
+                {
+                  "id": "f76151ae-24ca-4fc5-b940-213f3115d7d5",
+                  "description": "OOP ga kirish",
+                  "mediaCode": "T7MsaUJL",
+                  "mediaUrl": "https://play.boomstream.com/T7MsaUJL",
+                  "title": "OOP ga kirish",
+                  "ord": 1
+                },
+                {
+                  "id": "1f583977-dbe7-478a-bda0-6bef6ddc3b3c",
+                  "description": "Class va Object 1-qism",
+                  "mediaCode": "QGRekf6w",
+                  "mediaUrl": "https://play.boomstream.com/QGRekf6w",
+                  "title": "Class va Object 1-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "c1211b34-9cdd-4e3c-b9f5-317248ccd850",
+                  "description": "Class va Object 2-qism",
+                  "mediaCode": "hm5S9Iok",
+                  "mediaUrl": "https://play.boomstream.com/hm5S9Iok",
+                  "title": "Class va Object 2-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 1
+            },
+            {
+              "id": "b943fe42-d8e5-43b6-bfa5-babc5bb324f1",
+              "title": "Inheritance, Encapsulation, Polymorphism",
+              "url": "inheritance-encapsulation-polymorphism",
+              "description": "Inheritance, Encapsulation, Polymorphism",
+              "parts": [
+                {
+                  "id": "3a9c81bd-d3f0-493d-b568-c5435347667d",
+                  "description": "Inheritance, Encapsulation",
+                  "mediaCode": "IFRIbA8P",
+                  "mediaUrl": "https://play.boomstream.com/IFRIbA8P",
+                  "title": "Inheritance, Encapsulation",
+                  "ord": 1
+                },
+                {
+                  "id": "58f60f41-7349-4500-b32b-effea9d699f0",
+                  "description": "Polymorphism",
+                  "mediaCode": "52cJ66pJ",
+                  "mediaUrl": "https://play.boomstream.com/52cJ66pJ",
+                  "title": "Polymorphism",
+                  "ord": 2
+                },
+                {
+                  "id": "9b457d9c-fe11-494a-baed-868f7049fa84",
+                  "description": "Amaliyot va metodlar",
+                  "mediaCode": "Q6Jr3ZvJ",
+                  "mediaUrl": "https://play.boomstream.com/Q6Jr3ZvJ",
+                  "title": "Amaliyot va metodlar",
+                  "ord": 3
+                }
+              ],
+              "ord": 2
+            },
+            {
+              "id": "c8285d4e-9bc9-4b2f-a6c4-725416a9323e",
+              "title": "Abstraction, Meta class",
+              "url": "abstraction-meta-class",
+              "description": "Abstraction, Meta class",
+              "parts": [
+                {
+                  "id": "805a41ff-e3e5-4402-a417-1241c2cd8844",
+                  "description": "Abstraction",
+                  "mediaCode": "J0p16AmI",
+                  "mediaUrl": "https://play.boomstream.com/J0p16AmI",
+                  "title": "Abstraction",
+                  "ord": 1
+                },
+                {
+                  "id": "91313269-751c-453f-9d9c-f165faf27824",
+                  "description": "Metaclass",
+                  "mediaCode": "BBRbbjBb",
+                  "mediaUrl": "https://play.boomstream.com/BBRbbjBb",
+                  "title": "Metaclass",
+                  "ord": 2
+                },
+                {
+                  "id": "b174b266-5515-4202-bb60-798a84229882",
+                  "description": "Praktika metaclass va abstraction",
+                  "mediaCode": "dP3QBE5N",
+                  "mediaUrl": "https://play.boomstream.com/dP3QBE5N",
+                  "title": "Praktika metaclass va abstraction",
+                  "ord": 3
+                }
+              ],
+              "ord": 3
+            },
+            {
+              "id": "80ae32ba-84a5-4f3f-acb3-8571e06ca9ed",
+              "title": "Sending email,  Fayllar bilan ishlash,  Binary file",
+              "url": "sending-email--fayllar-bilan-ishlash--binary-file",
+              "description": "Sending email, Fayllar bilan ishlash, Binary file",
+              "parts": [
+                {
+                  "id": "63b3ef5e-77a6-4f03-b370-e6ee42a0dd46",
+                  "description": "Smptlib bilan ishlash",
+                  "mediaCode": "3QAxFHv8",
+                  "mediaUrl": "https://play.boomstream.com/3QAxFHv8",
+                  "title": "Smptlib bilan ishlash",
+                  "ord": 1
+                },
+                {
+                  "id": "8c71e2dd-1e90-4cc8-bdd3-086e9a9d66fd",
+                  "description": "Smptlik bilan ishlash davomi, fayl bilan ishlash",
+                  "mediaCode": "U0ZpWvNm",
+                  "mediaUrl": "https://play.boomstream.com/U0ZpWvNm",
+                  "title": "Smptlik bilan ishlash davomi, fayl bilan ishlash",
+                  "ord": 2
+                },
+                {
+                  "id": "242c7ddd-cbd2-437f-8673-8c1aaebe07a7",
+                  "description": "binary fayl, base64 praktika",
+                  "mediaCode": "0MTnn1eI",
+                  "mediaUrl": "https://play.boomstream.com/0MTnn1eI",
+                  "title": "binary fayl, base64 praktika",
+                  "ord": 3
+                }
+              ],
+              "ord": 4
+            },
+            {
+              "id": "8f71c039-f64a-4a41-a9dc-2b32f8753293",
+              "title": "Iterator, Generator,  Context manager,  Decorator",
+              "url": "iterator-generator--context-manager--decorator",
+              "description": "Iterator, Generator, Context manager, Decorator",
+              "parts": [
+                {
+                  "id": "e6d44eaf-1d97-4793-9d31-788b8aafd9d9",
+                  "description": "Iterator va Generator",
+                  "mediaCode": "upaKyug6",
+                  "mediaUrl": "https://play.boomstream.com/upaKyug6",
+                  "title": "Iterator va Generator",
+                  "ord": 1
+                },
+                {
+                  "id": "15a7ca96-4e2b-48b7-87e1-bbca6e8a7d29",
+                  "description": "Custom context manager",
+                  "mediaCode": "WiJysJfJ",
+                  "mediaUrl": "https://play.boomstream.com/WiJysJfJ",
+                  "title": "Custom context manager",
+                  "ord": 2
+                },
+                {
+                  "id": "f8f8b49d-126a-427e-89fc-cc3c88974ed0",
+                  "description": "Decorator",
+                  "mediaCode": "bOZpKly9",
+                  "mediaUrl": "https://play.boomstream.com/bOZpKly9",
+                  "title": "Decorator",
+                  "ord": 3
+                },
+                {
+                  "id": "f0718a62-9a54-4d33-8795-a1014f99b7d3",
+                  "description": "Decorator praktika",
+                  "mediaCode": "Yb4faB3M",
+                  "mediaUrl": "https://play.boomstream.com/Yb4faB3M",
+                  "title": "Decorator praktika",
+                  "ord": 4
+                }
+              ],
+              "ord": 5
+            },
+            {
+              "id": "4d751161-831e-4fcd-8441-425c2af49808",
+              "title": "os, pathlib, sys, logging, argparse",
+              "url": "os-pathlib-sys-logging-argparse",
+              "description": "os, pathlib, sys, logging, argparse",
+              "parts": [
+                {
+                  "id": "45437651-c563-49e6-9c4f-2916ead2b183",
+                  "description": "Oldingi mavzu takrori - (decorator) davomi",
+                  "mediaCode": "ZNNL2LKh",
+                  "mediaUrl": "https://play.boomstream.com/ZNNL2LKh",
+                  "title": "Oldingi mavzu takrori - (decorator) davomi",
+                  "ord": 1
+                },
+                {
+                  "id": "50222025-3a90-47ec-b554-6780f59fe7e4",
+                  "description": "linux basic commands va os, path kutubxonasi",
+                  "mediaCode": "YJ0SeC9e",
+                  "mediaUrl": "https://play.boomstream.com/YJ0SeC9e",
+                  "title": "linux basic commands va os, path kutubxonasi",
+                  "ord": 2
+                },
+                {
+                  "id": "e5027cc9-ccf2-4d21-98bb-eabf46bf82be",
+                  "description": " sys va logger bilan ishlash",
+                  "mediaCode": "o3GGKKET",
+                  "mediaUrl": "https://play.boomstream.com/o3GGKKET",
+                  "title": " sys va logger bilan ishlash",
+                  "ord": 3
+                },
+                {
+                  "id": "e1d4d027-1dd7-435a-a2ff-d0f1f32d7f89",
+                  "description": "argparse kutubxonasi",
+                  "mediaCode": "9fdPfdC1",
+                  "mediaUrl": "https://play.boomstream.com/9fdPfdC1",
+                  "title": "argparse kutubxonasi",
+                  "ord": 4
+                }
+              ],
+              "ord": 6
+            },
+            {
+              "id": "cb5294b8-b38d-41d1-8c85-212d238c350a",
+              "title": "Python Virtual  Muhitlari: venv,  pipenv & poetry",
+              "url": "python-virtual--muhitlari-venv--pipenv--poetry",
+              "description": "Python Virtual Muhitlari: venv, pipenv & poetry",
+              "parts": [
+                {
+                  "id": "24a702ee-254b-4cd3-ad52-653b73d9e052",
+                  "description": "Virtual muhit bilan ishlash",
+                  "mediaCode": "eRUVYp3x",
+                  "mediaUrl": "https://play.boomstream.com/eRUVYp3x",
+                  "title": "Virtual muhit bilan ishlash",
+                  "ord": 1
+                },
+                {
+                  "id": "703902d5-582c-4101-8de0-30be071c46e5",
+                  "description": "poetry va pipenv",
+                  "mediaCode": "dyr4XMn3",
+                  "mediaUrl": "https://play.boomstream.com/dyr4XMn3",
+                  "title": "poetry va pipenv",
+                  "ord": 2
+                },
+                {
+                  "id": "75ca37b4-2356-4365-a25b-74042e03faa0",
+                  "description": "json kutubxonasi bilan ishlash I",
+                  "mediaCode": "GeXnSNv3",
+                  "mediaUrl": "https://play.boomstream.com/GeXnSNv3",
+                  "title": "json kutubxonasi bilan ishlash I",
+                  "ord": 3
+                }
+              ],
+              "ord": 7
+            },
+            {
+              "id": "6dce9596-42af-4e64-9eea-c5783571ba58",
+              "title": "Multithreading, Multiprocessing",
+              "url": "multithreading-multiprocessing",
+              "description": "Multithreading, Multiprocessing",
+              "parts": [
+                {
+                  "id": "b3998678-ada9-4885-b820-d03314a1b624",
+                  "description": "Multithreading va Multiprocessing",
+                  "mediaCode": "8WrovjHt",
+                  "mediaUrl": "https://play.boomstream.com/8WrovjHt",
+                  "title": "Multithreading va Multiprocessing",
+                  "ord": 1
+                },
+                {
+                  "id": "a3896fd2-e3e0-465b-b2a5-e682a122356b",
+                  "description": "threading kutubxonasi",
+                  "mediaCode": "42iuZReZ",
+                  "mediaUrl": "https://play.boomstream.com/42iuZReZ",
+                  "title": "threading kutubxonasi",
+                  "ord": 2
+                },
+                {
+                  "id": "54e1e5f6-5b64-4613-9383-6cc1fe494460",
+                  "description": "processing va debug bilan ishlash",
+                  "mediaCode": "L0k5tHKB",
+                  "mediaUrl": "https://play.boomstream.com/L0k5tHKB",
+                  "title": "processing va debug bilan ishlash",
+                  "ord": 3
+                }
+              ],
+              "ord": 8
+            },
+            {
+              "id": "55b6d0c0-6dba-4a83-a8a8-00bf54c8cd19",
+              "title": "Async, Corountines",
+              "url": "async-corountines",
+              "description": "Async, Corountines",
+              "parts": [
+                {
+                  "id": "8870d808-4d33-49de-96ca-af097d725fa8",
+                  "description": "Async va Event loop",
+                  "mediaCode": "NOxo4rW8",
+                  "mediaUrl": "https://play.boomstream.com/NOxo4rW8",
+                  "title": "Async va Event loop",
+                  "ord": 1
+                },
+                {
+                  "id": "02282fc0-7119-45c1-94c0-74ae506aabfd",
+                  "description": "Coroutines",
+                  "mediaCode": "sEtsaDOc",
+                  "mediaUrl": "https://play.boomstream.com/sEtsaDOc",
+                  "title": "Coroutines",
+                  "ord": 2
+                },
+                {
+                  "id": "a5cd7c28-62c5-4531-9278-6a1986d0a097",
+                  "description": "Async code bilan ishlash",
+                  "mediaCode": "GmKmDUnI",
+                  "mediaUrl": "https://play.boomstream.com/GmKmDUnI",
+                  "title": "Async code bilan ishlash",
+                  "ord": 3
+                }
+              ],
+              "ord": 9
+            },
+            {
+              "id": "6efd21d7-4572-4544-8640-d2bec51f741f",
+              "title": "Publish own package on PyPI",
+              "url": "publish-own-package-on-pypi",
+              "description": "Publish own package on PyPI",
+              "parts": [
+                {
+                  "id": "8496443a-c5b7-4a84-b6e9-34f2dbd81665",
+                  "description": "Pip bilan ishlash va kutubxona yaratish",
+                  "mediaCode": "OVydhs5B",
+                  "mediaUrl": "https://play.boomstream.com/OVydhs5B",
+                  "title": "Pip bilan ishlash va kutubxona yaratish",
+                  "ord": 1
+                },
+                {
+                  "id": "e69f7a19-831a-42d9-858c-348b058db755",
+                  "description": "Pip bilan ishlash va kutubxona yaratish 2-qism",
+                  "mediaCode": "Q9DjeAZF",
+                  "mediaUrl": "https://play.boomstream.com/Q9DjeAZF",
+                  "title": "Pip bilan ishlash va kutubxona yaratish 2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "123409c2-a651-444f-bcc9-780ccc51e027",
+                  "description": "Fayllar va json bilan ishlaydigan kutubxona yaratish",
+                  "mediaCode": "wOUbfB9v",
+                  "mediaUrl": "https://play.boomstream.com/wOUbfB9v",
+                  "title": "Fayllar va json bilan ishlaydigan kutubxona yaratish",
+                  "ord": 3
+                }
+              ],
+              "ord": 10
+            }
+          ],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": true
+        },
+        {
+          "id": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4",
+          "amount": 790000.0,
+          "title": "Telegram Bot (aiogram)",
+          "description": "Telegram Bot (aiogram)",
+          "lessons": [
+            {
+              "id": "2eb24994-2168-4a9a-af0f-38aa192db773",
+              "title": "Telegram bot ga kirish, basic methods",
+              "url": "telegram-bot-ga-kirish-basic-methods",
+              "description": "Telegram bot ga kirish, basic methods",
+              "parts": [
+                {
+                  "id": "51c13501-3fd6-44c7-9d0a-73830d7f1ea3",
+                  "description": "Telegram bot ga kirish",
+                  "mediaCode": "iI6QLOdt",
+                  "mediaUrl": "https://play.boomstream.com/iI6QLOdt",
+                  "title": "Telegram bot ga kirish",
+                  "ord": 1
+                },
+                {
+                  "id": "861b67d8-c1e9-442e-9381-f2b29ed09831",
+                  "description": "Telegram bot basic methods",
+                  "mediaCode": "4ooPjh8o",
+                  "mediaUrl": "https://play.boomstream.com/4ooPjh8o",
+                  "title": "Telegram bot basic methods",
+                  "ord": 2
+                },
+                {
+                  "id": "877c8d4e-8b47-430f-aad5-da5bf0c110e6",
+                  "description": "Telegram botda fayl yuborish va qabul qilish",
+                  "mediaCode": "lFFdIPao",
+                  "mediaUrl": "https://play.boomstream.com/lFFdIPao",
+                  "title": "Telegram botda fayl yuborish va qabul qilish",
+                  "ord": 3
+                }
+              ],
+              "ord": 1
+            },
+            {
+              "id": "28977de9-f0a9-42cf-9168-a98dcf2e30d5",
+              "title": "Chat action, Button & InlineButton",
+              "url": "chat-action-button--inlinebutton",
+              "description": "Chat action, Button & InlineButton",
+              "parts": [
+                {
+                  "id": "4a6f7484-3d9b-4ff5-8333-81bc2afe5336",
+                  "description": "Chat action va message bilan ishlash",
+                  "mediaCode": "AZhVu1B0",
+                  "mediaUrl": "https://play.boomstream.com/AZhVu1B0",
+                  "title": "Chat action va message bilan ishlash",
+                  "ord": 1
+                },
+                {
+                  "id": "424f7c77-ea09-42f7-a0bf-66e2d3d0d8b4",
+                  "description": "Button & InlineButton ishlash",
+                  "mediaCode": "F4kd0iJ9",
+                  "mediaUrl": "https://play.boomstream.com/F4kd0iJ9",
+                  "title": "Button & InlineButton ishlash",
+                  "ord": 2
+                },
+                {
+                  "id": "c923a289-b6de-43f4-8cbb-b7bb87c0c04a",
+                  "description": "Button & InlineButton ishlashga doir misol 1-qism",
+                  "mediaCode": "hIibawbQ",
+                  "mediaUrl": "https://play.boomstream.com/hIibawbQ",
+                  "title": "Button & InlineButton ishlashga doir misol 1-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 2
+            },
+            {
+              "id": "f0a3fea0-f7c4-4bfe-9010-899911af359b",
+              "title": "Routers, Structure, Telegram Commands",
+              "url": "routers-structure-telegram-commands",
+              "description": "Routers, Structure, Telegram Commands",
+              "parts": [
+                {
+                  "id": "23bdb902-0b36-4c14-bd66-21ce9a6ceda1",
+                  "description": "Komanda va filterlar bilan ishlash",
+                  "mediaCode": "pKnMfAVe",
+                  "mediaUrl": "https://play.boomstream.com/pKnMfAVe",
+                  "title": "Komanda va filterlar bilan ishlash",
+                  "ord": 1
+                },
+                {
+                  "id": "2e4100f2-64cb-432e-ae76-3bfc197c8e0f",
+                  "description": "Custom filter yaratish",
+                  "mediaCode": "3DJ3qKLt",
+                  "mediaUrl": "https://play.boomstream.com/3DJ3qKLt",
+                  "title": "Custom filter yaratish",
+                  "ord": 2
+                },
+                {
+                  "id": "e36632be-8767-4f92-82f3-a7259ffb8efe",
+                  "description": "Router lar bilan ishlash",
+                  "mediaCode": "pKnMfAVe",
+                  "mediaUrl": "https://play.boomstream.com/pKnMfAVe",
+                  "title": "Router lar bilan ishlash",
+                  "ord": 3
+                }
+              ],
+              "ord": 3
+            },
+            {
+              "id": "08eb348e-5255-4dde-a513-e2754549b5c0",
+              "title": "FSM Context",
+              "url": "fsm-context",
+              "description": "FSM Context",
+              "parts": [
+                {
+                  "id": "e001ff91-7bac-4fb3-ac21-488df17517bc",
+                  "description": "FSM Context bilan ishlash",
+                  "mediaCode": "IEc2iRFV",
+                  "mediaUrl": "https://play.boomstream.com/IEc2iRFV",
+                  "title": "FSM Context bilan ishlash",
+                  "ord": 1
+                },
+                {
+                  "id": "411bd615-6927-4221-9424-b3cfa782f4db",
+                  "description": "Komandalar bilan ishlash",
+                  "mediaCode": "OYjBR4r6",
+                  "mediaUrl": "https://play.boomstream.com/OYjBR4r6",
+                  "title": "Komandalar bilan ishlash",
+                  "ord": 2
+                },
+                {
+                  "id": "2783515c-8d4b-4707-b6aa-e1f725a9e60f",
+                  "description": "Forward Message bilan ishlash",
+                  "mediaCode": "FPiiZFSq",
+                  "mediaUrl": "https://play.boomstream.com/FPiiZFSq",
+                  "title": "Forward Message bilan ishlash",
+                  "ord": 3
+                }
+              ],
+              "ord": 4
+            },
+            {
+              "id": "cca2d633-7774-4bc2-8186-4582062aae82",
+              "title": "InlineMode",
+              "url": "inlinemode",
+              "description": "InlineMode",
+              "parts": [
+                {
+                  "id": "6ff3748f-2bb7-45f8-9f60-a8c6cc65fffa",
+                  "description": "InlineMode bilan ishlash",
+                  "mediaCode": "j9m439Ji",
+                  "mediaUrl": "https://play.boomstream.com/j9m439Ji",
+                  "title": "InlineMode bilan ishlash",
+                  "ord": 1
+                },
+                {
+                  "id": "2eb356b1-b55d-45b5-91e4-68083945a846",
+                  "description": "InlineMode da fayl bilan ishlash",
+                  "mediaCode": "RNtyu7Wa",
+                  "mediaUrl": "https://play.boomstream.com/RNtyu7Wa",
+                  "title": "InlineMode da fayl bilan ishlash",
+                  "ord": 2
+                },
+                {
+                  "id": "d3e66251-5eb1-457b-8920-4cb8634229b0",
+                  "description": "startlink yaratish (referral bilan ishlash)",
+                  "mediaCode": "QRh2UFHd",
+                  "mediaUrl": "https://play.boomstream.com/QRh2UFHd",
+                  "title": "startlink yaratish (referral bilan ishlash)",
+                  "ord": 3
+                }
+              ],
+              "ord": 5
+            },
+            {
+              "id": "d2f441d3-f8f4-4ee8-92f2-343eed35f3cf",
+              "title": "Middleware",
+              "url": "middleware",
+              "description": "Middleware",
+              "parts": [
+                {
+                  "id": "c4356acd-8e2c-43e5-b33b-32e778a00291",
+                  "description": "Middleware, kanalga majburiy azo bot",
+                  "mediaCode": "lOP6nL9b",
+                  "mediaUrl": "https://play.boomstream.com/lOP6nL9b",
+                  "title": "Middleware, kanalga majburiy azo bot",
+                  "ord": 1
+                },
+                {
+                  "id": "95819604-59fd-4e39-9061-9d73722236ad",
+                  "description": "Middleware bilan azolikni tekshirish",
+                  "mediaCode": "eOc2bTyO",
+                  "mediaUrl": "https://play.boomstream.com/eOc2bTyO",
+                  "title": "Middleware bilan azolikni tekshirish",
+                  "ord": 2
+                },
+                {
+                  "id": "902ff8d0-518f-4c95-9502-74c52c2afb80",
+                  "description": "RedisDict malumotlarni saqlash",
+                  "mediaCode": "hKEGWzNW",
+                  "mediaUrl": "https://play.boomstream.com/hKEGWzNW",
+                  "title": "RedisDict malumotlarni saqlash",
+                  "ord": 3
+                }
+              ],
+              "ord": 6
+            },
+            {
+              "id": "f6b7dfbd-bbff-42ba-ae0d-d5bd3f55b7ab",
+              "title": "i18n",
+              "url": "i18n",
+              "description": "i18n",
+              "parts": [
+                {
+                  "id": "fd8f0fbd-d232-4796-93c6-0b139ca8dcb9",
+                  "description": "i18n ga kirish va Makefile",
+                  "mediaCode": "UJvM6EMN",
+                  "mediaUrl": "https://play.boomstream.com/UJvM6EMN",
+                  "title": "i18n ga kirish va Makefile",
+                  "ord": 1
+                },
+                {
+                  "id": "6f737e92-7b19-476f-aaa6-8df02c50f45d",
+                  "description": "i18n tarjimalarni kiritish",
+                  "mediaCode": "W4sO489q",
+                  "mediaUrl": "https://play.boomstream.com/W4sO489q",
+                  "title": "i18n tarjimalarni kiritish",
+                  "ord": 2
+                },
+                {
+                  "id": "74e5dd9f-f44c-4a0a-afd8-6a9d67699a1e",
+                  "description": "i18n bilan ishlash",
+                  "mediaCode": "zam2cfUF",
+                  "mediaUrl": "https://play.boomstream.com/zam2cfUF",
+                  "title": "i18n bilan ishlash",
+                  "ord": 3
+                }
+              ],
+              "ord": 7
+            },
+            {
+              "id": "607b5224-04a2-42f0-99cf-3bf53c6c1425",
+              "title": "Redis, Apscheduler",
+              "url": "redis-apscheduler",
+              "description": "Redis, Apscheduler",
+              "parts": [
+                {
+                  "id": "b5f6a1be-7ea5-4faf-922d-51cba40d4811",
+                  "description": "Redis va redisdict state da ishlatish",
+                  "mediaCode": "nvDI3JIE",
+                  "mediaUrl": "https://play.boomstream.com/nvDI3JIE",
+                  "title": "Redis va redisdict state da ishlatish",
+                  "ord": 1
+                },
+                {
+                  "id": "5ff80228-efb0-4e17-97e6-03ab3ae8b0a0",
+                  "description": "redisstorage da saqlash",
+                  "mediaCode": "78CChSTC",
+                  "mediaUrl": "https://play.boomstream.com/78CChSTC",
+                  "title": "redisstorage da saqlash",
+                  "ord": 2
+                },
+                {
+                  "id": "01757310-34b8-4a3d-ab21-ee7f6864d9df",
+                  "description": "apscheduler va dispatchersiz bot",
+                  "mediaCode": "oRmDzPi1",
+                  "mediaUrl": "https://play.boomstream.com/oRmDzPi1",
+                  "title": "apscheduler va dispatchersiz bot",
+                  "ord": 3
+                }
+              ],
+              "ord": 8
+            },
+            {
+              "id": "90e4e6c7-de3f-4055-984a-366fdd346038",
+              "title": "Deploy AWS, DigitalOcean",
+              "url": "deploy-aws-digitalocean",
+              "description": "Deploy AWS, DigitalOcean",
+              "parts": [
+                {
+                  "id": "ee386971-9417-4c09-a2ac-57c847b1fd2b",
+                  "description": "Serverlar haqida",
+                  "mediaCode": "WiZq7GUb",
+                  "mediaUrl": "https://play.boomstream.com/WiZq7GUb",
+                  "title": "Serverlar haqida",
+                  "ord": 1
+                },
+                {
+                  "id": "ca62e833-14f8-4e7e-803d-184992ea8921",
+                  "description": " Serverni sozlash (nginx, service)",
+                  "mediaCode": "8Xn42MjN",
+                  "mediaUrl": "https://play.boomstream.com/8Xn42MjN",
+                  "title": " Serverni sozlash (nginx, service)",
+                  "ord": 2
+                },
+                {
+                  "id": "f444a911-1576-46d7-8659-fa88fc041bf4",
+                  "description": "Serverga ssl qo'yish va botni webhook qilish",
+                  "mediaCode": "ZdqP2RLq",
+                  "mediaUrl": "https://play.boomstream.com/ZdqP2RLq",
+                  "title": "Serverga ssl qo'yish va botni webhook qilish",
+                  "ord": 3
+                }
+              ],
+              "ord": 9
+            },
+            {
+              "id": "0f663a60-dd42-4375-a227-c48c28c8f481",
+              "title": "Reminder Telegram Bot (bajariladigan ishlarni eslatib turuvchi bot)",
+              "url": "reminder-telegram-bot-bajariladigan-ishlarni-eslatib-turuvchi-bot",
+              "description": "Reminder Telegram Bot (bajariladigan ishlarni eslatib turuvchi bot)",
+              "parts": [
+                {
+                  "id": "0d99b94b-4817-4519-b664-534ba954c348",
+                  "description": "Reminder bot, user va admin handler ga ajratish",
+                  "mediaCode": "HL2JRk8b",
+                  "mediaUrl": "https://play.boomstream.com/HL2JRk8b",
+                  "title": "Reminder bot, user va admin handler ga ajratish",
+                  "ord": 1
+                },
+                {
+                  "id": "42f6d013-c824-4153-ac97-2c492e1698c2",
+                  "description": "Reminder botga baza ulash va tasklarni qo'shish",
+                  "mediaCode": "wievG04H",
+                  "mediaUrl": "https://play.boomstream.com/wievG04H",
+                  "title": "Reminder botga baza ulash va tasklarni qo'shish",
+                  "ord": 2
+                },
+                {
+                  "id": "3cc76d59-ca40-4705-a7d0-d08f76648239",
+                  "description": "Reminder bot da tasklarni eslatib turish",
+                  "mediaCode": "x3OIe7zc",
+                  "mediaUrl": "https://play.boomstream.com/x3OIe7zc",
+                  "title": "Reminder bot da tasklarni eslatib turish",
+                  "ord": 3
+                }
+              ],
+              "ord": 10
+            }
+          ],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": true
+        },
+        {
+          "id": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc",
+          "amount": 790000.0,
+          "title": "Python Advanced Practice with async and aiogram",
+          "description": "Python Advanced Practice with async and aiogram",
+          "lessons": [
+            {
+              "id": "0024a5d4-c4fc-445b-b5e3-6bfe0951be9e",
+              "title": "SQLAlchemy ORM",
+              "url": "sqlalchemy-orm",
+              "description": "SQLAlchemy ORM",
+              "parts": [
+                {
+                  "id": "e3f9bf5f-8675-4da4-868e-2963f3503f99",
+                  "description": "SQLAlchemy ORM",
+                  "mediaCode": "tzuUQLvu",
+                  "mediaUrl": "https://play.boomstream.com/tzuUQLvu",
+                  "title": "SQLAlchemy ORM",
+                  "ord": 1
+                },
+                {
+                  "id": "8faa1ff7-6c57-45f2-a957-073fae6a121b",
+                  "description": "SQLAlchemy ORM",
+                  "mediaCode": "TpZIuafx",
+                  "mediaUrl": "https://play.boomstream.com/TpZIuafx",
+                  "title": "SQLAlchemy ORM",
+                  "ord": 2
+                },
+                {
+                  "id": "4a1b38f4-5bc7-4e7d-9150-a74bd47259d4",
+                  "description": "SQLAlchemy ORM",
+                  "mediaCode": "O0HzIeT9",
+                  "mediaUrl": "https://play.boomstream.com/O0HzIeT9",
+                  "title": "SQLAlchemy ORM",
+                  "ord": 3
+                },
+                {
+                  "id": "b4688f8a-317a-4655-b232-6e8625dd2c7b",
+                  "description": "SQLAlchemy ORM",
+                  "mediaCode": "Bcc0SJdB",
+                  "mediaUrl": "https://play.boomstream.com/Bcc0SJdB",
+                  "title": "SQLAlchemy ORM",
+                  "ord": 4
+                },
+                {
+                  "id": "5977bae1-7aee-4088-bc3b-720a943596ef",
+                  "description": "SQLAlchemy ORM",
+                  "mediaCode": "gBVfK59n",
+                  "mediaUrl": "https://play.boomstream.com/gBVfK59n",
+                  "title": "SQLAlchemy ORM",
+                  "ord": 5
+                }
+              ],
+              "ord": 0
+            },
+            {
+              "id": "88962858-23b2-4794-ade4-98ed57fed906",
+              "title": "Alembic with sqlalchemy",
+              "url": "alembic-with-sqlalchemy",
+              "description": "Alembic with sqlalchemy",
+              "parts": [
+                {
+                  "id": "aa630c52-9446-4bce-8fe0-c65ee8dae175",
+                  "description": "Alembic with sqlalchemy",
+                  "mediaCode": "wzGtWuHR",
+                  "mediaUrl": "https://play.boomstream.com/wzGtWuHR",
+                  "title": "Alembic with sqlalchemy",
+                  "ord": 1
+                },
+                {
+                  "id": "5738a5c0-6b8f-453e-a1c6-92ed1f7baf95",
+                  "description": "Alembic with sqlalchemy",
+                  "mediaCode": "Ds89UiWU",
+                  "mediaUrl": "https://play.boomstream.com/Ds89UiWU",
+                  "title": "Alembic with sqlalchemy",
+                  "ord": 2
+                },
+                {
+                  "id": "2fca2c8a-acc8-4a41-8b2f-194494574bf5",
+                  "description": "Alembic with sqlalchemy",
+                  "mediaCode": "gyGdZIwY",
+                  "mediaUrl": "https://play.boomstream.com/gyGdZIwY",
+                  "title": "Alembic with sqlalchemy",
+                  "ord": 3
+                }
+              ],
+              "ord": 1
+            },
+            {
+              "id": "ae1f3c50-7ae6-45d2-aca2-4581788909aa",
+              "title": "Httpx, yaml, csv",
+              "url": "httpx-yaml-csv",
+              "description": "httpx, yaml, csv",
+              "parts": [
+                {
+                  "id": "f172b919-f272-4ee0-89b3-3e7b30ffdf8f",
+                  "description": "httpx, yaml, csv",
+                  "mediaCode": "dWv1phZm",
+                  "mediaUrl": "https://play.boomstream.com/dWv1phZm",
+                  "title": "httpx, yaml, csv",
+                  "ord": 1
+                },
+                {
+                  "id": "3e337674-4db2-4cf2-9acc-042abcc5f195",
+                  "description": "httpx, yaml, csv",
+                  "mediaCode": "fElbsez9",
+                  "mediaUrl": "https://play.boomstream.com/fElbsez9",
+                  "title": "httpx, yaml, csv",
+                  "ord": 2
+                },
+                {
+                  "id": "90a6cca8-090d-4ea0-a00d-54f65e217f75",
+                  "description": "httpx, yaml, csv",
+                  "mediaCode": "qmPlCmBk",
+                  "mediaUrl": "https://play.boomstream.com/qmPlCmBk",
+                  "title": "httpx, yaml, csv",
+                  "ord": 3
+                }
+              ],
+              "ord": 2
+            },
+            {
+              "id": "88a4a102-db25-489f-ba16-b10817d7e4b3",
+              "title": "Dataclasses, pydantic",
+              "url": "dataclasses-pydantic",
+              "description": "Dataclasses, pydantic",
+              "parts": [
+                {
+                  "id": "cc2818d9-004f-4760-97ba-f837e0ea9cb5",
+                  "description": "Dataclasses, pydantic",
+                  "mediaCode": "sKsV2eO2",
+                  "mediaUrl": "https://play.boomstream.com/sKsV2eO2",
+                  "title": "Dataclasses, pydantic",
+                  "ord": 1
+                },
+                {
+                  "id": "e979aea1-f331-4648-9179-332a4e0fb1c8",
+                  "description": "Dataclasses, pydantic",
+                  "mediaCode": "TC0he1f1",
+                  "mediaUrl": "https://play.boomstream.com/TC0he1f1",
+                  "title": "Dataclasses, pydantic",
+                  "ord": 2
+                },
+                {
+                  "id": "e7b0f939-ffa0-4f76-ae18-7829b0c78673",
+                  "description": "Dataclasses, pydantic",
+                  "mediaCode": "d0ss7XZp",
+                  "mediaUrl": "https://play.boomstream.com/d0ss7XZp",
+                  "title": "Dataclasses, pydantic",
+                  "ord": 3
+                }
+              ],
+              "ord": 3
+            },
+            {
+              "id": "300205f6-d25d-4c25-b450-8c6a990e94ca",
+              "title": "AIO libs",
+              "url": "aio-libs",
+              "description": "AIO libs",
+              "parts": [
+                {
+                  "id": "9617d947-8bb5-4f20-b845-e1a0403df6b9",
+                  "description": "AIO libs",
+                  "mediaCode": "2MKUq4nu",
+                  "mediaUrl": "https://play.boomstream.com/2MKUq4nu",
+                  "title": "AIO libs",
+                  "ord": 1
+                },
+                {
+                  "id": "d2f04df7-7585-4910-bcb1-d78617237b33",
+                  "description": "AIO libs",
+                  "mediaCode": "VgETXUBT",
+                  "mediaUrl": "https://play.boomstream.com/VgETXUBT",
+                  "title": "AIO libs",
+                  "ord": 2
+                },
+                {
+                  "id": "f2ae7fcb-7166-43d6-a520-a38571dea049",
+                  "description": "AIO libs",
+                  "mediaCode": "XkHp3jB4",
+                  "mediaUrl": "https://play.boomstream.com/XkHp3jB4",
+                  "title": "AIO libs",
+                  "ord": 3
+                }
+              ],
+              "ord": 5
+            },
+            {
+              "id": "e552a132-571f-47cb-9e05-e28e769b1d18",
+              "title": "AsyncIO, Aiohttp",
+              "url": "asyncio-aiohttp",
+              "description": "AsyncIO, Aiohttp",
+              "parts": [
+                {
+                  "id": "51118045-72c5-45be-adac-b48f9987a90b",
+                  "description": "AsyncIO, Aiohttp",
+                  "mediaCode": "2uI3tzic",
+                  "mediaUrl": "https://play.boomstream.com/2uI3tzic",
+                  "title": "AsyncIO, Aiohttp",
+                  "ord": 1
+                },
+                {
+                  "id": "a10ecff9-ba36-4b71-8f33-358ab1df46a5",
+                  "description": "AsyncIO, Aiohttp",
+                  "mediaCode": "j5T3E8g9",
+                  "mediaUrl": "https://play.boomstream.com/j5T3E8g9",
+                  "title": "AsyncIO, Aiohttp",
+                  "ord": 1
+                },
+                {
+                  "id": "1be0a9b6-4eb1-41e2-874a-cf845e2c4b38",
+                  "description": "AsyncIO, Aiohttp",
+                  "mediaCode": "bYdZDT12",
+                  "mediaUrl": "https://play.boomstream.com/bYdZDT12",
+                  "title": "AsyncIO, Aiohttp",
+                  "ord": 3
+                },
+                {
+                  "id": "cc87d02b-d0d1-46bf-bace-d9951f9ed3c8",
+                  "description": "AsyncIO, Aiohttp",
+                  "mediaCode": "pi6lGYP4",
+                  "mediaUrl": "https://play.boomstream.com/pi6lGYP4",
+                  "title": "AsyncIO, Aiohttp",
+                  "ord": 4
+                }
+              ],
+              "ord": 6
+            },
+            {
+              "id": "b731adc9-1c7e-4a85-ab5c-5544a1e2bd65",
+              "title": "Docker & Docker compose",
+              "url": "docker-docker-compose",
+              "description": "Docker & Docker compose",
+              "parts": [
+                {
+                  "id": "55a31a77-102b-4d13-b8c5-8d18a99e9a29",
+                  "description": "Docker & Docker compose",
+                  "mediaCode": "VVpoXWew",
+                  "mediaUrl": "https://play.boomstream.com/VVpoXWew",
+                  "title": "Docker & Docker compose",
+                  "ord": 1
+                },
+                {
+                  "id": "8a426fac-d164-473a-885b-387f79fc3e71",
+                  "description": "Docker & Docker compose",
+                  "mediaCode": "xN8FS5G5",
+                  "mediaUrl": "https://play.boomstream.com/xN8FS5G5",
+                  "title": "Docker & Docker compose",
+                  "ord": 2
+                },
+                {
+                  "id": "20f9d785-bdb9-4069-9633-9e0e176211c8",
+                  "description": "Docker & Docker compose",
+                  "mediaCode": "y5YpSc0a",
+                  "mediaUrl": "https://play.boomstream.com/y5YpSc0a",
+                  "title": "Docker & Docker compose",
+                  "ord": 3
+                },
+                {
+                  "id": "db546e88-f5cf-4d0e-ab35-5d45c741bda8",
+                  "description": "Docker & Docker compose",
+                  "mediaCode": "2TpUWZiM",
+                  "mediaUrl": "https://play.boomstream.com/2TpUWZiM",
+                  "title": "Docker & Docker compose",
+                  "ord": 4
+                }
+              ],
+              "ord": 7
+            },
+            {
+              "id": "fe33823d-62a9-44e6-ace3-56f629b0a59d",
+              "title": "Online do’kon telegram boti 1-part (aiogram based)",
+              "url": "online-dokon-telegram-boti-1-part-aiogram-based",
+              "description": "Online do’kon telegram boti 1-part (aiogram based)",
+              "parts": [
+                {
+                  "id": "495d3362-38ad-4615-a23c-f74f5e69216e",
+                  "description": "Online do’kon telegram boti 1-part (aiogram based)",
+                  "mediaCode": "FjuZrPtG",
+                  "mediaUrl": "https://play.boomstream.com/FjuZrPtG",
+                  "title": "Online do’kon telegram boti 1-part (aiogram based)",
+                  "ord": 1
+                },
+                {
+                  "id": "ddbdcb13-1625-4577-a3a0-1a0485b9429a",
+                  "description": "Online do’kon telegram boti 1-part (aiogram based)",
+                  "mediaCode": "DmI8O89v",
+                  "mediaUrl": "https://play.boomstream.com/DmI8O89v",
+                  "title": "Online do’kon telegram boti 1-part (aiogram based)",
+                  "ord": 2
+                },
+                {
+                  "id": "0e614cff-f96a-4eb0-b2e2-88c1f2f97d9d",
+                  "description": "Online do’kon telegram boti 1-part (aiogram based)",
+                  "mediaCode": "GKyhLZOY",
+                  "mediaUrl": "https://play.boomstream.com/GKyhLZOY",
+                  "title": "Online do’kon telegram boti 1-part (aiogram based)",
+                  "ord": 3
+                }
+              ],
+              "ord": 8
+            },
+            {
+              "id": "56dade18-ec62-4035-be20-b8a94ead2c62",
+              "title": "Online do’kon telegram boti 2-part (aiogram based)",
+              "url": "online-dokon-telegram-boti-2-part-aiogram-based",
+              "description": "Online do’kon telegram boti 2-part (aiogram based)",
+              "parts": [
+                {
+                  "id": "b79a78d8-32e0-4ac3-aa29-5aa9ef9e980c",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "sGuy5q2v",
+                  "mediaUrl": "https://play.boomstream.com/sGuy5q2v",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 1
+                },
+                {
+                  "id": "f187000b-6029-47f0-b2ae-8c7e11d8cce4",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "QF6uzXs2",
+                  "mediaUrl": "https://play.boomstream.com/QF6uzXs2",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 2
+                },
+                {
+                  "id": "45c16a2a-9222-494e-b0de-172ed5f43435",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "wNBzQilf",
+                  "mediaUrl": "https://play.boomstream.com/wNBzQilf",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 3
+                },
+                {
+                  "id": "1ce96875-169c-4e0e-9878-b9240f0fc0e1",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "MvAAVilD",
+                  "mediaUrl": "https://play.boomstream.com/MvAAVilD",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 4
+                },
+                {
+                  "id": "aae5f606-a7fa-49c9-afc3-1988d9a6c7de",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "KL18RhAN",
+                  "mediaUrl": "https://play.boomstream.com/KL18RhAN",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 5
+                },
+                {
+                  "id": "988711bd-63df-49a6-b352-1830eeba3a0b",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "P1QO9jB0",
+                  "mediaUrl": "https://play.boomstream.com/P1QO9jB0",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 6
+                },
+                {
+                  "id": "bdc35d82-ba54-4a90-83ff-d281f0043efb",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "IRRngaI4",
+                  "mediaUrl": "https://play.boomstream.com/IRRngaI4",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 7
+                },
+                {
+                  "id": "56da492c-0e85-49de-8d04-5c6ad1c2c661",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "AvKNGQ2u",
+                  "mediaUrl": "https://play.boomstream.com/AvKNGQ2u",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 8
+                },
+                {
+                  "id": "7d1b7fb6-82a7-42fe-8143-af9b86b81204",
+                  "description": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "mediaCode": "aiYX4PhK",
+                  "mediaUrl": "https://play.boomstream.com/aiYX4PhK",
+                  "title": "Online do’kon telegram boti 2-part (aiogram based)",
+                  "ord": 9
+                }
+              ],
+              "ord": 9
+            },
+            {
+              "id": "727ff51c-91d3-4be8-98c2-f2e657ba6a3f",
+              "title": "Online do’kon telegram boti 3-part (aiogram based)",
+              "url": "online-dokon-telegram-boti-3-part-aiogram-based",
+              "description": "Online do’kon telegram boti 3-part (aiogram based)",
+              "parts": [
+                {
+                  "id": "2ddb133f-79fb-4884-bd9c-4dd2709aa1df",
+                  "description": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "mediaCode": "zjozpbfH",
+                  "mediaUrl": "https://play.boomstream.com/zjozpbfH",
+                  "title": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "ord": 1
+                },
+                {
+                  "id": "47897f46-2309-42d5-9d4d-ce8e5a7f9a4e",
+                  "description": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "mediaCode": "T33t54UN",
+                  "mediaUrl": "https://play.boomstream.com/T33t54UN",
+                  "title": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "ord": 2
+                },
+                {
+                  "id": "90fc77ae-2f14-45ed-a6db-da4b4911a360",
+                  "description": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "mediaCode": "oTVUPmkC",
+                  "mediaUrl": "https://play.boomstream.com/oTVUPmkC",
+                  "title": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "ord": 3
+                },
+                {
+                  "id": "08d26070-1fbb-49e0-83c2-47164356aa29",
+                  "description": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "mediaCode": "f7vh8zvL",
+                  "mediaUrl": "https://play.boomstream.com/f7vh8zvL",
+                  "title": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "ord": 4
+                },
+                {
+                  "id": "43187b7b-8261-4a7a-80bc-26c53c374d81",
+                  "description": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "mediaCode": "5iA3onis",
+                  "mediaUrl": "https://play.boomstream.com/5iA3onis",
+                  "title": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "ord": 5
+                },
+                {
+                  "id": "f86d5138-6982-4e22-9104-87fba8e5742d",
+                  "description": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "mediaCode": "8AOcht6d",
+                  "mediaUrl": "https://play.boomstream.com/8AOcht6d",
+                  "title": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "ord": 6
+                },
+                {
+                  "id": "c3eb1151-bec4-4696-8720-f8b65b4c0efd",
+                  "description": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "mediaCode": "YS4tuHDS",
+                  "mediaUrl": "https://play.boomstream.com/YS4tuHDS",
+                  "title": "Online do’kon telegram boti 3-part (aiogram based)",
+                  "ord": 7
+                }
+              ],
+              "ord": 10
+            },
+            {
+              "id": "333d509c-e0c5-412c-838b-c7800db050d2",
+              "title": "Telegram botni deploy qilish webhook + ssl + nginx",
+              "url": "telegram-botni-deploy-qilish-webhook-ssl-nginx",
+              "description": "Telegram botni deploy qilish webhook + ssl + nginx",
+              "parts": [
+                {
+                  "id": "428ea5c9-2b29-444a-80ce-593fa5276c7e",
+                  "description": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "mediaCode": "IMOKEeoL",
+                  "mediaUrl": "https://play.boomstream.com/IMOKEeoL",
+                  "title": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "ord": 1
+                },
+                {
+                  "id": "0a8dc8ca-6d2c-4a7d-a2b8-af2b1cb2ae62",
+                  "description": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "mediaCode": "cRF2uvxW",
+                  "mediaUrl": "https://play.boomstream.com/cRF2uvxW",
+                  "title": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "ord": 2
+                },
+                {
+                  "id": "f304b4b2-e61c-4d08-b006-4e6602f9257e",
+                  "description": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "mediaCode": "extHKaj2",
+                  "mediaUrl": "https://play.boomstream.com/extHKaj2",
+                  "title": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "ord": 3
+                },
+                {
+                  "id": "3f16d25d-9b26-489c-a90c-dba5293078ed",
+                  "description": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "mediaCode": "yoGvOSXt",
+                  "mediaUrl": "https://play.boomstream.com/yoGvOSXt",
+                  "title": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "ord": 4
+                },
+                {
+                  "id": "22b8ac4c-b757-4109-b4fa-d91f8d2c0526",
+                  "description": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "mediaCode": "KAD2UOkU",
+                  "mediaUrl": "https://play.boomstream.com/KAD2UOkU",
+                  "title": "Telegram botni deploy qilish webhook + ssl + nginx",
+                  "ord": 5
+                }
+              ],
+              "ord": 11
+            }
+          ],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": true
+        },
+        {
+          "id": "64e713dd-a73d-419f-9653-1ecc4855f99c",
+          "amount": 790000.0,
+          "title": "Django Template based",
+          "description": "Django Template based",
+          "lessons": [
+            {
+              "id": "52644e44-2b85-4524-a00a-19e9fc9950ec",
+              "title": "Backendga kirish",
+              "url": "backendga-kirish",
+              "description": "Backendga kirish",
+              "parts": [
+                {
+                  "id": "90c38fcf-98c6-480a-af1e-d3180cdf3d51",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "ENKy0xVK",
+                  "mediaUrl": "https://play.boomstream.com/ENKy0xVK",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "6cb26cf3-12ab-44b1-a41b-50d5837025e6",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "kbB30Msk",
+                  "mediaUrl": "https://play.boomstream.com/kbB30Msk",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "6e1dff6d-8d85-4ef0-893d-7aaff60fd127",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "ItDDVnPX",
+                  "mediaUrl": "https://play.boomstream.com/ItDDVnPX",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 1
+            },
+            {
+              "id": "048e9418-53f3-4716-a941-045a5e0847da",
+              "title": "Template bilan ishlash, static fayllar, base.htmlga ajratish",
+              "url": "template-bilan-ishlash-static-fayllar-basehtmlga-ajratish",
+              "description": "Template bilan ishlash, static fayllar, base.htmlga ajratish",
+              "parts": [
+                {
+                  "id": "e668acc2-2bef-4f10-a2ce-c2ae6cfaa957",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "rdUJPoVI",
+                  "mediaUrl": "https://play.boomstream.com/rdUJPoVI",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "0fb3f5e9-3b33-422e-bf44-8716b4793433",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "j3REERPD",
+                  "mediaUrl": "https://play.boomstream.com/j3REERPD",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "2bdc2f72-6030-41c1-8d45-9edab0ab1cc3",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "eXPxewCR",
+                  "mediaUrl": "https://play.boomstream.com/eXPxewCR",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 2
+            },
+            {
+              "id": "8a060d71-dae8-4866-a09f-fed5614e4d20",
+              "title": "Django admin page",
+              "url": "django-admin-page",
+              "description": "Django admin",
+              "parts": [
+                {
+                  "id": "eae2a2b3-6df0-4c32-aafb-4cf3763daefd",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "7SIeuceV",
+                  "mediaUrl": "https://play.boomstream.com/7SIeuceV",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "e0f6790e-d42f-4e00-8d45-38c6762927af",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "99Mrrk6I",
+                  "mediaUrl": "https://play.boomstream.com/99Mrrk6I",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "ba21193f-e9f7-4f03-b930-87aa65b8e9dd",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "tv5DQDe0",
+                  "mediaUrl": "https://play.boomstream.com/tv5DQDe0",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 3
+            },
+            {
+              "id": "b16352bb-0b02-4b4f-a7c9-4365d9d6a37f",
+              "title": "Django ORM",
+              "url": "django-orm",
+              "description": "Django ORM",
+              "parts": [
+                {
+                  "id": "6d9da0e2-6b95-4961-ba9e-6cc5f03a0b87",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "EEUb7xFI",
+                  "mediaUrl": "https://play.boomstream.com/EEUb7xFI",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "3327b785-5318-420e-b805-0760cf25f94e",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "L5qXzezS",
+                  "mediaUrl": "https://play.boomstream.com/L5qXzezS",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "16d5760a-5993-4b5d-a429-182b54d44700",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "A53N2eIW",
+                  "mediaUrl": "https://play.boomstream.com/A53N2eIW",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 4
+            },
+            {
+              "id": "85b3e9a4-3c1d-45c2-b0bf-896027e77728",
+              "title": "Django custom commands",
+              "url": "django-custom-commands",
+              "description": "Django custom commands",
+              "parts": [
+                {
+                  "id": "a87cc669-a363-4afd-b59a-33ec92b5604d",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "MIUKPFfF",
+                  "mediaUrl": "https://play.boomstream.com/MIUKPFfF",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "c5f0b0dd-402b-49a5-bb9c-6f502e44602a",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "ZJyOIf6W",
+                  "mediaUrl": "https://play.boomstream.com/ZJyOIf6W",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "0838b118-e40f-4b05-9b68-dda47b928544",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "MbyxtLp7",
+                  "mediaUrl": "https://play.boomstream.com/MbyxtLp7",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 5
+            },
+            {
+              "id": "826b1137-c8b0-4f47-aad3-237e0c7c59a3",
+              "title": "Django 3rd party packages - import-export, django filters, mptt, django-baton, django-crispy-form",
+              "url": "django-3rd-party-packages---import-export-django-filters-mptt-django-baton-django-crispy-form",
+              "description": "Django 3rd party packages - import-export, django filters, mptt, django-baton, django-crispy-form",
+              "parts": [
+                {
+                  "id": "d1b1532d-42f7-46f4-a7d1-7b2411ceb96c",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "QH4DYJtr",
+                  "mediaUrl": "https://play.boomstream.com/QH4DYJtr",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "f7a24518-1967-4098-a23e-606fbf3286c7",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "Hwr6vq8V",
+                  "mediaUrl": "https://play.boomstream.com/Hwr6vq8V",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "2231e6ae-3c5a-432f-8314-32606cd971c3",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "04griRLM",
+                  "mediaUrl": "https://play.boomstream.com/04griRLM",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 6
+            },
+            {
+              "id": "140f7668-ed1f-4372-b00d-d8fb4dc6064e",
+              "title": "Minio, ckeditor5",
+              "url": "minio-ckeditor5",
+              "description": "minio, ckeditor5",
+              "parts": [
+                {
+                  "id": "6344ecc5-68a9-4aa7-b1d0-7e90170a1202",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "VBTFztP0",
+                  "mediaUrl": "https://play.boomstream.com/VBTFztP0",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "0d49d0cb-c409-4c47-a71b-24a3c7088a97",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "WgFkW2W4",
+                  "mediaUrl": "https://play.boomstream.com/WgFkW2W4",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "34b2606a-57ac-4e87-9a3e-9bf2a81ed7ff",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "EBvwAl4z",
+                  "mediaUrl": "https://play.boomstream.com/EBvwAl4z",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 7
+            },
+            {
+              "id": "d6a9e0d8-4899-4721-93d2-eec582442ec3",
+              "title": "Testing templated based",
+              "url": "testing-templated-based",
+              "description": "testing templated based",
+              "parts": [
+                {
+                  "id": "6e19704c-df72-4e11-90c9-83698703f33e",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "fHXC2fqX",
+                  "mediaUrl": "https://play.boomstream.com/fHXC2fqX",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "534f9570-40a6-4ef0-8d93-7ff54a74ade2",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "HIwA30Qn",
+                  "mediaUrl": "https://play.boomstream.com/HIwA30Qn",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "2b54e37d-3ed2-4ff3-9ac3-1c94748e2567",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "AIKtjGcL",
+                  "mediaUrl": "https://play.boomstream.com/AIKtjGcL",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 8
+            },
+            {
+              "id": "97a01c18-63dc-4dfc-9510-281d1f361a38",
+              "title": "Celery tasklar bilan ishlash",
+              "url": "celery-tasklar-bilan-ishlash",
+              "description": "celery tasklar bilan ishlash",
+              "parts": [
+                {
+                  "id": "d4079a16-8758-4878-bfeb-90725629aa67",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "dsTtWpT5",
+                  "mediaUrl": "https://play.boomstream.com/dsTtWpT5",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "56af73e8-61b3-44fc-858c-494698ae5a52",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "ojjroV16",
+                  "mediaUrl": "https://play.boomstream.com/ojjroV16",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "7ebf5aef-0102-4d4e-90a8-497a99052e4b",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "BdA5s3K6",
+                  "mediaUrl": "https://play.boomstream.com/BdA5s3K6",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 9
+            },
+            {
+              "id": "15ac47ee-e300-439e-93b9-836582d53bdc",
+              "title": "Celery-beat, celery-results",
+              "url": "celery-beat-celery-results",
+              "description": "celery-beat, celery-results",
+              "parts": [
+                {
+                  "id": "02980418-6101-41a1-bf89-b05db2ba7bd3",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "HeOWkmPd",
+                  "mediaUrl": "https://play.boomstream.com/HeOWkmPd",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "5b98fd8d-bff6-4ac9-a470-85112aede4a2",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "XuZGN3ek",
+                  "mediaUrl": "https://play.boomstream.com/XuZGN3ek",
+                  "title": "2-qism",
+                  "ord": 2
+                }
+              ],
+              "ord": 10
+            },
+            {
+              "id": "91dc5f43-ba90-45bf-b6ad-5f72bdcf1a3b",
+              "title": "Django publish own package",
+              "url": "django-publish-own-package",
+              "description": "django publish own package",
+              "parts": [
+                {
+                  "id": "92d84b5c-d0c6-4644-b719-6a79dd292ab4",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "FXa3Sgfd",
+                  "mediaUrl": "https://play.boomstream.com/FXa3Sgfd",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "c4ed0965-c102-49d3-afda-77a44180c058",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "vy9xz4OT",
+                  "mediaUrl": "https://play.boomstream.com/vy9xz4OT",
+                  "title": "2-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "6140babb-8b89-4091-b4a1-d94c6b19c50f",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "wss2osxu",
+                  "mediaUrl": "https://play.boomstream.com/wss2osxu",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 11
+            },
+            {
+              "id": "b46f57d3-49fc-4d3d-b5bf-e912b676af80",
+              "title": "Optimization with django-debug-toolbar",
+              "url": "optimization-with-django-debug-toolbar",
+              "description": "optimization with django-debug-toolbar",
+              "parts": [
+                {
+                  "id": "d9612b23-57a1-4118-8d21-e13309dbf2d5",
+                  "description": "1-qism",
+                  "isYoutube": false,
+                  "mediaCode": "8kGPA00E",
+                  "mediaUrl": "https://play.boomstream.com/8kGPA00E",
+                  "title": "1-qism",
+                  "ord": 1
+                },
+                {
+                  "id": "b5d608f8-9e7e-4850-b85b-e2cdb006bd6b",
+                  "description": "2-qism",
+                  "isYoutube": false,
+                  "mediaCode": "Dm88FX9i",
+                  "mediaUrl": "https://play.boomstream.com/Dm88FX9i",
+                  "title": "2-qism",
+                  "ord": 2
+                },
+                {
+                  "id": "19c89571-16b3-4fc7-9526-9063de1efa17",
+                  "description": "3-qism",
+                  "isYoutube": false,
+                  "mediaCode": "QaYJTR5v",
+                  "mediaUrl": "https://play.boomstream.com/QaYJTR5v",
+                  "title": "3-qism",
+                  "ord": 3
+                }
+              ],
+              "ord": 12
+            }
+          ],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": true
+        },
+        {
+          "id": "8f498748-ee38-48a1-95b1-cb2a4c38591f",
+          "amount": 990000.0,
+          "title": "Django Rest Framework",
+          "description": "Django Rest Framework",
+          "lessons": [],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": false
+        },
+        {
+          "id": "7bbed029-3154-418a-b054-bdc5a2a40cc8",
+          "amount": 990000.0,
+          "title": "FastAPI ",
+          "description": "FastAPI ",
+          "lessons": [],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": false
+        },
+        {
+          "id": "4b9aea7b-0c53-4799-afa7-0143fe7451b2",
+          "amount": 990000.0,
+          "title": "DevOps",
+          "description": "DevOps",
+          "lessons": [],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": false
+        },
+        {
+          "id": "7395593f-cc13-4a56-901e-12bc5bdd9069",
+          "amount": 990000.0,
+          "title": "Data Structure and Algorithm",
+          "description": "Data Structure and Algorithm",
+          "lessons": [],
+          "supportDays": 45,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": false
+        }
+      ],
+      "requirements": [],
+      "online": true,
+      "onsite": false,
+      "offline": false,
+      "discountAmountOnline": 0,
+      "discountAmountOnsite": 0,
+      "metaTitle": "Python Development 2025",
+      "metaDescription": "Python Development 2025",
+      "canonicalUrl": "https://pdp.uz/course/python-development-2025-new",
+      "metaImg": null,
+      "mentors": [
+        {
+          "companyAttachmentId": "576dca90-1370-48fc-a06e-aa08f0913217",
+          "position": "Python Backend Developer",
+          "firstName": "Xolmo'min",
+          "lastName": "Abdumo'minov",
+          "photoId": "344e1c90-e417-41b1-ae6a-50e8f56a8dc1"
+        }
+      ]
+    }
+  },
+  {
+    "type": "MAIN",
+    "url": "telegram-bot-yaratish",
+    "title": "Telegram Bot yaratish",
+    "data": {
+      "id": "61a24436-41f5-498a-90b3-bc1ad4f27ee4",
+      "title": "Telegram Bot yaratish",
+      "introVideoUrl": "Telegram Bot yaratish",
+      "description": "Telegram Bot yaratish",
+      "lessonCount": 7,
+      "customCourseParts": [
+        {
+          "id": "6b4eea4a-e7af-4b8f-87d5-443146ef6309",
+          "amount": 500000.0,
+          "amountOnsite": 0.0,
+          "oldAmount": 0.0,
+          "oldAmountOnsite": 0.0,
+          "title": "Create Telegram Bot",
+          "description": "Telegram Bot yaratish",
+          "lessons": [
+            {
+              "id": "7b67d24e-6551-4a12-8f9b-637531ee0997",
+              "title": "Introduction ",
+              "url": "introduction-",
+              "description": "Introduction ",
+              "parts": [
+                {
+                  "id": "418bd74a-9f8b-4e5d-9a1f-7bcc01ff2658",
+                  "description": "Kirish - kurs nima haqida, mentor haqida umumiy ma'lumot\nUmumiy kurs haqida, kursdan nimalar oladi. ",
+                  "mediaCode": "hnEayKCz",
+                  "mediaUrl": "https://play.boomstream.com/hnEayKCz",
+                  "title": "Introduction",
+                  "ord": 1
+                }
+              ],
+              "ord": 1
+            },
+            {
+              "id": "22c4827e-dcd9-4373-b29b-5a9da2986031",
+              "title": "Setup",
+              "url": "setup",
+              "description": "Setup",
+              "parts": [
+                {
+                  "id": "168d8fbe-665e-483b-8b9a-284d339d57e9",
+                  "description": "IntelliJ IDEA - download, setup, run\nCreate a new Java project in IntelliJ IDEA\nTelegramBot kutubxonalarini import qilish\nBot qanday yaratiladi",
+                  "mediaCode": "HT7kDnYi",
+                  "mediaUrl": "https://play.boomstream.com/HT7kDnYi",
+                  "title": "Setup",
+                  "ord": 1
+                }
+              ],
+              "ord": 2
+            },
+            {
+              "id": "d9a78259-563b-445f-ac6d-77dad2b767ba",
+              "title": "Bot Programming",
+              "url": "bot-programming",
+              "description": "Bot Programming",
+              "parts": [
+                {
+                  "id": "bd10fdab-b2b1-48ac-aac0-79033fc8faf9",
+                  "description": "Bot Tokenlarini o'rnatish\nUpdate Object\nReply to Messages\nShartli javoblar berish\nButtonlar yaratish\nButtonlar bilan ishlash\nChat commandlarini yaratish\nTg telefon nomerini olish\nEmojilar jo'natish\nYuzaga kelishi mumkin bo'lgan muammolarni sanab o'tish va ularga yechimlar berish",
+                  "mediaCode": "IKptCaMZ",
+                  "mediaUrl": "https://play.boomstream.com/IKptCaMZ",
+                  "title": "Bot Programming",
+                  "ord": 1
+                }
+              ],
+              "ord": 3
+            },
+            {
+              "id": "306d2c4e-3588-4a93-be23-b1cbf1e8bdef",
+              "title": "Ma'lumotni JSON filega yozish va o'qish ",
+              "url": "malumotni-json-filega-yozish-va-oqish-",
+              "description": "Ma'lumotni JSON filega yozish va o'qish ",
+              "parts": [
+                {
+                  "id": "65e50ef9-3ce2-46a1-bbe0-51f94bb21dcc",
+                  "description": "Data Persistence'ga kirish\nSetup MongoDB\nMongoDB collection yaratish va user malumotlarini document ko'rinishida saqlash\nSaqlangan userlarni topish va yangi user kiritish\nSaqlangan user malumotlaridan foydalanish",
+                  "mediaCode": "VDBgJTkY",
+                  "mediaUrl": "https://play.boomstream.com/VDBgJTkY",
+                  "title": "Ma'lumotni JSON filega yozish va o'qish ",
+                  "ord": 1
+                }
+              ],
+              "ord": 4
+            },
+            {
+              "id": "9aac35c7-7ebb-4fb6-b0ab-eb4352819723",
+              "title": "Pizza Bot (I Project)",
+              "url": "pizza-bot-i-project",
+              "description": "Pizza Bot (I Project)",
+              "parts": [
+                {
+                  "id": "9c3114c0-f411-40fb-b367-f271aba6a7b8",
+                  "description": "Intro - proekt haqida umumiy malumot berish\nPlanning and Design (UML)\nIntro to Maven\nCreating Pizza Bot Maven Project\nPizza Bot Maven Project Setup and Adding Dependencies\nCoding Pizza Bot",
+                  "mediaCode": "HVhAMp4U",
+                  "mediaUrl": "https://play.boomstream.com/HVhAMp4U",
+                  "title": "Pizza Bot (I Project)",
+                  "ord": 1
+                }
+              ],
+              "ord": 5
+            },
+            {
+              "id": "4d9f06a5-0088-4614-b212-cf2eafc2e5a9",
+              "title": "Customer Support Bot (II Project)",
+              "url": "customer-support-bot-ii-project",
+              "description": "Customer Support Bot (II Project)",
+              "parts": [
+                {
+                  "id": "72bd44d1-945b-4993-9081-24e5062fd8fb",
+                  "description": "Intro \nHow to Navigate Code Project Using Git\nSetting up Customer Support Chat Bot\nReading Bot Username and Token From External File\nSetting Up Responder Class\nBot Main Menu for Customer Support\nChecking Order Status\nGetting Information About Product\nRedirecting Customer to Human Support",
+                  "mediaCode": "Nr5whdvw",
+                  "mediaUrl": "https://play.boomstream.com/Nr5whdvw",
+                  "title": "Customer Support Bot (II Project)",
+                  "ord": 1
+                }
+              ],
+              "ord": 6
+            },
+            {
+              "id": "7f3f0f9a-af5c-4b96-9024-2becb9ce048a",
+              "title": "Bot Deployment to a Server",
+              "url": "bot-deployment-to-a-server",
+              "description": "Bot Deployment to a Server",
+              "parts": [
+                {
+                  "id": "1ed5dc17-7488-48cf-a1cb-897dd7a5e55b",
+                  "description": "Deploying Bot to a Server\nUnderstanding Files Required for Deployment\nBot Deployment to GUI Server\nBot Deployment to Server Without GUI",
+                  "mediaCode": "QqjCDisB",
+                  "mediaUrl": "https://play.boomstream.com/QqjCDisB",
+                  "title": "Bot Deployment to a Server",
+                  "ord": 1
+                }
+              ],
+              "ord": 7
+            }
+          ],
+          "supportDays": 25,
+          "stopped": null,
+          "currentLessonUrl": "",
+          "sale": true
+        }
+      ],
+      "requirements": [],
+      "online": true,
+      "onsite": false,
+      "offline": false,
+      "discountAmountOnline": 0,
+      "discountAmountOnsite": 0,
+      "metaTitle": "Telegram Bot yaratish",
+      "metaDescription": "Telegram Bot yaratish",
+      "canonicalUrl": "https://pdp.uz/course/telegram-bot-yaratish",
+      "metaImg": null,
+      "mentors": []
+    }
+  }
+]

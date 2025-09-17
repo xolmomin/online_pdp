@@ -1,10 +1,10 @@
 from django.db.models import CharField, ForeignKey, CASCADE
 from django_ckeditor_5.fields import CKEditor5Field
 
-from shared.models import UUIDBaseModel, CreatedBaseModel
+from shared.models import CreatedBaseModel
 
 
-class SectionInterview(UUIDBaseModel):  # TODO created_at
+class SectionInterview(CreatedBaseModel):
     title = CharField(max_length=255)
     full_description = CKEditor5Field()
     short_description = CKEditor5Field()

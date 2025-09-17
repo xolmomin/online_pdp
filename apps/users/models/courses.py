@@ -1,3 +1,4 @@
+from django.core.validators import FileExtensionValidator
 from django.db.models import TextChoices, ForeignKey, CASCADE, ManyToManyField, URLField, FileField, SET_NULL
 from django.db.models.fields import CharField, IntegerField, BooleanField, DecimalField
 from django_ckeditor_5.fields import CKEditor5Field
@@ -62,7 +63,7 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     video_duration = IntegerField(db_default=0)
     section = ForeignKey('users.Section', CASCADE)
     video_link = URLField()
-    video = FileField(upload_to='videos/%Y/%m/%d')  # TODO validation for video
+    video = FileField(upload_to='videos/%Y/%m/%d', validators=[FileExtensionValidator(['mp4', 'mov', 'webm'])])
 
     def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
         print(123)

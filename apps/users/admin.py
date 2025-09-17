@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
 
 from users.models import User, Course, Lesson, Section, Topic, Blog, SectionInterview, Part, Step
@@ -55,7 +56,7 @@ class SectionModelAdmin(admin.ModelAdmin):
 
 @admin.register(Topic)
 class TopicModelAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'name',)
 
 
 @admin.register(Blog)
@@ -76,6 +77,8 @@ class PartModelAdmin(admin.ModelAdmin):
 @admin.register(Step)
 class StepModelAdmin(admin.ModelAdmin):
     pass
+
+admin.site.unregister(Group)
 
 
 """
