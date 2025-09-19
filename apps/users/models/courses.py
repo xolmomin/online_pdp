@@ -1,6 +1,7 @@
 from django.core.validators import FileExtensionValidator
-from django.db.models import TextChoices, ForeignKey, CASCADE, ManyToManyField, URLField, FileField, SET_NULL
-from django.db.models.fields import CharField, IntegerField, BooleanField, DecimalField
+from django.db.models import TextChoices, ForeignKey, CASCADE, ManyToManyField, URLField, FileField, SET_NULL, \
+    CheckConstraint, Q
+from django.db.models.fields import CharField, IntegerField, BooleanField, SmallIntegerField
 from django_ckeditor_5.fields import CKEditor5Field
 
 from shared.models import CreatedBaseModel, OrderBaseModel
@@ -21,21 +22,27 @@ class Course(CreatedBaseModel):  # TODO Module
     level = CharField(max_length=20, choices=Level.choices)
     full_description = CKEditor5Field()
     short_description = CKEditor5Field()
-    has_certificate = BooleanField(db_default=True)
-    has_support = BooleanField()
-    practice_count = IntegerField(db_default=0)
+    has_certificate = BooleanField(default=True, db_default=True)
+    has_support = BooleanField(default=False, db_default=False)
+    practice_count = IntegerField(default=0, db_default=0, editable=False)
     valid_days = IntegerField()
-    price = DecimalField(max_digits=10, decimal_places=2)
-    rating = DecimalField(max_digits=3, decimal_places=1, db_default=0)
-    video_count = IntegerField(db_default=0)
-    video_duration = IntegerField(db_default=0)
+    price = IntegerField()
+    rating = SmallIntegerField(editable=False, default=50)
+    video_count = IntegerField(default=0, db_default=0, editable=False)
+    video_duration = IntegerField(default=0, db_default=0, editable=False)
     topic = ForeignKey('users.Topic', SET_NULL, null=True, blank=True)
-
     teachers = ManyToManyField('users.User', blank=True)
 
     class Meta:
         verbose_name = 'Kurs'
         verbose_name_plural = 'Kurslar'
+        constraints = [
+            CheckConstraint(
+                check=Q(rating__gte=0) & Q(rating__lte=50),
+                name='rating_check_constraints'
+            ),
+            # Add more CheckConstraint instances as needed
+        ]
 
 
 class Section(CreatedBaseModel, OrderBaseModel):  # TODO lesson

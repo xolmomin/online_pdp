@@ -78,13 +78,7 @@ class PartModelAdmin(admin.ModelAdmin):
 class StepModelAdmin(admin.ModelAdmin):
     pass
 
+
 admin.site.unregister(Group)
 
-
-"""
-online.pdp
-boomstream (video hosting)
-
-vdcipher
-
-"""
+# TODO bolimlar (Users, Blogs & Interview, Courses)

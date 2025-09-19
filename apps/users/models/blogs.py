@@ -25,9 +25,12 @@ def image_size_validator(image: ImageFieldFile):
 
 class Blog(CreatedBaseModel):
     title = CharField(max_length=255)
-    description = CharField(max_length=255)
+    description = CharField(max_length=255) # TODO ckeditor
     cover_image = ImageField(upload_to='cover_images/%Y/%m/%d',
                              validators=[image_size_validator, FileExtensionValidator(['jpg', 'jpeg', 'png', 'webp'])])
+
+    # TODO rasmlarni webp formatiga otkazib saqlash
+    # TODO media fayllarni ochmayabdi adminkada
 
     def delete(self, using=None, keep_parents=False):
         self.cover_image.delete()
