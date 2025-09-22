@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uz">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Intervyular - Backend savollar{% endblock %}</title>
+    <!-- Tailwind CDN for quick styling (replace with compiled Tailwind in production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Prism for code highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <style>
+        /* small visual niceties */
+        .prose pre {
+            background: #0b1220;
+            color: #e6eef8;
+            padding: 1rem;
+            border-radius: .5rem;
+            overflow: auto
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+    {% block custom_css %}{% endblock %}
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased">
+<header class="sticky top-0 z-40 glass border-b border-white/6">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center font-bold">
+                PY
+            </div>
+            <div>
+                <h1 class="text-lg font-semibold">Python Savollar</h1>
+                <p class="text-xs text-slate-300">Zamonaviy intervyu va tushuntirishlar</p>
+            </div>
+        </a>
+
+
+        <nav class="hidden md:flex items-center gap-3">
+            <a href="#" class="px-3 py-2 rounded hover:bg-white/5">Bosh sahifa</a>
+            <a href="#" class="px-3 py-2 rounded hover:bg-white/5">Bo‘limlar</a>
+            <a href="#" class="px-3 py-2 rounded bg-indigo-600/90 text-white">Yuklab olish</a>
+        </nav>
+
+
+        <div class="flex items-center gap-3">
+            <input aria-label="Search" type="search" placeholder="Qidirish..."
+                   class="hidden sm:inline-block bg-transparent border border-white/6 rounded px-3 py-1 text-sm focus:outline-none"/>
+            <button class="p-2 rounded hover:bg-white/5 md:hidden" id="nav-toggle">☰</button>
+        </div>
+    </div>
+</header>
+
+
+<main class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    {% block content %}{% endblock %}
+</main>
+
+
+<footer class="mt-12 py-8 border-t border-white/6 text-center text-sm text-slate-400">
+    &copy; {{ now.year }} — Sizning kompaniya. Yaratilgan zamonaviy va toza template bilan.
+</footer>
+
+
+<script>
+    // simple mobile nav toggle (for demo)
+    document.getElementById('nav-toggle')?.addEventListener('click', function(){
+    alert('Mobile nav placeholder — add your menu here');
+    });
+</script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -164,13 +164,13 @@ sudo certbot --nginx -d xolmomin.fil.uz
 
 
 
-task
-
-1. https://davronbek.dev/blogs  (blogs)
-2. https://firdavsdev.github.io/epam-interview-prep/ (interviews)
 
 
 
-https://videohub.uz/
+
+TASK
+1. interviews fixturs yaratish (python dan 5ta, django 5ta, postgresql 5ta)
+2. interview detailni frontini ozgartirish
+3. https://davronbek.dev/blogs  (blogs)
+4. https://videohub.uz/
 ga oxshash front yasash AI orqali
-

@@ -1,0 +1,42 @@
+{% extends "users/base.html" %}
+{% load static %}
+
+{% block custom_css %}
+    <link href="{% static 'users/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{% block content %}
+    <div class="max-w-4xl mx-auto p-6">
+
+        <!-- Blog cover image -->
+        <div class="mb-6">
+            {% if blog.cover_image %}
+                <img src="{{ blog.cover_image.url }}" alt="{{ blog.title }}" class="rounded-2xl shadow-md w-full">
+            {% endif %}
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold mb-4">{{ blog.title }}</h1>
+
+        <!-- Description -->
+        <div class="prose max-w-none prose-invert">
+            {{ blog.description|safe }}
+        </div>
+
+        <!-- Steps -->
+        {% if steps %}
+            <div class="mt-10 space-y-8">
+                <h2 class="text-2xl font-semibold">Steps</h2>
+                {% for step in steps %}
+                    <div class="p-6 bg-gray-800 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-3">{{ step.title }}</h3>
+                        <div class="prose prose-invert max-w-none">
+                            {{ step.description|safe }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -17,24 +17,11 @@ def image_size_validator(image: ImageFieldFile):
         raise ValidationError("Image MUST be less than 5 MB")
 
 
-# class Image(UUIDBaseModel):      # CKEtidor ichida bor
-#     blog = ForeignKey('users.Blog', CASCADE)
-#     image = ImageField(upload_to='blogs/%Y/%m/%d', null=True, blank=True,
-#                        validators=[image_size_validator, FileExtensionValidator(['jpg', 'jpeg', 'webp'])])
-#
-#     def delete(self, using=None, keep_parents=False):
-#         self.image.delete()
-#         return super().delete(using, keep_parents)
-
-
 class Blog(CreatedBaseModel):
     title = CharField(max_length=255)
     description = CKEditor5Field()
     cover_image = ImageField(upload_to='cover_images/%Y/%m/%d',
                              validators=[image_size_validator, FileExtensionValidator(['jpg', 'jpeg', 'png', 'webp'])])
-
-    # TODO rasmlarni webp formatiga otkazib saqlash
-    # TODO media fayllarni ochmayabdi adminkada
 
     def save(self, *args, **kwargs):
         if self.cover_image:
@@ -54,7 +41,7 @@ class Blog(CreatedBaseModel):
         return super().delete(using, keep_parents)
 
 
-class Step(UUIDBaseModel): # TODO ?
+class Step(UUIDBaseModel):  # TODO ?
     title = CharField(max_length=255)
     description = CKEditor5Field()
     blog = ForeignKey('users.Blog', CASCADE)

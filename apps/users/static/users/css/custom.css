@@ -1,0 +1,25 @@
+/* Carbon-like code style */
+pre code {
+    display: block;
+    background: #1e1e1e; /* monokai-dark */
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-family: "Fira Code", "Hack", monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Top dots (fake terminal header) */
+pre code::before {
+    content: "● ● ●";
+    color: #ff5f56;
+    letter-spacing: 6px;
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 14px;
+}

@@ -89,6 +89,7 @@ class InterviewStackedInline(admin.StackedInline):
     model = InterviewPart
     extra = 0
     min_num = 0
+    exclude = 'asked_by',
 
 
 @admin.register(Interview)

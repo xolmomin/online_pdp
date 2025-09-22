@@ -1,0 +1,91 @@
+[
+  {
+    "model": "users.interview",
+    "pk": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
+    "fields": {
+      "title": "🔹 1-BO‘LIM: Python asoslari – savollar va javoblar",
+      "full_description": "<p>Bu bo‘limda Python’ning asosiy konsepsiyalari va intervyu savollari jamlangan.</p>",
+      "short_description": "<p>Python asoslari, GIL, generatorlar, memory management va boshqalar.</p>",
+      "created_at": "2025-09-22T08:00:00Z",
+      "updated_at": "2025-09-22T08:00:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "35d07180-6024-4299-a4ed-2eb163fa1463",
+    "fields": {
+      "title": "@staticmethod, @classmethod, @property farqlari?",
+      "question": "<p>@staticmethod, @classmethod va @property nimaga xizmat qiladi?</p>",
+      "answer": "<ul><li>@staticmethod – klassga bog‘liq emas, utility vazifa bajaradi.</li><li>@classmethod – cls orqali klassni boshqaradi.</li><li>@property – methodni atribut sifatida ishlatish imkonini beradi.</li></ul>",
+      "asked_by": "Admin",
+      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
+      "created_at": "2025-09-22T08:10:00Z",
+      "updated_at": "2025-09-22T08:10:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "fda11241-6970-48ea-9037-e8478786304a",
+    "fields": {
+      "title": "Python’da GIL nima?",
+      "question": "<p>Global Interpreter Lock (GIL) nima va qachon muammo bo‘ladi?</p>",
+      "answer": "<p>GIL – CPython’da bir vaqtning o‘zida faqat bitta thread ishlashini kafolatlaydi. CPU-bound ishlar uchun to‘siq, ammo IO-bound ishlarda foydali emas.</p>",
+      "asked_by": "Dasturchi",
+      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
+      "created_at": "2025-09-22T08:15:00Z",
+      "updated_at": "2025-09-22T08:15:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "5d7a5106-ea1c-4087-8652-9983fba08f55",
+    "fields": {
+      "title": "Generatorlar va yield?",
+      "question": "<p>Generator nima, yield qanday ishlaydi?</p>",
+      "answer": "<p>Generator – funksiya bo‘lib, yield orqali qiymat qaytaradi va execution to‘xtaydi. Bu memory tejaydi va lazy evaluation qiladi.</p>",
+      "asked_by": null,
+      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
+      "created_at": "2025-09-22T08:20:00Z",
+      "updated_at": "2025-09-22T08:20:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "7dcb4a7b-6db0-4cbb-8e63-3f9c44a1a8d0",
+    "fields": {
+      "title": "Generatorlar va yield?",
+      "question": "<p>Generator nima, yield qanday ishlaydi?</p>",
+      "answer": "<p>Generator – funksiya bo‘lib, <code>yield</code> orqali qiymat qaytaradi va execution to‘xtaydi. Misol:</p>\n<pre><code class=\"language-python\">def my_gen():\n    for i in range(3):\n        yield i\n\nfor x in my_gen():\n    print(x)\n</code></pre>",
+      "asked_by": "Mentor",
+      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
+      "created_at": "2025-09-22T08:30:00Z",
+      "updated_at": "2025-09-22T08:30:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "abc12345-6789-4def-0123-456789abcdef",
+    "fields": {
+      "title": "Misol: `print()` funksiyasi",
+      "question": "<p>Python’da oddiy <code>print()</code> funksiyasi qanday ishlaydi?</p>",
+      "answer": "<pre><code class=\"language-python\" style=\"background: rgba(74,74,74,1); color: #eceff4; font-family: 'Hack', monospace; font-size: 14px; line-height: 133%; padding: 56px;\">print(\"Hello, World!\")</code></pre>",
+      "asked_by": "Admin",
+      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
+      "created_at": "2025-09-22T09:00:00Z",
+      "updated_at": "2025-09-22T09:00:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "9a7a8b2d-3af7-4e4d-9f2a-7b30c4e36c11",
+    "fields": {
+      "title": "Context manager misoli",
+      "question": "<p>Python’da <code>with</code> operatori qanday ishlaydi?</p>",
+      "answer": "<div style=\"background:#2b2b2b; border-radius:8px; padding:24px; color:#f8f8f2; font-family:'Hack', monospace; font-size:14px; line-height:1.5;\">\n  <span style='color:#f92672;'>with</span> <span style='color:#66d9ef;'>open</span>(<span style='color:#e6db74;'>'file.txt'</span>) <span style='color:#f92672;'>as</span> file:<br>\n  &nbsp;&nbsp;&nbsp;&nbsp;file.<span style='color:#a6e22e;'>write</span>(<span style='color:#e6db74;'>\"hello python\"</span>)\n</div>",
+      "asked_by": "Senior Dev",
+      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
+      "created_at": "2025-09-22T09:30:00Z",
+      "updated_at": "2025-09-22T09:30:00Z"
+    }
+  }
+]

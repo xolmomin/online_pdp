@@ -1,0 +1,102 @@
+{% extends 'users/base.html' %}
+
+
+{% block title %}{{ interview.title }} — Python savollar{% endblock %}
+
+
+{% block content %}
+    <!-- left: content -->
+    <section class="md:col-span-3">
+        <article class="prose prose-invert max-w-none">
+            <header class="mb-6">
+                <h2 class="text-2xl font-extrabold">{{ interview.title }}</h2>
+                <p class="text-slate-400">{{ interview.short_description|safe }}</p>
+            </header>
+
+            <section class="space-y-8">
+                {% for part in interview.parts.all %}
+                    <div id="part-{{ part.id }}" class="p-6 bg-slate-800 rounded-lg border border-white/6">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <h3 class="text-lg font-semibold">{{ forloop.counter }}. {{ part.title }}</h3>
+                                {% if part.asked_by %}
+                                    <p class="text-xs text-slate-400">So‘radigan: {{ part.asked_by }}</p>
+                                {% endif %}
+                            </div>
+
+
+                            <div class="flex items-center gap-2">
+                                <button onclick="document.getElementById('ans-{{ part.id }}').classList.toggle('hidden')"
+                                        class="text-sm px-3 py-1 rounded bg-indigo-600/90">Javobni ko‘rsatish
+                                </button>
+                                <a href="#part-{{ part.id }}" class="text-sm px-3 py-1 rounded border">Link</a>
+                            </div>
+                        </div>
+
+
+                        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="text-sm font-medium text-slate-300">Savol</h4>
+                                <div class="mt-2 prose prose-invert">{{ part.question|safe }}</div>
+                            </div>
+
+
+                            <div>
+                                <h4 class="text-sm font-medium text-slate-300">Javob</h4>
+                                <div id="ans-{{ part.id }}"
+                                     class="mt-2 prose prose-invert hidden">{{ part.answer|safe }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <p class="text-slate-400">Bu intervyu uchun bo‘limlar topilmadi.</p>
+                {% endfor %}
+            </section>
+
+            <hr class="my-8 border-white/6"/>
+
+
+            <!-- Example — FAQ-style quick list of the first 10 Q&A rendered in a compact way -->
+            <section>
+                <h3 class="text-lg font-semibold mb-4">Tezkor javoblar</h3>
+                <div class="grid gap-3 md:grid-cols-2">
+                    {% for part in interview.parts.all|slice:":10" %}
+                        <div class="p-3 bg-slate-800 rounded border border-white/6 flex items-start gap-3">
+                            <div class="w-10 h-10 rounded bg-indigo-700 flex items-center justify-center">{{ forloop.counter }}</div>
+                            <div class="text-sm">
+                                <div class="font-medium">{{ part.title }}</div>
+                                <div class="text-slate-400">{{ part.answer|truncatewords_html:20|safe }}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+
+        </article>
+    </section>
+    <!-- right: sidebar -->
+    <aside class="md:col-span-1 sticky top-24">
+        <div class="p-4 bg-slate-800 rounded border border-white/6 mb-4">
+            <h4 class="font-semibold">Bo‘limlar</h4>
+            <ol class="mt-3 space-y-2 text-sm">
+                {% for part in interview.parts.all %}
+                    <li>
+                        <a href="#part-{{ part.id }}"
+                           class="hover:underline">{{ forloop.counter }}. {{ part.title|truncatechars:40 }}</a>
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+
+
+        <div class="p-4 bg-slate-800 rounded border border-white/6">
+            <h4 class="font-semibold">Foydali manbalar</h4>
+            <ul class="mt-3 text-sm space-y-2">
+                <li><a href="#" class="hover:underline">Python — Official docs</a></li>
+                <li><a href="#" class="hover:underline">PEP8/Typing</a></li>
+                <li><a href="#" class="hover:underline">Asynchronous Python</a></li>
+            </ul>
+        </div>
+    </aside>
+{% endblock %}

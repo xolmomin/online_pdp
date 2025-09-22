@@ -6,13 +6,10 @@ from shared.models import CreatedBaseModel
 
 class Interview(CreatedBaseModel):
     title = CharField(max_length=255)
-    full_description = CKEditor5Field()
-    short_description = CKEditor5Field()
+    description = CKEditor5Field()
 
 
 class InterviewPart(CreatedBaseModel):
-    title = CharField(max_length=255)
     question = CKEditor5Field()
     answer = CKEditor5Field()
-    asked_by = CharField(max_length=50, null=True, blank=True)
     interview = ForeignKey('users.Interview', CASCADE, related_name='parts')
