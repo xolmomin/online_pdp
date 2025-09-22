@@ -1,4 +1,8 @@
+from io import BytesIO
+
+from PIL import Image
 from django.core.exceptions import ValidationError
+from django.core.files.base import ContentFile
 from django.core.validators import FileExtensionValidator
 from django.db.models import ImageField, CASCADE, ForeignKey, CharField
 from django.db.models.fields.files import ImageFieldFile
@@ -25,12 +29,25 @@ def image_size_validator(image: ImageFieldFile):
 
 class Blog(CreatedBaseModel):
     title = CharField(max_length=255)
-    description = CharField(max_length=255) # TODO ckeditor
+    description = CKEditor5Field()
     cover_image = ImageField(upload_to='cover_images/%Y/%m/%d',
                              validators=[image_size_validator, FileExtensionValidator(['jpg', 'jpeg', 'png', 'webp'])])
 
     # TODO rasmlarni webp formatiga otkazib saqlash
     # TODO media fayllarni ochmayabdi adminkada
+
+    def save(self, *args, **kwargs):
+        if self.cover_image:
+            img = Image.open(self.cover_image)
+            img = img.convert("RGB")
+            buffer = BytesIO()
+            img.save(buffer, format="WEBP", quality=85)
+            buffer.seek(0)
+
+            filename = f"{self.cover_image.name.split('.')[0]}.webp"
+            self.cover_image = ContentFile(buffer.read(), name=filename)
+
+        super().save(*args, **kwargs)
 
     def delete(self, using=None, keep_parents=False):
         self.cover_image.delete()
