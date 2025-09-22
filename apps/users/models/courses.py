@@ -10,6 +10,9 @@ from shared.models import CreatedBaseModel, OrderBaseModel
 class Topic(CreatedBaseModel):
     name = CharField(max_length=255)
 
+    def __str__(self):
+        return self.name
+
 
 class Course(CreatedBaseModel):  # TODO Module
     class Level(TextChoices):
@@ -44,6 +47,9 @@ class Course(CreatedBaseModel):  # TODO Module
             # Add more CheckConstraint instances as needed
         ]
 
+    def __str__(self):
+        return self.name
+
 
 class Section(CreatedBaseModel, OrderBaseModel):  # TODO lesson
     class Status(TextChoices):
@@ -53,6 +59,9 @@ class Section(CreatedBaseModel, OrderBaseModel):  # TODO lesson
     name = CharField(max_length=255)
     status = CharField(max_length=20, choices=Status.choices, default=Status.UNPUBLISHED)
     course = ForeignKey('users.Course', CASCADE)
+
+    def __str__(self):
+        return self.name
 
 
 class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
@@ -70,10 +79,12 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     video_duration = IntegerField(db_default=0)
     section = ForeignKey('users.Section', CASCADE)
     video_link = URLField()
-    video = FileField(upload_to='videos/%Y/%m/%d', validators=[FileExtensionValidator(['mp4', 'mov', 'webm'])])
+    video = FileField(upload_to='videos/%Y/%m/%d', help_text="video's format must be 'mp4', 'mov', 'webm'",validators=[FileExtensionValidator(['mp4', 'mov', 'webm'])])
 
     def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
-        print(123)
         super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+
+    def __str__(self):
+        return self.name
 
     # content = ?

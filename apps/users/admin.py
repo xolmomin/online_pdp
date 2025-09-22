@@ -2,8 +2,9 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
+from nested_inline.admin import NestedStackedInline, NestedModelAdmin
 
-from users.models import User, Course, Lesson, Section, Topic, Blog, SectionInterview, Part, Step
+from users.models import User, Course, Lesson, Section, Topic, Blog, Interview, InterviewPart, Step
 
 
 @admin.register(User)
@@ -37,26 +38,41 @@ class UserModelAdmin(UserAdmin):
     ordering = ('phone',)
 
 
-@admin.register(Course)
-class CourseModelAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name',)
-    readonly_fields = ('practice_count', 'rating', 'video_duration', 'video_count')
-
-
 @admin.register(Lesson)
 class LessonModelAdmin(admin.ModelAdmin):
     list_display = ('id', 'name',)
     readonly_fields = ('video_duration',)
 
 
+class LessonStackedInline(NestedStackedInline):
+    model = Lesson
+    min_num = 0
+    extra = 0
+
+
 @admin.register(Section)
 class SectionModelAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name',)
+    list_display = 'id', 'name'
+    inlines = LessonStackedInline,
+
+
+class SectionNestedStackedInline(NestedStackedInline):
+    model = Section
+    min_num = 0
+    extra = 0
+    inlines = LessonStackedInline,
+
+
+@admin.register(Course)
+class CourseModelAdmin(NestedModelAdmin):
+    list_display = 'id', 'name'
+    readonly_fields = 'practice_count', 'rating', 'video_duration', 'video_count'
+    inlines = SectionNestedStackedInline,
 
 
 @admin.register(Topic)
 class TopicModelAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name',)
+    list_display = 'id', 'name'
 
 
 @admin.register(Blog)
@@ -64,14 +80,20 @@ class BlogModelAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(SectionInterview)
-class SectionInterviewModelAdmin(admin.ModelAdmin):
-    pass
-
-
-@admin.register(Part)
+@admin.register(InterviewPart)
 class PartModelAdmin(admin.ModelAdmin):
     pass
+
+
+class InterviewStackedInline(admin.StackedInline):
+    model = InterviewPart
+    extra = 0
+    min_num = 0
+
+
+@admin.register(Interview)
+class SectionInterviewModelAdmin(admin.ModelAdmin):
+    inlines = InterviewStackedInline,
 
 
 @admin.register(Step)

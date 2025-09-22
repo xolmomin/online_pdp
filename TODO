@@ -106,23 +106,6 @@ https://api.videohab.uz/api/v1/course-lesson/public/c8ae335c-ab72-4b42-8461-9a6a
 }
 
 
-2ta
-password yangi
-video yuklaganda duration
-
-
-
-systemctl enabled service_name
-systemctl start service_name
-systemctl restart service_name
-systemctl stop service_name
-systemctl status service_name
-
-/var/www
-
-
-gunicorn
-uvicorn
 
 
 cd /etc/systemd/system/
@@ -177,67 +160,17 @@ systemctl restart nginx.service
 
 sudo certbot --nginx -d xolmomin.fil.uz
 
-crontab
 
-
-docker compose
-github cicd
-k8s
-
-
-
-container, image, network, volume
-
-
-uv pip compile pyproject.toml --output-file requirements.txt
-
-docker build -t online_pdp .
-docker build -t online_pdp -f dockerjon .
-
-
-docker run --name pdp -p 8000:8000 online_pdp
-
-ssh-keygen -t rsa -b 4096
-
-cat ~/.ssh/id_rsa
-
-nano ~/.ssh/authorized_keys
-
-ssh -p 2025 root@143.198.81.242
-p30_MultiProject
-
-
-
-
-nano /etc/ssh/sshd_config
-
-ssh key
-
-ufw
-
-
-docker compose up
-docker compose up --build
-
-docker compose exec -itu postgres postgres_service psql -c "create database online_pdp_db;"
-docker compose exec -it backend_service sh
-docker compose restart backend_service
-docker compose down
-docker compose down -v
-docker compose logs -f service_name
-
-docker compose + github cicd
 
 
 
 task
-
-1. django jazzmin
 
 1. https://davronbek.dev/blogs  (blogs)
 2. https://firdavsdev.github.io/epam-interview-prep/ (interviews)
 
 
 
-task
-1. adminkada phone chiroyli chiqishi
+https://videohub.uz/
+ga oxshash front yasash AI orqali
+
