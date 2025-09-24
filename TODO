@@ -169,8 +169,8 @@ sudo certbot --nginx -d xolmomin.fil.uz
 
 
 TASK
-1. interviews fixturs yaratish (python dan 5ta, django 5ta, postgresql 5ta)
-2. interview detailni frontini ozgartirish
+1. interviews fixturs yaratish (python dan 5ta, django 5ta, postgresql 5ta) +
+2. interview detailni frontini ozgartirish +
 3. https://davronbek.dev/blogs  (blogs)
 4. https://videohub.uz/
 ga oxshash front yasash AI orqali

@@ -82,7 +82,7 @@ class BlogModelAdmin(admin.ModelAdmin):
 
 @admin.register(InterviewPart)
 class PartModelAdmin(admin.ModelAdmin):
-    pass
+    list_display = 'id', 'interview__title'
 
 
 class InterviewStackedInline(admin.StackedInline):
@@ -94,6 +94,7 @@ class InterviewStackedInline(admin.StackedInline):
 
 @admin.register(Interview)
 class SectionInterviewModelAdmin(admin.ModelAdmin):
+    list_display = 'id', 'title',
     inlines = InterviewStackedInline,
 
 

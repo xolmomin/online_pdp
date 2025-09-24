@@ -1,91 +1,197 @@
 [
   {
     "model": "users.interview",
-    "pk": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
+    "pk": "f4fddc14-65fa-44a0-961c-fc8f3c4b13c9",
     "fields": {
-      "title": "🔹 1-BO‘LIM: Python asoslari – savollar va javoblar",
-      "full_description": "<p>Bu bo‘limda Python’ning asosiy konsepsiyalari va intervyu savollari jamlangan.</p>",
-      "short_description": "<p>Python asoslari, GIL, generatorlar, memory management va boshqalar.</p>",
-      "created_at": "2025-09-22T08:00:00Z",
-      "updated_at": "2025-09-22T08:00:00Z"
+      "title": "Python Interview",
+      "description": "<p>Interview focusing on Python fundamentals and advanced concepts.</p>",
+      "created_at": "2025-09-23T10:00:00Z",
+      "updated_at": "2025-09-23T10:00:00Z"
+    }
+  },
+  {
+    "model": "users.interview",
+    "pk": "d6a46df2-87d7-4cf0-a911-f26d8d0debc7",
+    "fields": {
+      "title": "Django Interview",
+      "description": "<p>Interview focusing on Django framework, ORM, and architecture.</p>",
+      "created_at": "2025-09-23T10:05:00Z",
+      "updated_at": "2025-09-23T10:05:00Z"
+    }
+  },
+  {
+    "model": "users.interview",
+    "pk": "3efc8504-ffdb-4f5a-82ec-2cfdf9c9aef0",
+    "fields": {
+      "title": "PostgreSQL Interview",
+      "description": "<p>Interview focusing on PostgreSQL database concepts and performance.</p>",
+      "created_at": "2025-09-23T10:10:00Z",
+      "updated_at": "2025-09-23T10:10:00Z"
     }
   },
   {
     "model": "users.interviewpart",
-    "pk": "35d07180-6024-4299-a4ed-2eb163fa1463",
+    "pk": "ec44989c-1e60-476e-ae76-52d7933aa3b5",
     "fields": {
-      "title": "@staticmethod, @classmethod, @property farqlari?",
-      "question": "<p>@staticmethod, @classmethod va @property nimaga xizmat qiladi?</p>",
-      "answer": "<ul><li>@staticmethod – klassga bog‘liq emas, utility vazifa bajaradi.</li><li>@classmethod – cls orqali klassni boshqaradi.</li><li>@property – methodni atribut sifatida ishlatish imkonini beradi.</li></ul>",
-      "asked_by": "Admin",
-      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
-      "created_at": "2025-09-22T08:10:00Z",
-      "updated_at": "2025-09-22T08:10:00Z"
+      "question": "<p>What are Python's key features?</p>",
+      "answer": "<p>Python is interpreted, dynamically typed, and supports multiple paradigms including OOP and functional programming.</p>",
+      "interview": "f4fddc14-65fa-44a0-961c-fc8f3c4b13c9",
+      "created_at": "2025-09-23T10:15:00Z",
+      "updated_at": "2025-09-23T10:15:00Z"
     }
   },
   {
     "model": "users.interviewpart",
-    "pk": "fda11241-6970-48ea-9037-e8478786304a",
+    "pk": "aaf8b987-f7fb-47e7-b11a-4e0a12a9f0c5",
     "fields": {
-      "title": "Python’da GIL nima?",
-      "question": "<p>Global Interpreter Lock (GIL) nima va qachon muammo bo‘ladi?</p>",
-      "answer": "<p>GIL – CPython’da bir vaqtning o‘zida faqat bitta thread ishlashini kafolatlaydi. CPU-bound ishlar uchun to‘siq, ammo IO-bound ishlarda foydali emas.</p>",
-      "asked_by": "Dasturchi",
-      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
-      "created_at": "2025-09-22T08:15:00Z",
-      "updated_at": "2025-09-22T08:15:00Z"
+      "question": "<p>Explain Python's GIL.</p>",
+      "answer": "<p>The Global Interpreter Lock ensures only one thread executes Python bytecode at a time.</p>",
+      "interview": "f4fddc14-65fa-44a0-961c-fc8f3c4b13c9",
+      "created_at": "2025-09-23T10:16:00Z",
+      "updated_at": "2025-09-23T10:16:00Z"
     }
   },
   {
     "model": "users.interviewpart",
-    "pk": "5d7a5106-ea1c-4087-8652-9983fba08f55",
+    "pk": "0e1ac7cf-0aa6-42c2-a55c-27445b786cbf",
     "fields": {
-      "title": "Generatorlar va yield?",
-      "question": "<p>Generator nima, yield qanday ishlaydi?</p>",
-      "answer": "<p>Generator – funksiya bo‘lib, yield orqali qiymat qaytaradi va execution to‘xtaydi. Bu memory tejaydi va lazy evaluation qiladi.</p>",
-      "asked_by": null,
-      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
-      "created_at": "2025-09-22T08:20:00Z",
-      "updated_at": "2025-09-22T08:20:00Z"
+      "question": "<p>Difference between list and tuple?</p>",
+      "answer": "<p>Lists are mutable while tuples are immutable.</p>",
+      "interview": "f4fddc14-65fa-44a0-961c-fc8f3c4b13c9",
+      "created_at": "2025-09-23T10:17:00Z",
+      "updated_at": "2025-09-23T10:17:00Z"
     }
   },
   {
     "model": "users.interviewpart",
-    "pk": "7dcb4a7b-6db0-4cbb-8e63-3f9c44a1a8d0",
+    "pk": "cdb89c9a-6c70-4e43-a820-97e7c68161c5",
     "fields": {
-      "title": "Generatorlar va yield?",
-      "question": "<p>Generator nima, yield qanday ishlaydi?</p>",
-      "answer": "<p>Generator – funksiya bo‘lib, <code>yield</code> orqali qiymat qaytaradi va execution to‘xtaydi. Misol:</p>\n<pre><code class=\"language-python\">def my_gen():\n    for i in range(3):\n        yield i\n\nfor x in my_gen():\n    print(x)\n</code></pre>",
-      "asked_by": "Mentor",
-      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
-      "created_at": "2025-09-22T08:30:00Z",
-      "updated_at": "2025-09-22T08:30:00Z"
+      "question": "<p>How do Python decorators work?</p>",
+      "answer": "<p>Decorators wrap a function, modifying its behavior without changing its code.</p>",
+      "interview": "f4fddc14-65fa-44a0-961c-fc8f3c4b13c9",
+      "created_at": "2025-09-23T10:18:00Z",
+      "updated_at": "2025-09-23T10:18:00Z"
     }
   },
   {
     "model": "users.interviewpart",
-    "pk": "abc12345-6789-4def-0123-456789abcdef",
+    "pk": "827cf34b-b5fd-4c5d-9d41-9e8135e56c60",
     "fields": {
-      "title": "Misol: `print()` funksiyasi",
-      "question": "<p>Python’da oddiy <code>print()</code> funksiyasi qanday ishlaydi?</p>",
-      "answer": "<pre><code class=\"language-python\" style=\"background: rgba(74,74,74,1); color: #eceff4; font-family: 'Hack', monospace; font-size: 14px; line-height: 133%; padding: 56px;\">print(\"Hello, World!\")</code></pre>",
-      "asked_by": "Admin",
-      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
-      "created_at": "2025-09-22T09:00:00Z",
-      "updated_at": "2025-09-22T09:00:00Z"
+      "question": "<p>What is list comprehension?</p>",
+      "answer": "<p>A concise syntax to create lists using a single line of code.</p>",
+      "interview": "f4fddc14-65fa-44a0-961c-fc8f3c4b13c9",
+      "created_at": "2025-09-23T10:19:00Z",
+      "updated_at": "2025-09-23T10:19:00Z"
     }
   },
   {
     "model": "users.interviewpart",
-    "pk": "9a7a8b2d-3af7-4e4d-9f2a-7b30c4e36c11",
+    "pk": "c68f91b7-f354-40a0-9285-089ee8af9817",
     "fields": {
-      "title": "Context manager misoli",
-      "question": "<p>Python’da <code>with</code> operatori qanday ishlaydi?</p>",
-      "answer": "<div style=\"background:#2b2b2b; border-radius:8px; padding:24px; color:#f8f8f2; font-family:'Hack', monospace; font-size:14px; line-height:1.5;\">\n  <span style='color:#f92672;'>with</span> <span style='color:#66d9ef;'>open</span>(<span style='color:#e6db74;'>'file.txt'</span>) <span style='color:#f92672;'>as</span> file:<br>\n  &nbsp;&nbsp;&nbsp;&nbsp;file.<span style='color:#a6e22e;'>write</span>(<span style='color:#e6db74;'>\"hello python\"</span>)\n</div>",
-      "asked_by": "Senior Dev",
-      "interview": "c1dddbad-fcc1-41c2-a2e5-b6ba5908a7d0",
-      "created_at": "2025-09-22T09:30:00Z",
-      "updated_at": "2025-09-22T09:30:00Z"
+      "question": "<p>What is Django's MTV pattern?</p>",
+      "answer": "<p>Model-Template-View, Django’s variant of MVC.</p>",
+      "interview": "d6a46df2-87d7-4cf0-a911-f26d8d0debc7",
+      "created_at": "2025-09-23T10:20:00Z",
+      "updated_at": "2025-09-23T10:20:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "99f12f47-7822-4f8f-8a5c-3ef99bc23f4e",
+    "fields": {
+      "question": "<p>What are Django signals?</p>",
+      "answer": "<p>Signals let decoupled apps receive notifications when certain actions occur.</p>",
+      "interview": "d6a46df2-87d7-4cf0-a911-f26d8d0debc7",
+      "created_at": "2025-09-23T10:21:00Z",
+      "updated_at": "2025-09-23T10:21:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "0f59e634-6a9d-4de3-b452-79d8df5e4ed4",
+    "fields": {
+      "question": "<p>How does Django ORM work?</p>",
+      "answer": "<p>It translates Python class models into SQL queries behind the scenes.</p>",
+      "interview": "d6a46df2-87d7-4cf0-a911-f26d8d0debc7",
+      "created_at": "2025-09-23T10:22:00Z",
+      "updated_at": "2025-09-23T10:22:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "cdfe16e0-4c2e-46ee-aab3-27b7b832fa2f",
+    "fields": {
+      "question": "<p>What are Django middlewares?</p>",
+      "answer": "<p>They are hooks that process requests and responses globally.</p>",
+      "interview": "d6a46df2-87d7-4cf0-a911-f26d8d0debc7",
+      "created_at": "2025-09-23T10:23:00Z",
+      "updated_at": "2025-09-23T10:23:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "c3b90f1d-70ad-4e74-8b4a-6c92f75b0cb7",
+    "fields": {
+      "question": "<p>How do you implement custom user models in Django?</p>",
+      "answer": "<p>By extending AbstractBaseUser or AbstractUser and updating AUTH_USER_MODEL.</p>",
+      "interview": "d6a46df2-87d7-4cf0-a911-f26d8d0debc7",
+      "created_at": "2025-09-23T10:24:00Z",
+      "updated_at": "2025-09-23T10:24:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "50ac22d2-d967-44a8-8d8f-5b8a0cb36d5f",
+    "fields": {
+      "question": "<p>What are PostgreSQL’s key features?</p>",
+      "answer": "<p>It supports advanced indexing, JSONB, CTEs, and transactional DDL.</p>",
+      "interview": "3efc8504-ffdb-4f5a-82ec-2cfdf9c9aef0",
+      "created_at": "2025-09-23T10:25:00Z",
+      "updated_at": "2025-09-23T10:25:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "aa5ac0b4-3f92-4d21-a937-df26dd50c2c1",
+    "fields": {
+      "question": "<p>Explain VACUUM in PostgreSQL.</p>",
+      "answer": "<p>VACUUM reclaims storage occupied by dead tuples and updates statistics.</p>",
+      "interview": "3efc8504-ffdb-4f5a-82ec-2cfdf9c9aef0",
+      "created_at": "2025-09-23T10:26:00Z",
+      "updated_at": "2025-09-23T10:26:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "4212371b-c42a-4a04-8d87-8d6f187d5b7b",
+    "fields": {
+      "question": "<p>What are indexes in PostgreSQL?</p>",
+      "answer": "<p>Indexes improve query performance by speeding up lookups.</p>",
+      "interview": "3efc8504-ffdb-4f5a-82ec-2cfdf9c9aef0",
+      "created_at": "2025-09-23T10:27:00Z",
+      "updated_at": "2025-09-23T10:27:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "c48ee6d3-7ac2-4c7b-9390-3481ef37384f",
+    "fields": {
+      "question": "<p>How do transactions work in PostgreSQL?</p>",
+      "answer": "<p>Transactions group multiple queries into a single atomic operation.</p>",
+      "interview": "3efc8504-ffdb-4f5a-82ec-2cfdf9c9aef0",
+      "created_at": "2025-09-23T10:28:00Z",
+      "updated_at": "2025-09-23T10:28:00Z"
+    }
+  },
+  {
+    "model": "users.interviewpart",
+    "pk": "83b3642d-ef54-4700-9ed2-68847c0d6fd5",
+    "fields": {
+      "question": "<p>What is the difference between INNER JOIN and LEFT JOIN?</p>",
+      "answer": "<p>INNER JOIN returns only matching rows, LEFT JOIN returns all from left table plus matches.</p>",
+      "interview": "3efc8504-ffdb-4f5a-82ec-2cfdf9c9aef0",
+      "created_at": "2025-09-23T10:29:00Z",
+      "updated_at": "2025-09-23T10:29:00Z"
     }
   }
 ]

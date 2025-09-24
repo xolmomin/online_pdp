@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - EduHub Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #667eea;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tag-tech {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .tag-career {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .tag-interview {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .tag-skills {
+            background-color: #f3e8ff;
+            color: #7c3aed;
+        }
+
+        .tag-industry {
+            background-color: #fce7f3;
+            color: #be185d;
+        }
+
+        .tag-tips {
+            background-color: #ecfdf5;
+            color: #059669;
+        }
+
+        .featured-gradient {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .read-time {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-gray-900">
+                        <span class="text-purple-600">Edu</span>Hub
+                    </h1>
+                </div>
+                <div class="hidden md:block ml-10">
+                    <div class="flex items-baseline space-x-8">
+                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Home</a>
+                        <a href="{% url 'course_list' %}" class="nav-link text-gray-600 hover:text-gray-900">Courses</a>
+                        <a href="#" class="nav-link text-purple-600 font-medium">Blogs</a>
+                        <a href="{% url 'interview_list' %}" class="nav-link text-gray-600 hover:text-gray-900">Interviews</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search articles..."
+                           class="bg-gray-100 rounded-full px-4 py-2 pl-10 w-64 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:bg-white transition-all">
+                    <svg class="absolute left-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="hero-gradient text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-4">EduHub Blog</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Discover insights, tips, and expert advice to accelerate your career and master new skills in the
+                ever-evolving tech landscape.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Articles Grid -->
+<section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+            <!-- Article 1 -->
+            <article class="blog-card card-hover" data-category="tech">
+                <div class="aspect-video bg-gradient-to-br from-blue-400 to-blue-600 relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-4xl">🚀</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
+                        onclick="readArticle('react-2024')">
+                        React 18 Features Every Developer Should Know
+                    </h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Explore the latest React 18 features including concurrent rendering, automatic batching, and
+                        Suspense improvements that will revolutionize your development workflow.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="author-avatar text-sm">MK</div>
+                            <div class="text-sm">
+                                <div class="font-medium text-gray-900">Mike Chen</div>
+                                <div class="text-gray-500">8 min read</div>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Dec 12, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="blog-card card-hover" data-category="career">
+                <div class="aspect-video bg-gradient-to-br from-green-400 to-green-600 relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-4xl">📈</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
+                        onclick="readArticle('salary-negotiation')">
+                        Salary Negotiation Strategies for Software Engineers
+                    </h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Master the art of salary negotiation with proven tactics, market research techniques, and
+                        scripts that have helped engineers increase their compensation by 30%+.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="author-avatar text-sm">AL</div>
+                            <div class="text-sm">
+                                <div class="font-medium text-gray-900">Alex Rivera</div>
+                                <div class="text-gray-500">15 min read</div>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Dec 10, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="blog-card card-hover" data-category="interview">
+                <div class="aspect-video bg-gradient-to-br from-yellow-400 to-orange-500 relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-4xl">🎯</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
+                        onclick="readArticle('system-design')">
+                        System Design Interview: Building Scalable Chat Applications
+                    </h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        A comprehensive walkthrough of designing a real-time chat system, covering WebSockets, message
+                        queuing, database sharding, and scaling strategies.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="author-avatar text-sm">DP</div>
+                            <div class="text-sm">
+                                <div class="font-medium text-gray-900">David Park</div>
+                                <div class="text-gray-500">20 min read</div>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Dec 8, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="blog-card card-hover" data-category="skills">
+                <div class="aspect-video bg-gradient-to-br from-purple-400 to-purple-600 relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-4xl">🧠</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
+                        onclick="readArticle('ai-skills')">
+                        Essential AI Skills for Developers in 2024
+                    </h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        From prompt engineering to machine learning fundamentals, discover the AI skills that are
+                        becoming essential for modern software development careers.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="author-avatar text-sm">LW</div>
+                            <div class="text-sm">
+                                <div class="font-medium text-gray-900">Lisa Wang</div>
+                                <div class="text-gray-500">12 min read</div>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Dec 6, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="blog-card card-hover" data-category="industry">
+                <div class="aspect-video bg-gradient-to-br from-pink-400 to-red-500 relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-4xl">🌐</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
+                        onclick="readArticle('remote-work')">
+                        The Future of Remote Work in Tech Companies
+                    </h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Analyzing the latest trends in remote work policies, hybrid models, and how leading tech
+                        companies are adapting to the new workplace reality.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="author-avatar text-sm">JT</div>
+                            <div class="text-sm">
+                                <div class="font-medium text-gray-900">James Taylor</div>
+                                <div class="text-gray-500">10 min read</div>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Dec 4, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="blog-card card-hover" data-category="tips">
+                <div class="aspect-video bg-gradient-to-br from-teal-400 to-cyan-500 relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-4xl">💡</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
+                        onclick="readArticle('productivity')">
+                        10 Productivity Hacks Every Developer Should Know
+                    </h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Boost your coding efficiency with these proven productivity techniques, tools, and workflows
+                        used by top developers at leading tech companies.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="author-avatar text-sm">EM</div>
+                            <div class="text-sm">
+                                <div class="font-medium text-gray-900">Emma Martinez</div>
+                                <div class="text-gray-500">7 min read</div>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Dec 2, 2024</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Pagination -->
+<section class="py-8 bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center items-center space-x-2">
+            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                Previous
+            </button>
+            <button class="pagination-button active px-3 py-2 rounded-lg border border-gray-300">1</button>
+            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                2
+            </button>
+            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                3
+            </button>
+            <span class="px-3 py-2 text-gray-500">...</span>
+            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                13
+            </button>
+            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                Next
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-2xl font-bold mb-4">
+                    <span class="text-purple-400">Edu</span>Hub
+                </h4>
+                <p class="text-gray-400 mb-4">Empowering professionals with knowledge, skills, and insights to excel in
+                    their careers and stay ahead in the tech industry.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">📱</button>
+                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">🐦</button>
+                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">📘</button>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Blog Categories</h5>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Technology Trends</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Career Development</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Interview Preparation</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Skill Building</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Resources</h5>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Writing Guidelines</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Author Program</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Content Calendar</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">RSS Feed</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Company</h5>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Our Authors</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 EduHub Blog. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Category filtering functionality
+    function filterCategory(category) {
+        const articles = document.querySelectorAll('[data-category]');
+        const buttons = document.querySelectorAll('.category-filter');
+
+        // Update button states
+        buttons.forEach(btn => {
+            btn.classList.remove('active', 'bg-purple-600', 'text-white');
+            btn.classList.add('bg-gray-100', 'text-gray-700');
+        });
+
+        event.target.classList.add('active', 'bg-purple-600', 'text-white');
+        event.target.classList.remove('bg-gray-100', 'text-gray-700');
+
+        // Filter articles
+        articles.forEach(article => {
+            if (category === 'all' || article.dataset.category === category) {
+                article.style.display = 'block';
+                article.classList.add('animate-fade-in');
+            } else {
+                article.style.display = 'none';
+            }
+        });
+    }
+
+    // Read article functionality
+    function readArticle(articleId) {
+        const articles = {
+            'featured': 'The Complete Guide to Landing Your First Tech Job in 2024',
+            'react-2024': 'React 18 Features Every Developer Should Know',
+            'salary-negotiation': 'Salary Negotiation Strategies for Software Engineers',
+            'system-design': 'System Design Interview: Building Scalable Chat Applications',
+            'ai-skills': 'Essential AI Skills for Developers in 2024',
+            'remote-work': 'The Future of Remote Work in Tech Companies',
+            'productivity': '10 Productivity Hacks Every Developer Should Know'
+        };
+
+        const title = articles[articleId] || 'Article';
+        alert(`Opening article: "${title}"\n\nThis would navigate to the full article page with detailed content, comments, and related articles.`);
+    }
+
+    // Load more articles
+    function loadMoreArticles() {
+        alert('Loading more articles...\n\nThis would fetch additional blog posts from the server and append them to the current grid.');
+    }
+
+    // Pagination functionality
+    const paginationButtons = document.querySelectorAll('.pagination-button');
+    paginationButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            if (this.textContent === 'Previous' || this.textContent === 'Next') {
+                alert(`Navigating to ${this.textContent.toLowerCase()} page...`);
+            } else if (!isNaN(this.textContent)) {
+                paginationButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                alert(`Loading page ${this.textContent}...`);
+            }
+        });
+    });
+
+    // Newsletter subscription
+    function subscribeNewsletter() {
+        const email = document.querySelector('input[type="email"]').value;
+        if (email && email.includes('@')) {
+            alert(`Thank you for subscribing!\n\nWe've added ${email} to our newsletter list. You'll receive our weekly digest with the latest articles and career insights.`);
+            document.querySelector('input[type="email"]').value = '';
+        } else {
+            alert('Please enter a valid email address to subscribe to our newsletter.');
+        }
+    }
+
+    // Navigation functionality
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const section = this.textContent.toLowerCase();
+            if (section !== 'blogs') {
+                alert(`Navigating to ${section} page...`);
+            }
+        });
+    });
+
+    // Sign In functionality
+    document.querySelectorAll('button').forEach(button => {
+        if (button.textContent.includes('Sign In')) {
+            button.addEventListener('click', function () {
+                alert('Sign In\n\nRedirecting to authentication page...');
+            });
+        }
+    });
+
+    // Search functionality
+    document.querySelector('input[placeholder="Search articles..."]').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            const query = this.value;
+            if (query.trim()) {
+                alert(`Searching for: "${query}"\n\nThis would filter articles based on your search query and show relevant results.`);
+            }
+        }
+    });
+
+    // Add smooth scrolling and animations on load
+    document.addEventListener('DOMContentLoaded', function () {
+        const articles = document.querySelectorAll('.blog-card');
+        articles.forEach((article, index) => {
+            setTimeout(() => {
+                article.classList.add('animate-slide-up');
+            }, index * 100);
+        });
+    });
+</script>
+<script>(function () {
+    function c() {
+        var b = a.contentDocument || a.contentWindow.document;
+        if (b) {
+            var d = b.createElement('script');
+            d.innerHTML = "window.__CF$cv$params={r:'983d9a44166621e9',t:'MTc1ODY2Nzg0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName('head')[0].appendChild(d)
+        }
+    }
+
+    if (document.body) {
+        var a = document.createElement('iframe');
+        a.height = 1;
+        a.width = 1;
+        a.style.position = 'absolute';
+        a.style.top = 0;
+        a.style.left = 0;
+        a.style.border = 'none';
+        a.style.visibility = 'hidden';
+        document.body.appendChild(a);
+        if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else {
+            var e = document.onreadystatechange || function () {
+            };
+            document.onreadystatechange = function (b) {
+                e(b);
+                'loading' !== document.readyState && (document.onreadystatechange = e, c())
+            }
+        }
+    }
+})();</script>
+</body>
+</html>
