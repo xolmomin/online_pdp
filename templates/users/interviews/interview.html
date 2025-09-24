@@ -1,102 +1,386 @@
-{% extends 'users/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Preparation - EduHub Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #667eea;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .difficulty-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+
+        .difficulty-easy {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .difficulty-medium {
+            background-color: #f59e0b;
+            color: white;
+        }
+
+        .difficulty-hard {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+            transition: width 0.3s ease;
+        }
+
+        .question-card {
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .question-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .timer-circle {
+            stroke-dasharray: 283;
+            stroke-dashoffset: 283;
+            transition: stroke-dashoffset 1s linear;
+        }
+
+        .answer-input {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .feedback-positive {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-color: #10b981;
+        }
+
+        .feedback-negative {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-color: #ef4444;
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-gray-900">
+                        <span class="text-purple-600">Edu</span>Hub
+                    </h1>
+                </div>
+                <div class="hidden md:block ml-10">
+                    <div class="flex items-baseline space-x-8">
+                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Home</a>
+                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Courses</a>
+                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Blogs</a>
+                        <a href="#" class="nav-link text-purple-600 font-medium">Interviews</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search interview topics..."
+                           class="bg-gray-100 rounded-full px-4 py-2 pl-10 w-64 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:bg-white transition-all">
+                    <svg class="absolute left-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="hero-gradient text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-4">Interview Preparation Hub</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Master your next interview with our comprehensive collection of practice questions organized by category
+                and difficulty level.
+            </p>
+        </div>
+    </div>
+</section>
 
 
-{% block title %}{{ interview.title }} — Python savollar{% endblock %}
+<!-- Interview Categories -->
+<section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
-{% block content %}
-    <!-- left: content -->
-    <section class="md:col-span-3">
-        <article class="prose prose-invert max-w-none">
-            <header class="mb-6">
-                <h2 class="text-2xl font-extrabold">{{ interview.title }}</h2>
-                <p class="text-slate-400">{{ interview.short_description|safe }}</p>
-            </header>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for interview in interviews %}
+                <div class="category-card p-8 rounded-2xl cursor-pointer" onclick="openCategory('{{ interview.id }}')">
+                    <div class="text-center">
+                        <!-- Title -->
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">{{ interview.title }}</h4>
+                        <div class="flex flex-col items-center space-y-1">
+                            <!-- Description (CKEditor safe rendering) -->
+                            <p class="text-gray-600 text-center mb-1 pb-2 border-b border-gray-200">{{ interview.description|safe }}</p>
 
-            <section class="space-y-8">
-                {% for part in interview.parts.all %}
-                    <div id="part-{{ part.id }}" class="p-6 bg-slate-800 rounded-lg border border-white/6">
-                        <div class="flex items-start justify-between gap-4">
+                            <!-- Questions count (related InterviewParts) -->
                             <div>
-                                <h3 class="text-lg font-semibold">{{ forloop.counter }}. {{ part.title }}</h3>
-                                {% if part.asked_by %}
-                                    <p class="text-xs text-slate-400">So‘radigan: {{ part.asked_by }}</p>
-                                {% endif %}
-                            </div>
-
-
-                            <div class="flex items-center gap-2">
-                                <button onclick="document.getElementById('ans-{{ part.id }}').classList.toggle('hidden')"
-                                        class="text-sm px-3 py-1 rounded bg-indigo-600/90">Javobni ko‘rsatish
-                                </button>
-                                <a href="#part-{{ part.id }}" class="text-sm px-3 py-1 rounded border">Link</a>
+                            <span class="difficulty-badge difficulty-easy">
+                                Total: {{ interview.parts.count }} questions
+                            </span>
                             </div>
                         </div>
 
+                        <!-- Action row: More button (left) + Views (right) -->
+                        <div class="flex items-center justify-between mt-4">
+                            <!-- More button -->
+                            <a href="{% url 'interview_detail' interview.pk %}"
+                               class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-colors text-sm font-medium">
+                                Read More
+                            </a>
 
-                        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <h4 class="text-sm font-medium text-slate-300">Savol</h4>
-                                <div class="mt-2 prose prose-invert">{{ part.question|safe }}</div>
-                            </div>
-
-
-                            <div>
-                                <h4 class="text-sm font-medium text-slate-300">Javob</h4>
-                                <div id="ans-{{ part.id }}"
-                                     class="mt-2 prose prose-invert hidden">{{ part.answer|safe }}</div>
-                            </div>
+                            <!-- Views count -->
+                            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium
+                                    bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-md">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                     viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0
+                                             8.268 2.943 9.542 7-1.274 4.057-5.065
+                                             7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                670 views
+                            </span>
                         </div>
                     </div>
-                {% empty %}
-                    <p class="text-slate-400">Bu intervyu uchun bo‘limlar topilmadi.</p>
-                {% endfor %}
-            </section>
-
-            <hr class="my-8 border-white/6"/>
-
-
-            <!-- Example — FAQ-style quick list of the first 10 Q&A rendered in a compact way -->
-            <section>
-                <h3 class="text-lg font-semibold mb-4">Tezkor javoblar</h3>
-                <div class="grid gap-3 md:grid-cols-2">
-                    {% for part in interview.parts.all|slice:":10" %}
-                        <div class="p-3 bg-slate-800 rounded border border-white/6 flex items-start gap-3">
-                            <div class="w-10 h-10 rounded bg-indigo-700 flex items-center justify-center">{{ forloop.counter }}</div>
-                            <div class="text-sm">
-                                <div class="font-medium">{{ part.title }}</div>
-                                <div class="text-slate-400">{{ part.answer|truncatewords_html:20|safe }}</div>
-                            </div>
-                        </div>
-                    {% endfor %}
                 </div>
-            </section>
 
-
-        </article>
-    </section>
-    <!-- right: sidebar -->
-    <aside class="md:col-span-1 sticky top-24">
-        <div class="p-4 bg-slate-800 rounded border border-white/6 mb-4">
-            <h4 class="font-semibold">Bo‘limlar</h4>
-            <ol class="mt-3 space-y-2 text-sm">
-                {% for part in interview.parts.all %}
-                    <li>
-                        <a href="#part-{{ part.id }}"
-                           class="hover:underline">{{ forloop.counter }}. {{ part.title|truncatechars:40 }}</a>
-                    </li>
-                {% endfor %}
-            </ol>
+            {% empty %}
+                <p class="col-span-3 text-center text-gray-500">No interviews available yet.</p>
+            {% endfor %}
         </div>
+    </div>
+</section>
 
 
-        <div class="p-4 bg-slate-800 rounded border border-white/6">
-            <h4 class="font-semibold">Foydali manbalar</h4>
-            <ul class="mt-3 text-sm space-y-2">
-                <li><a href="#" class="hover:underline">Python — Official docs</a></li>
-                <li><a href="#" class="hover:underline">PEP8/Typing</a></li>
-                <li><a href="#" class="hover:underline">Asynchronous Python</a></li>
-            </ul>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-2xl font-bold mb-4">
+                    <span class="text-purple-400">Edu</span>Hub
+                </h4>
+                <p class="text-gray-400 mb-4">Empowering professionals to ace their interviews with expert-designed
+                    practice questions and mock interviews.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">📱</button>
+                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">🐦</button>
+                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">📘</button>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Interview Prep</h5>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Technical Questions</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Behavioral Questions</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Mock Interviews</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Interview Tips</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Resources</h5>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Interview Guide</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Salary Negotiation</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Career Advice</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Success Stories</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Company</h5>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Expert Interviewers</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                </ul>
+            </div>
         </div>
-    </aside>
-{% endblock %}
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 EduHub Interview Prep. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Category selection functionality
+    function openCategory(category) {
+        const categoryNames = {
+            'technical': 'Technical Interviews',
+            'behavioral': 'Behavioral Interviews',
+            'case-study': 'Case Study Interviews',
+            'product': 'Product Management',
+            'data-science': 'Data Science',
+            'leadership': 'Leadership & Management'
+        };
+
+        alert(`Opening ${categoryNames[category]} section...\n\nThis would navigate to a dedicated page with filtered questions for this category.`);
+    }
+
+
+    // Navigation functionality
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const section = this.textContent.toLowerCase();
+            alert(`Navigating to ${section} page...`);
+        });
+    });
+
+    // Sign In functionality
+    document.querySelectorAll('button').forEach(button => {
+        if (button.textContent.includes('Sign In')) {
+            button.addEventListener('click', function () {
+                alert('Sign In\n\nRedirecting to authentication page...');
+            });
+        }
+    });
+
+
+</script>
+<script>(function () {
+    function c() {
+        var b = a.contentDocument || a.contentWindow.document;
+        if (b) {
+            var d = b.createElement('script');
+            d.innerHTML = "window.__CF$cv$params={r:'98363734a0f237b3',t:'MTc1ODU5MDM4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName('head')[0].appendChild(d)
+        }
+    }
+
+    if (document.body) {
+        var a = document.createElement('iframe');
+        a.height = 1;
+        a.width = 1;
+        a.style.position = 'absolute';
+        a.style.top = 0;
+        a.style.left = 0;
+        a.style.border = 'none';
+        a.style.visibility = 'hidden';
+        document.body.appendChild(a);
+        if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else {
+            var e = document.onreadystatechange || function () {
+            };
+            document.onreadystatechange = function (b) {
+                e(b);
+                'loading' !== document.readyState && (document.onreadystatechange = e, c())
+            }
+        }
+    }
+})();</script>
+</body>
+</html>

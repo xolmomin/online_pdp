@@ -1,13 +1,12 @@
 from django.urls import path
 
-from users.views import InterviewTemplateView, CourseTemplateView, InterviewCanvaListView, InterviewCanvaDetailView, \
+from users.views import CourseTemplateView, InterviewListView, InterviewDetailView, \
     BlogTemplateView, MainTemplateView
 
 urlpatterns = [
-    path('interview/<uuid:pk>', InterviewTemplateView.as_view(), name='interview_page'),
-    path('interview-canva', InterviewCanvaListView.as_view(), name='interview_list'),
-    path('interview-canva/<uuid:pk>', InterviewCanvaDetailView.as_view(), name='interview_detail'),
+    path('interviews', InterviewListView.as_view(), name='interview_list'),
+    path('interview/<uuid:pk>', InterviewDetailView.as_view(), name='interview_detail'),
     path('courses', CourseTemplateView.as_view(), name='course_list'),
     path('blogs', BlogTemplateView.as_view(), name='blog_list'),
-    path('main', MainTemplateView.as_view(), name='main'),
+    path('', MainTemplateView.as_view(), name='main'),
 ]

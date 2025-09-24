@@ -1,13 +1,8 @@
-from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView, TemplateView, ListView
 
 from users.models import Interview
 from .models import Blog, Step
 
-
-class InterviewTemplateView(DetailView):
-    queryset = Interview.objects.all()
-    template_name = 'users/interviews/interview.html'
 
 
 class BlogDetailView(DetailView):
@@ -25,13 +20,13 @@ class CourseTemplateView(TemplateView):
     template_name = 'users/courses/course.html'
 
 
-class InterviewCanvaListView(ListView):
+class InterviewListView(ListView):
     queryset = Interview.objects.all()
-    template_name = "users/interviews/interview-canva.html"
+    template_name = "users/interviews/interview.html"
     context_object_name = "interviews"
 
 
-class InterviewCanvaDetailView(DetailView):
+class InterviewDetailView(DetailView):
     queryset = Interview.objects.all()
     template_name = "users/interviews/interview-detail.html"
     context_object_name = "interview"
