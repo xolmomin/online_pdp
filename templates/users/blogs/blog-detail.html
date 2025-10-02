@@ -1329,9 +1329,12 @@ REST_FRAMEWORK = {
 
     // Close blog detail modal
     function closeBlogDetail() {
-        document.getElementById('blog-detail-modal').classList.add('hidden');
-        currentBlog = null;
-        currentStepIndex = 0;
+        const modal = document.getElementById('blog-detail-modal');
+        if (modal) {
+            modal.classList.add('hidden');
+            currentBlog = null;
+            currentStepIndex = 0;
+        }
     }
 
     // Edit current blog
@@ -1399,22 +1402,6 @@ REST_FRAMEWORK = {
                 applyFilters();
             }, 300);
         }
-    }
-
-    // Modal functions
-    function createNewBlog() {
-        document.getElementById('blog-modal').classList.remove('hidden');
-    }
-
-    function closeBlogModal() {
-        document.getElementById('blog-modal').classList.add('hidden');
-    }
-
-    function createBlog(event) {
-        event.preventDefault();
-        showNotification('Blog created successfully! 🎉\n\nImage automatically converted to WebP format.', 'success');
-        closeBlogModal();
-        // Would make POST request to Django backend
     }
 
     function previewImage(input) {
@@ -1491,13 +1478,6 @@ REST_FRAMEWORK = {
         showNotification('Welcome to Blog Management! 🚀\n\nAll images are automatically optimized to WebP format for better performance.', 'success');
     });
 
-    // Close modal when clicking outside
-    document.getElementById('blog-modal').addEventListener('click', function (e) {
-        if (e.target === this) {
-            closeBlogModal();
-        }
-    });
-
     // Close blog detail modal when clicking outside
     document.getElementById('blog-detail-modal').addEventListener('click', function (e) {
         if (e.target === this) {
@@ -1555,17 +1535,6 @@ REST_FRAMEWORK = {
             }
         }
     })();
-</script>
-<script>
-    function openBlogDetail() {
-        const modal = document.getElementById("blog-detail-modal");
-        if (modal) modal.classList.remove("hidden");
-    }
-
-    function closeBlogDetail() {
-        const modal = document.getElementById("blog-detail-modal");
-        if (modal) modal.classList.add("hidden");
-    }
 </script>
 </body>
 </html>
