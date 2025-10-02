@@ -44,4 +44,4 @@ class Blog(CreatedBaseModel):
 class Step(UUIDBaseModel):  # TODO ?
     title = CharField(max_length=255)
     description = CKEditor5Field()
-    blog = ForeignKey('users.Blog', CASCADE)
+    blog = ForeignKey('users.Blog', CASCADE, related_name='steps')

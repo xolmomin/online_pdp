@@ -1,0 +1,255 @@
+[
+  {
+    "model": "users.blog",
+    "pk": "11111111-1111-1111-1111-111111111111",
+    "fields": {
+      "title": "Getting Started with Django",
+      "description": "<p>Django is one of the most popular Python frameworks for web development. This introductory guide explains the basic setup, installation, and configuration steps you need to start building projects. With this blog, you will learn how to create your first Django project, run migrations, and launch the development server effectively.</p>",
+      "cover_image": "cover_images/2025/09/26/django_intro.webp",
+      "created_at": "2025-09-26T09:00:00Z",
+      "updated_at": "2025-09-26T09:00:00Z"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaa0001",
+    "fields": {
+      "title": "Install Python",
+      "description": "<p>Before you can run Django, make sure that Python 3.10 or a higher version is installed on your computer. Python provides the base runtime environment for Django, and using the latest stable release ensures compatibility, security patches, and access to modern libraries required for development.</p>",
+      "blog": "11111111-1111-1111-1111-111111111111"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaa0002",
+    "fields": {
+      "title": "Install Django",
+      "description": "<p>Once Python is ready, the next step is to install Django using pip. The command <code>pip install django</code> will download and install the latest version. Installing through pip ensures that you can easily upgrade, manage dependencies, and keep your development environment clean and organized for future projects.</p>",
+      "blog": "11111111-1111-1111-1111-111111111111"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaa0003",
+    "fields": {
+      "title": "Start a Project",
+      "description": "<p>After installation, you can create a new Django project using the command <code>django-admin startproject mysite</code>. This generates a project folder structure with essential files like manage.py, settings.py, and urls.py. These files provide the foundation for adding apps, models, and views as your project grows.</p>",
+      "blog": "11111111-1111-1111-1111-111111111111"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaa0004",
+    "fields": {
+      "title": "Run Migrations",
+      "description": "<p>Migrations are a core part of Django. By running <code>python manage.py migrate</code>, you apply database schema changes that Django needs for its built-in apps. This step initializes your database with tables for authentication, sessions, and other features required to start building your application.</p>",
+      "blog": "11111111-1111-1111-1111-111111111111"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaa0005",
+    "fields": {
+      "title": "Start Development Server",
+      "description": "<p>Finally, use <code>python manage.py runserver</code> to launch the development server. This command starts a lightweight server that runs locally, allowing you to test your application. It automatically reloads when you change code, making development faster and more efficient as you iterate on your project.</p>",
+      "blog": "11111111-1111-1111-1111-111111111111"
+    }
+  },
+  {
+    "model": "users.blog",
+    "pk": "22222222-2222-2222-2222-222222222222",
+    "fields": {
+      "title": "Building a REST API",
+      "description": "<p>Django REST Framework (DRF) is a powerful toolkit for building Web APIs quickly and efficiently. This guide covers the essential steps to create a RESTful API, from installation to serialization, viewsets, and routing. By the end, you will understand how to expose your Django models as clean and reusable API endpoints.</p>",
+      "cover_image": "cover_images/2025/09/26/drf_api.webp",
+      "created_at": "2025-09-26T09:30:00Z",
+      "updated_at": "2025-09-26T09:30:00Z"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbb0001",
+    "fields": {
+      "title": "Install DRF",
+      "description": "<p>The first step is installing DRF with <code>pip install djangorestframework</code>. This package builds on Django to add tools for creating API views, serializers, and permissions. Installing DRF ensures your project has everything needed to build APIs that follow RESTful principles with minimal boilerplate.</p>",
+      "blog": "22222222-2222-2222-2222-222222222222"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbb0002",
+    "fields": {
+      "title": "Add DRF to Installed Apps",
+      "description": "<p>Next, update your <code>INSTALLED_APPS</code> in settings.py to include <code>'rest_framework'</code>. This tells Django to load DRF, making its features available throughout your project. Without this step, serializers, viewsets, and other DRF tools cannot be used in your application.</p>",
+      "blog": "22222222-2222-2222-2222-222222222222"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbb0003",
+    "fields": {
+      "title": "Create a Serializer",
+      "description": "<p>Serializers in DRF convert Django model instances into JSON data and vice versa. Define a serializer for your model to control which fields are exposed. This layer ensures data consistency, validation, and flexibility when interacting with external clients or mobile applications through your API.</p>",
+      "blog": "22222222-2222-2222-2222-222222222222"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbb0004",
+    "fields": {
+      "title": "Build a Viewset",
+      "description": "<p>Viewsets allow you to handle CRUD operations with minimal code. By using DRF's built-in ModelViewSet, you can expose your model endpoints with actions like list, retrieve, create, update, and delete. This step reduces boilerplate and enforces a consistent structure for your API endpoints.</p>",
+      "blog": "22222222-2222-2222-2222-222222222222"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbb0005",
+    "fields": {
+      "title": "Register Routes",
+      "description": "<p>Finally, use DRF routers in urls.py to automatically generate routes for your viewsets. Routers simplify URL configuration and ensure that your endpoints follow a consistent pattern. This step makes your API discoverable, easier to maintain, and more intuitive for clients consuming your data.</p>",
+      "blog": "22222222-2222-2222-2222-222222222222"
+    }
+  },
+  {
+    "model": "users.blog",
+    "pk": "33333333-3333-3333-3333-333333333333",
+    "fields": {
+      "title": "Deploying Django to Heroku",
+      "description": "<p>Heroku provides a simple way to deploy Django applications to the cloud. This guide walks through essential steps such as configuring gunicorn, creating a Procfile, updating allowed hosts, and setting up a PostgreSQL database. By following these steps, you will have a Django project running smoothly on Heroku’s infrastructure.</p>",
+      "cover_image": "cover_images/2025/09/26/heroku_deploy.webp",
+      "created_at": "2025-09-26T10:00:00Z",
+      "updated_at": "2025-09-26T10:00:00Z"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "cccccccc-cccc-cccc-cccc-cccccccc0001",
+    "fields": {
+      "title": "Install Gunicorn",
+      "description": "<p>Gunicorn is a production-grade WSGI server widely used with Django. Installing it using pip ensures that your application can serve requests efficiently on platforms like Heroku. Unlike the development server, gunicorn is designed to handle multiple requests simultaneously, providing stability and scalability for production environments.</p>",
+      "blog": "33333333-3333-3333-3333-333333333333"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "cccccccc-cccc-cccc-cccc-cccccccc0002",
+    "fields": {
+      "title": "Create Procfile",
+      "description": "<p>The Procfile is a special configuration file Heroku uses to know how to run your application. By adding <code>web: gunicorn mysite.wsgi</code> inside it, you instruct Heroku to launch your Django project with gunicorn. This file must be located at the root of your repository to function correctly.</p>",
+      "blog": "33333333-3333-3333-3333-333333333333"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "cccccccc-cccc-cccc-cccc-cccccccc0003",
+    "fields": {
+      "title": "Set Allowed Hosts",
+      "description": "<p>Before deployment, ensure that <code>ALLOWED_HOSTS</code> in settings.py includes your Heroku app domain. This step prevents Django from rejecting requests from unknown hosts. Without proper configuration, your deployed project may throw errors or deny access when accessed from the public Heroku URL.</p>",
+      "blog": "33333333-3333-3333-3333-333333333333"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "cccccccc-cccc-cccc-cccc-cccccccc0004",
+    "fields": {
+      "title": "Add Heroku Postgres",
+      "description": "<p>Heroku provides PostgreSQL as a reliable managed database service. Add the addon from your dashboard or CLI, and update your settings with <code>dj-database-url</code> for automatic configuration. This ensures your Django application uses a scalable and production-ready database with minimal setup effort.</p>",
+      "blog": "33333333-3333-3333-3333-333333333333"
+    }
+  },
+  {
+    "model": "users.blog",
+    "pk": "44444444-4444-4444-4444-444444444444",
+    "fields": {
+      "title": "Authentication with Django Allauth",
+      "description": "<p>Django Allauth makes user authentication easier by providing built-in support for email login, social authentication, and account management. This tutorial explains the key steps to install, configure, and integrate Allauth. You will learn how to enable login with popular providers and manage authentication securely.</p>",
+      "cover_image": "cover_images/2025/09/26/allauth.webp",
+      "created_at": "2025-09-26T10:30:00Z",
+      "updated_at": "2025-09-26T10:30:00Z"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "dddddddd-dddd-dddd-dddd-dddddddd0001",
+    "fields": {
+      "title": "Install Allauth",
+      "description": "<p>Start by installing Django Allauth with <code>pip install django-allauth</code>. This package brings many features including social authentication, account management, and customizable forms. Installing the package is the first step before integrating its apps into your Django project’s settings.</p>",
+      "blog": "44444444-4444-4444-4444-444444444444"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "dddddddd-dddd-dddd-dddd-dddddddd0002",
+    "fields": {
+      "title": "Update Installed Apps",
+      "description": "<p>After installing Allauth, you must add the required apps to your <code>INSTALLED_APPS</code> list in settings.py. This includes authentication, account, and socialaccount modules. Without this configuration, Allauth will not be able to provide the login, signup, and social authentication features.</p>",
+      "blog": "44444444-4444-4444-4444-444444444444"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "dddddddd-dddd-dddd-dddd-dddddddd0003",
+    "fields": {
+      "title": "Set Authentication Backends",
+      "description": "<p>Allauth requires specific authentication backends to be defined in your settings. Update <code>AUTHENTICATION_BACKENDS</code> to include both the Django model backend and Allauth backend. This ensures traditional username-password login and social authentication can coexist without conflicts.</p>",
+      "blog": "44444444-4444-4444-4444-444444444444"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "dddddddd-dddd-dddd-dddd-dddddddd0004",
+    "fields": {
+      "title": "Configure URLs",
+      "description": "<p>Finally, include Allauth’s URLs in your project’s <code>urls.py</code>. This step makes all authentication routes like login, logout, signup, and password reset available. With this, users can access built-in authentication pages, and you can further customize templates to match your application design.</p>",
+      "blog": "44444444-4444-4444-4444-444444444444"
+    }
+  },
+  {
+    "model": "users.blog",
+    "pk": "55555555-5555-5555-5555-555555555555",
+    "fields": {
+      "title": "Working with Django Signals",
+      "description": "<p>Django signals allow decoupled applications to respond to specific events, such as saving or deleting a model instance. This blog explains how to create custom signals, connect them properly, and use built-in ones like post_save or pre_delete. By mastering signals, you can make your application more modular and maintainable.</p>",
+      "cover_image": "cover_images/2025/09/26/signals.webp",
+      "created_at": "2025-09-26T11:00:00Z",
+      "updated_at": "2025-09-26T11:00:00Z"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "eeeeeeee-eeee-eeee-eeee-eeeeeeee0001",
+    "fields": {
+      "title": "Create Signals.py",
+      "description": "<p>A good practice is to define your signals in a separate <code>signals.py</code> file within the app. This keeps your project organized and makes it clear where custom signals are defined. Using this structure, other developers can easily understand and maintain your signal implementations.</p>",
+      "blog": "55555555-5555-5555-5555-555555555555"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "eeeeeeee-eeee-eeee-eeee-eeeeeeee0002",
+    "fields": {
+      "title": "Connect Signals",
+      "description": "<p>In order for signals to work, they must be connected. The best way to do this is in the <code>ready()</code> method of your app’s <code>apps.py</code>. This ensures that your signals are registered when the application starts, preventing unexpected behavior or missed events.</p>",
+      "blog": "55555555-5555-5555-5555-555555555555"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "eeeeeeee-eeee-eeee-eeee-eeeeeeee0003",
+    "fields": {
+      "title": "Use post_save",
+      "description": "<p>The <code>post_save</code> signal is triggered after a model instance is saved. You can use this signal to perform actions such as sending emails, logging activity, or updating related models. This decouples logic from the main save method, keeping your models clean and focused.</p>",
+      "blog": "55555555-5555-5555-5555-555555555555"
+    }
+  },
+  {
+    "model": "users.step",
+    "pk": "eeeeeeee-eeee-eeee-eeee-eeeeeeee0004",
+    "fields": {
+      "title": "Use pre_delete",
+      "description": "<p>The <code>pre_delete</code> signal is triggered right before a model instance is removed from the database. This is useful for cleaning up related data, deleting files, or performing checks before the deletion occurs. Using this signal makes your application safer and more consistent in handling data removal.</p>",
+      "blog": "55555555-5555-5555-5555-555555555555"
+    }
+  }
+]

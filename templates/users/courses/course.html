@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Courses - EduHub Learning Platform</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+{% extends 'users/base.html' %}
+
+{% block title %}
+    All Courses - EduHub Learning Platform
+{% endblock %}
+
+{% block custom_css %}
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
         .hero-gradient {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
@@ -23,30 +17,6 @@
         .card-hover:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #667eea;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #667eea;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
         }
 
         .course-thumbnail {
@@ -67,11 +37,6 @@
             color: white;
         }
 
-        .level-elementary {
-            background-color: #3b82f6;
-            color: white;
-        }
-
         .level-intermediate {
             background-color: #f59e0b;
             color: white;
@@ -84,51 +49,6 @@
 
         .rating-stars {
             color: #fbbf24;
-        }
-
-        .filter-button {
-            transition: all 0.3s ease;
-        }
-
-        .filter-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .filter-button.active {
-            background-color: #667eea;
-            color: white;
-        }
-
-        .sort-dropdown {
-            transition: all 0.3s ease;
-        }
-
-        .price-range-slider {
-            -webkit-appearance: none;
-            appearance: none;
-            height: 6px;
-            border-radius: 3px;
-            background: #e5e7eb;
-            outline: none;
-        }
-
-        .price-range-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #667eea;
-            cursor: pointer;
-        }
-
-        .price-range-slider::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #667eea;
-            cursor: pointer;
-            border: none;
         }
 
         .instructor-avatar {
@@ -162,910 +82,664 @@
             color: white;
         }
     </style>
-</head>
-<body class="bg-gray-50">
-<!-- Navigation -->
-<nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <div class="flex-shrink-0">
-                    <h1 class="text-2xl font-bold text-gray-900">
-                        <span class="text-purple-600">Edu</span>Hub
-                    </h1>
+{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="hero-gradient text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-4">All Courses</h2>
+                <p class="text-xl mb-6 max-w-2xl mx-auto opacity-90">
+                    Discover our complete collection of expert-led courses across technology, business, and creative
+                    fields.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
+                <!-- Course Card 1 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="web-development" data-level="beginner" data-price="89" data-duration="52">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
+                        <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Complete Web Development Bootcamp</h4>
+                            <p class="text-gray-600 text-sm mb-3">Learn HTML, CSS, JavaScript, React, and Node.js from
+                                scratch. Build real-world projects.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★★</div>
+                                <span class="text-gray-600 text-sm ml-2">4.8 (2,341)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 52 hours</span>
+                                    <span>📚 156 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-blue-500">JS</div>
+                                    <span class="ml-2 text-sm text-gray-600">John Smith</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$89</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
                 </div>
-                <div class="hidden md:block ml-10">
-                    <div class="flex items-baseline space-x-8">
-                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Home</a>
-                        <a href="#" class="nav-link text-purple-600 font-medium">Courses</a>
-                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Blogs</a>
-                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Interviews</a>
+
+                <!-- Course Card 2 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="data-science" data-level="intermediate" data-price="129" data-duration="38">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
+                        <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Data Science with Python</h4>
+                            <p class="text-gray-600 text-sm mb-3">Master data analysis, visualization, and machine
+                                learning
+                                with Python and Pandas.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★☆</div>
+                                <span class="text-gray-600 text-sm ml-2">4.6 (1,890)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 38 hours</span>
+                                    <span>📚 124 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-green-500">MG</div>
+                                    <span class="ml-2 text-sm text-gray-600">Dr. Maria Garcia</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$129</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="design"
+                     data-level="beginner" data-price="79" data-duration="28">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-yellow-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 20h9"/>
+                                    <path d="M12 4h9"/>
+                                    <path d="M4 9h16"/>
+                                    <path d="M4 15h16"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Graphic Design Essentials</h4>
+                            <p class="text-gray-600 text-sm mb-3">Learn Photoshop, Illustrator, and design principles to
+                                create professional graphics.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★☆</div>
+                                <span class="text-gray-600 text-sm ml-2">4.5 (980)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 28 hours</span>
+                                    <span>📚 90 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-pink-500">AL</div>
+                                    <span class="ml-2 text-sm text-gray-600">Alice Lee</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$79</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="mobile-development" data-level="advanced" data-price="149" data-duration="60">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M7 4h10v16H7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-advanced">Advanced</span>
+                        <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Advanced Mobile App Development</h4>
+                            <p class="text-gray-600 text-sm mb-3">Build complex iOS and Android apps using Flutter and
+                                React
+                                Native.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★★</div>
+                                <span class="text-gray-600 text-sm ml-2">4.9 (1,230)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 60 hours</span>
+                                    <span>📚 200 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-indigo-500">RK</div>
+                                    <span class="ml-2 text-sm text-gray-600">Robert King</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$149</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 5 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="cybersecurity" data-level="intermediate" data-price="119" data-duration="42">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-600"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l7 4v6c0 5-3.5 9.74-7 10-3.5-.26-7-5-7-10V6z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Cybersecurity Fundamentals</h4>
+                            <p class="text-gray-600 text-sm mb-3">Protect systems and networks from cyber attacks. Learn
+                                encryption, firewalls, and more.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★☆</div>
+                                <span class="text-gray-600 text-sm ml-2">4.7 (760)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 42 hours</span>
+                                    <span>📚 130 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-red-500">TN</div>
+                                    <span class="ml-2 text-sm text-gray-600">Tom Nelson</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$119</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 6 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="ai-ml"
+                     data-level="advanced" data-price="159" data-duration="70">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-red-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-advanced">Advanced</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Artificial Intelligence & Machine
+                                Learning</h4>
+                            <p class="text-gray-600 text-sm mb-3">Deep dive into neural networks, TensorFlow, and
+                                advanced
+                                ML models.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★★</div>
+                                <span class="text-gray-600 text-sm ml-2">4.9 (3,450)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 70 hours</span>
+                                    <span>📚 220 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-yellow-500">SJ</div>
+                                    <span class="ml-2 text-sm text-gray-600">Sophia Johnson</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$159</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 7 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="cloud-computing" data-level="beginner" data-price="99" data-duration="35">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-300 to-blue-600"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M5 16h14a4 4 0 00-4-4H9a4 4 0 00-4 4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Cloud Computing with AWS</h4>
+                            <p class="text-gray-600 text-sm mb-3">Get started with AWS services, EC2, S3, and
+                                Lambda.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★☆</div>
+                                <span class="text-gray-600 text-sm ml-2">4.6 (1,150)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 35 hours</span>
+                                    <span>📚 100 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-blue-500">MK</div>
+                                    <span class="ml-2 text-sm text-gray-600">Michael Kim</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$99</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 8 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="business"
+                     data-level="intermediate" data-price="109" data-duration="40">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-600"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 8c-1.11 0-2 .89-2 2s.89 2 2 2 2-.89 2-2-.89-2-2-2z"/>
+                                    <path d="M4 6h16v12H4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Business Analytics</h4>
+                            <p class="text-gray-600 text-sm mb-3">Learn data-driven decision making using Excel, SQL,
+                                and BI
+                                tools.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★☆</div>
+                                <span class="text-gray-600 text-sm ml-2">4.7 (1,450)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 40 hours</span>
+                                    <span>📚 140 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-purple-500">AK</div>
+                                    <span class="ml-2 text-sm text-gray-600">Anita Kapoor</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$109</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 9 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="graphic-design" data-level="beginner" data-price="79" data-duration="28">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-red-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 6h16v12H4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Graphic Design Basics</h4>
+                            <p class="text-gray-600 text-sm mb-3">Learn Photoshop, Illustrator, and design principles
+                                from
+                                scratch.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★☆</div>
+                                <span class="text-gray-600 text-sm ml-2">4.5 (920)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 28 hours</span>
+                                    <span>📚 90 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-pink-500">LS</div>
+                                    <span class="ml-2 text-sm text-gray-600">Laura Scott</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$79</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 10 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="marketing"
+                     data-level="intermediate" data-price="99" data-duration="32">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-300 to-teal-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Digital Marketing Mastery</h4>
+                            <p class="text-gray-600 text-sm mb-3">SEO, SEM, social media, and email campaigns for
+                                business
+                                growth.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★★</div>
+                                <span class="text-gray-600 text-sm ml-2">4.8 (1,670)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 32 hours</span>
+                                    <span>📚 110 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-green-500">EM</div>
+                                    <span class="ml-2 text-sm text-gray-600">Ethan Miller</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$99</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 11 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="finance"
+                     data-level="advanced" data-price="139" data-duration="55">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-700"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5v14"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-advanced">Advanced</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Financial Modeling & Investment</h4>
+                            <p class="text-gray-600 text-sm mb-3">Master Excel models, valuations, and investment
+                                strategies.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★★</div>
+                                <span class="text-gray-600 text-sm ml-2">4.9 (2,080)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 55 hours</span>
+                                    <span>📚 170 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-gray-600">JW</div>
+                                    <span class="ml-2 text-sm text-gray-600">James Wilson</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$139</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 12 -->
+                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                     data-topic="language-learning" data-level="beginner" data-price="69" data-duration="25">
+                    <div class="course-thumbnail h-48 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-400 to-yellow-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white bg-opacity-90 rounded-full p-4">
+                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 20h9"/>
+                                    <path d="M12 4h9"/>
+                                    <path d="M3 9h18"/>
+                                    <path d="M3 15h18"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Spanish for Beginners</h4>
+                            <p class="text-gray-600 text-sm mb-3">Learn basic Spanish vocabulary, grammar, and
+                                conversational skills.</p>
+                            <div class="flex items-center mb-3">
+                                <div class="rating-stars">★★★★☆</div>
+                                <span class="text-gray-600 text-sm ml-2">4.6 (580)</span>
+                            </div>
+                            <div class="course-stats mb-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span>⏱️ 25 hours</span>
+                                    <span>📚 85 lessons</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="instructor-avatar bg-orange-500">CM</div>
+                                    <span class="ml-2 text-sm text-gray-600">Carla Martinez</span>
+                                </div>
+                                <span class="text-purple-600 font-bold text-xl">$69</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            Enroll Now
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="flex items-center space-x-4">
-                <div class="relative">
-                    <input type="text" id="search-input" placeholder="Search courses..."
-                           class="bg-gray-100 rounded-full px-4 py-2 pl-10 w-64 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:bg-white transition-all">
-                    <svg class="absolute left-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
-                         viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </div>
-                <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
-                    Sign In
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="py-8 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center items-center space-x-2">
+                <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                    Previous
+                </button>
+                <button class="pagination-button active px-3 py-2 rounded-lg border border-gray-300">1</button>
+                <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                    2
+                </button>
+                <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                    3
+                </button>
+                <span class="px-3 py-2 text-gray-500">...</span>
+                <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                    13
+                </button>
+                <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
+                    Next
                 </button>
             </div>
         </div>
-    </div>
-</nav>
+    </section>
+{% endblock %}
 
-<!-- Page Header -->
-<section class="hero-gradient text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-            <h2 class="text-4xl font-bold mb-4">All Courses</h2>
-            <p class="text-xl mb-6 max-w-2xl mx-auto opacity-90">
-                Discover our complete collection of expert-led courses across technology, business, and creative fields.
-            </p>
-        </div>
-    </div>
-</section>
+{% block custom_js %}
+    <script>
+        // Course filtering and search functionality
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const courseCards = document.querySelectorAll('[data-topic]');
+        const searchInput = document.getElementById('search-input');
+        const levelFilter = document.getElementById('level-filter');
+        const priceRange = document.getElementById('price-range');
+        const priceDisplay = document.getElementById('price-display');
+        const durationFilter = document.getElementById('duration-filter');
+        const sortFilter = document.getElementById('sort-filter');
+        const resultsCount = document.getElementById('results-count');
 
-<!-- Courses Grid -->
-<section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
-            <!-- Course Card 1 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                 data-topic="web-development" data-level="beginner" data-price="89" data-duration="52">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
-                    <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Complete Web Development Bootcamp</h4>
-                        <p class="text-gray-600 text-sm mb-3">Learn HTML, CSS, JavaScript, React, and Node.js from
-                            scratch. Build real-world projects.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★★</div>
-                            <span class="text-gray-600 text-sm ml-2">4.8 (2,341)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 52 hours</span>
-                                <span>📚 156 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-blue-500">JS</div>
-                                <span class="ml-2 text-sm text-gray-600">John Smith</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$89</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 2 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                 data-topic="data-science" data-level="intermediate" data-price="129" data-duration="38">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
-                    <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Data Science with Python</h4>
-                        <p class="text-gray-600 text-sm mb-3">Master data analysis, visualization, and machine learning
-                            with Python and Pandas.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★☆</div>
-                            <span class="text-gray-600 text-sm ml-2">4.6 (1,890)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 38 hours</span>
-                                <span>📚 124 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-green-500">MG</div>
-                                <span class="ml-2 text-sm text-gray-600">Dr. Maria Garcia</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$129</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 3 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="design"
-                 data-level="beginner" data-price="79" data-duration="28">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-yellow-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 20h9"/>
-                                <path d="M12 4h9"/>
-                                <path d="M4 9h16"/>
-                                <path d="M4 15h16"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Graphic Design Essentials</h4>
-                        <p class="text-gray-600 text-sm mb-3">Learn Photoshop, Illustrator, and design principles to
-                            create professional graphics.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★☆</div>
-                            <span class="text-gray-600 text-sm ml-2">4.5 (980)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 28 hours</span>
-                                <span>📚 90 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-pink-500">AL</div>
-                                <span class="ml-2 text-sm text-gray-600">Alice Lee</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$79</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 4 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                 data-topic="mobile-development" data-level="advanced" data-price="149" data-duration="60">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M7 4h10v16H7z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-advanced">Advanced</span>
-                    <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Advanced Mobile App Development</h4>
-                        <p class="text-gray-600 text-sm mb-3">Build complex iOS and Android apps using Flutter and React
-                            Native.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★★</div>
-                            <span class="text-gray-600 text-sm ml-2">4.9 (1,230)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 60 hours</span>
-                                <span>📚 200 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-indigo-500">RK</div>
-                                <span class="ml-2 text-sm text-gray-600">Robert King</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$149</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 5 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                 data-topic="cybersecurity" data-level="intermediate" data-price="119" data-duration="42">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-600"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l7 4v6c0 5-3.5 9.74-7 10-3.5-.26-7-5-7-10V6z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Cybersecurity Fundamentals</h4>
-                        <p class="text-gray-600 text-sm mb-3">Protect systems and networks from cyber attacks. Learn
-                            encryption, firewalls, and more.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★☆</div>
-                            <span class="text-gray-600 text-sm ml-2">4.7 (760)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 42 hours</span>
-                                <span>📚 130 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-red-500">TN</div>
-                                <span class="ml-2 text-sm text-gray-600">Tom Nelson</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$119</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 6 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="ai-ml"
-                 data-level="advanced" data-price="159" data-duration="70">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-red-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-advanced">Advanced</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Artificial Intelligence & Machine
-                            Learning</h4>
-                        <p class="text-gray-600 text-sm mb-3">Deep dive into neural networks, TensorFlow, and advanced
-                            ML models.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★★</div>
-                            <span class="text-gray-600 text-sm ml-2">4.9 (3,450)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 70 hours</span>
-                                <span>📚 220 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-yellow-500">SJ</div>
-                                <span class="ml-2 text-sm text-gray-600">Sophia Johnson</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$159</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 7 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                 data-topic="cloud-computing" data-level="beginner" data-price="99" data-duration="35">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-300 to-blue-600"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M5 16h14a4 4 0 00-4-4H9a4 4 0 00-4 4z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Cloud Computing with AWS</h4>
-                        <p class="text-gray-600 text-sm mb-3">Get started with AWS services, EC2, S3, and Lambda.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★☆</div>
-                            <span class="text-gray-600 text-sm ml-2">4.6 (1,150)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 35 hours</span>
-                                <span>📚 100 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-blue-500">MK</div>
-                                <span class="ml-2 text-sm text-gray-600">Michael Kim</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$99</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 8 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="business"
-                 data-level="intermediate" data-price="109" data-duration="40">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-600"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 8c-1.11 0-2 .89-2 2s.89 2 2 2 2-.89 2-2-.89-2-2-2z"/>
-                                <path d="M4 6h16v12H4z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Business Analytics</h4>
-                        <p class="text-gray-600 text-sm mb-3">Learn data-driven decision making using Excel, SQL, and BI
-                            tools.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★☆</div>
-                            <span class="text-gray-600 text-sm ml-2">4.7 (1,450)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 40 hours</span>
-                                <span>📚 140 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-purple-500">AK</div>
-                                <span class="ml-2 text-sm text-gray-600">Anita Kapoor</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$109</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 9 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                 data-topic="graphic-design" data-level="beginner" data-price="79" data-duration="28">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-red-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M4 6h16v12H4z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Graphic Design Basics</h4>
-                        <p class="text-gray-600 text-sm mb-3">Learn Photoshop, Illustrator, and design principles from
-                            scratch.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★☆</div>
-                            <span class="text-gray-600 text-sm ml-2">4.5 (920)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 28 hours</span>
-                                <span>📚 90 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-pink-500">LS</div>
-                                <span class="ml-2 text-sm text-gray-600">Laura Scott</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$79</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 10 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="marketing"
-                 data-level="intermediate" data-price="99" data-duration="32">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-300 to-teal-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 12h18M3 6h18M3 18h18"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Digital Marketing Mastery</h4>
-                        <p class="text-gray-600 text-sm mb-3">SEO, SEM, social media, and email campaigns for business
-                            growth.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★★</div>
-                            <span class="text-gray-600 text-sm ml-2">4.8 (1,670)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 32 hours</span>
-                                <span>📚 110 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-green-500">EM</div>
-                                <span class="ml-2 text-sm text-gray-600">Ethan Miller</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$99</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 11 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="finance"
-                 data-level="advanced" data-price="139" data-duration="55">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-700"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5v14"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-advanced">Advanced</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Financial Modeling & Investment</h4>
-                        <p class="text-gray-600 text-sm mb-3">Master Excel models, valuations, and investment
-                            strategies.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★★</div>
-                            <span class="text-gray-600 text-sm ml-2">4.9 (2,080)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 55 hours</span>
-                                <span>📚 170 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-gray-600">JW</div>
-                                <span class="ml-2 text-sm text-gray-600">James Wilson</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$139</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Card 12 -->
-            <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                 data-topic="language-learning" data-level="beginner" data-price="69" data-duration="25">
-                <div class="course-thumbnail h-48 relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-400 to-yellow-500"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white bg-opacity-90 rounded-full p-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 20h9"/>
-                                <path d="M12 4h9"/>
-                                <path d="M3 9h18"/>
-                                <path d="M3 15h18"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
-                </div>
-                <div class="p-5 flex flex-col flex-grow justify-between">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-2 text-lg">Spanish for Beginners</h4>
-                        <p class="text-gray-600 text-sm mb-3">Learn basic Spanish vocabulary, grammar, and
-                            conversational skills.</p>
-                        <div class="flex items-center mb-3">
-                            <div class="rating-stars">★★★★☆</div>
-                            <span class="text-gray-600 text-sm ml-2">4.6 (580)</span>
-                        </div>
-                        <div class="course-stats mb-3">
-                            <div class="flex items-center justify-between text-sm">
-                                <span>⏱️ 25 hours</span>
-                                <span>📚 85 lessons</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center">
-                                <div class="instructor-avatar bg-orange-500">CM</div>
-                                <span class="ml-2 text-sm text-gray-600">Carla Martinez</span>
-                            </div>
-                            <span class="text-purple-600 font-bold text-xl">$69</span>
-                        </div>
-                    </div>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                        Enroll Now
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pagination -->
-<section class="py-8 bg-white border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-center items-center space-x-2">
-            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
-                Previous
-            </button>
-            <button class="pagination-button active px-3 py-2 rounded-lg border border-gray-300">1</button>
-            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
-                2
-            </button>
-            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
-                3
-            </button>
-            <span class="px-3 py-2 text-gray-500">...</span>
-            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
-                13
-            </button>
-            <button class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">
-                Next
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h4 class="text-2xl font-bold mb-4">
-                    <span class="text-purple-400">Edu</span>Hub
-                </h4>
-                <p class="text-gray-400 mb-4">Empowering learners worldwide with structured courses, expert instruction,
-                    and industry-recognized certificates.</p>
-                <div class="flex space-x-4">
-                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">📱</button>
-                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">🐦</button>
-                    <button class="bg-gray-800 p-2 rounded hover:bg-gray-700 transition-colors">📘</button>
-                </div>
-            </div>
-            <div>
-                <h5 class="font-semibold mb-4">Learn</h5>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="#" class="hover:text-white transition-colors">All Courses</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Free Lessons</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Certificates</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Learning Paths</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="font-semibold mb-4">Resources</h5>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Interviews</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Career Guide</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="font-semibold mb-4">Company</h5>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Instructors</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 EduHub. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<script>
-    // Course filtering and search functionality
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const courseCards = document.querySelectorAll('[data-topic]');
-    const searchInput = document.getElementById('search-input');
-    const levelFilter = document.getElementById('level-filter');
-    const priceRange = document.getElementById('price-range');
-    const priceDisplay = document.getElementById('price-display');
-    const durationFilter = document.getElementById('duration-filter');
-    const sortFilter = document.getElementById('sort-filter');
-    const resultsCount = document.getElementById('results-count');
-
-    // Topic filtering
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            applyFilters();
-        });
-    });
-
-    // Price range slider
-    priceRange.addEventListener('input', function () {
-        const value = this.value;
-        priceDisplay.textContent = value == 0 ? 'Free only' : `Up to $${value}`;
-        applyFilters();
-    });
-
-    // Other filters
-    [levelFilter, durationFilter, sortFilter].forEach(filter => {
-        filter.addEventListener('change', applyFilters);
-    });
-
-    // Search functionality
-    searchInput.addEventListener('input', applyFilters);
-
-    function applyFilters() {
-        const selectedTopic = document.querySelector('.filter-button.active').getAttribute('data-topic');
-        const selectedLevel = levelFilter.value;
-        const maxPrice = parseInt(priceRange.value);
-        const selectedDuration = durationFilter.value;
-        const searchTerm = searchInput.value.toLowerCase();
-        const sortBy = sortFilter.value;
-
-        let visibleCourses = [];
-
-        courseCards.forEach(card => {
-            const topic = card.getAttribute('data-topic');
-            const level = card.getAttribute('data-level');
-            const price = parseInt(card.getAttribute('data-price'));
-            const duration = parseInt(card.getAttribute('data-duration'));
-            const title = card.querySelector('h4').textContent.toLowerCase();
-            const description = card.querySelector('p').textContent.toLowerCase();
-
-            let show = true;
-
-            // Topic filter
-            if (selectedTopic !== 'all' && topic !== selectedTopic) {
-                show = false;
-            }
-
-            // Level filter
-            if (selectedLevel !== 'all' && level !== selectedLevel) {
-                show = false;
-            }
-
-            // Price filter
-            if (price > maxPrice) {
-                show = false;
-            }
-
-            // Duration filter
-            if (selectedDuration !== 'all') {
-                if (selectedDuration === 'short' && duration >= 10) show = false;
-                if (selectedDuration === 'medium' && (duration < 10 || duration > 30)) show = false;
-                if (selectedDuration === 'long' && duration <= 30) show = false;
-            }
-
-            // Search filter
-            if (searchTerm && !title.includes(searchTerm) && !description.includes(searchTerm)) {
-                show = false;
-            }
-
-            if (show) {
-                card.style.display = 'block';
-                visibleCourses.push(card);
-            } else {
-                card.style.display = 'none';
-            }
-        });
-
-        // Sort courses
-        if (sortBy !== 'popular') {
-            sortCourses(visibleCourses, sortBy);
-        }
-
-        // Update results count
-        resultsCount.textContent = `Showing ${visibleCourses.length} of 150 courses`;
-    }
-
-    function sortCourses(courses, sortBy) {
-        const container = document.getElementById('courses-grid');
-
-        courses.sort((a, b) => {
-            switch (sortBy) {
-                case 'newest':
-                    // Simulate newest first (reverse order)
-                    return -1;
-                case 'rating':
-                    const ratingA = parseFloat(a.querySelector('.rating-stars + span').textContent);
-                    const ratingB = parseFloat(b.querySelector('.rating-stars + span').textContent);
-                    return ratingB - ratingA;
-                case 'price-low':
-                    const priceA = parseInt(a.getAttribute('data-price'));
-                    const priceB = parseInt(b.getAttribute('data-price'));
-                    return priceA - priceB;
-                case 'price-high':
-                    const priceA2 = parseInt(a.getAttribute('data-price'));
-                    const priceB2 = parseInt(b.getAttribute('data-price'));
-                    return priceB2 - priceA2;
-                case 'duration':
-                    const durationA = parseInt(a.getAttribute('data-duration'));
-                    const durationB = parseInt(b.getAttribute('data-duration'));
-                    return durationA - durationB;
-                default:
-                    return 0;
-            }
-        });
-
-        // Reorder DOM elements
-        courses.forEach(course => {
-            container.appendChild(course);
-        });
-    }
-
-    // View toggle functionality
-    const gridView = document.getElementById('grid-view');
-    const listView = document.getElementById('list-view');
-    const coursesGrid = document.getElementById('courses-grid');
-
-    gridView.addEventListener('click', function () {
-        coursesGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
-        this.classList.remove('text-gray-400');
-        this.classList.add('text-purple-600');
-        listView.classList.remove('text-purple-600');
-        listView.classList.add('text-gray-400');
-    });
-
-    listView.addEventListener('click', function () {
-        coursesGrid.className = 'grid grid-cols-1 gap-6';
-        this.classList.remove('text-gray-400');
-        this.classList.add('text-purple-600');
-        gridView.classList.remove('text-purple-600');
-        gridView.classList.add('text-gray-400');
-    });
-
-    // Load more functionality
-    const loadMoreBtn = document.getElementById('load-more');
-    loadMoreBtn.addEventListener('click', function () {
-        alert('Loading more courses...\n\nThis would typically load the next batch of courses from the server.');
-    });
-
-    // Pagination functionality
-    const paginationButtons = document.querySelectorAll('.pagination-button');
-    paginationButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            if (this.textContent === 'Previous' || this.textContent === 'Next') {
-                alert(`Navigating to ${this.textContent.toLowerCase()} page...`);
-            } else if (!isNaN(this.textContent)) {
-                paginationButtons.forEach(btn => btn.classList.remove('active'));
+        // Topic filtering
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
-                alert(`Loading page ${this.textContent}...`);
+                applyFilters();
+            });
+        });
+
+
+        // View toggle functionality
+        const gridView = document.getElementById('grid-view');
+        const listView = document.getElementById('list-view');
+        const coursesGrid = document.getElementById('courses-grid');
+
+        gridView.addEventListener('click', function () {
+            coursesGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
+            this.classList.remove('text-gray-400');
+            this.classList.add('text-purple-600');
+            listView.classList.remove('text-purple-600');
+            listView.classList.add('text-gray-400');
+        });
+
+        listView.addEventListener('click', function () {
+            coursesGrid.className = 'grid grid-cols-1 gap-6';
+            this.classList.remove('text-gray-400');
+            this.classList.add('text-purple-600');
+            gridView.classList.remove('text-purple-600');
+            gridView.classList.add('text-gray-400');
+        });
+
+        // Pagination functionality
+        const paginationButtons = document.querySelectorAll('.pagination-button');
+        paginationButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                if (this.textContent === 'Previous' || this.textContent === 'Next') {
+                    alert(`Navigating to ${this.textContent.toLowerCase()} page...`);
+                } else if (!isNaN(this.textContent)) {
+                    paginationButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    alert(`Loading page ${this.textContent}...`);
+                }
+            });
+        });
+
+        // Course enrollment
+        const enrollButtons = document.querySelectorAll('button');
+        enrollButtons.forEach(button => {
+            if (button.textContent.includes('Enroll Now') || button.textContent.includes('Start Free')) {
+                button.addEventListener('click', function () {
+                    const courseCard = this.closest('.card-hover');
+                    const courseTitle = courseCard.querySelector('h4').textContent;
+                    const coursePrice = courseCard.querySelector('.text-purple-600, .text-green-600').textContent;
+                    const courseLevel = courseCard.querySelector('.level-badge').textContent;
+                    const courseDuration = courseCard.querySelector('.course-stats span').textContent;
+                    const instructor = courseCard.querySelector('.instructor-avatar + span').textContent;
+                    const rating = courseCard.querySelector('.rating-stars + span').textContent;
+
+                    alert(`Course Enrollment Details\n\n📚 Course: ${courseTitle}\n👨‍🏫 Instructor: ${instructor}\n📊 Level: ${courseLevel}\n⏱️ Duration: ${courseDuration}\n⭐ Rating: ${rating}\n💰 Price: ${coursePrice}\n\n${coursePrice === 'Free' ? '🎉 Starting free course...' : '💳 Redirecting to payment...'}`);
+                });
             }
         });
-    });
-
-    // Course enrollment
-    const enrollButtons = document.querySelectorAll('button');
-    enrollButtons.forEach(button => {
-        if (button.textContent.includes('Enroll Now') || button.textContent.includes('Start Free')) {
-            button.addEventListener('click', function () {
-                const courseCard = this.closest('.card-hover');
-                const courseTitle = courseCard.querySelector('h4').textContent;
-                const coursePrice = courseCard.querySelector('.text-purple-600, .text-green-600').textContent;
-                const courseLevel = courseCard.querySelector('.level-badge').textContent;
-                const courseDuration = courseCard.querySelector('.course-stats span').textContent;
-                const instructor = courseCard.querySelector('.instructor-avatar + span').textContent;
-                const rating = courseCard.querySelector('.rating-stars + span').textContent;
-
-                alert(`Course Enrollment Details\n\n📚 Course: ${courseTitle}\n👨‍🏫 Instructor: ${instructor}\n📊 Level: ${courseLevel}\n⏱️ Duration: ${courseDuration}\n⭐ Rating: ${rating}\n💰 Price: ${coursePrice}\n\n${coursePrice === 'Free' ? '🎉 Starting free course...' : '💳 Redirecting to payment...'}`);
-            });
-        }
-    });
-
-    // Navigation functionality
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const section = this.textContent.toLowerCase();
-            alert(`Navigating to ${section} page...`);
-        });
-    });
-
-    // Sign In functionality
-    document.querySelectorAll('button').forEach(button => {
-        if (button.textContent.includes('Sign In')) {
-            button.addEventListener('click', function () {
-                alert('Sign In\n\nRedirecting to authentication page...');
-            });
-        }
-    });
-
-    // Initialize filters
-    applyFilters();
-</script>
-<script>(function () {
-    function c() {
-        var b = a.contentDocument || a.contentWindow.document;
-        if (b) {
-            var d = b.createElement('script');
-            d.innerHTML = "window.__CF$cv$params={r:'9833ec34b351ad45',t:'MTc1ODU2NjM0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
-            b.getElementsByTagName('head')[0].appendChild(d)
-        }
-    }
-
-    if (document.body) {
-        var a = document.createElement('iframe');
-        a.height = 1;
-        a.width = 1;
-        a.style.position = 'absolute';
-        a.style.top = 0;
-        a.style.left = 0;
-        a.style.border = 'none';
-        a.style.visibility = 'hidden';
-        document.body.appendChild(a);
-        if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else {
-            var e = document.onreadystatechange || function () {
-            };
-            document.onreadystatechange = function (b) {
-                e(b);
-                'loading' !== document.readyState && (document.onreadystatechange = e, c())
-            }
-        }
-    }
-})();</script>
-</body>
-</html>
+    </script>
+{% endblock %}

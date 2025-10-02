@@ -77,7 +77,7 @@ class TopicModelAdmin(admin.ModelAdmin):
 
 @admin.register(Blog)
 class BlogModelAdmin(admin.ModelAdmin):
-    pass
+    list_display = 'id', 'title'
 
 
 @admin.register(InterviewPart)
