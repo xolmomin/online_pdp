@@ -45,7 +45,14 @@ docker compose
 redis
 nginx
 
+docker
+docker compose
+docker swarm | k8s
 
+image
+container
+network
+volume
 
 ------------------------------------
 project
