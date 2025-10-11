@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 11:11+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/users/admin.py:14
+msgid "Personal info"
+msgstr ""
+
+#: apps/users/admin.py:16
+msgid "Permissions"
+msgstr ""
+
+#: apps/users/admin.py:27
+msgid "Important dates"
+msgstr ""
+
+#: apps/users/models/courses.py:40
+msgid "Course"
+msgstr ""
+
+#: apps/users/models/courses.py:41
+msgid "Courses"
+msgstr ""
+
+#: apps/users/models/courses.py:64
+msgid "Section"
+msgstr ""
+
+#: apps/users/models/courses.py:65
+msgid "Sections"
+msgstr ""
+
+#: apps/users/models/courses.py:89
+msgid "Lesson"
+msgstr ""
+
+#: apps/users/models/courses.py:90
+msgid "Lessons"
+msgstr ""
