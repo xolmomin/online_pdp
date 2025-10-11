@@ -5,7 +5,7 @@ from django.db.models.fields import CharField, IntegerField, BooleanField, Small
 from django_ckeditor_5.fields import CKEditor5Field
 
 from shared.models import CreatedBaseModel, OrderBaseModel
-
+from django.utils.translation import gettext_lazy as _
 
 class Topic(CreatedBaseModel):
     name = CharField(max_length=255)
@@ -37,8 +37,8 @@ class Course(CreatedBaseModel):  # TODO Module
     teachers = ManyToManyField('users.User', blank=True)
 
     class Meta:
-        verbose_name = 'Kurs'
-        verbose_name_plural = 'Kurslar'
+        verbose_name = _('Course')
+        verbose_name_plural = _('Courses')
         constraints = [
             CheckConstraint(
                 check=Q(rating__gte=0) & Q(rating__lte=50),
@@ -60,6 +60,10 @@ class Section(CreatedBaseModel, OrderBaseModel):  # TODO lesson
     status = CharField(max_length=20, choices=Status.choices, default=Status.UNPUBLISHED)
     course = ForeignKey('users.Course', CASCADE)
 
+    class Meta:
+        verbose_name = _('Section')
+        verbose_name_plural = _('Sections')
+
     def __str__(self):
         return self.name
 
@@ -80,6 +84,10 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     section = ForeignKey('users.Section', CASCADE)
     video_link = URLField()
     video = FileField(upload_to='videos/%Y/%m/%d', help_text="video's format must be 'mp4', 'mov', 'webm'",validators=[FileExtensionValidator(['mp4', 'mov', 'webm'])])
+
+    class Meta:
+        verbose_name = _('Lesson')
+        verbose_name_plural = _('Lessons')
 
     def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
         super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
