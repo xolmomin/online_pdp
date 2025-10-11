@@ -83,7 +83,10 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     video_duration = IntegerField(db_default=0)
     section = ForeignKey('users.Section', CASCADE)
     video_link = URLField()
-    video = FileField(upload_to='videos/%Y/%m/%d', help_text="video's format must be 'mp4', 'mov', 'webm'",validators=[FileExtensionValidator(['mp4', 'mov', 'webm'])])
+    video = FileField(upload_to='videos/%Y/%m/%d',
+                      help_text="video's format must be 'mp4', 'mov', 'webm'",
+                      validators=[FileExtensionValidator(['mp4', 'mov', 'webm'])]
+                      )
 
     class Meta:
         verbose_name = _('Lesson')
