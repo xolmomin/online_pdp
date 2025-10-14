@@ -16,6 +16,7 @@ pip-selfcheck.json
 .idea/**/shelf
 .idea/**/aws.xml
 media
+**/migrations/**
 .idea/**/contentModel.xml
 .idea/**/dataSources/
 .idea/**/dataSources.ids
