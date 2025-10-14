@@ -16,10 +16,10 @@ class Topic(CreatedBaseModel):
 
 class Course(CreatedBaseModel):  # TODO Module
     class Level(TextChoices):
-        BEGINNER = 'beginner', 'Beginner'
-        ELEMENTARY = 'elementary', 'Elementary'
-        INTERMEDIATE = 'intermediate', 'Intermediate'
-        ADVANCED = 'advanced', 'Advanced'
+        BEGINNER = 'beginner', _('Beginner')
+        ELEMENTARY = 'elementary', _('Elementary')
+        INTERMEDIATE = 'intermediate', _('Intermediate')
+        ADVANCED = 'advanced', _('Advanced')
 
     name = CharField(max_length=255)
     level = CharField(max_length=20, choices=Level.choices)

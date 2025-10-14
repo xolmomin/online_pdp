@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 11:11+0500\n"
+"POT-Creation-Date: 2025-10-14 09:11+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,22 @@ msgstr ""
 msgid "Important dates"
 msgstr ""
 
+#: apps/users/models/courses.py:19
+msgid "Beginner"
+msgstr ""
+
+#: apps/users/models/courses.py:20
+msgid "Elementary"
+msgstr ""
+
+#: apps/users/models/courses.py:21
+msgid "Intermediate"
+msgstr ""
+
+#: apps/users/models/courses.py:22
+msgid "Advanced"
+msgstr ""
+
 #: apps/users/models/courses.py:40
 msgid "Course"
 msgstr ""
@@ -46,10 +62,10 @@ msgstr ""
 msgid "Sections"
 msgstr ""
 
-#: apps/users/models/courses.py:89
+#: apps/users/models/courses.py:92
 msgid "Lesson"
 msgstr ""
 
-#: apps/users/models/courses.py:90
+#: apps/users/models/courses.py:93
 msgid "Lessons"
 msgstr ""
