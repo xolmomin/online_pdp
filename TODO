@@ -166,3 +166,4 @@ Task
 2. view larni yozish
 3. login, register page lari
 4. email orqali verification bolishi kerak (one time link orqali)
+5. base.html ga ajratish
