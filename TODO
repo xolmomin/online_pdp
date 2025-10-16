@@ -176,4 +176,5 @@ Task
 - userlarni type ga qarab alohida chiqarish
 8. duration course, section, lesson bular read_only
 9. oauth2 login google | telegram
-10.
+10. / blog listni chiqarish
+11. /courses course listini chiqarish (pagination bilan)
