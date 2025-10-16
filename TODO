@@ -168,3 +168,12 @@ Task
 3. login, register page lari
 4. email orqali verification bolishi kerak (one time link orqali)
 5. base.html ga ajratish
+6. adminkada (course da course nomi boyicha izlash, blog da blog nomi boyicha izlash)
+7. ADMIN
+- adminkada list display blog (id, name, created_at)
+- adminkada list display course (id, name, total_hour, section_count, lesson_count)
+- adminkada list display userlarni barchasida (..., created_at)
+- userlarni type ga qarab alohida chiqarish
+8. duration course, section, lesson bular read_only
+9. oauth2 login google | telegram
+10.

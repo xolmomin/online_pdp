@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
 from nested_inline.admin import NestedStackedInline, NestedModelAdmin
 
-from users.models import User, Course, Lesson, Section, Topic, Blog, Interview, InterviewPart, Step
+from users.models import User, Course, Lesson, Section, Category, Blog, Interview, InterviewPart, Step
 
 
 @admin.register(User)
@@ -41,7 +41,6 @@ class UserModelAdmin(UserAdmin):
 @admin.register(Lesson)
 class LessonModelAdmin(admin.ModelAdmin):
     list_display = ('id', 'name',)
-    readonly_fields = ('video_duration',)
 
 
 class LessonStackedInline(NestedStackedInline):
@@ -66,11 +65,10 @@ class SectionNestedStackedInline(NestedStackedInline):
 @admin.register(Course)
 class CourseModelAdmin(NestedModelAdmin):
     list_display = 'id', 'name'
-    readonly_fields = 'practice_count', 'rating', 'video_duration', 'video_count'
     inlines = SectionNestedStackedInline,
 
 
-@admin.register(Topic)
+@admin.register(Category)
 class TopicModelAdmin(admin.ModelAdmin):
     list_display = 'id', 'name'
 
