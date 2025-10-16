@@ -1,4 +1,5 @@
 {% extends 'users/base.html' %}
+{% load static %}
 
 {% block title %}
     EduHub - Professional Learning Platform
@@ -25,30 +26,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #667eea;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #667eea;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
         .course-thumbnail {
             background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
             position: relative;
@@ -64,11 +41,6 @@
 
         .level-beginner {
             background-color: #10b981;
-            color: white;
-        }
-
-        .level-elementary {
-            background-color: #3b82f6;
             color: white;
         }
 
@@ -131,27 +103,6 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
-
-        .interview-card {
-            transition: all 0.3s ease;
-        }
-
-        .interview-card:hover {
-            transform: scale(1.02);
-        }
-
-        .topic-filter {
-            transition: all 0.3s ease;
-        }
-
-        .topic-filter:hover {
-            transform: translateY(-2px);
-        }
-
-        .topic-filter.active {
-            background-color: #667eea;
-            color: white;
-        }
     </style>
 {% endblock %}
 
@@ -182,17 +133,19 @@
                 <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
                      data-topic="web-development" data-level="beginner" data-price="89" data-duration="52">
                     <div class="course-thumbnail h-48 relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-white bg-opacity-90 rounded-full p-4">
-                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                </svg>
-                            </div>
-                        </div>
+                        <!-- Replace gradient + icon with course cover image -->
+                        <img src="{% static 'users/vendors/images/no-picture.webp' %}"
+                             alt="Course Cover"
+                             class="absolute inset-0 w-full h-full object-cover rounded-lg"/>
+
+                        <!-- Optional overlay for styling -->
+                        <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
+
+                        <!-- Badges (keep these) -->
                         <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
                         <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
                     </div>
+
                     <div class="p-5 flex flex-col flex-grow justify-between">
                         <div>
                             <h4 class="font-semibold text-gray-900 mb-2 text-lg">Complete Web Development Bootcamp</h4>

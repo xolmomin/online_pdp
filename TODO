@@ -146,6 +146,7 @@ sudo certbot --nginx -d xolmomin.fil.uz
 
 task
 1. django command to delete unused images
+2. djangoda adminkadan youtube url qoyish
 
 
 

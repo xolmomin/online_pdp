@@ -1,0 +1,923 @@
+{% extends 'users/base.html' %}
+
+{% block title %}
+	Complete Web Development Bootcamp - EduHub
+{% endblock %}
+
+{% block custom_css %}
+	<style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .rating-stars {
+            color: #fbbf24;
+        }
+
+        .instructor-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .sticky-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <!-- Course Hero Section -->
+    <div class="hero-gradient text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="mb-4">
+                        <span class="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm font-medium">Web Development</span>
+                        <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium ml-2">🏆 Certificate</span>
+                    </div>
+                    <h1 class="text-4xl font-bold mb-4">Complete Web Development Bootcamp</h1>
+                    <p class="text-xl text-white text-opacity-90 mb-6">Learn HTML, CSS, JavaScript, React, and Node.js
+                        from
+                        scratch. Build real-world projects and become a full-stack developer.</p>
+
+                    <div class="flex items-center mb-6">
+                        <div class="rating-stars text-2xl">★★★★★</div>
+                        <span class="ml-2 text-white text-opacity-90">4.8 (2,341 reviews)</span>
+                        <span class="ml-4 text-white text-opacity-90">15,847 students</span>
+                    </div>
+
+                    <div class="flex items-center space-x-6 text-white text-opacity-90">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            52 hours of content
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                            </svg>
+                            156 lessons
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            Beginner Level
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Preview Card -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+                        <div class="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <button class="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all transform hover:scale-110">
+                                    <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="absolute top-3 left-3 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm">Preview Course</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-4">
+                                <span class="text-3xl font-bold text-purple-600">$89</span>
+                                <span class="text-gray-500 line-through ml-2">$199</span>
+                                <div class="text-sm text-green-600 font-medium">55% off - Limited time!</div>
+                            </div>
+                            <button onclick="enrollNow()"
+                                    class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold mb-3">
+                                Enroll Now
+                            </button>
+                            <button class="w-full border border-purple-600 text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-medium">
+                                Add to Wishlist
+                            </button>
+                            <div class="mt-4 text-center text-sm text-gray-600">
+                                30-day money-back guarantee
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content Area -->
+            <div class="lg:col-span-2">
+                <!-- Tab Navigation -->
+                <div class="flex space-x-1 mb-8 bg-gray-100 p-1 rounded-lg">
+                    <button onclick="showTab('overview')"
+                            class="tab-button active flex-1 py-2 px-4 rounded-md font-medium text-center">Overview
+                    </button>
+                    <button onclick="showTab('curriculum')"
+                            class="tab-button flex-1 py-2 px-4 rounded-md font-medium text-center">Curriculum
+                    </button>
+                    <button onclick="showTab('instructor')"
+                            class="tab-button flex-1 py-2 px-4 rounded-md font-medium text-center">Instructor
+                    </button>
+                    <button onclick="showTab('reviews')"
+                            class="tab-button flex-1 py-2 px-4 rounded-md font-medium text-center">Reviews
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="overview-tab" class="tab-content animate-fade-in">
+                    <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">What you'll learn</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span class="text-gray-700">Build responsive websites with HTML5 and CSS3</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span class="text-gray-700">Master JavaScript ES6+ and modern features</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span class="text-gray-700">Create dynamic web apps with React.js</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span class="text-gray-700">Build backend APIs with Node.js and Express</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span class="text-gray-700">Work with databases using MongoDB</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span class="text-gray-700">Deploy applications to production</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Course Description</h2>
+                        <div class="prose max-w-none text-gray-700">
+                            <p class="mb-4">Welcome to the Complete Web Development Bootcamp! This comprehensive course
+                                is
+                                designed to take you from a complete beginner to a confident full-stack web
+                                developer.</p>
+
+                            <p class="mb-4">You'll start with the fundamentals of HTML and CSS, learning how to create
+                                beautiful, responsive websites. Then we'll dive deep into JavaScript, covering
+                                everything
+                                from basic syntax to advanced concepts like async/await, closures, and the DOM.</p>
+
+                            <p class="mb-4">The course then progresses to modern frameworks and libraries. You'll master
+                                React.js, learning how to build dynamic, interactive user interfaces with components,
+                                hooks,
+                                and state management.</p>
+
+                            <p class="mb-4">On the backend, you'll learn Node.js and Express.js to create powerful
+                                server-side applications. We'll cover RESTful APIs, authentication, and database
+                                integration
+                                with MongoDB.</p>
+
+                            <p>By the end of this course, you'll have built several real-world projects and have the
+                                skills
+                                to work as a professional web developer.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Requirements</h2>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">•</span>
+                                No prior programming experience required
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">•</span>
+                                A computer with internet connection
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">•</span>
+                                Willingness to learn and practice coding
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">•</span>
+                                Basic computer skills (file management, web browsing)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="curriculum-tab" class="tab-content hidden">
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Course Curriculum</h2>
+                        <div class="mb-4 text-sm text-gray-600">
+                            <span class="font-medium">Course Progress:</span> 3 Sections • 35 Lessons • 52 hours total
+                        </div>
+                        <div class="space-y-4">
+                            <!-- Section 1 -->
+                            <div class="border border-gray-200 rounded-lg">
+                                <button onclick="toggleSection('section1')"
+                                        class="w-full p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                                    <div>
+                                        <div class="flex items-center mb-1">
+                                            <span class="bg-purple-100 text-purple-600 px-2 py-1 rounded text-xs font-medium mr-2">PUBLISHED</span>
+                                            <h3 class="font-semibold text-gray-900">Section 1: HTML & CSS
+                                                Fundamentals</h3>
+                                        </div>
+                                        <p class="text-sm text-gray-600">8 lessons • 6 hours • Order: 1</p>
+                                    </div>
+                                    <svg id="section1-icon" class="w-5 h-5 text-gray-400 transform transition-transform"
+                                         fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div id="section1-content" class="hidden border-t border-gray-200">
+                                    <div class="p-4 space-y-3">
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <button onclick="openVideoFrame('https://www.youtube.com/embed/UB1O30fR-EE?autoplay=1&rel=0')"
+                                                            class="text-purple-600 hover:text-purple-800 transition-colors">
+                                                        <svg class="w-4 h-4 mr-2" fill="currentColor"
+                                                             viewBox="0 0 24 24">
+                                                            <path d="M8 5v14l11-7z"/>
+                                                        </svg>
+                                                    </button>
+                                                    <span class="bg-green-100 text-green-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PUBLIC</span>
+                                                </div>
+                                                <button onclick="openVideoFrame('https://www.youtube.com/embed/UB1O30fR-EE?autoplay=1&rel=0')"
+                                                        class="text-gray-700 hover:text-purple-600 transition-colors text-left">
+                                                    Introduction to HTML
+                                                </button>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 1</span>
+                                                <span class="text-sm text-gray-500">12:34</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-red-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PRIVATE</span>
+                                                </div>
+                                                <span class="text-gray-700">HTML Elements and Tags</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 2</span>
+                                                <span class="text-sm text-gray-500">18:45</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-red-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PRIVATE</span>
+                                                </div>
+                                                <span class="text-gray-700">CSS Basics and Styling</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 3</span>
+                                                <span class="text-sm text-gray-500">25:12</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 2 -->
+                            <div class="border border-gray-200 rounded-lg">
+                                <button onclick="toggleSection('section2')"
+                                        class="w-full p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                                    <div>
+                                        <div class="flex items-center mb-1">
+                                            <span class="bg-purple-100 text-purple-600 px-2 py-1 rounded text-xs font-medium mr-2">PUBLISHED</span>
+                                            <h3 class="font-semibold text-gray-900">Section 2: JavaScript
+                                                Fundamentals</h3>
+                                        </div>
+                                        <p class="text-sm text-gray-600">12 lessons • 18 hours • Order: 2</p>
+                                    </div>
+                                    <svg id="section2-icon" class="w-5 h-5 text-gray-400 transform transition-transform"
+                                         fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div id="section2-content" class="hidden border-t border-gray-200">
+                                    <div class="p-4 space-y-3">
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-green-100 text-green-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PUBLIC</span>
+                                                </div>
+                                                <span class="text-gray-700">Variables and Data Types</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 1</span>
+                                                <span class="text-sm text-gray-500">22:15</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-red-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PRIVATE</span>
+                                                </div>
+                                                <span class="text-gray-700">Functions and Scope</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 2</span>
+                                                <span class="text-sm text-gray-500">28:30</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-red-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PRIVATE</span>
+                                                </div>
+                                                <span class="text-gray-700">DOM Manipulation</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 3</span>
+                                                <span class="text-sm text-gray-500">35:45</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-red-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PRIVATE</span>
+                                                </div>
+                                                <span class="text-gray-700">Async JavaScript & Promises</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 4</span>
+                                                <span class="text-sm text-gray-500">42:20</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 3 -->
+                            <div class="border border-gray-200 rounded-lg">
+                                <button onclick="toggleSection('section3')"
+                                        class="w-full p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                                    <div>
+                                        <div class="flex items-center mb-1">
+                                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium mr-2">UNPUBLISHED</span>
+                                            <h3 class="font-semibold text-gray-900">Section 3: React.js & Advanced
+                                                Topics</h3>
+                                        </div>
+                                        <p class="text-sm text-gray-600">15 lessons • 28 hours • Order: 3</p>
+                                    </div>
+                                    <svg id="section3-icon" class="w-5 h-5 text-gray-400 transform transition-transform"
+                                         fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div id="section3-content" class="hidden border-t border-gray-200">
+                                    <div class="p-4 space-y-3">
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-green-100 text-green-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PUBLIC</span>
+                                                </div>
+                                                <span class="text-gray-700">Introduction to React</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 1</span>
+                                                <span class="text-sm text-gray-500">15:20</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-red-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PRIVATE</span>
+                                                </div>
+                                                <span class="text-gray-700">Components and Props</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 2</span>
+                                                <span class="text-sm text-gray-500">32:10</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 hover:bg-gray-50 rounded px-2">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center mr-3">
+                                                    <svg class="w-4 h-4 text-purple-600 mr-2" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                    <span class="bg-red-100 text-red-600 px-1.5 py-0.5 rounded text-xs font-medium mr-2">PRIVATE</span>
+                                                </div>
+                                                <span class="text-gray-700">State Management & Hooks</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="text-xs text-gray-500">Order: 3</span>
+                                                <span class="text-sm text-gray-500">41:25</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Statistics -->
+                        <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 mb-3">Course Statistics</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-600">35</div>
+                                    <div class="text-sm text-gray-600">Total Lessons</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-600">52</div>
+                                    <div class="text-sm text-gray-600">Hours Content</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-600">25</div>
+                                    <div class="text-sm text-gray-600">Practice Exercises</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-600">365</div>
+                                    <div class="text-sm text-gray-600">Valid Days</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="instructor-tab" class="tab-content hidden">
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Meet Your Instructor</h2>
+                        <div class="flex items-start space-x-6">
+                            <div class="instructor-avatar bg-blue-500 flex-shrink-0">JS</div>
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">John Smith</h3>
+                                <p class="text-purple-600 font-medium mb-4">Senior Full-Stack Developer & Instructor</p>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-600">4.9</div>
+                                        <div class="text-sm text-gray-600">Instructor Rating</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-600">1,247</div>
+                                        <div class="text-sm text-gray-600">Reviews</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-600">45,892</div>
+                                        <div class="text-sm text-gray-600">Students</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-purple-600">12</div>
+                                        <div class="text-sm text-gray-600">Courses</div>
+                                    </div>
+                                </div>
+                                <div class="prose max-w-none text-gray-700">
+                                    <p class="mb-4">John is a seasoned full-stack developer with over 8 years of
+                                        experience
+                                        in web development. He has worked with companies like Google, Microsoft, and
+                                        several
+                                        successful startups.</p>
+                                    <p class="mb-4">John specializes in JavaScript, React, Node.js, and modern web
+                                        development practices. He's passionate about teaching and has helped thousands
+                                        of
+                                        students transition into successful web development careers.</p>
+                                    <p>When he's not coding or teaching, John enjoys hiking, photography, and
+                                        contributing
+                                        to open-source projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reviews-tab" class="tab-content hidden">
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Student Reviews</h2>
+
+                        <!-- Review Summary -->
+                        <div class="flex items-center mb-8">
+                            <div class="text-center mr-8">
+                                <div class="text-4xl font-bold text-purple-600 mb-2">4.8</div>
+                                <div class="rating-stars text-xl mb-2">★★★★★</div>
+                                <div class="text-sm text-gray-600">2,341 reviews</div>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="space-y-2">
+                                    <div class="flex items-center">
+                                        <span class="text-sm w-8">5★</span>
+                                        <div class="flex-grow bg-gray-200 rounded-full h-2 mx-3">
+                                            <div class="progress-bar h-2 rounded-full" style="width: 78%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600">78%</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span class="text-sm w-8">4★</span>
+                                        <div class="flex-grow bg-gray-200 rounded-full h-2 mx-3">
+                                            <div class="progress-bar h-2 rounded-full" style="width: 15%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600">15%</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span class="text-sm w-8">3★</span>
+                                        <div class="flex-grow bg-gray-200 rounded-full h-2 mx-3">
+                                            <div class="progress-bar h-2 rounded-full" style="width: 5%"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600">5%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Reviews -->
+                        <div class="space-y-6">
+                            <div class="border-b border-gray-200 pb-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
+                                        S
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex items-center mb-2">
+                                            <h4 class="font-semibold text-gray-900 mr-3">Sarah Johnson</h4>
+                                            <div class="rating-stars text-sm">★★★★★</div>
+                                            <span class="text-sm text-gray-500 ml-2">2 weeks ago</span>
+                                        </div>
+                                        <p class="text-gray-700">This course is absolutely amazing! John explains
+                                            everything
+                                            so clearly and the projects are really practical. I went from knowing
+                                            nothing
+                                            about web development to building my own full-stack applications. Highly
+                                            recommended!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-b border-gray-200 pb-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                                        M
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex items-center mb-2">
+                                            <h4 class="font-semibold text-gray-900 mr-3">Mike Chen</h4>
+                                            <div class="rating-stars text-sm">★★★★★</div>
+                                            <span class="text-sm text-gray-500 ml-2">1 month ago</span>
+                                        </div>
+                                        <p class="text-gray-700">Best web development course I've taken! The curriculum
+                                            is
+                                            well-structured and up-to-date with modern technologies. The React section
+                                            was
+                                            particularly helpful for my career transition.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-b border-gray-200 pb-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                                        E
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex items-center mb-2">
+                                            <h4 class="font-semibold text-gray-900 mr-3">Emily Rodriguez</h4>
+                                            <div class="rating-stars text-sm">★★★★★</div>
+                                            <span class="text-sm text-gray-500 ml-2">3 weeks ago</span>
+                                        </div>
+                                        <p class="text-gray-700">John is an excellent instructor. The course content is
+                                            comprehensive and the hands-on projects really help solidify the concepts. I
+                                            landed my first developer job 3 months after completing this course!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="sticky-sidebar">
+                    <!-- Course Features -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+                        <h3 class="font-bold text-gray-900 mb-4">This course includes:</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <span class="text-gray-700">52 hours on-demand video</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                </svg>
+                                <span class="text-gray-700">25 practice exercises</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <span class="text-gray-700">Certificate of completion</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                                <span class="text-gray-700">Instructor support included</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                                <span class="text-gray-700">Access for 365 days</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 2 2h12c1.11 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+                                </svg>
+                                <span class="text-gray-700">Downloadable resources</span>
+                            </div>
+                        </div>
+
+                        <!-- Course Level & Topic -->
+                        <div class="mt-6 pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-600">Level:</span>
+                                <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-medium">Beginner</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-gray-600">Topic:</span>
+                                <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm font-medium">Web Development</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-gray-600">Rating:</span>
+                                <div class="flex items-center">
+                                    <div class="rating-stars text-sm mr-1">★★★★★</div>
+                                    <span class="text-sm text-gray-600">4.8/5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Courses -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="font-bold text-gray-900 mb-4">Students also bought</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-16 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded flex-shrink-0"></div>
+                                <div class="flex-grow">
+                                    <h4 class="font-medium text-gray-900 text-sm">Advanced React Patterns</h4>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-xs text-gray-600">★★★★★ 4.7</span>
+                                        <span class="font-bold text-purple-600">$79</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-16 h-12 bg-gradient-to-br from-yellow-400 to-red-500 rounded flex-shrink-0"></div>
+                                <div class="flex-grow">
+                                    <h4 class="font-medium text-gray-900 text-sm">Node.js Masterclass</h4>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-xs text-gray-600">★★★★★ 4.9</span>
+                                        <span class="font-bold text-purple-600">$99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Frame Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">Introduction to HTML</h3>
+                <button onclick="closeVideoFrame()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18.3 5.71a.996.996 0 00-1.41 0L12 10.59 7.11 5.7A.996.996 0 105.7 7.11L10.59 12 5.7 16.89a.996.996 0 101.41 1.41L12 13.41l4.89 4.89a.996.996 0 101.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="aspect-video">
+                <iframe id="video-frame" class="w-full h-full" frameborder="0" allowfullscreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enrollment Modal -->
+    <div id="enrollment-modal"
+         class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center transform scale-95 transition-transform">
+            <div class="mx-auto h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Enrollment Successful! 🎉</h3>
+            <p class="text-gray-600 mb-6">Welcome to the Complete Web Development Bootcamp! You now have lifetime access
+                to
+                all course materials.</p>
+            <button onclick="closeEnrollmentModal()"
+                    class="w-full bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                Start Learning
+            </button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+	<script>
+    function showTab(tabName) {
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.add('hidden');
+        });
+
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Show selected tab and mark button as active
+        document.getElementById(tabName + '-tab').classList.remove('hidden');
+        event.target.classList.add('active');
+    }
+
+    function toggleSection(sectionId) {
+        const content = document.getElementById(sectionId + '-content');
+        const icon = document.getElementById(sectionId + '-icon');
+
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            content.classList.add('hidden');
+            icon.style.transform = 'rotate(0deg)';
+        }
+    }
+
+    function enrollNow() {
+        const modal = document.getElementById('enrollment-modal');
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.querySelector('.transform').classList.remove('scale-95');
+            modal.querySelector('.transform').classList.add('scale-100');
+        }, 100);
+    }
+
+    function closeEnrollmentModal() {
+        const modal = document.getElementById('enrollment-modal');
+        modal.querySelector('.transform').classList.remove('scale-100');
+        modal.querySelector('.transform').classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            showNotification('Welcome to your new course! Happy learning! 🚀', 'success');
+        }, 200);
+    }
+
+    function openVideoFrame(videoUrl) {
+        const modal = document.getElementById('video-modal');
+        const iframe = document.getElementById('video-frame');
+        iframe.src = videoUrl;
+        modal.classList.remove('hidden');
+    }
+
+    function closeVideoFrame() {
+        const modal = document.getElementById('video-modal');
+        const iframe = document.getElementById('video-frame');
+        iframe.src = '';
+        modal.classList.add('hidden');
+    }
+
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        const colors = {
+            success: 'bg-green-500',
+            error: 'bg-red-500',
+            info: 'bg-blue-500',
+            warning: 'bg-yellow-500'
+        };
+
+        notification.className = `fixed top-4 right-4 ${colors[type]} text-white px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300`;
+        notification.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <span>${message}</span>
+                    <button onclick="this.parentElement.parentElement.remove()" class="text-white hover:text-gray-200">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            `;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+
+        setTimeout(() => {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => notification.remove(), 300);
+        }, 5000);
+    }
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function () {
+        // Show overview tab by default
+        showTab('overview');
+    });
+</script>
+{% endblock %}
+
+
+

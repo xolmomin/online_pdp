@@ -4,13 +4,24 @@ from users.models import Interview, Step
 from .models import Blog
 
 
-class BlogTemplateDetailView(TemplateView):
-    queryset = Blog.objects.all()
-    template_name = "users/blogs/blog-detail.html"
+class BlogDetailView(DetailView):
+    model = Blog
+    template_name = 'users/blogs/blog-detail.html'
+    context_object_name = "blog"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # fetch related steps
+        context["steps"] = self.object.steps.all().order_by("id")
+        return context
 
 
 class CourseTemplateView(TemplateView):
     template_name = 'users/courses/course.html'
+
+
+class CourseDetailTemplateView(TemplateView):
+    template_name = 'users/courses/course-detail.html'
 
 
 class InterviewListView(ListView):
