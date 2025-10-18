@@ -11,8 +11,7 @@ class BlogDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # fetch related steps
-        context["steps"] = self.object.steps.all().order_by("id")
+        context["steps"] = self.object.steps.all()
         return context
 
 
