@@ -61,6 +61,26 @@
                 transform: scale(1.05);
             }
         }
+
+        .pagination-button.active {
+            background-color: #9333ea; /* purple-600 */
+            color: white;
+            border-color: #9333ea;
+        }
+
+        .pagination-button {
+            transition: all 0.3s ease;
+        }
+
+        .pagination-button:hover {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .pagination-button.active {
+            background-color: #667eea;
+            color: white;
+        }
     </style>
 {% endblock %}
 
@@ -135,6 +155,55 @@
             </div>
         </div>
     </section>
+
+    <!-- Pagination -->
+    <section class="py-8 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center items-center space-x-2">
+                <!-- Previous Page -->
+                {% if page_obj.has_previous %}
+                    <a href="{% url 'interview_list' %}?page={{ page_obj.previous_page_number }}"
+                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">Previous</a>
+                {% endif %}
+
+                {% if page_obj.previous_page_number > 1 %}
+                    <a href="{% url 'interview_list' %}?page=1"
+                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">1</a>
+                    <span class="px-3 py-2 text-gray-500">...</span>
+                {% endif %}
+
+                {% if page_obj.has_previous %}
+                    <a href="{% url 'interview_list' %}?page={{ page_obj.previous_page_number }}"
+                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">{{ page_obj.previous_page_number }}</a>
+                {% endif %}
+
+                <a href="#"
+                   class="pagination-button active px-3 py-2 rounded-lg border border-gray-300 bg-purple-600 text-white">{{ page_obj.number }}</a>
+
+                {% if page_obj.has_next %}
+                    <a href="{% url 'interview_list' %}?page={{ page_obj.next_page_number }}"
+                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">{{ page_obj.next_page_number }}</a>
+                {% endif %}
+
+                {% if page_obj.next_page_number < page_obj.paginator.num_pages %}
+                    <span class="px-3 py-2 text-gray-500">...</span>
+                    <a href="{% url 'interview_list' %}?page={{ page_obj.paginator.num_pages }}"
+                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">{{ page_obj.paginator.num_pages }}</a>
+                {% endif %}
+
+                <!-- Next Page -->
+                {% if page_obj.has_next %}
+                    <a href="{% url 'interview_list' %}?page={{ page_obj.next_page_number }}"
+                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">Next</a>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </section>
+
+    {% include 'users/parts/footers.html' %}
+
 {% endblock %}
 
 {% block custom_js %}

@@ -11,10 +11,10 @@
                 </div>
                 <div class="hidden md:block ml-10">
                     <div class="flex items-baseline space-x-8">
-                        <a href="#" class="nav-link text-gray-900 font-medium">Home</a>
-                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Courses</a>
-                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Blogs</a>
-                        <a href="#" class="nav-link text-gray-600 hover:text-gray-900">Interviews</a>
+                        <a href="{% url 'main' %}" class="nav-link text-gray-900 font-medium">Home</a>
+                        <a href="{% url 'course_list' %}" class="nav-link text-gray-600 hover:text-gray-900">Courses</a>
+                        <a href="{% url 'blog_list' %}" class="nav-link text-gray-600 hover:text-gray-900">Blogs</a>
+                        <a href="{% url 'interview_list' %}" class="nav-link text-gray-600 hover:text-gray-900">Interviews</a>
                     </div>
                 </div>
             </div>
@@ -28,9 +28,10 @@
                               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
-                <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
+                <a href="{% url 'login' %}"
+                   class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors inline-block text-center">
                     Sign In
-                </button>
+                </a>
             </div>
         </div>
     </div>

@@ -126,278 +126,64 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center mb-8">
                 <h3 class="text-3xl font-bold text-gray-900">Featured Courses</h3>
-                <button class="text-purple-600 hover:text-purple-700 font-medium">View All Courses</button>
+                <a href="{% url 'course_list' %}" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">
+                    View All Courses
+                </a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
-                <!-- Course Card 1 -->
-                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                     data-topic="web-development" data-level="beginner" data-price="89" data-duration="52">
-                    <div class="course-thumbnail h-48 relative">
-                        <!-- Replace gradient + icon with course cover image -->
-                        <img src="{% static 'users/vendors/images/no-picture.webp' %}"
-                             alt="Course Cover"
-                             class="absolute inset-0 w-full h-full object-cover rounded-lg"/>
+                {% for course in courses %}
+                    <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                         data-topic="web-development" data-level="{{ course.level }}" data-price="{{ course.price }}"
+                         data-duration="{{ course.total_video_duration }}">
+                        <div class="course-thumbnail h-48 relative">
+                            <!-- Replace gradient + icon with course cover image -->
+                            {% if course.cover_image %}
+                                <img src="{{ course.cover_image.url }}"
+                                     alt="Course Cover"
+                                     class="absolute inset-0 w-full h-full object-cover rounded-lg"/>
+                            {% else %}
+                                <img src="{% static 'users/vendors/images/no-picture.webp' %}"
+                                     alt="No image"
+                                     class="absolute inset-0 w-full h-full object-cover rounded-lg"/>
+                            {% endif %}
 
-                        <!-- Optional overlay for styling -->
-                        <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
+                            <!-- Optional overlay for styling -->
+                            <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
 
-                        <!-- Badges (keep these) -->
-                        <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
-                        <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
-                    </div>
-
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Complete Web Development Bootcamp</h4>
-                            <p class="text-gray-600 text-sm mb-3">Learn HTML, CSS, JavaScript, React, and Node.js from
-                                scratch. Build real-world projects.</p>
-                            <div class="flex items-center mb-3">
-                                <div class="rating-stars">★★★★★</div>
-                                <span class="text-gray-600 text-sm ml-2">4.8 (2,341)</span>
-                            </div>
-                            <div class="course-stats mb-3">
-                                <div class="flex items-center justify-between text-sm">
-                                    <span>⏱️ 52 hours</span>
-                                    <span>📚 156 lessons</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="instructor-avatar bg-blue-500">JS</div>
-                                    <span class="ml-2 text-sm text-gray-600">John Smith</span>
-                                </div>
-                                <span class="text-purple-600 font-bold text-xl">$89</span>
-                            </div>
+                            <!-- Badges (keep these) -->
+                            <span class="absolute top-3 left-3 level-badge level-beginner">{{ course.level }}</span>
+                            {% if course.has_certificate %}
+                                <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
+                            {% endif %}
                         </div>
-                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                            Enroll Now
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Course Card 2 -->
-                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                     data-topic="data-science" data-level="intermediate" data-price="129" data-duration="38">
-                    <div class="course-thumbnail h-48 relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-500"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-white bg-opacity-90 rounded-full p-4">
-                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
-                        <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Data Science with Python</h4>
-                            <p class="text-gray-600 text-sm mb-3">Master data analysis, visualization, and machine
-                                learning
-                                with Python and Pandas.</p>
-                            <div class="flex items-center mb-3">
-                                <div class="rating-stars">★★★★☆</div>
-                                <span class="text-gray-600 text-sm ml-2">4.6 (1,890)</span>
-                            </div>
-                            <div class="course-stats mb-3">
-                                <div class="flex items-center justify-between text-sm">
-                                    <span>⏱️ 38 hours</span>
-                                    <span>📚 124 lessons</span>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2 text-lg">{{ course.name }}</h4>
+                                <p class="text-gray-600 text-sm mb-3">{{ course.short_description|safe }}</p>
+                                <div class="flex items-center mb-3">
+                                    <div class="rating-stars">★★★★★</div>
+                                    <span class="text-gray-600 text-sm ml-2">{{ course.rating }} (2,341)</span>
+                                </div>
+                                <div class="course-stats mb-3">
+                                    <div class="flex items-center justify-between text-sm">
+                                        <span>⏱️ 52 hours</span>
+                                        <span>📚 156 lessons</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center">
+                                        <div class="instructor-avatar bg-blue-500">JS</div>
+                                        <span class="ml-2 text-sm text-gray-600">{{ course.teachers.first_name }} {{ course.teachers.last_name }}</span>
+                                    </div>
+                                    <span class="text-purple-600 font-bold text-xl">{{ course.price }}</span>
                                 </div>
                             </div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="instructor-avatar bg-green-500">MG</div>
-                                    <span class="ml-2 text-sm text-gray-600">Dr. Maria Garcia</span>
-                                </div>
-                                <span class="text-purple-600 font-bold text-xl">$129</span>
-                            </div>
+                            <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                                Enroll Now
+                            </button>
                         </div>
-                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                            Enroll Now
-                        </button>
                     </div>
-                </div>
-
-                <!-- Course Card 3 -->
-                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="design"
-                     data-level="beginner" data-price="79" data-duration="28">
-                    <div class="course-thumbnail h-48 relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-yellow-500"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-white bg-opacity-90 rounded-full p-4">
-                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 20h9"/>
-                                    <path d="M12 4h9"/>
-                                    <path d="M4 9h16"/>
-                                    <path d="M4 15h16"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <span class="absolute top-3 left-3 level-badge level-beginner">Beginner</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Graphic Design Essentials</h4>
-                            <p class="text-gray-600 text-sm mb-3">Learn Photoshop, Illustrator, and design principles to
-                                create professional graphics.</p>
-                            <div class="flex items-center mb-3">
-                                <div class="rating-stars">★★★★☆</div>
-                                <span class="text-gray-600 text-sm ml-2">4.5 (980)</span>
-                            </div>
-                            <div class="course-stats mb-3">
-                                <div class="flex items-center justify-between text-sm">
-                                    <span>⏱️ 28 hours</span>
-                                    <span>📚 90 lessons</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="instructor-avatar bg-pink-500">AL</div>
-                                    <span class="ml-2 text-sm text-gray-600">Alice Lee</span>
-                                </div>
-                                <span class="text-purple-600 font-bold text-xl">$79</span>
-                            </div>
-                        </div>
-                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                            Enroll Now
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Course Card 4 -->
-                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                     data-topic="mobile-development" data-level="advanced" data-price="149" data-duration="60">
-                    <div class="course-thumbnail h-48 relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-white bg-opacity-90 rounded-full p-4">
-                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M7 4h10v16H7z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <span class="absolute top-3 left-3 level-badge level-advanced">Advanced</span>
-                        <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Advanced Mobile App Development</h4>
-                            <p class="text-gray-600 text-sm mb-3">Build complex iOS and Android apps using Flutter and
-                                React
-                                Native.</p>
-                            <div class="flex items-center mb-3">
-                                <div class="rating-stars">★★★★★</div>
-                                <span class="text-gray-600 text-sm ml-2">4.9 (1,230)</span>
-                            </div>
-                            <div class="course-stats mb-3">
-                                <div class="flex items-center justify-between text-sm">
-                                    <span>⏱️ 60 hours</span>
-                                    <span>📚 200 lessons</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="instructor-avatar bg-indigo-500">RK</div>
-                                    <span class="ml-2 text-sm text-gray-600">Robert King</span>
-                                </div>
-                                <span class="text-purple-600 font-bold text-xl">$149</span>
-                            </div>
-                        </div>
-                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                            Enroll Now
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Course Card 5 -->
-                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                     data-topic="cybersecurity" data-level="intermediate" data-price="119" data-duration="42">
-                    <div class="course-thumbnail h-48 relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-600"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-white bg-opacity-90 rounded-full p-4">
-                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2l7 4v6c0 5-3.5 9.74-7 10-3.5-.26-7-5-7-10V6z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <span class="absolute top-3 left-3 level-badge level-intermediate">Intermediate</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Cybersecurity Fundamentals</h4>
-                            <p class="text-gray-600 text-sm mb-3">Protect systems and networks from cyber attacks. Learn
-                                encryption, firewalls, and more.</p>
-                            <div class="flex items-center mb-3">
-                                <div class="rating-stars">★★★★☆</div>
-                                <span class="text-gray-600 text-sm ml-2">4.7 (760)</span>
-                            </div>
-                            <div class="course-stats mb-3">
-                                <div class="flex items-center justify-between text-sm">
-                                    <span>⏱️ 42 hours</span>
-                                    <span>📚 130 lessons</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="instructor-avatar bg-red-500">TN</div>
-                                    <span class="ml-2 text-sm text-gray-600">Tom Nelson</span>
-                                </div>
-                                <span class="text-purple-600 font-bold text-xl">$119</span>
-                            </div>
-                        </div>
-                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                            Enroll Now
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Course Card 6 -->
-                <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col" data-topic="ai-ml"
-                     data-level="advanced" data-price="159" data-duration="70">
-                    <div class="course-thumbnail h-48 relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-red-500"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-white bg-opacity-90 rounded-full p-4">
-                                <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 6v6l4 2"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <span class="absolute top-3 left-3 level-badge level-advanced">Advanced</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h4 class="font-semibold text-gray-900 mb-2 text-lg">Artificial Intelligence & Machine
-                                Learning</h4>
-                            <p class="text-gray-600 text-sm mb-3">Deep dive into neural networks, TensorFlow, and
-                                advanced
-                                ML models.</p>
-                            <div class="flex items-center mb-3">
-                                <div class="rating-stars">★★★★★</div>
-                                <span class="text-gray-600 text-sm ml-2">4.9 (3,450)</span>
-                            </div>
-                            <div class="course-stats mb-3">
-                                <div class="flex items-center justify-between text-sm">
-                                    <span>⏱️ 70 hours</span>
-                                    <span>📚 220 lessons</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center">
-                                    <div class="instructor-avatar bg-yellow-500">SJ</div>
-                                    <span class="ml-2 text-sm text-gray-600">Sophia Johnson</span>
-                                </div>
-                                <span class="text-purple-600 font-bold text-xl">$159</span>
-                            </div>
-                        </div>
-                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
-                            Enroll Now
-                        </button>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -407,96 +193,51 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center mb-8">
                 <h3 class="text-3xl font-bold text-gray-900">Latest Blogs</h3>
-                <button class="text-purple-600 hover:text-purple-700 font-medium">View All Posts</button>
+                <a href="{% url 'blog_list' %}" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">
+                    View All Blogs
+                </a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
-                <!-- Article 1 -->
-                <article class="blog-card card-hover" data-category="tech">
-                    <div class="aspect-video bg-gradient-to-br from-blue-400 to-blue-600 relative">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-4xl">🚀</span>
+                {% for blog in blogs %}
+                    <!-- Blog Card 1 - React Tutorial -->
+                    <article class="blog-card card-hover animate-slide-up flex flex-col h-full" data-category="tech"
+                             data-date="2024-12-12"
+                             data-steps="5">
+                        <div class="aspect-video relative">
+                            {% if blog.cover_image %}
+                                <img src="{{ blog.cover_image.url }}"
+                                     alt="{{ blog.title }}"
+                                     class="absolute inset-0 w-full h-full object-cover rounded-t-xl"/>
+                            {% else %}
+                                <img src="{% static 'users/vendors/images/no-picture.webp' %}"
+                                     alt="No image available"
+                                     class="absolute inset-0 w-full h-full object-cover rounded-t-xl"/>
+                            {% endif %}
                         </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
-                            onclick="readArticle('react-2024')">
-                            React 18 Features Every Developer Should Know
-                        </h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-                            Explore the latest React 18 features including concurrent rendering, automatic batching, and
-                            Suspense improvements that will revolutionize your development workflow.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-2">
-                                <div class="author-avatar text-sm">MK</div>
-                                <div class="text-sm">
-                                    <div class="font-medium text-gray-900">Mike Chen</div>
-                                    <div class="text-gray-500">8 min read</div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <a href="{% url 'blog_detail' blog.pk %}"
+                               class="text-xl font-semibold text-gray-900 mb-2 hover:text-purple-600 transition-colors cursor-pointer block">
+                                {{ blog.title }}
+                            </a>
+                            {{ blog.description|truncatewords:15|safe }}
+                            <p class="text-gray-600 mb-8 text-sm leading-relaxed">
+                            <div class="flex items-center justify-between mt-auto">
+                                <div class="flex items-center space-x-2">
+                                    <div class="author-avatar">MK</div>
+                                    <div class="text-sm">
+                                        <div class="font-medium text-gray-900">Mike Chen</div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="reading-time">8 min read</span>
+                                            <span class="step-count-badge">5 steps</span>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="text-sm text-gray-500">Dec 12, 2024</span>
                             </div>
-                            <span class="text-sm text-gray-500">Dec 12, 2024</span>
+                            </p>
                         </div>
-                    </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="blog-card card-hover" data-category="career">
-                    <div class="aspect-video bg-gradient-to-br from-green-400 to-green-600 relative">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-4xl">📈</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
-                            onclick="readArticle('salary-negotiation')">
-                            Salary Negotiation Strategies for Software Engineers
-                        </h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-                            Master the art of salary negotiation with proven tactics, market research techniques, and
-                            scripts that have helped engineers increase their compensation by 30%+.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-2">
-                                <div class="author-avatar text-sm">AL</div>
-                                <div class="text-sm">
-                                    <div class="font-medium text-gray-900">Alex Rivera</div>
-                                    <div class="text-gray-500">15 min read</div>
-                                </div>
-                            </div>
-                            <span class="text-sm text-gray-500">Dec 10, 2024</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="blog-card card-hover" data-category="interview">
-                    <div class="aspect-video bg-gradient-to-br from-yellow-400 to-orange-500 relative">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-4xl">🎯</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer"
-                            onclick="readArticle('system-design')">
-                            System Design Interview: Building Scalable Chat Applications
-                        </h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-                            A comprehensive walkthrough of designing a real-time chat system, covering WebSockets,
-                            message
-                            queuing, database sharding, and scaling strategies.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-2">
-                                <div class="author-avatar text-sm">DP</div>
-                                <div class="text-sm">
-                                    <div class="font-medium text-gray-900">David Park</div>
-                                    <div class="text-gray-500">20 min read</div>
-                                </div>
-                            </div>
-                            <span class="text-sm text-gray-500">Dec 8, 2024</span>
-                        </div>
-                    </div>
-                </article>
+                    </article>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -520,42 +261,12 @@
         </div>
     </section>
 
+    {% include 'users/parts/footers.html' %}
+
 {% endblock %}
 
 {% block custom_js %}
     <script>
-        // Course enrollment
-        const enrollButtons = document.querySelectorAll('button');
-        enrollButtons.forEach(button => {
-            if (button.textContent.includes('Enroll Now')) {
-                button.addEventListener('click', function () {
-                    const courseCard = this.closest('.card-hover');
-                    const courseTitle = courseCard.querySelector('h4').textContent;
-                    const coursePrice = courseCard.querySelector('.text-purple-600.font-bold').textContent;
-                    const courseLevel = courseCard.querySelector('.level-badge').textContent;
-                    const courseDuration = courseCard.querySelector('.flex.items-center.text-sm.text-gray-500 span').textContent;
-
-                    alert(`Course Enrollment\n\nCourse: ${courseTitle}\nLevel: ${courseLevel}\nDuration: ${courseDuration}\nPrice: ${coursePrice}\n\nRedirecting to enrollment page...`);
-                });
-            }
-        });
-
-        // Blog reading with step-by-step content
-        const readMoreButtons = document.querySelectorAll('button');
-        readMoreButtons.forEach(button => {
-            if (button.textContent.includes('Read Full Guide')) {
-                button.addEventListener('click', function () {
-                    const blogCard = this.closest('article');
-                    const blogTitle = blogCard.querySelector('h4').textContent;
-                    const blogCategory = blogCard.querySelector('.flex.items-center.text-sm.text-gray-500 span').textContent;
-                    const stepsList = blogCard.querySelector('ul');
-                    const steps = Array.from(stepsList.querySelectorAll('li')).map(li => li.textContent.trim()).join('\n');
-
-                    alert(`📖 Opening Full Blog Guide\n\nTitle: ${blogTitle}\nCategory: ${blogCategory}\n\nStep-by-Step Content:\n${steps}\n\n✅ WebP optimized images loaded\n🔄 Loading complete article with rich media...`);
-                });
-            }
-        });
-
         // Read article functionality
         function readArticle(articleId) {
             const articles = {

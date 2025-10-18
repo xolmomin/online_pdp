@@ -51,9 +51,6 @@
 
 {% block content %}{% endblock %}
 
-<!-- Footer -->
-
-{% include 'users/parts/footers.html' %}
 
 <script>
 
@@ -65,23 +62,6 @@
             console.log('Searching for:', searchTerm);
             // In a real app, this would filter courses by name/description
         }
-    });
-
-    // Navigation functionality
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const section = this.textContent.toLowerCase();
-            if (section === 'home') {
-                window.scrollTo({top: 0, behavior: 'smooth'});
-            } else {
-                const targetSection = document.getElementById(section);
-                if (targetSection) {
-                    targetSection.scrollIntoView({behavior: 'smooth'});
-                }
-            }
-        });
     });
 
     // CTA buttons
@@ -96,17 +76,6 @@
             button.addEventListener('click', function () {
                 const coursesSection = document.getElementById('courses');
                 coursesSection.scrollIntoView({behavior: 'smooth'});
-            });
-        }
-    });
-
-    // View All buttons
-    const viewAllButtons = document.querySelectorAll('button');
-    viewAllButtons.forEach(button => {
-        if (button.textContent.includes('View All')) {
-            button.addEventListener('click', function () {
-                const buttonText = this.textContent;
-                alert(`${buttonText}\n\nLoading complete collection...`);
             });
         }
     });

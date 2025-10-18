@@ -1,59 +1,155 @@
+{% extends 'users/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ blog.title }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800">
 
-<!-- Blog Hero -->
-<section class="relative">
-    {% if blog.cover_image %}
-        <img src="{{ blog.cover_image.url }}" alt="{{ blog.title }}"
-         class="w-full h-80 object-cover rounded-b-2xl shadow">
-    {% else %}
-        <img src="{{ blog.cover_image.url }}" alt="{{ blog.title }}"
-         class="w-full h-80 object-cover rounded-b-2xl shadow">
-    {% endif %}
-    <img src="{% static 'users/vendors/images/no-picture.webp' %}" alt="No image"
-         class="w-full h-80 object-cover rounded-b-2xl shadow">
-    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white">
-        <span class="px-3 py-1 bg-white text-blue-600 rounded-full text-sm font-medium">Technology</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-4">{{ blog.title }}</h1>
-        <div class="mt-4 text-sm flex space-x-4">
-            <span>By {{ blog.created_by.get_full_name|default:"Unknown" }}</span>
-            <span>•</span>
-            <span>{{ blog.created_at|date:"M d, Y" }}</span>
+{% block title %}
+    Blog Detail - EduHub Learning Platform
+{% endblock %}
+
+{% block custom_css %}
+<style>
+    .author-avatar {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .step-count-badge {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        color: white;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .reading-time {
+        background: #f3f4f6;
+        color: #6b7280;
+        padding: 2px 8px;
+        border-radius: 8px;
+        font-size: 11px;
+        font-weight: 500;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Blog Detail Full Page -->
+<div class="min-h-screen bg-gray-50 py-10 px-4 flex justify-center">
+    <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full relative overflow-hidden border border-gray-200">
+
+        <!-- Header -->
+        <div class="relative">
+            <div id="blog-detail-cover"
+                 class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden">
+                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div class="absolute top-4 right-4 flex space-x-2">
+                    <a href="{% url 'blog_list' %}"
+                       class="bg-white/20 backdrop-blur-sm text-white p-2 rounded-lg hover:bg-white/30 transition-colors"
+                       title="Back">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="absolute bottom-6 left-6 right-6">
+                    <h1 id="blog-detail-title" class="text-3xl font-bold text-white mb-2">{{ blog.title }}</h1>
+                    <div class="flex items-center space-x-4 text-white/90">
+                        <div class="flex items-center space-x-2">
+                            <div id="blog-detail-avatar" class="author-avatar">MK</div>
+                            <div>
+                                <div id="blog-detail-author" class="font-medium">Mike Chen</div>
+                                <div class="text-sm opacity-75">
+                                    Published <span id="blog-detail-date">{{ blog.created_at|date:"M d, Y" }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 text-sm">
+                            <span id="blog-detail-reading-time" class="bg-white/20 px-2 py-1 rounded">8 min read</span>
+                            <span id="blog-detail-steps-count" class="bg-yellow-500 text-white px-2 py-1 rounded font-semibold">
+                                {{ blog.steps.count }} steps
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="blog-detail-icon"
+                     class="absolute inset-0 flex items-center justify-center text-6xl opacity-20">🚀</div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-8">
+            <!-- Blog Description -->
+            <div class="prose max-w-none mb-8">
+                <div id="blog-detail-description" class="text-gray-700 leading-relaxed text-lg">
+                    {{ blog.description|safe }}
+                </div>
+            </div>
+
+            <!-- Steps Section -->
+            <div class="border-t border-gray-200 pt-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Tutorial Steps</h2>
+
+                {% for step in blog.steps.all %}
+                <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ step.title }}</h3>
+                    <div class="text-gray-700 leading-relaxed prose">
+                        {{ step.description|safe }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Blog Actions -->
+            <div class="border-t border-gray-200 pt-6 mt-8">
+                <div class="flex items-center justify-between flex-wrap gap-4">
+                    <div class="flex items-center space-x-4">
+                        <button onclick="likeBlog()"
+                                class="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-red-500 transition-colors">
+                            ❤️ <span>Like</span>
+                        </button>
+                        <button onclick="shareBlog()"
+                                class="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-blue-500 transition-colors">
+                            🔗 <span>Share</span>
+                        </button>
+                        <button onclick="bookmarkBlog()"
+                                class="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-yellow-500 transition-colors">
+                            🔖 <span>Bookmark</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button onclick="printBlog()"
+                                class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                            🖨️ Print Guide
+                        </button>
+                        <button onclick="downloadPDF()"
+                                class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                            📄 Download PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+</div>
 
-<!-- Blog Content -->
-<main class="max-w-4xl mx-auto px-6 py-12 bg-white shadow-lg rounded-2xl -mt-12 relative z-10">
-    <article class="prose max-w-none prose-lg">
-        {{ blog.description|safe }}
-    </article>
+{% endblock %}
 
-    <!-- Steps -->
-    {% if steps %}
-        <section class="mt-12">
-            <h2 class="text-2xl font-semibold mb-6">Steps</h2>
-            <ol class="space-y-8">
-                {% for step in steps %}
-                    <li class="p-6 bg-gray-50 border rounded-xl shadow-sm">
-                        <h3 class="text-xl font-bold mb-2">Step {{ forloop.counter }}: {{ step.title }}</h3>
-                        <div class="prose max-w-none">
-                            {{ step.description|safe }}
-                        </div>
-                    </li>
-                {% endfor %}
-            </ol>
-        </section>
-    {% endif %}
-</main>
-
-</body>
-</html>
+{% block custom_js %}
+<script>
+    function likeBlog() { alert("❤️ Blog liked!"); }
+    function shareBlog() { alert("🔗 Blog shared!"); }
+    function bookmarkBlog() { alert("🔖 Blog bookmarked!"); }
+    function printBlog() { window.print(); }
+    function downloadPDF() { alert("📄 Downloading blog as PDF..."); }
+</script>
+{% endblock %}
