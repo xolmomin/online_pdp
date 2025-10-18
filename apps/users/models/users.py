@@ -16,7 +16,7 @@ class User(AbstractUser, UUIDBaseModel):
         STUDENT = 'student', 'Student'
 
     username = None
-    phone = CharField(max_length=15, null=True, unique=True)
+    phone = CharField(max_length=15, unique=True)
     type = CharField(max_length=20, choices=Type.choices, default=Type.STUDENT)
 
     USERNAME_FIELD = 'phone'

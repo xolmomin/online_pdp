@@ -185,25 +185,6 @@ https://pypi.org/project/django-video-encoding/
 
 
 
-News
-https://www.figma.com/design/NJjwtbj98TLF8h7RIKE1B9/Free-News-%26-Magazine-Figma-Template-%2F-All-pages-(Community)?node-id=17-11&p=f&t=6aG6vz8S9yOBnBnL-0
-
-Kiyim online do'kon
-https://www.figma.com/design/SG4eSdCayTYVEJrLA1mbXq/E-commerce-Website-Template-(Freebie)-(Community)?node-id=0-1&p=f&t=DxTfIsSnw0AqeEAo-0
-
-Online course
-https://www.figma.com/design/gFoTExaXHl19o8PoNNgGSL/Free-Education-Template-%7C-Online-Courses-%26-E-Learning-%7C-EduPress-(Community)?node-id=0-1&p=f&t=Hcgs4FwaDq8dna18-0
-
-RentCar
-https://www.figma.com/design/Ez76V48hoaMl5WEjed4L2t/Car-Rent-Website-Design---Pickolab-Studio-(Community)?node-id=1-5&p=f&t=ccmirZsYeAsMSfRd-0
-
-E-comemrce
-https://www.figma.com/design/Hda8bgGevRwr9ZsRA4zBi4/Full-E-Commerce-Website-UI-UX-Design-(Community)?node-id=1-3&p=f&t=ouabHbBn6BasTvk6-0
-
-Dream house
-https://www.figma.com/design/e1dWEEkTgqjqBnkG8LpqSJ/65--Real-Estate-Website-Templates--Community-?node-id=0-1&p=f&t=kFITB1asVT8BrhNN-0
-
-
 Jo'rayev Abdurahmon
 Dream house
 https://www.figma.com/design/e1dWEEkTgqjqBnkG8LpqSJ/65--Real-Estate-Website-Templates--Community-?node-id=0-1&p=f&t=kFITB1asVT8BrhNN-0
@@ -220,10 +201,9 @@ https://www.figma.com/design/Ez76V48hoaMl5WEjed4L2t/Car-Rent-Website-Design---Pi
 
 
 TASK
-0. (muhammadamin)
-menyuda problems (modelini ham yozish)
-
-1. (muhammadamin) crun (python-alpine container)
+muhammadamin
+0. menyuda problems (modelini ham yozish)
+1. crun (python-alpine container)
 main.py
 l = map(int, input().split())
 print(*filter(lambda i: i % 2 == 0, l))
@@ -235,12 +215,13 @@ output.txt
 2 6 2 6
 
 
-
-3. (mirjalol) adminkadagi UI togrilash (applarni dropdown qilish, ajratish)
+mirjalol
+3. adminkadagi UI togrilash (applarni dropdown qilish, ajratish)
 4. createsuperuser ni togrilash
 5. adminkada userlarni ajratish (admin, teacher)
 6. media ichida fixture dan qoshiladigan malumotlar yuborilsin ()
-
+7. login (phone orqali), (bot orqali)
+8. register page, detail page shular otadigan qilish
 
 
 
