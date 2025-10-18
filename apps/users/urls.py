@@ -11,7 +11,7 @@ urlpatterns = [
     path('courses', CourseListView.as_view(), name='course_list'),
     path('course-detail', CourseDetailTemplateView.as_view()),
     path('blogs', BlogListView.as_view(), name='blog_list'),
-    path('blog/<uuid:pk>', BlogDetailView.as_view(), name='blog_detail'),
-    path('register', RegisterTemplateView.as_view(), name='register'),
-    path('login', LoginTemplateView.as_view(), name='login'),
+    path('blogs/<uuid:pk>', BlogDetailView.as_view(), name='blog_detail'),
+    path('auth/register', RegisterTemplateView.as_view(), name='register'),
+    path('auth/login', LoginTemplateView.as_view(), name='login'),
 ]
