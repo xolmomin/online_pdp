@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'users',
     'shared',
     'payments',
+    'tasks',
 
     # Third-party
     'django_ckeditor_5',

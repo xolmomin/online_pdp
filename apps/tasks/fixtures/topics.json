@@ -1,0 +1,122 @@
+[
+  {
+    "model": "tasks.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Arrays",
+      "slug": "arrays"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Strings",
+      "slug": "strings"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Dynamic Programming",
+      "slug": "dynamic-programming"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Greedy Algorithms",
+      "slug": "greedy-algorithms"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Recursion",
+      "slug": "recursion"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Sorting",
+      "slug": "sorting"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 7,
+    "fields": {
+      "name": "Searching",
+      "slug": "searching"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 8,
+    "fields": {
+      "name": "Linked Lists",
+      "slug": "linked-lists"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 9,
+    "fields": {
+      "name": "Binary Trees",
+      "slug": "binary-trees"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 10,
+    "fields": {
+      "name": "Graphs",
+      "slug": "graphs"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 11,
+    "fields": {
+      "name": "Hash Tables",
+      "slug": "hash-tables"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 12,
+    "fields": {
+      "name": "Stacks",
+      "slug": "stacks"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 13,
+    "fields": {
+      "name": "Queues",
+      "slug": "queues"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 14,
+    "fields": {
+      "name": "Math",
+      "slug": "math"
+    }
+  },
+  {
+    "model": "tasks.topic",
+    "pk": 15,
+    "fields": {
+      "name": "Bit Manipulation",
+      "slug": "bit-manipulation"
+    }
+  }
+]
