@@ -17,4 +17,5 @@ msg:
 compile_msg:
 	python3 manage.py compilemessages -i .venv
 
-mig_in_container:
+fixture:
+	python3 manage.py loaddata blogs course interviews lesson section
