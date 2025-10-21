@@ -68,17 +68,18 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2">
                     <div class="mb-4">
-                        <span class="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm font-medium">Web Development</span>
-                        <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium ml-2">🏆 Certificate</span>
+                        <span class="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm font-medium">{{ course.category }}</span>
+                        {% if course.has_certificate %}
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium ml-2">Certificate</span>
+                        {% endif %}
                     </div>
-                    <h1 class="text-4xl font-bold mb-4">Complete Web Development Bootcamp</h1>
-                    <p class="text-xl text-white text-opacity-90 mb-6">Learn HTML, CSS, JavaScript, React, and Node.js
-                        from
-                        scratch. Build real-world projects and become a full-stack developer.</p>
-
+                    <h1 class="text-4xl font-bold mb-4">{{ course.name }}</h1>
+                    <p class="text-xl text-white text-opacity-90 mb-6">
+                        {{ course.short_description|safe }}
+                    </p>
                     <div class="flex items-center mb-6">
                         <div class="rating-stars text-2xl">★★★★★</div>
-                        <span class="ml-2 text-white text-opacity-90">4.8 (2,341 reviews)</span>
+                        <span class="ml-2 text-white text-opacity-90">{{ course.rating }} (2,341 reviews)</span>
                         <span class="ml-4 text-white text-opacity-90">15,847 students</span>
                     </div>
 
@@ -214,29 +215,7 @@
                     <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
                         <h2 class="text-2xl font-bold text-gray-900 mb-6">Course Description</h2>
                         <div class="prose max-w-none text-gray-700">
-                            <p class="mb-4">Welcome to the Complete Web Development Bootcamp! This comprehensive course
-                                is
-                                designed to take you from a complete beginner to a confident full-stack web
-                                developer.</p>
-
-                            <p class="mb-4">You'll start with the fundamentals of HTML and CSS, learning how to create
-                                beautiful, responsive websites. Then we'll dive deep into JavaScript, covering
-                                everything
-                                from basic syntax to advanced concepts like async/await, closures, and the DOM.</p>
-
-                            <p class="mb-4">The course then progresses to modern frameworks and libraries. You'll master
-                                React.js, learning how to build dynamic, interactive user interfaces with components,
-                                hooks,
-                                and state management.</p>
-
-                            <p class="mb-4">On the backend, you'll learn Node.js and Express.js to create powerful
-                                server-side applications. We'll cover RESTful APIs, authentication, and database
-                                integration
-                                with MongoDB.</p>
-
-                            <p>By the end of this course, you'll have built several real-world projects and have the
-                                skills
-                                to work as a professional web developer.</p>
+                            <p class="mb-4">{{ course.full_description|safe }}</p>
                         </div>
                     </div>
 

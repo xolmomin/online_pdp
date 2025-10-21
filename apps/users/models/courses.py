@@ -89,7 +89,7 @@ class Section(CreatedBaseModel, OrderBaseModel):
 
     name = CharField(max_length=255)
     status = CharField(max_length=20, choices=Status.choices, default=Status.UNPUBLISHED)
-    course = ForeignKey('users.Course', CASCADE)
+    course = ForeignKey('users.Course', CASCADE, related_name='courses')
     video_count = IntegerField(default=0, db_default=0, editable=False)
     total_video_duration = IntegerField(default=0, db_default=0, editable=False)
 

@@ -106,49 +106,50 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for interview in interviews %}
-                    <div class="category-card p-8 rounded-2xl cursor-pointer"
-                         onclick="openCategory('{{ interview.id }}')">
-                        <div class="text-center">
-                            <!-- Title -->
-                            <h4 class="text-xl font-semibold text-gray-900 mb-3">{{ interview.title }}</h4>
-                            <div class="flex flex-col items-center space-y-1">
-                                <!-- Description (CKEditor safe rendering) -->
-                                <p class="text-gray-600 text-center mb-1 pb-2 border-b border-gray-200">{{ interview.description|safe }}</p>
+                    <a href="{% url 'interview_detail' interview.pk %}" class="block">
+                        <div class="category-card p-8 rounded-2xl cursor-pointer hover:shadow-lg transition-shadow">
+                            <div class="text-center">
+                                <!-- Title -->
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">{{ interview.title }}</h4>
+                                <div class="flex flex-col items-center space-y-1">
+                                    <!-- Description (CKEditor safe rendering) -->
+                                    <p class="text-gray-600 text-center mb-1 pb-2 border-b border-gray-200">
+                                        {{ interview.description|safe }}
+                                    </p>
 
-                                <!-- Questions count (related InterviewParts) -->
-                                <div>
-                            <span class="difficulty-badge difficulty-easy">
-                                Total: {{ interview.parts.count }} questions
-                            </span>
+                                    <!-- Questions count -->
+                                    <div>
+                                      <span class="difficulty-badge difficulty-easy">
+                                        Total: {{ interview.parts.count }} questions
+                                      </span>
+                                    </div>
+                                </div>
+
+                                <!-- Action row: More button (left) + Views (right) -->
+                                <div class="flex items-center justify-between mt-4">
+                                    <!-- More button -->
+                                    <span class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-colors text-sm font-medium">
+                                      Read More
+                                    </span>
+
+                                    <!-- Views count -->
+                                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium
+                                        bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-md">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                           viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0
+                                                  8.268 2.943 9.542 7-1.274 4.057-5.065
+                                                  7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        670 views
+                                    </span>
                                 </div>
                             </div>
-
-                            <!-- Action row: More button (left) + Views (right) -->
-                            <div class="flex items-center justify-between mt-4">
-                                <!-- More button -->
-                                <a href="{% url 'interview_detail' interview.pk %}"
-                                   class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-colors text-sm font-medium">
-                                    Read More
-                                </a>
-
-                                <!-- Views count -->
-                                <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium
-                                    bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-md">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0
-                                             8.268 2.943 9.542 7-1.274 4.057-5.065
-                                             7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                                </svg>
-                                670 views
-                            </span>
-                            </div>
                         </div>
-                    </div>
-
+                    </a>
                 {% empty %}
                     <p class="col-span-3 text-center text-gray-500">No interviews available yet.</p>
                 {% endfor %}
@@ -207,19 +208,19 @@
 {% endblock %}
 
 {% block custom_js %}
-	<script>
-    // Category selection functionality
-    function openCategory(category) {
-        const categoryNames = {
-            'technical': 'Technical Interviews',
-            'behavioral': 'Behavioral Interviews',
-            'case-study': 'Case Study Interviews',
-            'product': 'Product Management',
-            'data-science': 'Data Science',
-            'leadership': 'Leadership & Management'
-        };
+    <script>
+        // Category selection functionality
+        function openCategory(category) {
+            const categoryNames = {
+                'technical': 'Technical Interviews',
+                'behavioral': 'Behavioral Interviews',
+                'case-study': 'Case Study Interviews',
+                'product': 'Product Management',
+                'data-science': 'Data Science',
+                'leadership': 'Leadership & Management'
+            };
 
-        alert(`Opening ${categoryNames[category]} section...\n\nThis would navigate to a dedicated page with filtered questions for this category.`);
-    }
-</script>
+            alert(`Opening ${categoryNames[category]} section...\n\nThis would navigate to a dedicated page with filtered questions for this category.`);
+        }
+    </script>
 {% endblock %}

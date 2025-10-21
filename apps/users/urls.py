@@ -2,14 +2,14 @@ from django.urls import path
 
 from users.views import CourseListView, InterviewListView, InterviewDetailView, \
     BlogListView, MainListView, BlogDetailView, RegisterTemplateView, LoginTemplateView, \
-    CourseDetailTemplateView
+    CourseDetailView
 
 urlpatterns = [
     path('', MainListView.as_view(), name='main'),
     path('interviews', InterviewListView.as_view(), name='interview_list'),
     path('interviews/<uuid:pk>', InterviewDetailView.as_view(), name='interview_detail'),
     path('courses', CourseListView.as_view(), name='course_list'),
-    path('courses/detail', CourseDetailTemplateView.as_view()),
+    path('courses/<uuid:pk>', CourseDetailView.as_view(), name='course_detail'),
     path('blogs', BlogListView.as_view(), name='blog_list'),
     path('blogs/<uuid:pk>', BlogDetailView.as_view(), name='blog_detail'),
     path('auth/register', RegisterTemplateView.as_view(), name='register'),

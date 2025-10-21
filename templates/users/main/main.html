@@ -126,7 +126,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center mb-8">
                 <h3 class="text-3xl font-bold text-gray-900">Featured Courses</h3>
-                <a href="{% url 'course_list' %}" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">
+                <a href="{% url 'course_list' %}"
+                   class="text-purple-600 hover:text-purple-700 font-medium transition-colors">
                     View All Courses
                 </a>
             </div>
@@ -178,9 +179,11 @@
                                     <span class="text-purple-600 font-bold text-xl">{{ course.price }}</span>
                                 </div>
                             </div>
-                            <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            <a href="{% url 'course_detail' course.pk %}"
+                               class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4 text-center block">
                                 Enroll Now
-                            </button>
+                            </a>
+
                         </div>
                     </div>
                 {% endfor %}
@@ -193,7 +196,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center mb-8">
                 <h3 class="text-3xl font-bold text-gray-900">Latest Blogs</h3>
-                <a href="{% url 'blog_list' %}" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">
+                <a href="{% url 'blog_list' %}"
+                   class="text-purple-600 hover:text-purple-700 font-medium transition-colors">
                     View All Blogs
                 </a>
             </div>
@@ -203,39 +207,41 @@
                     <article class="blog-card card-hover animate-slide-up flex flex-col h-full" data-category="tech"
                              data-date="2024-12-12"
                              data-steps="5">
-                        <div class="aspect-video relative">
-                            {% if blog.cover_image %}
-                                <img src="{{ blog.cover_image.url }}"
-                                     alt="{{ blog.title }}"
-                                     class="absolute inset-0 w-full h-full object-cover rounded-t-xl"/>
-                            {% else %}
-                                <img src="{% static 'users/vendors/images/no-picture.webp' %}"
-                                     alt="No image available"
-                                     class="absolute inset-0 w-full h-full object-cover rounded-t-xl"/>
-                            {% endif %}
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <a href="{% url 'blog_detail' blog.pk %}"
-                               class="text-xl font-semibold text-gray-900 mb-2 hover:text-purple-600 transition-colors cursor-pointer block">
-                                {{ blog.title }}
-                            </a>
-                            {{ blog.description|truncatewords:15|safe }}
-                            <p class="text-gray-600 mb-8 text-sm leading-relaxed">
-                            <div class="flex items-center justify-between mt-auto">
-                                <div class="flex items-center space-x-2">
-                                    <div class="author-avatar">MK</div>
-                                    <div class="text-sm">
-                                        <div class="font-medium text-gray-900">Mike Chen</div>
-                                        <div class="flex items-center space-x-2">
-                                            <span class="reading-time">8 min read</span>
-                                            <span class="step-count-badge">5 steps</span>
+                        <a href="{% url 'blog_detail' blog.pk %}">
+                            <div class="aspect-video relative">
+                                {% if blog.cover_image %}
+                                    <img src="{{ blog.cover_image.url }}"
+                                         alt="{{ blog.title }}"
+                                         class="absolute inset-0 w-full h-full object-cover rounded-t-xl"/>
+                                {% else %}
+                                    <img src="{% static 'users/vendors/images/no-picture.webp' %}"
+                                         alt="No image available"
+                                         class="absolute inset-0 w-full h-full object-cover rounded-t-xl"/>
+                                {% endif %}
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <a href="{% url 'blog_detail' blog.pk %}"
+                                   class="text-xl font-semibold text-gray-900 mb-2 hover:text-purple-600 transition-colors cursor-pointer block">
+                                    {{ blog.title }}
+                                </a>
+                                {{ blog.description|truncatewords:15|safe }}
+                                <p class="text-gray-600 mb-8 text-sm leading-relaxed">
+                                <div class="flex items-center justify-between mt-auto">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="author-avatar">MK</div>
+                                        <div class="text-sm">
+                                            <div class="font-medium text-gray-900">Mike Chen</div>
+                                            <div class="flex items-center space-x-2">
+                                                <span class="reading-time">8 min read</span>
+                                                <span class="step-count-badge">5 steps</span>
+                                            </div>
                                         </div>
                                     </div>
+                                    <span class="text-sm text-gray-500">Dec 12, 2024</span>
                                 </div>
-                                <span class="text-sm text-gray-500">Dec 12, 2024</span>
+                                </p>
                             </div>
-                            </p>
-                        </div>
+                        </a>
                     </article>
                 {% endfor %}
             </div>

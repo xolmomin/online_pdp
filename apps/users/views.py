@@ -1,11 +1,23 @@
 from django.views.generic import DetailView, TemplateView, ListView
 
-from users.models import Interview, Step, Course
+from users.models import Interview, Step, Course, Section
 from .models import Blog
 
 
+class BlogListView(ListView):
+    queryset = Blog.objects.all()
+    template_name = 'users/blogs/blog.html'
+    context_object_name = 'blogs'
+    paginate_by = 1
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['blog_detail'] = Step.objects.all()
+        return context
+
+
 class BlogDetailView(DetailView):
-    model = Blog
+    queryset = Blog.objects.all()
     template_name = 'users/blogs/blog-detail.html'
     context_object_name = "blog"
 
@@ -22,8 +34,15 @@ class CourseListView(ListView):
     paginate_by = 2
 
 
-class CourseDetailTemplateView(TemplateView):
+class CourseDetailView(DetailView):
     template_name = 'users/courses/course-detail.html'
+    queryset = Course.objects.all()
+    context_object_name = 'course'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['sections'] = self.object.courses.all()
+        return context
 
 
 class InterviewListView(ListView):
@@ -37,18 +56,6 @@ class InterviewDetailView(DetailView):
     queryset = Interview.objects.all()
     template_name = "users/interviews/interview-detail.html"
     context_object_name = "interview"
-
-
-class BlogListView(ListView):
-    queryset = Blog.objects.all()
-    template_name = 'users/blogs/blog.html'
-    context_object_name = 'blogs'
-    paginate_by = 1
-
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(object_list=object_list, **kwargs)
-        context['blog_detail'] = Step.objects.all()
-        return context
 
 
 class MainListView(ListView):

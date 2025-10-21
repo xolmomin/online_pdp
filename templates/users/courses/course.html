@@ -111,30 +111,34 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
                 <!-- Course Card 1 -->
                 {% for course in courses %}
+
                     <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                         data-topic="web-development" data-level="{{ course.level }}" data-price="{{ course.price }}"
+                         data-topic="web-development" data-level="{{ course.level }}"
+                         data-price="{{ course.price }}"
                          data-duration="{{ course.total_video_duration }}">
-                        <div class="course-thumbnail h-48 relative">
-                            <!-- Replace gradient + icon with course cover image -->
-                            {% if course.cover_image %}
-                                <img src="{{ course.cover_image.url }}"
-                                     alt="Course Cover"
-                                     class="absolute inset-0 w-full h-full object-cover rounded-lg"/>
-                            {% else %}
-                                <img src="{% static 'users/vendors/images/no-picture.webp' %}"
-                                     alt="No image"
-                                     class="absolute inset-0 w-full h-full object-cover rounded-lg"/>
-                            {% endif %}
+                        <a href="{% url 'course_detail' course.pk %}">
+                            <div class="course-thumbnail h-48 relative">
+                                <!-- Replace gradient + icon with course cover image -->
+                                {% if course.cover_image %}
+                                    <img src="{{ course.cover_image.url }}"
+                                         alt="Course Cover"
+                                         class="absolute inset-0 w-full h-full object-cover rounded-lg"/>
+                                {% else %}
+                                    <img src="{% static 'users/vendors/images/no-picture.webp' %}"
+                                         alt="No image"
+                                         class="absolute inset-0 w-full h-full object-cover rounded-lg"/>
+                                {% endif %}
 
-                            <!-- Optional overlay for styling -->
-                            <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
+                                <!-- Optional overlay for styling -->
+                                <div class="absolute inset-0 bg-black bg-opacity-20 rounded-lg"></div>
 
-                            <!-- Badges (keep these) -->
-                            <span class="absolute top-3 left-3 level-badge level-beginner">{{ course.level }}</span>
-                            {% if course.has_certificate %}
-                                <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
-                            {% endif %}
-                        </div>
+                                <!-- Badges (keep these) -->
+                                <span class="absolute top-3 left-3 level-badge level-beginner">{{ course.level }}</span>
+                                {% if course.has_certificate %}
+                                    <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
+                                {% endif %}
+                            </div>
+                        </a>
                         <div class="p-5 flex flex-col flex-grow justify-between">
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-2 text-lg">{{ course.name }}</h4>
@@ -157,9 +161,10 @@
                                     <span class="text-purple-600 font-bold text-xl">{{ course.price }}</span>
                                 </div>
                             </div>
-                            <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4">
+                            <a href="{% url 'course_detail' course.pk %}"
+                               class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4 text-center block">
                                 Enroll Now
-                            </button>
+                            </a>
                         </div>
                     </div>
                 {% endfor %}
