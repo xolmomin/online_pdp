@@ -15,7 +15,6 @@ pip-selfcheck.json
 .idea/**/dictionaries
 .idea/**/shelf
 .idea/**/aws.xml
-media
 **/migrations/**
 .idea/**/contentModel.xml
 .idea/**/dataSources/
@@ -116,5 +115,6 @@ dmypy.json
 .pyre/
 .pytype/
 cython_debug/
+media
 !media/cover_images
 !media/cover_image_courses
