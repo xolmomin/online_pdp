@@ -118,6 +118,26 @@
                         </div>
                     </div>
 
+                    <!-- Phone -->
+                    <div class="form-group relative">
+                        <div class="input-group">
+                            <input type="tel" id="register-phone" name="phone" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white/50 backdrop-blur-sm"
+                                   placeholder="+998(99) 999-99-99">
+                            <label for="register-phone"
+                                   class="floating-label absolute left-4 top-3 text-gray-500 pointer-events-none">
+                            </label>
+                        </div>
+                        <div class="absolute right-3 top-3">
+                            <svg id="register-phone-check" class="h-6 w-6 text-green-500 hidden" fill="none"
+                                 stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+
                     <!-- Email -->
                     <div class="form-group relative">
                         <input type="email" id="email" name="email" required
@@ -135,17 +155,6 @@
                                       d="M5 13l4 4L19 7"></path>
                             </svg>
                         </div>
-                    </div>
-
-                    <!-- Phone -->
-                    <div class="form-group relative">
-                        <input type="tel" id="phone" name="phone"
-                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white/50 backdrop-blur-sm"
-                               oninput="checkValue(this)">
-                        <label for="phone"
-                               class="floating-label absolute left-4 top-3 text-gray-500 pointer-events-none">
-                            Phone Number (Optional)
-                        </label>
                     </div>
 
                     <!-- Password -->
@@ -263,12 +272,16 @@
                         <span class="ml-2">Google</span>
                     </button>
 
-                    <button type="button" onclick="registerWithApple()"
+                    <button type="button" onclick="registerWithTelegram()"
                             class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        <svg class="h-5 w-5" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="120" cy="120" r="120" fill="#37AEE2"/>
+                            <path d="M98.1 175c-3.3 0-2.7-1.2-3.8-4.1L83 132.9l90-53.5" fill="#C8DAEA"/>
+                            <path d="M98.1 175c2.5 0 3.7-1.1 5.2-2.5l14-13.6-17.4-10.5" fill="#A9C9DD"/>
+                            <path d="M99.9 148.4l42.2 31.1c4.8 2.6 8.2 1.3 9.4-4.4l17-80.2c1.7-6.8-2.6-9.9-7-7.9L63.8 114.3c-6.6 2.7-6.6 6.4-1.2 8.1l23.6 7.4 54.7-34.5c2.6-1.6 5-0.7 3 1L99.9 148.4z"
+                                  fill="#fff"/>
                         </svg>
-                        <span class="ml-2">Apple</span>
+                        <span class="ml-2">Telegram</span>
                     </button>
                 </div>
 
@@ -276,7 +289,7 @@
                 <div class="mt-6 text-center">
                     <p class="text-sm text-gray-600">
                         Already have an account?
-                        <a href="#signin" class="font-medium text-purple-600 hover:text-purple-700 transition-colors">
+                        <a href="{% url 'login' %}" class="font-medium text-purple-600 hover:text-purple-700 transition-colors">
                             Sign in here
                         </a>
                     </p>
@@ -307,172 +320,173 @@
 {% endblock %}
 
 {% block custom_js %}
-	<script>
-    // Form validation and interaction functions
-    function checkValue(input) {
-        const formGroup = input.closest('.form-group');
-        if (input.value.trim() !== '') {
-            formGroup.classList.add('has-value');
-        } else {
-            formGroup.classList.remove('has-value');
-        }
-
-        // Email validation
-        if (input.type === 'email') {
-            const emailCheck = document.getElementById('email-check');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (emailRegex.test(input.value)) {
-                emailCheck.classList.remove('hidden');
+    <script>
+        // Form validation and interaction functions
+        function checkValue(input) {
+            const formGroup = input.closest('.form-group');
+            if (input.value.trim() !== '') {
+                formGroup.classList.add('has-value');
             } else {
-                emailCheck.classList.add('hidden');
+                formGroup.classList.remove('has-value');
+            }
+
+            // Email validation
+            if (input.type === 'email') {
+                const emailCheck = document.getElementById('email-check');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailRegex.test(input.value)) {
+                    emailCheck.classList.remove('hidden');
+                } else {
+                    emailCheck.classList.add('hidden');
+                }
             }
         }
-    }
 
-    function checkPasswordStrength(password) {
-        const strengthBar = document.getElementById('strength-bar');
-        const strengthText = document.getElementById('strength-text');
+        function checkPasswordStrength(password) {
+            const strengthBar = document.getElementById('strength-bar');
+            const strengthText = document.getElementById('strength-text');
 
-        let strength = 0;
-        let strengthLabel = 'Weak';
+            let strength = 0;
+            let strengthLabel = 'Weak';
 
-        // Length check
-        if (password.length >= 8) strength += 1;
-        if (password.length >= 12) strength += 1;
+            // Length check
+            if (password.length >= 8) strength += 1;
+            if (password.length >= 12) strength += 1;
 
-        // Character variety checks
-        if (/[a-z]/.test(password)) strength += 1;
-        if (/[A-Z]/.test(password)) strength += 1;
-        if (/[0-9]/.test(password)) strength += 1;
-        if (/[^A-Za-z0-9]/.test(password)) strength += 1;
+            // Character variety checks
+            if (/[a-z]/.test(password)) strength += 1;
+            if (/[A-Z]/.test(password)) strength += 1;
+            if (/[0-9]/.test(password)) strength += 1;
+            if (/[^A-Za-z0-9]/.test(password)) strength += 1;
 
-        // Update strength indicator
-        strengthBar.className = 'password-strength rounded-full transition-all duration-300';
+            // Update strength indicator
+            strengthBar.className = 'password-strength rounded-full transition-all duration-300';
 
-        if (strength <= 2) {
-            strengthBar.classList.add('strength-weak');
-            strengthLabel = 'Weak';
-        } else if (strength <= 3) {
-            strengthBar.classList.add('strength-fair');
-            strengthLabel = 'Fair';
-        } else if (strength <= 4) {
-            strengthBar.classList.add('strength-good');
-            strengthLabel = 'Good';
-        } else {
-            strengthBar.classList.add('strength-strong');
-            strengthLabel = 'Strong';
+            if (strength <= 2) {
+                strengthBar.classList.add('strength-weak');
+                strengthLabel = 'Weak';
+            } else if (strength <= 3) {
+                strengthBar.classList.add('strength-fair');
+                strengthLabel = 'Fair';
+            } else if (strength <= 4) {
+                strengthBar.classList.add('strength-good');
+                strengthLabel = 'Good';
+            } else {
+                strengthBar.classList.add('strength-strong');
+                strengthLabel = 'Strong';
+            }
+
+            strengthText.textContent = strengthLabel;
         }
 
-        strengthText.textContent = strengthLabel;
-    }
+        function checkPasswordMatch() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const matchError = document.getElementById('password-match');
+            const matchSuccess = document.getElementById('password-match-success');
 
-    function checkPasswordMatch() {
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
-        const matchError = document.getElementById('password-match');
-        const matchSuccess = document.getElementById('password-match-success');
-
-        if (confirmPassword.length > 0) {
-            if (password === confirmPassword) {
-                matchError.classList.add('hidden');
-                matchSuccess.classList.remove('hidden');
+            if (confirmPassword.length > 0) {
+                if (password === confirmPassword) {
+                    matchError.classList.add('hidden');
+                    matchSuccess.classList.remove('hidden');
+                } else {
+                    matchError.classList.remove('hidden');
+                    matchSuccess.classList.add('hidden');
+                }
             } else {
-                matchError.classList.remove('hidden');
+                matchError.classList.add('hidden');
                 matchSuccess.classList.add('hidden');
             }
-        } else {
-            matchError.classList.add('hidden');
-            matchSuccess.classList.add('hidden');
-        }
-    }
-
-    function togglePassword(fieldId) {
-        const field = document.getElementById(fieldId);
-        const type = field.getAttribute('type') === 'password' ? 'text' : 'password';
-        field.setAttribute('type', type);
-    }
-
-
-    function handleRegister(event) {
-        event.preventDefault();
-
-        // Get form data
-        const formData = new FormData(event.target);
-        const data = Object.fromEntries(formData);
-
-        // Validate passwords match
-        if (data.password !== data.confirmPassword) {
-            showNotification('Passwords do not match!', 'error');
-            return;
         }
 
-        // Validate terms acceptance
-        if (!data.terms) {
-            showNotification('Please accept the Terms of Service and Privacy Policy', 'error');
-            return;
+        function togglePassword(fieldId) {
+            const field = document.getElementById(fieldId);
+            const type = field.getAttribute('type') === 'password' ? 'text' : 'password';
+            field.setAttribute('type', type);
         }
 
-        // Show loading state
-        const submitBtn = event.target.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Creating Account...';
-        submitBtn.disabled = true;
+        function handleRegister(event) {
+            event.preventDefault();
 
-        // Simulate API call
-        setTimeout(() => {
-            // Reset button
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
 
-            // Show success modal
-            showSuccessModal();
+            // Validate passwords match
+            if (data.password !== data.confirmPassword) {
+                showNotification('Passwords do not match!', 'error');
+                return;
+            }
 
-            // Log registration data (in real app, this would be sent to server)
-            console.log('Registration data:', data);
-        }, 2000);
-    }
+            // Validate terms acceptance
+            if (!data.terms) {
+                showNotification('Please accept the Terms of Service and Privacy Policy', 'error');
+                return;
+            }
 
-    function registerWithGoogle() {
-        showNotification('Redirecting to Google...', 'info');
-        // In real app, this would redirect to Google OAuth
-    }
+            // Show loading state
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Creating Account...';
+            submitBtn.disabled = true;
 
-    function registerWithApple() {
-        showNotification('Redirecting to Apple...', 'info');
-        // In real app, this would redirect to Apple Sign In
-    }
+            // Simulate API call
+            setTimeout(() => {
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
 
-    function showSuccessModal() {
-        const modal = document.getElementById('success-modal');
-        modal.classList.remove('hidden');
-        setTimeout(() => {
-            modal.querySelector('.transform').classList.remove('scale-95');
-            modal.querySelector('.transform').classList.add('scale-100');
-        }, 100);
-    }
+                // Show success modal
+                showSuccessModal();
 
-    function closeSuccessModal() {
-        const modal = document.getElementById('success-modal');
-        modal.querySelector('.transform').classList.remove('scale-100');
-        modal.querySelector('.transform').classList.add('scale-95');
-        setTimeout(() => {
-            modal.classList.add('hidden');
-            // In real app, redirect to dashboard or sign in page
-            showNotification('Welcome to EduHub! 🎉', 'success');
-        }, 200);
-    }
+                // Log registration data (in real app, this would be sent to server)
+                console.log('Registration data:', data);
+            }, 2000);
+        }
 
-    function showNotification(message, type = 'info') {
-        const notification = document.createElement('div');
-        const colors = {
-            success: 'bg-green-500',
-            error: 'bg-red-500',
-            info: 'bg-blue-500',
-            warning: 'bg-yellow-500'
-        };
+        function registerWithGoogle() {
+            showNotification('Redirecting to Google...', 'info');
+            // In real app, this would redirect to Google OAuth
+        }
 
-        notification.className = `fixed top-4 right-4 ${colors[type]} text-white px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300`;
-        notification.innerHTML = `
+        function registerWithTelegram() {
+            showNotification('Redirecting to Telegram...', 'info');
+            // In a real app, this would redirect to Telegram Login
+            // Example:
+            // window.location.href = "https://t.me/your_bot?start=auth";
+        }
+
+        function showSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('.transform').classList.remove('scale-95');
+                modal.querySelector('.transform').classList.add('scale-100');
+            }, 100);
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            modal.querySelector('.transform').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                // In real app, redirect to dashboard or sign in page
+                showNotification('Welcome to EduHub! 🎉', 'success');
+            }, 200);
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            const colors = {
+                success: 'bg-green-500',
+                error: 'bg-red-500',
+                info: 'bg-blue-500',
+                warning: 'bg-yellow-500'
+            };
+
+            notification.className = `fixed top-4 right-4 ${colors[type]} text-white px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300`;
+            notification.innerHTML = `
             <div class="flex items-center space-x-3">
                 <span>${message}</span>
                 <button onclick="this.parentElement.parentElement.remove()" class="text-white hover:text-gray-200">
@@ -483,28 +497,69 @@
             </div>
         `;
 
-        document.body.appendChild(notification);
+            document.body.appendChild(notification);
 
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
 
-        setTimeout(() => {
-            notification.style.transform = 'translateX(100%)';
-            setTimeout(() => notification.remove(), 300);
-        }, 5000);
-    }
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
 
-    // Initialize form
-    document.addEventListener('DOMContentLoaded', function () {
-        // Add floating label behavior to all form inputs
-        document.querySelectorAll('.form-input').forEach(input => {
-            if (input.value.trim() !== '') {
-                input.closest('.form-group').classList.add('has-value');
-            }
+        // Initialize form
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add floating label behavior to all form inputs
+            document.querySelectorAll('.form-input').forEach(input => {
+                if (input.value.trim() !== '') {
+                    input.closest('.form-group').classList.add('has-value');
+                }
+            });
         });
-    });
-</script>
+    </script>
+
+    <!-- jQuery + InputMask -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <!-- JS -->
+    <script>
+        jQuery(document).ready(function ($) {
+            // Apply input mask for register phone field
+            $('#register-phone').inputmask({
+                "mask": "+\\9\\98(99) 999-99-99"
+            });
+
+            // Show green check when input complete
+            $('#register-phone').on('complete', function () {
+                $('#register-phone-check').removeClass('hidden');
+            }).on('incomplete', function () {
+                $('#register-phone-check').addClass('hidden');
+            });
+
+
+            // Handle form submission
+            $('form').submit(function (event) {
+                event.preventDefault();
+
+                // Get phone number and clean it
+                var phoneInput = $('#phone').val();
+                var modifiedPhoneInput = phoneInput.replace(/^\+|\D/g, '').replace(/^998/, '');
+
+                // Append hidden input with cleaned phone (for backend)
+                var newInput = $('<input>').attr({
+                    type: 'hidden',
+                    name: 'username',
+                    value: modifiedPhoneInput
+                });
+                $(this).append(newInput);
+
+                // Unbind handler and submit
+                $(this).unbind('submit').submit();
+            });
+        });
+    </script>
 {% endblock %}
 
 

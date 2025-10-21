@@ -1,3 +1,5 @@
+import uuid
+
 from django.db.models import Model, Func
 from django.db.models.fields import DateTimeField, UUIDField, IntegerField, CharField, SlugField
 from django.utils.text import slugify
@@ -13,7 +15,7 @@ class GenRandomUUID(Func):
 
 
 class UUIDBaseModel(Model):
-    id = UUIDField(primary_key=True, db_default=GenRandomUUID(), editable=False)
+    id = UUIDField(primary_key=True, db_default=GenRandomUUID(), default=uuid.uuid4(), editable=False)
 
     class Meta:
         abstract = True

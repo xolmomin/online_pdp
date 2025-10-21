@@ -116,3 +116,5 @@ dmypy.json
 .pyre/
 .pytype/
 cython_debug/
+!media/cover_images
+!media/cover_image_courses

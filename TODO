@@ -217,11 +217,11 @@ output.txt
 
 mirjalol
 3. adminkadagi UI togrilash (applarni dropdown qilish, ajratish)
-4. createsuperuser ni togrilash
+4.✅ createsuperuser ni togrilash
 5. adminkada userlarni ajratish (admin, teacher)
-6. media ichida fixture dan qoshiladigan malumotlar yuborilsin ()
-7. login (phone orqali), (bot orqali)
-8. register page, detail page shular otadigan qilish
+6.✅ media ichida fixture dan qoshiladigan malumotlar yuborilsin ()
+7.✅ login (phone orqali), (bot orqali)
+8.✅ register page, detail page shular otadigan qilish
 
 
 

@@ -1,5 +1,121 @@
 {% extends "admin/login.html" %}
 {% block content %}
+    <style>
+        /* Background with Uzbekistan flag colors */
+
+
+        /* Login logo adjustments */
+        .login-logo img {
+            width: 120px;
+            height: 80px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 3px solid #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .login-logo img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Form inputs with a solid color background (no frosted glass) */
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+            border: 1px solid #d1d5db; /* Dark border */
+            color: black; /* Dark text for readability */
+            border-radius: 4px; /* No rounded corners */
+            padding: 10px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control::placeholder {
+            color: rgba(0, 0, 0, 0.6); /* Light gray for placeholders */
+        }
+
+        .input-group-text {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d1d5db;
+            color: black;
+            border-left: none; /* Connect smoothly to input */
+            border-radius: 0 4px 4px 0;
+            height: 38px; /* Match input height */
+            width: 38px; /* Make all icons same size */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0; /* Center icon perfectly */
+            transition: border-color 0.3s;
+        }
+
+        /* Primary button with green color and blue border */
+        .btn-primary {
+            background: linear-gradient(to right, #7E3AF2, #2563EB); /* Green button */
+            border: none; /* Blue border */
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #6B21A8, #1E40AF); /* Darker green */
+            transform: scale(1.05);
+        }
+
+        /* Custom login card with light blue background */
+        .card {
+            background-color: #FFFFFF; /* Light blue background */
+            box-shadow: 0 6px 10px #9B4DFF; /* Light blue shadow */
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            /* Dark border */
+        }
+
+        .card-body {
+            border-radius: 15px;
+        }
+
+        /* Notification message style */
+        .notification {
+            position: fixed;
+            top: -100px; /* Initially off-screen */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #388e3c; /* Green for success */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 9999;
+            opacity: 0;
+            transition: top 0.5s ease, opacity 0.5s ease;
+        }
+
+        .notification.show {
+            top: 10px; /* Move the notification into view */
+            opacity: 1;
+        }
+
+        .notification.error {
+            background-color: #f44336; /* Red for error */
+        }
+
+        .login-box-msg {
+            margin: 0;
+            padding: 0 20px 20px;
+            text-align: center;
+            font-size: 1.5rem; /* Bigger text */
+            font-weight: 700; /* Bold */
+            background: linear-gradient(to right, #7E3AF2, #2563EB); /* EduHub gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Makes gradient apply to text */
+        }
+    </style>
     {{ block.super }}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
@@ -34,7 +150,5 @@
                 $(this).unbind('submit').submit();
             });
         });
-
-
     </script>
 {% endblock %}
