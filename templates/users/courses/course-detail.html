@@ -1,11 +1,11 @@
 {% extends 'users/base.html' %}
 
 {% block title %}
-	Complete Web Development Bootcamp - EduHub
+    Complete Web Development Bootcamp - EduHub
 {% endblock %}
 
 {% block custom_css %}
-	<style>
+    <style>
         .hero-gradient {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
@@ -140,6 +140,26 @@
             </div>
         </div>
     </div>
+
+
+    {% for section in sections %}
+        <h2>{{ section.name }}</h2>
+
+        {% for lesson in section.sections.all %}
+            <div class="lesson">
+                <p>{{ lesson.name }}</p>
+
+                {% if lesson.video_link %}
+                    <!-- Secure route to play the video -->
+                    <a href="{% url 'lesson_video' lesson.pk %}" target="_blank">
+                        ▶ Watch Lesson
+                    </a>
+                {% else %}
+                    <p><em>No video available</em></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% endfor %}
 
     <!-- Main Content -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -794,80 +814,80 @@
 {% endblock %}
 
 {% block custom_js %}
-	<script>
-    function showTab(tabName) {
-        // Hide all tab contents
-        document.querySelectorAll('.tab-content').forEach(tab => {
-            tab.classList.add('hidden');
-        });
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
 
-        // Remove active class from all buttons
-        document.querySelectorAll('.tab-button').forEach(btn => {
-            btn.classList.remove('active');
-        });
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
 
-        // Show selected tab and mark button as active
-        document.getElementById(tabName + '-tab').classList.remove('hidden');
-        event.target.classList.add('active');
-    }
-
-    function toggleSection(sectionId) {
-        const content = document.getElementById(sectionId + '-content');
-        const icon = document.getElementById(sectionId + '-icon');
-
-        if (content.classList.contains('hidden')) {
-            content.classList.remove('hidden');
-            icon.style.transform = 'rotate(180deg)';
-        } else {
-            content.classList.add('hidden');
-            icon.style.transform = 'rotate(0deg)';
+            // Show selected tab and mark button as active
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+            event.target.classList.add('active');
         }
-    }
 
-    function enrollNow() {
-        const modal = document.getElementById('enrollment-modal');
-        modal.classList.remove('hidden');
-        setTimeout(() => {
-            modal.querySelector('.transform').classList.remove('scale-95');
-            modal.querySelector('.transform').classList.add('scale-100');
-        }, 100);
-    }
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId + '-content');
+            const icon = document.getElementById(sectionId + '-icon');
 
-    function closeEnrollmentModal() {
-        const modal = document.getElementById('enrollment-modal');
-        modal.querySelector('.transform').classList.remove('scale-100');
-        modal.querySelector('.transform').classList.add('scale-95');
-        setTimeout(() => {
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function enrollNow() {
+            const modal = document.getElementById('enrollment-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('.transform').classList.remove('scale-95');
+                modal.querySelector('.transform').classList.add('scale-100');
+            }, 100);
+        }
+
+        function closeEnrollmentModal() {
+            const modal = document.getElementById('enrollment-modal');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            modal.querySelector('.transform').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                showNotification('Welcome to your new course! Happy learning! 🚀', 'success');
+            }, 200);
+        }
+
+        function openVideoFrame(videoUrl) {
+            const modal = document.getElementById('video-modal');
+            const iframe = document.getElementById('video-frame');
+            iframe.src = videoUrl;
+            modal.classList.remove('hidden');
+        }
+
+        function closeVideoFrame() {
+            const modal = document.getElementById('video-modal');
+            const iframe = document.getElementById('video-frame');
+            iframe.src = '';
             modal.classList.add('hidden');
-            showNotification('Welcome to your new course! Happy learning! 🚀', 'success');
-        }, 200);
-    }
+        }
 
-    function openVideoFrame(videoUrl) {
-        const modal = document.getElementById('video-modal');
-        const iframe = document.getElementById('video-frame');
-        iframe.src = videoUrl;
-        modal.classList.remove('hidden');
-    }
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            const colors = {
+                success: 'bg-green-500',
+                error: 'bg-red-500',
+                info: 'bg-blue-500',
+                warning: 'bg-yellow-500'
+            };
 
-    function closeVideoFrame() {
-        const modal = document.getElementById('video-modal');
-        const iframe = document.getElementById('video-frame');
-        iframe.src = '';
-        modal.classList.add('hidden');
-    }
-
-    function showNotification(message, type = 'info') {
-        const notification = document.createElement('div');
-        const colors = {
-            success: 'bg-green-500',
-            error: 'bg-red-500',
-            info: 'bg-blue-500',
-            warning: 'bg-yellow-500'
-        };
-
-        notification.className = `fixed top-4 right-4 ${colors[type]} text-white px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300`;
-        notification.innerHTML = `
+            notification.className = `fixed top-4 right-4 ${colors[type]} text-white px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300`;
+            notification.innerHTML = `
                 <div class="flex items-center space-x-3">
                     <span>${message}</span>
                     <button onclick="this.parentElement.parentElement.remove()" class="text-white hover:text-gray-200">
@@ -878,24 +898,48 @@
                 </div>
             `;
 
-        document.body.appendChild(notification);
+            document.body.appendChild(notification);
 
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
 
-        setTimeout(() => {
-            notification.style.transform = 'translateX(100%)';
-            setTimeout(() => notification.remove(), 300);
-        }, 5000);
-    }
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
 
-    // Initialize page
-    document.addEventListener('DOMContentLoaded', function () {
-        // Show overview tab by default
-        showTab('overview');
-    });
-</script>
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function () {
+            // Show overview tab by default
+            showTab('overview');
+        });
+    </script>
+
+    {#  HLS js  #}
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        const video = document.getElementById('player');
+        const src = "{{ m3u8_url }}";
+
+        if (Hls.isSupported()) {
+            const hls = new Hls({
+                xhrSetup: function (xhr, url) {
+                    xhr.withCredentials = true;  // sessiya cookie yuborish uchun
+                }
+            });
+            hls.loadSource(src);
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = src;
+            video.addEventListener('loadedmetadata', function () {
+                video.play();
+            });
+        } else {
+            console.warn("HLS not supported in this browser.");
+        }
+    </script>
 {% endblock %}
 
 

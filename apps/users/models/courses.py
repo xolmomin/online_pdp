@@ -114,8 +114,8 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     status = CharField(max_length=20, choices=Status.choices, default=Status.UNPUBLISHED)
     access_type = CharField(max_length=20, choices=AccessType.choices, default=AccessType.PRIVATE)
     video_duration = IntegerField(db_default=0, editable=False)
-    section = ForeignKey('users.Section', CASCADE)
-    video_link = URLField()
+    section = ForeignKey('users.Section', CASCADE, related_name='sections')
+    video_link = CharField(max_length=255, blank=True, null=True)
     video = FileField(upload_to='videos/%Y/%m/%d',
                       help_text="video's format must be 'mp4', 'mov', 'webm'",
                       validators=[FileExtensionValidator(['mp4', 'mov', 'webm'])]
@@ -125,8 +125,8 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
         verbose_name = _('Lesson')
         verbose_name_plural = _('Lessons')
 
-    def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
-        super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+    # def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
+    #     super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
 
     def __str__(self):
         return self.name
