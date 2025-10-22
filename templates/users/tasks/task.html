@@ -96,161 +96,12 @@
         </div>
     </section>
 
-    <!-- Tasks Grid -->
-    <!-- Tasks Grid (Updated for Problem model) -->
-    {#    <section class="py-8 flex flex-col h-full">#}
-    {#        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">#}
-    {#            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="problem-grid">#}
-    {#                {% for problem in problems %}#}
-    {#                    <article class="task-card card-hover animate-slide-up flex flex-col h-full">#}
-    {#                        <div class="p-6 flex flex-col flex-1">#}
-    {#                            <a href="{% url 'problem_detail' problem.pk %}"#}
-    {#                               class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors cursor-pointer block">#}
-    {#                                {{ problem.name }}#}
-    {#                            </a>#}
-    {#                            <p class="text-gray-600 mb-6 text-sm leading-relaxed">#}
-    {#                                {{ problem.description|truncatewords:25|safe }}#}
-    {#                            </p>#}
-    {##}
-    {#                            <div class="flex items-center justify-between mt-auto">#}
-    {#                                <div class="flex items-center space-x-2">#}
-    {#                                    <span class="difficulty">{{ problem.difficulty }}</span>#}
-    {#                                    {% if problem.topic.all %}#}
-    {#                                        <span class="task-badge">#}
-    {#                                        {{ problem.topic.all|join:", " }}#}
-    {#                                    </span>#}
-    {#                                    {% else %}#}
-    {#                                        <span class="task-badge">General</span>#}
-    {#                                    {% endif %}#}
-    {#                                </div>#}
-    {#                                <span class="text-sm text-gray-500">#}
-    {#                                {{ problem.created_at|date:"M d, Y" }}#}
-    {#                            </span>#}
-    {#                            </div>#}
-    {#                        </div>#}
-    {#                    </article>#}
-    {#                {% empty %}#}
-    {#                    <p class="text-center text-gray-500 col-span-3">No problems available yet.</p>#}
-    {#                {% endfor %}#}
-    {#                <!-- 1. Two Sum -->#}
-    {#                <article class="task-card card-hover animate-slide-up flex flex-col h-full">#}
-    {#                    <div class="p-6 flex flex-col flex-1">#}
-    {#                        <a href="#"#}
-    {#                           class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors block">#}
-    {#                            Two Sum#}
-    {#                        </a>#}
-    {#                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">#}
-    {#                            Given an array of integers nums and an integer target, return indices of the two numbers#}
-    {#                            such that they add up to target.#}
-    {#                        </p>#}
-    {##}
-    {#                        <div class="flex items-center justify-between mt-auto">#}
-    {#                            <div class="flex items-center space-x-2">#}
-    {#                                <span class="difficulty">Easy</span>#}
-    {#                                <span class="task-badge">Array</span>#}
-    {#                            </div>#}
-    {#                            <span class="text-sm text-gray-500">Oct 12, 2025</span>#}
-    {#                        </div>#}
-    {#                    </div>#}
-    {#                </article>#}
-    {##}
-    {#                <!-- 2. Valid Parentheses -->#}
-    {#                <article class="task-card card-hover animate-slide-up flex flex-col h-full">#}
-    {#                    <div class="p-6 flex flex-col flex-1">#}
-    {#                        <a href="#"#}
-    {#                           class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors block">#}
-    {#                            Valid Parentheses#}
-    {#                        </a>#}
-    {#                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">#}
-    {#                            Given a string s containing only the characters '(', ')', '{', '}', '[' and ']', determine#}
-    {#                            if the input string is valid.#}
-    {#                        </p>#}
-    {##}
-    {#                        <div class="flex items-center justify-between mt-auto">#}
-    {#                            <div class="flex items-center space-x-2">#}
-    {#                                <span class="difficulty">Easy</span>#}
-    {#                                <span class="task-badge">Stack</span>#}
-    {#                            </div>#}
-    {#                            <span class="text-sm text-gray-500">Oct 14, 2025</span>#}
-    {#                        </div>#}
-    {#                    </div>#}
-    {#                </article>#}
-    {##}
-    {#                <!-- 3. Merge Two Sorted Lists -->#}
-    {#                <article class="task-card card-hover animate-slide-up flex flex-col h-full">#}
-    {#                    <div class="p-6 flex flex-col flex-1">#}
-    {#                        <a href="#"#}
-    {#                           class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors block">#}
-    {#                            Merge Two Sorted Lists#}
-    {#                        </a>#}
-    {#                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">#}
-    {#                            Merge two sorted linked lists and return it as a new sorted list. The new list should be#}
-    {#                            made by splicing together the nodes of the first two lists.#}
-    {#                        </p>#}
-    {##}
-    {#                        <div class="flex items-center justify-between mt-auto">#}
-    {#                            <div class="flex items-center space-x-2">#}
-    {#                                <span class="difficulty">Easy</span>#}
-    {#                                <span class="task-badge">Linked List</span>#}
-    {#                            </div>#}
-    {#                            <span class="text-sm text-gray-500">Oct 15, 2025</span>#}
-    {#                        </div>#}
-    {#                    </div>#}
-    {#                </article>#}
-    {##}
-    {#                <!-- 4. Longest Substring Without Repeating Characters -->#}
-    {#                <article class="task-card card-hover animate-slide-up flex flex-col h-full">#}
-    {#                    <div class="p-6 flex flex-col flex-1">#}
-    {#                        <a href="#"#}
-    {#                           class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors block">#}
-    {#                            Longest Substring Without Repeating Characters#}
-    {#                        </a>#}
-    {#                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">#}
-    {#                            Given a string s, find the length of the longest substring without repeating characters.#}
-    {#                        </p>#}
-    {##}
-    {#                        <div class="flex items-center justify-between mt-auto">#}
-    {#                            <div class="flex items-center space-x-2">#}
-    {#                                <span class="difficulty">Medium</span>#}
-    {#                                <span class="task-badge">String</span>#}
-    {#                            </div>#}
-    {#                            <span class="text-sm text-gray-500">Oct 17, 2025</span>#}
-    {#                        </div>#}
-    {#                    </div>#}
-    {#                </article>#}
-    {##}
-    {#                <!-- 5. Median of Two Sorted Arrays -->#}
-    {#                <article class="task-card card-hover animate-slide-up flex flex-col h-full">#}
-    {#                    <div class="p-6 flex flex-col flex-1">#}
-    {#                        <a href="#"#}
-    {#                           class="text-xl font-semibold text-gray-900 mb-3 hover:text-purple-600 transition-colors block">#}
-    {#                            Median of Two Sorted Arrays#}
-    {#                        </a>#}
-    {#                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">#}
-    {#                            Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of#}
-    {#                            the two sorted arrays.#}
-    {#                        </p>#}
-    {##}
-    {#                        <div class="flex items-center justify-between mt-auto">#}
-    {#                            <div class="flex items-center space-x-2">#}
-    {#                                <span class="difficulty">Hard</span>#}
-    {#                                <span class="task-badge">Array</span>#}
-    {#                            </div>#}
-    {#                            <span class="text-sm text-gray-500">Oct 20, 2025</span>#}
-    {#                        </div>#}
-    {#                    </div>#}
-    {#                </article>#}
-    {##}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </section>#}
-
     <section class="py-8">
         <div class="container mx-auto">
             <!-- Tags bar -->
             <div class="flex flex-wrap items-center gap-2 border-y border-gray-300 py-3 mb-4 overflow-x-auto scrollbar-hide">
                 {% for topic in topics %}
-                    <a href="?topic={{ topic.name }}"
+                    <a href="?topic={{ topic.slug }}"
                        class="flex items-center gap-2 bg-gray-100 hover:bg-purple-100 text-gray-700 hover:text-purple-700 px-3 py-1 rounded-full text-sm font-medium transition">
                         <span>{{ topic.name }}</span>
                         <span class="bg-purple-200 text-purple-800 px-2 py-0.5 rounded-full text-xs font-semibold">
@@ -292,7 +143,7 @@
                         <tr class="border-b hover:bg-gray-50 transition">
                             <td class="py-3 px-4 text-gray-500 text-sm">1</td>
                             <td class="py-3 px-4">
-                                <a href="#" class="font-medium text-gray-900 hover:text-purple-600 transition">
+                                <a href="{% url 'problem_detail' problem.pk %}" class="font-medium text-gray-900 hover:text-purple-600 transition">
                                     {{ problem.name }}
                                 </a>
                                 <p class="text-gray-500 text-xs mt-1 line-clamp-1">

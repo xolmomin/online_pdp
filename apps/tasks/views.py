@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from tasks.models import Problem, Topic
 
@@ -13,3 +13,9 @@ class ProblemsListView(ListView):
         context = super().get_context_data(**kwargs)
         context['topics'] = Topic.objects.all()
         return context
+
+
+class ProblemDetailView(DetailView):
+    queryset = Problem.objects.all()
+    template_name = 'users/tasks/problem_detail.html'
+    context_object_name = 'problem'
