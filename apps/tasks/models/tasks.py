@@ -5,7 +5,8 @@ from django_ckeditor_5.fields import CKEditor5Field
 
 from shared.models import SlugBaseModel
 
-#TODO - Profile - solved problems (Easy 10 / 100) (Leetcode), problems: success, in process, failed (robocontest.uz)
+
+# TODO - Profile - solved problems (Easy 10 / 100) (Leetcode), problems: success, in process, failed (robocontest.uz)
 class Topic(SlugBaseModel):
     name = CharField(max_length=255)
 
@@ -41,4 +42,9 @@ class Example(Model):
     input = CharField(max_length=255)
     output = CharField(max_length=255)
     explanation = TextField(null=True, blank=True)
-    problem = ForeignKey(Problem, on_delete=CASCADE)
+    problem = ForeignKey(Problem, CASCADE)
+
+
+class Hint(Model):
+    problem = ForeignKey(Problem, CASCADE)
+    text = CKEditor5Field(null=True, blank=True)
