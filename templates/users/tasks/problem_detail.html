@@ -4,194 +4,247 @@
 {% block title %}{{ problem.name }} | EduHub{% endblock %}
 
 {% block custom_css %}
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #f8fafc;
-  }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
 
-  .editor {
-    background: #1e1e1e;
-    color: #e4e4e7;
-    font-family: 'Fira Code', monospace;
-    border-radius: 0.5rem;
-    overflow: hidden;
-  }
+        /* --- Editor Styling --- */
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
 
-  .editor-header {
-    background: #2d2d2d;
-    padding: 0.6rem 1rem;
-    border-bottom: 1px solid #3f3f46;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+        .editor-header {
+            background: #2563eb;
+            color: #fff;
+            padding: 0.6rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  .editor-lines {
-    counter-reset: line;
-  }
+        .editor-body {
+            background: #f9fafb;
+            font-family: 'Fira Code', monospace;
+            color: #1f2937;
+            font-size: 0.875rem;
+            padding: 1rem;
+            height: 400px;
+            overflow-y: auto;
+        }
 
-  .editor-lines pre {
-    counter-increment: line;
-    padding-left: 3rem;
-    position: relative;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
+        .editor-body pre {
+            outline: none;
+            white-space: pre;
+        }
 
-  .editor-lines pre::before {
-    content: counter(line);
-    position: absolute;
-    left: 0.8rem;
-    color: #71717a;
-  }
+        .run-button {
+            background: #22c55e;
+            color: white;
+            padding: 0.35rem 0.9rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
 
-  .run-button {
-    background: #22c55e;
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    transition: 0.2s;
-  }
+        .run-button:hover {
+            background: #16a34a;
+        }
 
-  .run-button:hover {
-    background: #16a34a;
-  }
+        .submit-button {
+            background: #3b82f6;
+            color: white;
+            padding: 0.35rem 0.9rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
 
-  .submit-button {
-    background: #3b82f6;
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    transition: 0.2s;
-  }
+        .submit-button:hover {
+            background: #2563eb;
+        }
 
-  .submit-button:hover {
-    background: #2563eb;
-  }
+        /* --- Output Styling --- */
+        .output-section {
+            background: #2563eb;
+            color: #ffffff;
+            padding: 1rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.875rem;
+            border-top: 1px solid #1e40af;
+        }
 
-  .result-box {
-    background: #111827;
-    color: #d1d5db;
-    padding: 1rem;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.875rem;
-    border-radius: 0.5rem;
-    min-height: 120px;
-  }
-</style>
+        .output-section h3 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Left Section --- */
+        .problem-container {
+            background: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .problem-nav {
+            background: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0.6rem 1.25rem;
+            border-radius: 0.75rem 0.75rem 0 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .problem-nav button:hover {
+            color: #dbeafe;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
-<div class="flex h-[92vh] gap-4 p-6">
-  <!-- LEFT SIDE: Problem Details -->
-  <div class="flex-1 bg-white shadow-md rounded-xl p-6 overflow-y-auto">
-    <h1 class="text-2xl font-bold text-gray-900 mb-4">{{ problem.name }}</h1>
+    <div class="flex gap-6 p-6 h-[92vh] bg-gray-100">
 
-    <div class="flex items-center gap-3 mb-6">
-      <span class="px-3 py-1 text-sm rounded-full
-        {% if problem.difficulty == 'Easy' %}bg-green-100 text-green-700
-        {% elif problem.difficulty == 'Medium' %}bg-yellow-100 text-yellow-700
-        {% else %}bg-red-100 text-red-700{% endif %}">
-        {{ problem.difficulty }}
-      </span>
-      <span class="text-gray-500 text-sm">#{{ problem.pk }}</span>
-    </div>
+        <!-- LEFT SIDE: Problem Section -->
+        <div class="w-1/2 flex flex-col bg-white rounded-xl shadow-md overflow-hidden">
+            <!-- Blue Navigation Bar -->
+            <div class="bg-blue-600 text-white flex gap-6 px-6 py-3 font-medium text-sm">
+                <button class="hover:text-blue-200">Description</button>
+                <button class="hover:text-blue-200">Editorial</button>
+                <button class="hover:text-blue-200">Solutions</button>
+                <button class="hover:text-blue-200">Submissions</button>
+            </div>
 
-    <article class="prose max-w-none text-gray-800 mb-6">
-      {{ problem.description|safe }}
-    </article>
+            <!-- Problem Content -->
+            <div class="p-8 overflow-y-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <h1 class="text-3xl font-bold text-gray-900">{{ problem.name }}</h1>
+                    <span class="text-green-600 font-semibold text-sm">Solved ✅</span>
+                </div>
 
-    {% if problem.hints %}
-      <div class="bg-gray-50 border-l-4 border-blue-500 p-4 mb-6 rounded">
-        <h2 class="font-semibold text-blue-600 mb-2">💡 Hints</h2>
-        <ul class="list-disc list-inside text-gray-700">
-          {% for hint in problem.hints|linebreaksbr %}
-            <li>{{ hint }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
+                <div class="flex items-center gap-3 mb-6 text-sm">
+        <span class="px-3 py-1 rounded-full font-medium
+          {% if problem.difficulty == 'Easy' %}bg-green-100 text-green-700
+          {% elif problem.difficulty == 'Medium' %}bg-yellow-100 text-yellow-700
+          {% else %}bg-red-100 text-red-700{% endif %}">
+          {{ problem.difficulty }}
+        </span>
+                    <span class="text-gray-400">#{{ problem.pk }}</span>
 
-    {% if problem.examples.all %}
-      <div class="mb-6">
-        <h2 class="text-lg font-semibold mb-2 text-gray-900">🧩 Examples</h2>
-        {% for example in problem.examples.all %}
-          <div class="bg-gray-100 rounded p-3 mb-3">
-            <p><strong>Input:</strong> <code>{{ example.input }}</code></p>
-            <p><strong>Output:</strong> <code>{{ example.output }}</code></p>
-            {% if example.explanation %}
-              <p class="text-gray-700 mt-1"><strong>Explanation:</strong> {{ example.explanation }}</p>
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
+                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200">💡 Hint</span>
+                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200">🏢 Companies</span>
+                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200">🧠 Topics</span>
+                </div>
 
-    {% if problem.constraints %}
-      <div class="mb-6">
-        <h2 class="text-lg font-semibold mb-2 text-gray-900">⚙️ Constraints</h2>
-        <ul class="list-disc list-inside text-gray-700">
-          {% for constraint in problem.constraints|linebreaksbr %}
-            <li>{{ constraint }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-  </div>
+                <article class="leading-relaxed mb-8 text-gray-700">
+                    {{ problem.description|safe }}
+                </article>
 
-  <!-- RIGHT SIDE: Code Editor -->
-  <div class="w-[50%] flex flex-col">
-    <div class="editor flex-1 flex flex-col">
-      <div class="editor-header">
-        <span class="text-gray-200 font-semibold">Python 3</span>
-        <div class="flex gap-2">
-          <button class="run-button" onclick="runCode()">Run</button>
-          <button class="submit-button" onclick="submitCode()">Submit</button>
+                {% if problem.examples.all %}
+                    <div class="mb-8">
+                        {% for example in problem.examples.all %}
+                            <h2 class="text-lg font-semibold mb-2 text-gray-900">Example {{ forloop.counter }}:</h2>
+                            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+                                <p><span class="font-semibold text-blue-600">Input:</span>
+                                    <code class="bg-gray-100 px-1 rounded">{{ example.input }}</code>
+                                </p>
+                                <p><span class="font-semibold text-blue-600">Output:</span>
+                                    <code class="bg-gray-100 px-1 rounded">{{ example.output }}</code>
+                                </p>
+                                {% if example.explanation %}
+                                    <p class="mt-1 text-gray-600">
+                                        <span class="font-semibold text-blue-600">Explanation:</span> {{ example.explanation }}
+                                    </p>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% if problem.constraints %}
+                    <div class="mb-8">
+                        <h2 class="text-lg font-semibold mb-2 text-gray-900">Constraints:</h2>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            {{ problem.constraints|linebreaksbr }}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                <div class="text-gray-600 text-sm border-t border-gray-200 pt-4">
+                    <span class="font-semibold text-gray-800">Follow-up:</span>
+                    Can you come up with an algorithm that is less than
+                    <code class="bg-gray-100 px-1 rounded">O(n²)</code> time complexity?
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="editor-lines flex-1 p-4 overflow-y-auto">
-        <pre id="code-area" contenteditable="true" spellcheck="false">
+        <!-- RIGHT SIDE (COLUMN): Editor + Output -->
+        <div class="flex flex-col w-1/2 gap-6">
+
+            <!-- Code Editor -->
+            <div class="bg-white rounded-xl shadow-md flex flex-col flex-1">
+                <div class="bg-blue-600 text-white flex justify-between items-center px-4 py-2 rounded-t-xl">
+                    <span class="font-semibold">Python 3</span>
+                    <div class="flex gap-2">
+                        <button class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Run
+                        </button>
+                        <button class="bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded text-sm font-medium">Submit
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gray-50 font-mono text-sm text-gray-800 p-4 h-64 overflow-y-auto">
+        <pre contenteditable="true" spellcheck="false">
 def solve():
     n = int(input())
     arr = list(map(int, input().split()))
     print(sum(arr))
         </pre>
-      </div>
-    </div>
+                </div>
+            </div>
 
-    <!-- OUTPUT SECTION -->
-    <div class="mt-4">
-      <h3 class="text-sm font-semibold text-gray-700 mb-2">Output:</h3>
-      <div id="output-box" class="result-box">
-        Run your code to see output here...
-      </div>
+            <!-- Output Section -->
+            <div class="bg-white rounded-xl shadow-md flex flex-col">
+                <div class="bg-blue-600 text-white px-4 py-2 rounded-t-xl font-semibold">Output</div>
+                <div id="output-box" class="bg-gray-50 text-sm font-mono text-gray-800 p-4 h-48 overflow-y-auto">
+                    Run your code to see output here...
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 {% endblock %}
 
-{% block custom_js %}
-<script>
-  function runCode() {
-    const outputBox = document.getElementById('output-box');
-    outputBox.textContent = '⏳ Running code...';
-    setTimeout(() => {
-      outputBox.textContent = '✅ Example test passed!\nOutput: 6';
-    }, 1000);
-  }
 
-  function submitCode() {
-    const outputBox = document.getElementById('output-box');
-    outputBox.textContent = '🚀 Submitting code...';
-    setTimeout(() => {
-      outputBox.textContent = '🎉 All test cases passed!\nAccepted ✔️';
-    }, 1500);
-  }
-</script>
+
+{% block custom_js %}
+    <script>
+        function runCode() {
+            const outputBox = document.getElementById('output-box');
+            outputBox.textContent = '⏳ Running code...';
+            setTimeout(() => {
+                outputBox.textContent = '✅ Example test passed!\nOutput: 6';
+            }, 1000);
+        }
+
+        function submitCode() {
+            const outputBox = document.getElementById('output-box');
+            outputBox.textContent = '🚀 Submitting code...';
+            setTimeout(() => {
+                outputBox.textContent = '🎉 All test cases passed!\nAccepted ✔️';
+            }, 1500);
+        }
+    </script>
 {% endblock %}
