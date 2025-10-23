@@ -15,7 +15,7 @@ urlpatterns = [
     path('blogs/<uuid:pk>', BlogDetailView.as_view(), name='blog_detail'),
     path('auth/register', RegisterTemplateView.as_view(), name='register'),
     path('auth/login', LoginTemplateView.as_view(), name='login'),
-    path('<profile>', ProfileView.as_view(), name='profile'),
+    path('profile', ProfileView.as_view(), name='profile'),
     # path('lesson/<uuid:pk>/', LessonVideoView.as_view(), name='lesson_video'),
     # path('get_key/lesson/<uuid:lesson_uuid>/', KeyDeliveryView.as_view(), name='lesson_key'),
 ]
