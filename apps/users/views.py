@@ -114,3 +114,7 @@ class LessonVideoView(DetailView):
         context = super().get_context_data(**kwargs)
         context['m3u8_url'] = Lesson.objects.first().video_link
         return context
+
+
+class ProfileView(LoginRequiredMixin, View):
+    template_name = 'users/auth/profile.html'
