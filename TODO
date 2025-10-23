@@ -226,12 +226,12 @@ mirjalol
 6.✅ media ichida fixture dan qoshiladigan malumotlar yuborilsin ()
 7.✅ login (phone orqali), (bot orqali)
 8.✅ register page, detail page shular otadigan qilish
+9. django debug toolbar
+10. https://videohub.uz/login va https://botcommerce.io/en/login qismdagi
+telegram orqali kirish va telegram bot ga sms yuborish orqali kirishni
+login va register qoshish
+11. login qilgandan keyin (Sign In joyida dumaloq image turadi, ustiga oborgandan fullname chiqsin)
+ustiga bosgandan profile page ga otsin
+12. What you'll Learn & Requirements modelini yozish
+13. videojs orqali frontda chiqadigan qilish (buttonlari bolsin)
 
-
-
-
-apps
-    - users
-    - courses (blog, interview, course)
-    - tasks
-    - payments

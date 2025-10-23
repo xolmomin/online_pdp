@@ -1,10 +1,14 @@
 import os
 import subprocess
+import threading
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.conf import settings
 from .models import Lesson
 
+
+# TODO asyncio | threading orqali task yaratish
 
 @receiver(post_save, sender=Lesson)
 def convert_video_to_hls(sender, instance, created, **kwargs):
@@ -58,3 +62,7 @@ def convert_video_to_hls(sender, instance, created, **kwargs):
     hls_rel_path = os.path.relpath(output_m3u8, settings.MEDIA_ROOT)
     instance.video_link = f"/media/{hls_rel_path}"
     instance.save(update_fields=['video_link'])
+
+
+# media/courses/videos/hls/2025/05/16
+# media/courses/videos/2025/05/16
