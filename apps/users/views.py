@@ -65,13 +65,13 @@ class InterviewDetailView(DetailView):
 
 
 class MainListView(ListView):
-    queryset = Course.objects.order_by('-created_at')[:6]
-    template_name = 'users/main/main.html'
+    queryset = Course.objects.all()[:6]
+    template_name = 'users/main.html'
     context_object_name = 'courses'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(object_list=object_list, **kwargs)
-        context['blogs'] = Blog.objects.order_by('-created_at')[:3]
+        context['blogs'] = Blog.objects.all()[:3]
         return context
 
 
@@ -83,7 +83,6 @@ class LoginTemplateView(TemplateView):
     template_name = 'users/auth/login.html'
 
 
-
 # TODO Video view
 
 
@@ -91,6 +90,7 @@ class KeyDeliveryView(LoginRequiredMixin, View):
     """
     Faqat login foydalanuvchiga video kalitni beradi (UUID versiya).
     """
+
     def get(self, request, lesson_uuid):
         try:
             base_dir = os.path.join(settings.MEDIA_ROOT, 'hls', f'lesson_{lesson_uuid}')
@@ -107,7 +107,7 @@ class KeyDeliveryView(LoginRequiredMixin, View):
 
 class LessonVideoView(DetailView):
     model = Lesson
-    template_name = 'users/courses/' # TODO
+    template_name = 'users/courses/'  # TODO
     context_object_name = 'lesson'
 
     def get_context_data(self, **kwargs):

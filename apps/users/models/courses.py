@@ -54,6 +54,7 @@ class Course(CreatedBaseModel):
     class Meta:
         verbose_name = _('Course')
         verbose_name_plural = _('Courses')
+        ordering = '-created_at',
         constraints = [
             CheckConstraint(
                 check=Q(rating__gte=0) & Q(rating__lte=50),
@@ -125,8 +126,9 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
         verbose_name = _('Lesson')
         verbose_name_plural = _('Lessons')
 
-    # def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
-    #     super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+    def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
+        super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
+        # TODO threading
 
     def __str__(self):
         return self.name
