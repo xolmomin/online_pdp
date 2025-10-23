@@ -158,8 +158,10 @@
                                    class="text-xl font-semibold text-gray-900 mb-2 hover:text-purple-600 transition-colors cursor-pointer block">
                                     {{ blog.title }}
                                 </a>
-                                {{ blog.description|truncatewords:15|safe }}
-                                <p class="text-gray-600 mb-8 text-sm leading-relaxed">
+                                <a href="{% url 'blog_detail' blog.pk %}">
+                                    {{ blog.description|truncatewords:15|safe }}
+                                </a>
+                                <p class="text-gray-600 mb-8 text-sm leading-relaxed"></p>
                                 <div class="flex items-center justify-between mt-auto">
                                     <div class="flex items-center space-x-2">
                                         <div class="author-avatar">MK</div>
@@ -173,7 +175,6 @@
                                     </div>
                                     <span class="text-sm text-gray-500">Dec 12, 2024</span>
                                 </div>
-                                </p>
                             </div>
                         </a>
                     </article>

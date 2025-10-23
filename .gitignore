@@ -118,3 +118,4 @@ cython_debug/
 media
 !media/cover_images
 !media/cover_image_courses
+!media/hls
