@@ -28,10 +28,10 @@ def convert_video_to_hls(sender, instance, created, **kwargs):
     with open(key_file_path, 'wb') as f:
         f.write(bytes.fromhex(key_hex))
 
-    # Kalit uchun URL (key so‘rov uchun)
-    key_uri = f"/get_key/lesson/{instance.id}/"
+    # 🔥 MUHIM O‘ZGARISH: `key_uri` = to‘liq URL (foydalanuvchi uchun)
+    key_uri = f"http://127.0.0.1:8000/get_key/lesson/{instance.id}/"
 
-    # .keyinfo fayl yaratish
+    # 🔥 MUHIM O‘ZGARISH: `enc.keyinfo` faylga to‘liq *fayl yo‘li* yozish
     key_info_path = os.path.join(base_dir, 'enc.keyinfo')
     with open(key_info_path, 'w') as f:
         f.write(f"{key_uri}\n{key_file_path}\n{key_hex}")
@@ -52,6 +52,7 @@ def convert_video_to_hls(sender, instance, created, **kwargs):
 
     try:
         subprocess.run(cmd, check=True, capture_output=True, text=True)
+        print("✅ FFmpeg muvofaqqiyatli HLS yaratdi")
     except subprocess.CalledProcessError as e:
         print("❌ FFmpeg xatolik berdi:")
         print(e.stderr)
