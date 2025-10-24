@@ -1,4 +1,4 @@
-from django.db.models import ManyToManyField, ForeignKey, JSONField, CASCADE, Model
+from django.db.models import ManyToManyField, ForeignKey, CASCADE, Model
 from django.db.models.enums import TextChoices
 from django.db.models.fields import CharField, DateTimeField, TextField
 from django_ckeditor_5.fields import CKEditor5Field
@@ -48,3 +48,9 @@ class Example(Model):
 class Hint(Model):
     problem = ForeignKey(Problem, CASCADE)
     text = CKEditor5Field(null=True, blank=True)
+
+
+class Answers(Model):
+    problem = ForeignKey(Problem, CASCADE)
+    input = TextField()
+    output = TextField(null=True)

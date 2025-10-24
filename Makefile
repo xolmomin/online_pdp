@@ -19,3 +19,9 @@ compile_msg:
 
 fixture:
 	python3 manage.py loaddata blogs course interviews lesson section
+
+docker_build:
+	 docker build -t crun-python-runner -f apps/tasks/checker/Dockerfile.runner .
+
+task_fixture:
+	python3 manage.py loaddata topics problems answers

@@ -4,6 +4,93 @@
 {% block title %}{{ problem.name }} | EduHub{% endblock %}
 
 {% block custom_css %}
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
+    />
+    <style>
+        .editor-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .editor-header {
+            background-color: #2563eb;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .editor-header button {
+            font-size: 0.9rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .run-button {
+            background-color: #22c55e;
+            color: white;
+        }
+
+        .run-button:hover {
+            background-color: #16a34a;
+        }
+
+        .submit-button {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .submit-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* CodeMirror Editor */
+        .CodeMirror {
+            height: 100%;
+            flex: 1;
+            font-size: 0.95rem;
+            border: none;
+            border-radius: 0 0 12px 12px;
+            background-color: white !important;
+            color: #1f2937;
+        }
+
+        .CodeMirror-gutters {
+            background-color: #f3f4f6 !important;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        /* Output section */
+        .output-section {
+            background-color: #eff6ff;
+            color: #1e3a8a;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .output-header {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        #output-box {
+            white-space: pre-line;
+        }
+    </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
@@ -206,15 +293,14 @@
                         </button>
                     </div>
                 </div>
-                <div class="bg-gray-50 font-mono text-sm text-gray-800 p-4 h-64 overflow-y-auto">
-        <pre contenteditable="true" spellcheck="false">
-def solve():
-    n = int(input())
-    arr = list(map(int, input().split()))
-    print(sum(arr))
-        </pre>
+
+                <div class="bg-gray-50 font-mono text-sm text-gray-800 p-0 h-64 overflow-hidden">
+                    <textarea id="code-editor">
+
+                    </textarea>
                 </div>
             </div>
+
 
             <!-- Output Section -->
             <div class="bg-white rounded-xl shadow-md flex flex-col">
@@ -230,21 +316,34 @@ def solve():
 
 
 {% block custom_js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+
+
     <script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+
+    <script>
+        const editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+            mode: "python",
+            theme: "default",
+            lineNumbers: true,
+            indentUnit: 4,
+            tabSize: 4,
+            lineWrapping: true,
+        });
+
         function runCode() {
-            const outputBox = document.getElementById('output-box');
-            outputBox.textContent = '⏳ Running code...';
-            setTimeout(() => {
-                outputBox.textContent = '✅ Example test passed!\nOutput: 6';
-            }, 1000);
+            const code = editor.getValue();
+            document.getElementById("output-box").textContent =
+                "Running your code...\n\n" + code;
         }
 
         function submitCode() {
-            const outputBox = document.getElementById('output-box');
-            outputBox.textContent = '🚀 Submitting code...';
-            setTimeout(() => {
-                outputBox.textContent = '🎉 All test cases passed!\nAccepted ✔️';
-            }, 1500);
+            const code = editor.getValue();
+            document.getElementById("output-box").textContent =
+                "Submitting your solution...\n\n" + code;
         }
     </script>
 {% endblock %}
