@@ -1,0 +1,14 @@
+# Dockerfile.runner
+FROM python:3.14-alpine
+
+# Create a non-root user (generic name)
+RUN adduser -D runner
+
+# Create workspace
+WORKDIR /home/runner/workspace
+
+# Switch to non-root user
+USER runner
+
+# Default entrypoint (will run user code)
+ENTRYPOINT ["python3", "main.py"]
