@@ -224,12 +224,12 @@
                 </div>
 
                 <div class="flex items-center gap-3 mb-6 text-sm">
-        <span class="px-3 py-1 rounded-full font-medium
-          {% if problem.difficulty == 'Easy' %}bg-green-100 text-green-700
-          {% elif problem.difficulty == 'Medium' %}bg-yellow-100 text-yellow-700
-          {% else %}bg-red-100 text-red-700{% endif %}">
-          {{ problem.difficulty }}
-        </span>
+                <span class="px-3 py-1 rounded-full font-medium
+                  {% if problem.difficulty == 'Easy' %}bg-green-100 text-green-700
+                  {% elif problem.difficulty == 'Medium' %}bg-yellow-100 text-yellow-700
+                  {% else %}bg-red-100 text-red-700{% endif %}">
+                  {{ problem.difficulty }}
+                </span>
                     <span class="text-gray-400">#{{ problem.pk }}</span>
 
                     <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200">💡 Hint</span>
@@ -241,7 +241,7 @@
                     {{ problem.description|safe }}
                 </article>
 
-                {% if problem.examples.all %}
+
                     <div class="mb-8">
                         {% for example in problem.examples.all %}
                             <h2 class="text-lg font-semibold mb-2 text-gray-900">Example {{ forloop.counter }}:</h2>
@@ -260,7 +260,6 @@
                             </div>
                         {% endfor %}
                     </div>
-                {% endif %}
 
                 {% if problem.constraints %}
                     <div class="mb-8">
@@ -316,34 +315,69 @@
 
 
 {% block custom_js %}
+    <!-- Load CodeMirror -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
 
-
     <script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const runButton = document.querySelector(".bg-green-500");
+            const submitButton = document.querySelector(".bg-blue-500");
+            const outputBox = document.getElementById("output-box");
 
-    <script>
-        const editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
-            mode: "python",
-            theme: "default",
-            lineNumbers: true,
-            indentUnit: 4,
-            tabSize: 4,
-            lineWrapping: true,
+            const runUrl = "{% url 'run_code' %}";
+            const submitUrl = "{% url 'submit_code' %}";
+            const problemId = {{ problem.pk }};
+
+            // Initialize CodeMirror
+            const editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+                mode: "python",
+                theme: "default",
+                lineNumbers: true,
+                indentUnit: 4,
+                tabSize: 4,
+                lineWrapping: true,
+            });
+
+            async function sendCode(url, includeProblem = false) {
+                const code = editor.getValue().trim(); // ✅ from CodeMirror
+                const body = includeProblem ? {code, problem_id: problemId} : {code};
+
+                outputBox.textContent = "Running...";
+                try {
+                    const response = await fetch(url, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRFToken": getCookie("csrftoken")
+                        },
+                        body: JSON.stringify(body)
+                    });
+
+                    const data = await response.json();
+                    outputBox.textContent = data.output || "No output returned.";
+                } catch (err) {
+                    outputBox.textContent = "Error: " + err.message;
+                }
+            }
+
+            runButton.addEventListener("click", () => sendCode(runUrl));
+            submitButton.addEventListener("click", () => sendCode(submitUrl, true));
+
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== "") {
+                    const cookies = document.cookie.split(";");
+                    for (let cookie of cookies) {
+                        cookie = cookie.trim();
+                        if (cookie.startsWith(name + "=")) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
         });
-
-        function runCode() {
-            const code = editor.getValue();
-            document.getElementById("output-box").textContent =
-                "Running your code...\n\n" + code;
-        }
-
-        function submitCode() {
-            const code = editor.getValue();
-            document.getElementById("output-box").textContent =
-                "Submitting your solution...\n\n" + code;
-        }
     </script>
 {% endblock %}

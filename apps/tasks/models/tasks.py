@@ -42,7 +42,10 @@ class Example(Model):
     input = CharField(max_length=255)
     output = CharField(max_length=255)
     explanation = TextField(null=True, blank=True)
-    problem = ForeignKey(Problem, CASCADE)
+    problem = ForeignKey(Problem, CASCADE, related_name='examples')
+
+    class Meta:
+        ordering = ['id']
 
 
 class Hint(Model):
