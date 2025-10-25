@@ -64,7 +64,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/devops.webp",
+      "cover_image": "courses/cover_image/2025/10/18/devops.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }
@@ -87,7 +87,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/Django-Template.webp",
+      "cover_image": "courses/cover_image/2025/10/18/Django-Template.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }
@@ -110,7 +110,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/data-structure.webp",
+      "cover_image": "courses/cover_image/2025/10/18/data-structure.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }
@@ -133,7 +133,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/fastapi.webp",
+      "cover_image": "courses/cover_image/2025/10/18/fastapi.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }
@@ -156,7 +156,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/drf.webp",
+      "cover_image": "courses/cover_image/2025/10/18/drf.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }
@@ -179,7 +179,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/basic-python.webp",
+      "cover_image": "courses/cover_image/2025/10/18/basic-python.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }
@@ -202,7 +202,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/aiogram.webp",
+      "cover_image": "courses/cover_image/2025/10/18/aiogram.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }
@@ -225,7 +225,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/python.webp",
+      "cover_image": "courses/cover_image/2025/10/18/python.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }
@@ -248,7 +248,7 @@
       "rating": 0,
       "video_count": 0,
       "total_video_duration": 0,
-      "cover_image": "cover_image_courses/2025/10/18/telegram-bot.webp",
+      "cover_image": "courses/cover_image/2025/10/18/telegram-bot.webp",
       "category": "de2bceea-fe92-4e9b-b0c9-b201ed20d254",
       "teachers": "399f816a-f29f-4648-b854-1caa69f1bd5e"
     }

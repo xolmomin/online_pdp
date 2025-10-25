@@ -117,6 +117,7 @@ class Section(CreatedBaseModel, OrderBaseModel):
     class Meta:
         verbose_name = _('Section')
         verbose_name_plural = _('Sections')
+        ordering = 'order_number',
 
     def __str__(self):
         return self.name
@@ -144,6 +145,7 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     class Meta:
         verbose_name = _('Lesson')
         verbose_name_plural = _('Lessons')
+        ordering = 'order_number',
 
 
     # def convert_video_to_hls(self):
