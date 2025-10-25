@@ -20,7 +20,7 @@ def image_size_validator(image: ImageFieldFile):
 class Blog(CreatedBaseModel):
     title = CharField(max_length=255)
     description = CKEditor5Field()
-    cover_image = ImageField(upload_to='cover_images/%Y/%m/%d',
+    cover_image = ImageField(upload_to='blogs/cover_images/%Y/%m/%d',
                              validators=[image_size_validator, FileExtensionValidator(['jpg', 'jpeg', 'png', 'webp'])])
 
     def save(self, *args, **kwargs):

@@ -49,7 +49,6 @@ class CourseDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['sections'] = Lesson.objects.first()
         return context
 
 
@@ -84,8 +83,6 @@ class RegisterTemplateView(TemplateView):
 class LoginTemplateView(LoginView):
     template_name = 'users/auth/login.html'
     next_page = reverse_lazy('main')
-
-
 
 
 # TODO Video view

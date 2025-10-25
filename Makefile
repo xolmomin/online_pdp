@@ -17,8 +17,8 @@ msg:
 compile_msg:
 	python3 manage.py compilemessages -i .venv
 
+loaddata:
+	python3 manage.py loaddata blogs course interviews lesson section abouts topics problems answers
+
 docker_build:
 	 docker build -t crun-python-runner -f apps/tasks/checker/Dockerfile.runner .
-
-loaddata:
-	python3 manage.py loaddata blogs course interviews lesson section topics problems answers abouts
