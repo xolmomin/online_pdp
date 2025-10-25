@@ -68,6 +68,3 @@ def convert_video_to_hls(sender, instance, created, **kwargs):
     instance.video_link = f"/media/{hls_rel_path}"
     instance.save(update_fields=['video_link'])
 
-
-# media/courses/videos/hls/2025/05/16
-# media/courses/videos/2025/05/16
