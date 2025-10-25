@@ -111,12 +111,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
                 <!-- Course Card 1 -->
                 {% for course in courses %}
-
-                    <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
-                         data-topic="web-development" data-level="{{ course.level }}"
-                         data-price="{{ course.price }}"
-                         data-duration="{{ course.total_video_duration }}">
-                        <a href="{% url 'course_detail' course.pk %}">
+                    <a href="{% url 'course_detail' course.pk %}" class="block">
+                        <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
+                             data-topic="web-development" data-level="{{ course.level }}"
+                             data-price="{{ course.price }}"
+                             data-duration="{{ course.total_video_duration }}">
                             <div class="course-thumbnail h-48 relative">
                                 <!-- Replace gradient + icon with course cover image -->
                                 {% if course.cover_image %}
@@ -138,9 +137,7 @@
                                     <span class="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded text-sm font-medium">🏆 Certificate</span>
                                 {% endif %}
                             </div>
-                        </a>
-                        <div class="p-5 flex flex-col flex-grow justify-between">
-                            <a href="{% url 'course_detail' course.pk %}">
+                            <div class="p-5 flex flex-col flex-grow justify-between">
                                 <div>
                                     <h4 class="font-semibold text-gray-900 mb-2 text-lg">{{ course.name }}</h4>
                                     <p class="text-gray-600 text-sm mb-3">{{ course.short_description|safe }}</p>
@@ -162,14 +159,13 @@
                                         <span class="text-purple-600 font-bold text-xl">{{ course.price }}</span>
                                     </div>
                                 </div>
-                            </a>
-
-                            <a href="{% url 'course_detail' course.pk %}"
-                               class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4 text-center block">
-                                Enroll Now
-                            </a>
+                                <button
+                                   class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4 text-center block">
+                                    Enroll Now
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 {% endfor %}
             </div>
         </div>

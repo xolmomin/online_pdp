@@ -114,7 +114,8 @@
 
             <!-- Login Form -->
             <div class="login-card rounded-2xl shadow-2xl p-8">
-                <form class="space-y-6" onsubmit="handleLogin(event)">
+                <form method="post" class="space-y-6" action="{% url 'login' %}">
+                    {% csrf_token %}
                     <!-- Phone -->
                     <div class="form-group relative">
                         <div class="input-group">
@@ -137,8 +138,7 @@
                     <!-- Password -->
                     <div class="form-group relative">
                         <input type="password" id="password" name="password" required
-                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white/50 backdrop-blur-sm pr-12"
-                               oninput="checkValue(this)">
+                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white/50 backdrop-blur-sm pr-12">
                         <label for="password"
                                class="floating-label absolute left-4 top-3 text-gray-500 pointer-events-none">
                             Password
@@ -164,7 +164,7 @@
                                 Remember me
                             </label>
                         </div>
-                        <a href="#forgot-password" onclick="showForgotPassword()"
+                        <a href="#" onclick="showForgotPassword()"
                            class="text-sm text-purple-600 hover:text-purple-700 font-medium forgot-password-link">
                             Forgot password?
                         </a>

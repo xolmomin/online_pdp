@@ -1,0 +1,643 @@
+[
+  {
+    "model": "users.about",
+    "pk": "b1a2038e-5c94-4df7-a278-67d8e7b829a1",
+    "fields": {
+      "text": "<p>Learn the fundamentals of HTML structure and elements.</p>",
+      "course": "4b9aea7b-0c53-4799-afa7-0143fe7451b2"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "fc018f87-7831-478f-a495-36b89f5827c4",
+    "fields": {
+      "text": "<p>Understand how to style pages using CSS selectors and properties.</p>",
+      "course": "4b9aea7b-0c53-4799-afa7-0143fe7451b2"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "c3b1700f-6c1c-41f8-9c70-9e9c22b2c01d",
+    "fields": {
+      "text": "<p>Build a responsive portfolio website with HTML and CSS.</p>",
+      "course": "4b9aea7b-0c53-4799-afa7-0143fe7451b2"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "e2da55aa-b9a9-4a38-ae2f-0a8d48289388",
+    "fields": {
+      "text": "<p>Hands-on practice with layout techniques and media queries.</p>",
+      "course": "4b9aea7b-0c53-4799-afa7-0143fe7451b2"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "4f35772a-c55d-4fd2-9f71-3bb6d979aa47",
+    "fields": {
+      "text": "<p>No prior coding experience required.</p>",
+      "course": "4b9aea7b-0c53-4799-afa7-0143fe7451b2"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "2cecf454-22a1-4d23-91f2-2737a3dbce5d",
+    "fields": {
+      "text": "<p>Basic computer and internet skills.</p>",
+      "course": "4b9aea7b-0c53-4799-afa7-0143fe7451b2"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "c33b1529-8438-4894-9b18-42e0ff06738c",
+    "fields": {
+      "text": "<p>A laptop or PC with internet access.</p>",
+      "course": "4b9aea7b-0c53-4799-afa7-0143fe7451b2"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "a0b50d7a-72d1-4cb5-8291-bbc4a24dc9e3",
+    "fields": {
+      "text": "<p>Interest in web design and creativity.</p>",
+      "course": "4b9aea7b-0c53-4799-afa7-0143fe7451b2"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "83edfa56-37f8-4d5c-8ee8-bb6fc8e88b74",
+    "fields": {
+      "text": "<p>Introduction to JavaScript and DOM manipulation.</p>",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "37b7c585-babb-4744-9ec7-df62c5d96b03",
+    "fields": {
+      "text": "<p>Variables, loops, and conditional logic explained simply.</p>",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "97debb8b-195a-4f2e-8102-7d1a8a5f2874",
+    "fields": {
+      "text": "<p>Learn functions and array methods.</p>",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "1db6d774-fb6f-42b0-9ae5-744c69c8e8f3",
+    "fields": {
+      "text": "<p>Build real-world projects using JavaScript.</p>",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "64e5e5ed-df1b-481a-9610-6ab1b0b96ee4",
+    "fields": {
+      "text": "<p>Basic understanding of HTML and CSS.</p>",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "b5f50bdf-87ec-403c-9c84-94d47a7eaf5e",
+    "fields": {
+      "text": "<p>Desire to learn JavaScript fundamentals.</p>",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "e3db7a39-4d86-48b3-b376-2a612df7d0ee",
+    "fields": {
+      "text": "<p>Access to a modern web browser.</p>",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "96d2c02b-45e1-43b0-8f2c-d3a726e0e3b4",
+    "fields": {
+      "text": "<p>Time to practice coding regularly.</p>",
+      "course": "64e713dd-a73d-419f-9653-1ecc4855f99c"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "f0f89c4a-6762-4c62-91ff-9f3a46a6652d",
+    "fields": {
+      "text": "<p>Master Python basics including syntax and data types.</p>",
+      "course": "7395593f-cc13-4a56-901e-12bc5bdd9069"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "db62a0b3-8b67-4c70-8cd7-dcfad8d2e781",
+    "fields": {
+      "text": "<p>Understand functions and modules in Python.</p>",
+      "course": "7395593f-cc13-4a56-901e-12bc5bdd9069"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "abf2e65a-70a7-42f7-b1b7-8c1a61f7b23c",
+    "fields": {
+      "text": "<p>Work with files and handle exceptions.</p>",
+      "course": "7395593f-cc13-4a56-901e-12bc5bdd9069"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "8bb2da9e-d592-4a65-b6a9-f688b3294f9e",
+    "fields": {
+      "text": "<p>Practice building simple console applications.</p>",
+      "course": "7395593f-cc13-4a56-901e-12bc5bdd9069"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "5a35bc3a-2086-4b24-b73b-8d3c07c6ad9a",
+    "fields": {
+      "text": "<p>No prior Python knowledge required.</p>",
+      "course": "7395593f-cc13-4a56-901e-12bc5bdd9069"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "a2d5b298-c4b1-4038-97c1-2ab244d2f75a",
+    "fields": {
+      "text": "<p>Install Python 3.10 or newer.</p>",
+      "course": "7395593f-cc13-4a56-901e-12bc5bdd9069"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "4de287d9-1a54-4b37-bf12-091d712d79b7",
+    "fields": {
+      "text": "<p>Basic understanding of computers.</p>",
+      "course": "7395593f-cc13-4a56-901e-12bc5bdd9069"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "a55a93f3-1942-4b03-a9d9-493a7c93149e",
+    "fields": {
+      "text": "<p>Patience and curiosity to learn coding.</p>",
+      "course": "7395593f-cc13-4a56-901e-12bc5bdd9069"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "c9e0a931-bdcf-4b2b-a5e9-126cefe4744a",
+    "fields": {
+      "text": "<p>Explore Django's MVC architecture.</p>",
+      "course": "7bbed029-3154-418a-b054-bdc5a2a40cc8"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "a8db31c2-6e10-49e9-bc61-40da47814bb0",
+    "fields": {
+      "text": "<p>Learn how to create dynamic web pages using Django views and templates.</p>",
+      "course": "7bbed029-3154-418a-b054-bdc5a2a40cc8"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "b3d1909d-bf3a-4a64-bd12-73f7b18d9e6f",
+    "fields": {
+      "text": "<p>Implement models and ORM queries effectively.</p>",
+      "course": "7bbed029-3154-418a-b054-bdc5a2a40cc8"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "8a8cb933-f9e4-47fc-8ef4-2b3854ab4cb7",
+    "fields": {
+      "text": "<p>Build a full CRUD application from scratch.</p>",
+      "course": "7bbed029-3154-418a-b054-bdc5a2a40cc8"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "27c24a83-416b-4dbd-894d-5b9f7c174ff9",
+    "fields": {
+      "text": "<p>Intermediate Python knowledge.</p>",
+      "course": "7bbed029-3154-418a-b054-bdc5a2a40cc8"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "a61d6d2c-f1b5-4b3e-9d73-2df77f3a12f6",
+    "fields": {
+      "text": "<p>Basic understanding of HTML.</p>",
+      "course": "7bbed029-3154-418a-b054-bdc5a2a40cc8"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "6a9c87ab-4178-4e91-88b2-4a27adac991e",
+    "fields": {
+      "text": "<p>Install Django via pip.</p>",
+      "course": "7bbed029-3154-418a-b054-bdc5a2a40cc8"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "c1e8b02a-0cf7-42b1-a62e-079a8f8c40b3",
+    "fields": {
+      "text": "<p>Ready to build web apps.</p>",
+      "course": "7bbed029-3154-418a-b054-bdc5a2a40cc8"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "a981cdcc-ded7-4894-823d-bff3d821fdc8",
+    "fields": {
+      "text": "<p>Learn database fundamentals with SQL.</p>",
+      "course": "8f498748-ee38-48a1-95b1-cb2a4c38591f"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "a26d5d4e-5d16-4f1e-9e17-78a9b2f77ac3",
+    "fields": {
+      "text": "<p>Understand relational databases and normalization.</p>",
+      "course": "8f498748-ee38-48a1-95b1-cb2a4c38591f"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "b1d03af6-d0ac-4e38-b44e-1745a567e926",
+    "fields": {
+      "text": "<p>Master SELECT, JOIN, and aggregate queries.</p>",
+      "course": "8f498748-ee38-48a1-95b1-cb2a4c38591f"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "cf9d9e92-7d73-4a2a-b8d2-0f43ad83b514",
+    "fields": {
+      "text": "<p>Design your own database schema.</p>",
+      "course": "8f498748-ee38-48a1-95b1-cb2a4c38591f"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "3e5b2038-648e-4e6a-9e65-4a8899655af1",
+    "fields": {
+      "text": "<p>Interest in databases and data organization.</p>",
+      "course": "8f498748-ee38-48a1-95b1-cb2a4c38591f"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "c5f9d85e-d24e-4d58-9cb7-7b5e1e85cb9a",
+    "fields": {
+      "text": "<p>Basic computer literacy.</p>",
+      "course": "8f498748-ee38-48a1-95b1-cb2a4c38591f"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "8b68e9f5-d0a7-4235-86e8-37a79f5b3a40",
+    "fields": {
+      "text": "<p>Desire to learn SQL commands.</p>",
+      "course": "8f498748-ee38-48a1-95b1-cb2a4c38591f"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "cc03b235-bd1a-46b8-9052-15cfad9ad8ab",
+    "fields": {
+      "text": "<p>Access to MySQL or PostgreSQL server.</p>",
+      "course": "8f498748-ee38-48a1-95b1-cb2a4c38591f"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "b1a2038e-5c94-4df7-a278-67d8e7b829a1",
+    "fields": {
+      "text": "<p>Learn the fundamentals of HTML structure and elements.</p>",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "fc018f87-7831-478f-a495-36b89f5827c4",
+    "fields": {
+      "text": "<p>Understand how to style pages using CSS selectors and properties.</p>",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "c3b1700f-6c1c-41f8-9c70-9e9c22b2c01d",
+    "fields": {
+      "text": "<p>Build a responsive portfolio website with HTML and CSS.</p>",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "e2da55aa-b9a9-4a38-ae2f-0a8d48289388",
+    "fields": {
+      "text": "<p>Hands-on practice with layout techniques and media queries.</p>",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "4f35772a-c55d-4fd2-9f71-3bb6d979aa47",
+    "fields": {
+      "text": "<p>No prior coding experience required.</p>",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "2cecf454-22a1-4d23-91f2-2737a3dbce5d",
+    "fields": {
+      "text": "<p>Basic computer and internet skills.</p>",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "c33b1529-8438-4894-9b18-42e0ff06738c",
+    "fields": {
+      "text": "<p>A laptop or PC with internet access.</p>",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "a0b50d7a-72d1-4cb5-8291-bbc4a24dc9e3",
+    "fields": {
+      "text": "<p>Interest in web design and creativity.</p>",
+      "course": "aaee2b54-d626-44f9-a1f1-3acb4b6b4dd1"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "83edfa56-37f8-4d5c-8ee8-bb6fc8e88b74",
+    "fields": {
+      "text": "<p>Introduction to JavaScript and DOM manipulation.</p>",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "37b7c585-babb-4744-9ec7-df62c5d96b03",
+    "fields": {
+      "text": "<p>Variables, loops, and conditional logic explained simply.</p>",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "97debb8b-195a-4f2e-8102-7d1a8a5f2874",
+    "fields": {
+      "text": "<p>Learn functions and array methods.</p>",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "1db6d774-fb6f-42b0-9ae5-744c69c8e8f3",
+    "fields": {
+      "text": "<p>Build real-world projects using JavaScript.</p>",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "64e5e5ed-df1b-481a-9610-6ab1b0b96ee4",
+    "fields": {
+      "text": "<p>Basic understanding of HTML and CSS.</p>",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "b5f50bdf-87ec-403c-9c84-94d47a7eaf5e",
+    "fields": {
+      "text": "<p>Desire to learn JavaScript fundamentals.</p>",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "e3db7a39-4d86-48b3-b376-2a612df7d0ee",
+    "fields": {
+      "text": "<p>Access to a modern web browser.</p>",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "96d2c02b-45e1-43b0-8f2c-d3a726e0e3b4",
+    "fields": {
+      "text": "<p>Time to practice coding regularly.</p>",
+      "course": "c6255d66-ca14-4e50-8c9e-d0d11bc950cc"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "bba7f5e4-7080-46a8-b1d7-5a2db26c9d1f",
+    "fields": {
+      "text": "<p>Master React components and props.</p>",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "fd46f6a3-621d-4a42-8a38-f3c4cfbfc482",
+    "fields": {
+      "text": "<p>Understand hooks and state management.</p>",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "dd0b6a48-2b7c-4a12-95f2-8f9a49f6fcd2",
+    "fields": {
+      "text": "<p>Build dynamic UI with JSX.</p>",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "f5f7dc36-5935-4b65-a96f-c7eaa60cb1d3",
+    "fields": {
+      "text": "<p>Integrate APIs with Axios.</p>",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "8d73c789-30a7-4723-b8f2-48a823f3f540",
+    "fields": {
+      "text": "<p>Basic knowledge of JavaScript.</p>",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "ac719f61-03b9-4ec3-9044-8b3a9ab0c6b3",
+    "fields": {
+      "text": "<p>Node.js installed locally.</p>",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "9b03dc7f-28a8-46a3-bfd7-1f0c4d3285a1",
+    "fields": {
+      "text": "<p>Experience using command line tools.</p>",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "b1a6bbf8-30a0-4e24-bf10-8a53c88ac5c7",
+    "fields": {
+      "text": "<p>Modern browser for testing apps.</p>",
+      "course": "c9864158-0e19-49ca-b181-fadf9f567686"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "ff0e5a4a-5d77-45d5-8eb3-d3a5e0edb9d0",
+    "fields": {
+      "text": "<p>Introduction to Git version control.</p>",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "7e933d3a-09b3-4b8e-8a3d-2b2c3f7f0b26",
+    "fields": {
+      "text": "<p>Learn branching and merging strategies.</p>",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "34e0b22b-3e4b-4ff3-b3d8-8df2d4e1e8ab",
+    "fields": {
+      "text": "<p>Collaborate using GitHub.</p>",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "ba53f39b-d6b2-4822-b1cf-8a9b7790f21a",
+    "fields": {
+      "text": "<p>Handle pull requests effectively.</p>",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "21e6c14a-936a-4fd1-8dc7-61d9d01935f7",
+    "fields": {
+      "text": "<p>Install Git locally.</p>",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "ebf68bb4-0d86-4c91-bd4b-5a421d8a0a52",
+    "fields": {
+      "text": "<p>Basic command line familiarity.</p>",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "bd351b9a-2b6f-4f2c-8c53-05c7f3b17ad8",
+    "fields": {
+      "text": "<p>GitHub account required.</p>",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "cdef68f7-2b8f-4e9d-b1b6-7732cb61d9e4",
+    "fields": {
+      "text": "<p>Desire to work in teams.</p>",
+      "course": "d97bb06c-aa14-44b2-87b3-7ce4cfba36d4"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "b6eab51e-55f9-4dfc-bb83-6cfa9df1a282",
+    "fields": {
+      "text": "<p>Learn about RESTful APIs.</p>",
+      "course": "de2bceea-fe92-4e9b-b0c9-b201ed20d254"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "ea2a784b-3474-4b0e-b0f3-96cf7052e81d",
+    "fields": {
+      "text": "<p>Understand API authentication and tokens.</p>",
+      "course": "de2bceea-fe92-4e9b-b0c9-b201ed20d254"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "d5c33b2a-d540-4d3e-9533-29efb6df4ee3",
+    "fields": {
+      "text": "<p>Use Postman for testing endpoints.</p>",
+      "course": "de2bceea-fe92-4e9b-b0c9-b201ed20d254"
+    }
+  },
+  {
+    "model": "users.about",
+    "pk": "e56a0d3a-03e8-4c64-9fa0-5c24bfc437d2",
+    "fields": {
+      "text": "<p>Build your own Django REST API.</p>",
+      "course": "de2bceea-fe92-4e9b-b0c9-b201ed20d254"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "d01e1f56-cc55-4a8d-a22a-dfc8599a8d43",
+    "fields": {
+      "text": "<p>Knowledge of Django basics.</p>",
+      "course": "de2bceea-fe92-4e9b-b0c9-b201ed20d254"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "d7a47ac2-dfa7-4fd3-9dc5-4c7b07b1748a",
+    "fields": {
+      "text": "<p>Understanding of APIs and JSON.</p>",
+      "course": "de2bceea-fe92-4e9b-b0c9-b201ed20d254"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "ed2f19b2-8b92-4d1a-90b3-44f64e5c6e51",
+    "fields": {
+      "text": "<p>Python 3 installed.</p>",
+      "course": "de2bceea-fe92-4e9b-b0c9-b201ed20d254"
+    }
+  },
+  {
+    "model": "users.requirement",
+    "pk": "a1b2f5b3-c8de-40c8-bf36-c87c24e3aab9",
+    "fields": {
+      "text": "<p>Familiarity with Django ORM.</p>",
+      "course": "de2bceea-fe92-4e9b-b0c9-b201ed20d254"
+    }
+  }
+]
+

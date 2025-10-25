@@ -17,12 +17,17 @@ def convert_video_to_hls(sender, instance, created, **kwargs):
         return
 
     input_path = instance.video.path
+    print(instance.video.name)
+    # videos / 2025 / 10 / 23 / example_video_kplirQO.mp4
+
+    url = instance.video.name.removeprefix('courses/videos/').split('.')[0]
+    print(url)
 
     # Har bir video uchun unikal papka (uuid asosida)
-    base_dir = os.path.join(settings.MEDIA_ROOT, 'hls', f'lesson_{instance.id}')
+    base_dir = os.path.join(settings.MEDIA_ROOT, 'courses/videos/hls', f"{url}")
     os.makedirs(base_dir, exist_ok=True)
 
-    # --- ⃣ Kalit yaratish ---
+    # --- Kalit yaratish ---
     key_hex = os.urandom(16).hex()
     key_file_path = os.path.join(base_dir, 'enc.key')
     with open(key_file_path, 'wb') as f:
@@ -36,7 +41,7 @@ def convert_video_to_hls(sender, instance, created, **kwargs):
     with open(key_info_path, 'w') as f:
         f.write(f"{key_uri}\n{key_file_path}\n{key_hex}")
 
-    # --- ⃣ FFmpeg yordamida HLS generatsiya ---
+    # --- FFmpeg yordamida HLS generatsiya ---
     output_m3u8 = os.path.join(base_dir, 'master.m3u8')
     segment_pattern = os.path.join(base_dir, 'segment_%03d.ts')
 
@@ -58,7 +63,7 @@ def convert_video_to_hls(sender, instance, created, **kwargs):
         print(e.stderr)
         raise
 
-    # --- ⃣ Modelda video_link yangilash ---
+    # --- Modelda video_link yangilash ---
     hls_rel_path = os.path.relpath(output_m3u8, settings.MEDIA_ROOT)
     instance.video_link = f"/media/{hls_rel_path}"
     instance.save(update_fields=['video_link'])

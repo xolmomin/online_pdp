@@ -11,7 +11,7 @@ from django.db.models.fields.files import ImageFieldFile
 from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
 
-from shared.models import CreatedBaseModel, OrderBaseModel
+from shared.models import CreatedBaseModel, OrderBaseModel, UUIDBaseModel
 
 
 class Category(CreatedBaseModel):
@@ -46,7 +46,7 @@ class Course(CreatedBaseModel):
     rating = SmallIntegerField(default=50, editable=False)
     video_count = IntegerField(default=0, db_default=0, editable=False)
     total_video_duration = IntegerField(default=0, db_default=0, editable=False)
-    cover_image = ImageField(upload_to='cover_image_courses/%Y/%m/%d',
+    cover_image = ImageField(upload_to='courses/cover_image/%Y/%m/%d',
                              validators=[image_size_validator, FileExtensionValidator(['jpg', 'jpeg', 'png', 'webp'])])
     category = ForeignKey('users.Category', SET_NULL, null=True, blank=True)
     teachers = ForeignKey('users.User', CASCADE, blank=True)
@@ -83,14 +83,30 @@ class Course(CreatedBaseModel):
         return self.name
 
 
+class About(UUIDBaseModel):
+    text = CKEditor5Field(blank=True)
+    course = ForeignKey('users.Course', CASCADE, related_name='abouts')
+
+    def __str__(self):
+        return self.text
+
+
+class Requirement(UUIDBaseModel):
+    text = CKEditor5Field(blank=True)
+    course = ForeignKey('users.Course', CASCADE, related_name='requirements')
+
+    def __str__(self):
+        return self.text
+
+
 class Section(CreatedBaseModel, OrderBaseModel):
     class Status(TextChoices):
-        PUBLISHED = 'published', 'Published'
-        UNPUBLISHED = 'unpublished', 'Unpublished'
+        PUBLISHED = 'published', _('Published')
+        UNPUBLISHED = 'unpublished', _('Unpublished')
 
     name = CharField(max_length=255)
     status = CharField(max_length=20, choices=Status.choices, default=Status.UNPUBLISHED)
-    course = ForeignKey('users.Course', CASCADE, related_name='courses')
+    course = ForeignKey('users.Course', CASCADE, related_name='sections')
     video_count = IntegerField(default=0, db_default=0, editable=False)
     total_video_duration = IntegerField(default=0, db_default=0, editable=False)
 
@@ -115,9 +131,9 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     status = CharField(max_length=20, choices=Status.choices, default=Status.UNPUBLISHED)
     access_type = CharField(max_length=20, choices=AccessType.choices, default=AccessType.PRIVATE)
     video_duration = IntegerField(db_default=0, editable=False)
-    section = ForeignKey('users.Section', CASCADE, related_name='sections')
+    section = ForeignKey('users.Section', CASCADE, related_name='lessons')
     video_link = CharField(max_length=255, blank=True, null=True)
-    video = FileField(upload_to='videos/%Y/%m/%d',
+    video = FileField(upload_to='courses/videos/%Y/%m/%d',
                       help_text="video's format must be 'mp4', 'mov', 'webm'",
                       validators=[FileExtensionValidator(['mp4', 'mov', 'webm'])]
                       )

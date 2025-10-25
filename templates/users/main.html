@@ -44,6 +44,24 @@
             color: white;
         }
 
+        .reading-time {
+            background: #f3f4f6;
+            color: #6b7280;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .step-count-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
         .level-intermediate {
             background-color: #f59e0b;
             color: white;
@@ -133,7 +151,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
                 {% for course in courses %}
-                    <a href="/en/courses/4b9aea7b-0c53-4799-afa7-0143fe7451b2" class="block">
+                    <a href="{% url 'course_detail' course.pk %}" class="block">
                         <div class="bg-white rounded-xl shadow-md card-hover overflow-hidden flex flex-col"
                              data-topic="web-development" data-level="{{ course.level }}"
                              data-price="{{ course.price }}"
@@ -206,7 +224,6 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
                 {% for blog in blogs %}
-                    <!-- Blog Card 1 - React Tutorial -->
                     <article class="blog-card card-hover animate-slide-up flex flex-col h-full" data-category="tech"
                              data-date="2024-12-12"
                              data-steps="5">
@@ -223,10 +240,10 @@
                                 {% endif %}
                             </div>
                             <div class="p-6 flex flex-col flex-1">
-                                <a href="{% url 'blog_detail' blog.pk %}"
+                                <h2
                                    class="text-xl font-semibold text-gray-900 mb-2 hover:text-purple-600 transition-colors cursor-pointer block">
                                     {{ blog.title }}
-                                </a>
+                                </h2>
                                 {{ blog.description|truncatewords:15|safe }}
                                 <p class="text-gray-600 mb-8 text-sm leading-relaxed">
                                 <div class="flex items-center justify-between mt-auto">

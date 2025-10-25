@@ -1,7 +1,9 @@
 import os
 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView
 from django.http import Http404, HttpResponse
+from django.urls import reverse_lazy
 from django.views import View
 from django.conf import settings
 from django.views.generic import DetailView, TemplateView, ListView
@@ -47,7 +49,7 @@ class CourseDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['sections'] = self.object.courses.prefetch_related('sections')
+        context['sections'] = Lesson.objects.first()
         return context
 
 
@@ -79,8 +81,11 @@ class RegisterTemplateView(TemplateView):
     template_name = 'users/auth/register.html'
 
 
-class LoginTemplateView(TemplateView):
+class LoginTemplateView(LoginView):
     template_name = 'users/auth/login.html'
+    next_page = reverse_lazy('main')
+
+
 
 
 # TODO Video view
