@@ -36,7 +36,7 @@ class RunCodeView(View):
             data = json.loads(request.body)
             code = data.get("code", "")
 
-            # Create a temporary Python file
+
             with tempfile.NamedTemporaryFile(suffix=".py", delete=False) as temp:
                 temp.write(code.encode())
                 temp.flush()
@@ -62,13 +62,13 @@ class SubmitCodeView(View):
         try:
             data = json.loads(request.body)
             code = data.get("code", "")
-            problem_id = data.get("problem_id")  # <-- added
+            problem_id = data.get("problem_id")
 
             if not problem_id:
                 return JsonResponse({"output": "❌ No problem ID provided."})
 
             test_cases = list(Answers.objects.filter(problem_id=problem_id).values('input', 'output'))
-            judge_submission(code, test_cases)
+            judge_submission(code, Problem.objects.get(problem_id) ,test_cases)
 
             result = "✅ Submitted successfully and passed all tests!"
 
