@@ -743,59 +743,6 @@
                 }
             ];
 
-            function displayTestResults(results) {
-                testResults.innerHTML = '';
-                let passed = 0;
-                let failed = 0;
-
-                results.forEach((result, index) => {
-                    const testCase = testCases[index];
-                    const testCaseElement = document.createElement('div');
-                    testCaseElement.className = 'test-case';
-
-                    const statusClass = result.passed ? 'status-passed' : 'status-failed';
-                    const statusText = result.passed ? 'Passed' : 'Failed';
-
-                    testCaseElement.innerHTML = `
-                        <div class="test-case-header">
-                            <div class="test-case-title">Test Case ${index + 1}</div>
-                            <div class="test-case-status ${statusClass}">${statusText}</div>
-                        </div>
-                        <div class="test-case-details">
-                            <div class="test-input"><span>Input:</span> ${testCase.input}</div>
-                            <div class="test-expected"><span>Expected:</span> ${testCase.expected}</div>
-                            <div class="test-actual"><span>Output:</span> ${result.output || 'No output'}</div>
-                            ${result.error ? `<div class="test-error"><span>Error:</span> ${result.error}</div>` : ''}
-                            <div class="test-explanation"><span>Explanation:</span> ${testCase.explanation}</div>
-                        </div>
-                    `;
-
-                    testResults.appendChild(testCaseElement);
-
-                    if (result.passed) {
-                        passed++;
-                    } else {
-                        failed++;
-                    }
-                });
-
-                // Update summary
-                document.getElementById('passed-count').textContent = passed;
-                document.getElementById('failed-count').textContent = failed;
-                document.getElementById('total-count').textContent = results.length;
-
-                const summaryMessage = document.getElementById('summary-message');
-                if (passed === results.length) {
-                    summaryMessage.textContent = '🎉 All test cases passed!';
-                    summaryMessage.className = 'summary-message message-passed';
-                } else {
-                    summaryMessage.textContent = '❌ Some test cases failed';
-                    summaryMessage.className = 'summary-message message-failed';
-                }
-
-                resultsSummary.style.display = 'block';
-            }
-
             async function sendCode(url, includeProblem = false) {
                 const code = editor.getValue().trim();
                 const body = includeProblem ? {code, problem_id: problemId} : {code};
@@ -816,11 +763,11 @@
 
                     const data = await response.json();
 
-                    // Show console output
+                    // ✅ Console Output
                     outputBox.textContent = data.output || "No output returned.";
 
-                    // If the server returned test results → display them
-                    if (data.results && data.results.length > 0) {
+                    // ✅ If server returned test results, show them nicely
+                    if (Array.isArray(data.results)) {
                         displayTestResults(data.results);
                     }
 
@@ -829,17 +776,63 @@
                 }
             }
 
+            function displayTestResults(results) {
+                testResults.innerHTML = '';
+                let passed = 0;
+                let failed = 0;
+
+                results.forEach((result, index) => {
+                    const testCaseElement = document.createElement('div');
+                    testCaseElement.className = 'test-case';
+
+                    const statusClass = result.verdict === "AC" ? 'status-passed' : 'status-failed';
+                    const statusText = result.verdict === "AC" ? 'Passed' : result.verdict;
+
+                    testCaseElement.innerHTML = `
+            <div class="test-case-header">
+                <div class="test-case-title">Test Case #${result.testcase}</div>
+                <div class="test-case-status ${statusClass}">${statusText}</div>
+            </div>
+            <div class="test-case-details">
+                <div class="test-input"><span>Input:</span> ${result.input}</div>
+                <div class="test-expected"><span>Expected:</span> ${result.expected}</div>
+                <div class="test-actual"><span>Output:</span> ${result.actual || 'No output'}</div>
+            </div>
+        `;
+
+                    testResults.appendChild(testCaseElement);
+
+                    if (result.verdict === "AC") passed++;
+                    else failed++;
+                });
+
+                document.getElementById('passed-count').textContent = passed;
+                document.getElementById('failed-count').textContent = failed;
+                document.getElementById('total-count').textContent = results.length;
+
+                const summaryMessage = document.getElementById('summary-message');
+                if (passed === results.length) {
+                    summaryMessage.textContent = '🎉 All test cases passed!';
+                    summaryMessage.className = 'summary-message message-passed';
+                } else {
+                    summaryMessage.textContent = '❌ Some test cases failed';
+                    summaryMessage.className = 'summary-message message-failed';
+                }
+
+                resultsSummary.style.display = 'block';
+            }
 
             runButton.addEventListener("click", () => sendCode(runUrl));
             submitButton.addEventListener("click", () => sendCode(submitUrl, true));
+
 
             function getCookie(name) {
                 let cookieValue = null;
                 if (document.cookie && document.cookie !== '') {
                     const cookies = document.cookie.split(';');
-                    for (let i = 0; i < cookies.length; i++) {
-                        const cookie = cookies[i].trim();
-                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    for (let cookie of cookies) {
+                        cookie = cookie.trim();
+                        if (cookie.startsWith(name + '=')) {
                             cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                             break;
                         }
@@ -847,7 +840,6 @@
                 }
                 return cookieValue;
             }
-
 
             // Resizable functionality for horizontal split (left/right panels)
             const horizontalResizer = document.getElementById('horizontal-resizer');

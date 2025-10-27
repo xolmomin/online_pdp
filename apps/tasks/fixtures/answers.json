@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "problem": 1,
-      "input": "nums = [2,7,11,15]\ntarget = 9",
+      "input": "4\n2 7 11 15\n9",
       "output": "[0, 1]"
     }
   },
@@ -13,7 +13,7 @@
     "pk": 2,
     "fields": {
       "problem": 1,
-      "input": "nums = [3,2,4]\ntarget = 6",
+      "input": "3\n3 2 4\n6",
       "output": "[1, 2]"
     }
   },
@@ -22,7 +22,7 @@
     "pk": 3,
     "fields": {
       "problem": 2,
-      "input": "s = \"abcabcbb\"",
+      "input": "abcabcbb",
       "output": "3"
     }
   },
@@ -31,7 +31,7 @@
     "pk": 4,
     "fields": {
       "problem": 2,
-      "input": "s = \"bbbbb\"",
+      "input": "bbbbb",
       "output": "1"
     }
   },
@@ -40,7 +40,7 @@
     "pk": 5,
     "fields": {
       "problem": 3,
-      "input": "prices = [7,1,5,3,6,4]",
+      "input": "6\n7 1 5 3 6 4",
       "output": "5"
     }
   },
@@ -49,7 +49,7 @@
     "pk": 6,
     "fields": {
       "problem": 3,
-      "input": "prices = [7,6,4,3,1]",
+      "input": "5\n7 6 4 3 1",
       "output": "0"
     }
   },
@@ -58,7 +58,7 @@
     "pk": 7,
     "fields": {
       "problem": 4,
-      "input": "root = [1,null,2,3]",
+      "input": "1\nnull 2 3",
       "output": "[1,3,2]"
     }
   },
@@ -67,7 +67,7 @@
     "pk": 8,
     "fields": {
       "problem": 4,
-      "input": "root = []",
+      "input": "",
       "output": "[]"
     }
   },
@@ -76,7 +76,7 @@
     "pk": 9,
     "fields": {
       "problem": 5,
-      "input": "beginWord = \"hit\"\nendWord = \"cog\"\nwordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]",
+      "input": "hit\ncog\n6\nhot dot dog lot log cog",
       "output": "5"
     }
   },
@@ -85,99 +85,8 @@
     "pk": 10,
     "fields": {
       "problem": 5,
-      "input": "beginWord = \"hit\"\nendWord = \"cog\"\nwordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]",
-      "output": "0"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 6,
-    "fields": {
-      "problem": 1,
-      "input": "[2,7,11,15], 9",
-      "output": "[0,1]"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 7,
-    "fields": {
-      "problem": 1,
-      "input": "[3,2,4], 6",
-      "output": "[1,2]"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 8,
-    "fields": {
-      "problem": 2,
-      "input": "\"abcabcbb\"",
-      "output": "3"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 9,
-    "fields": {
-      "problem": 2,
-      "input": "\"bbbbb\"",
-      "output": "1"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 10,
-    "fields": {
-      "problem": 3,
-      "input": "[7,1,5,3,6,4]",
-      "output": "5"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 11,
-    "fields": {
-      "problem": 3,
-      "input": "[7,6,4,3,1]",
-      "output": "0"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 12,
-    "fields": {
-      "problem": 4,
-      "input": "[1,null,2,3]",
-      "output": "[1,3,2]"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 13,
-    "fields": {
-      "problem": 4,
-      "input": "[]",
-      "output": "[]"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 14,
-    "fields": {
-      "problem": 5,
-      "input": "\"hit\", \"cog\", [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]",
-      "output": "5"
-    }
-  },
-  {
-    "model": "tasks.answers",
-    "pk": 15,
-    "fields": {
-      "problem": 5,
-      "input": "\"hit\", \"cog\", [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]",
+      "input": "hit\ncog\n5\nhot dot dog lot log",
       "output": "0"
     }
   }
 ]
-

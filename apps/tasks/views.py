@@ -7,7 +7,7 @@ from django.views import View
 from django.views.generic import ListView, DetailView
 
 from tasks.models import Problem, Topic
-from tasks.checker.main import judge_submission
+from tasks.utils import judge_submission
 from tasks.models.tasks import Answers
 
 
@@ -29,13 +29,11 @@ class ProblemDetailView(DetailView):
     context_object_name = 'problem'
 
 
-
 class RunCodeView(View):
     def post(self, request):
         try:
             data = json.loads(request.body)
             code = data.get("code", "")
-
 
             with tempfile.NamedTemporaryFile(suffix=".py", delete=False) as temp:
                 temp.write(code.encode())
@@ -67,12 +65,23 @@ class SubmitCodeView(View):
             if not problem_id:
                 return JsonResponse({"output": "❌ No problem ID provided."})
 
-            test_cases = list(Answers.objects.filter(problem_id=problem_id).values('input', 'output'))
-            judge_submission(code, Problem.objects.get(problem_id) ,test_cases)
+            problem = Problem.objects.get(pk=problem_id)
 
-            result = "✅ Submitted successfully and passed all tests!"
+            results = judge_submission(code, problem.pk)
 
-            return JsonResponse({"output": result})
+            failed = next((r for r in results if r["verdict"] != "AC"), None)
+
+            if failed:
+                verdict = failed["verdict"]
+                test_num = failed["testcase"]
+                msg = f"❌ Test #{test_num} failed ({verdict})"
+            else:
+                msg = "✅ All tests passed!"
+
+            return JsonResponse({"output": msg, "results": results})
+
+        except Problem.DoesNotExist:
+            return JsonResponse({"output": "❌ Problem not found."})
 
         except Exception as e:
             return JsonResponse({"output": f"Error: {str(e)}"})

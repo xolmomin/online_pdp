@@ -1,8 +1,11 @@
 import subprocess
 import tempfile
 import shutil
+import textwrap
 from pathlib import Path
 import difflib
+
+from tasks.models import Problem
 
 DOCKER_IMAGE = "crun-python-runner"
 TIMEOUT = 2.0
@@ -13,12 +16,12 @@ def normalize_output(s: str):
     return "\n".join(line.rstrip() for line in s.strip().splitlines())
 
 
-def run_in_docker(source_code: str, test_input: str):
+def run_submission(source_code: str, test_input: str):
     tmp = Path(tempfile.mkdtemp(prefix="crun-judge-"))
     try:
         workspace = tmp / "workspace"
         workspace.mkdir()
-        code_file = workspace / "main.py"
+        code_file = workspace / "checker.py"
         code_file.write_text(source_code)
 
         docker_cmd = [
@@ -48,7 +51,7 @@ def run_in_docker(source_code: str, test_input: str):
         )
 
         try:
-            stdout, stderr = proc.communicate(test_input, timeout=TIMEOUT)
+            stdout, stderr = proc.communicate(test_input.rstrip() + '\n', timeout=TIMEOUT)
         except subprocess.TimeoutExpired:
             proc.kill()
             return {"verdict": "TLE", "stdout": "", "stderr": "timeout (wall-clock)"}
@@ -73,48 +76,42 @@ def compare_output(user_out: str, expected_out: str):
         return {"result": "WA", "diff": diff}
 
 
-def judge_submission(source_code: str, test_cases: list[dict]):
-    """
-    Run and evaluate code against multiple test cases.
+# utils/checker.py
+def judge_submission(code: str, problem_id):
+    code = textwrap.dedent(code)
+    problem = Problem.objects.get(pk=problem_id)
 
-    Args:
-        source_code (str): The Python code the user submitted.
-        test_cases (list[dict]): Each dict must have {'input': str, 'expected': str}.
-
-    Returns:
-        dict: Overall verdict and detailed per-test results.
-    """
     results = []
-    all_passed = True
 
-    for i, case in enumerate(test_cases, start=1):
-        runr = run_in_docker(source_code, case["input"])
+    for testcase in problem.answers_set.all():
+        progress_submission = run_submission(code, testcase.input)
 
-        if runr["verdict"] != "OK":
+        # Runtime error or timeout
+        if progress_submission["verdict"] != "OK":
             results.append({
-                "test": i,
-                "verdict": runr["verdict"],
-                "stdout": runr["stdout"],
-                "stderr": runr["stderr"],
+                "testcase": testcase.pk,
+                "verdict": "RE",  # runtime error
+                "stdout": progress_submission.get("stdout", ""),
+                "stderr": progress_submission.get("stderr", "")
             })
-            all_passed = False
-            continue
+            break
 
-        cmp = compare_output(runr["stdout"], case["expected"])
-        verdict = cmp.get("result")
+        cmp = compare_output(progress_submission["stdout"], testcase.output)
 
-        results.append({
-            "test": i,
-            "verdict": verdict,
-            "stdout": runr["stdout"],
-            "stderr": runr["stderr"],
-            "diff": cmp.get("diff", "")
-        })
+        if cmp.get("result") == "AC":
+            results.append({
+                "testcase": testcase.pk,
+                "verdict": "AC",
+                "stdout": progress_submission["stdout"]
+            })
+        else:
+            results.append({
+                "testcase": testcase.pk,
+                "verdict": "WA",
+                "stdout": progress_submission["stdout"],
+                "expected": testcase.output,
+                "diff": cmp.get("diff", "")
+            })
+            break  
+    return results
 
-        if verdict != "AC":
-            all_passed = False
-
-    return {
-        "final_verdict": "✅ Accepted" if all_passed else "❌ Wrong Answer",
-        "results": results
-    }

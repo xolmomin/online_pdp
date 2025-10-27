@@ -48,11 +48,6 @@ class Example(Model):
         ordering = ['id']
 
 
-class Hint(Model):
-    problem = ForeignKey(Problem, CASCADE)
-    text = CKEditor5Field(null=True, blank=True)
-
-
 class Answers(Model):
     problem = ForeignKey(Problem, CASCADE)
     input = TextField()
