@@ -1,5 +1,3 @@
-import os
-import subprocess
 import threading
 from io import BytesIO
 
@@ -7,15 +5,16 @@ from PIL import Image
 from django.core.exceptions import ValidationError
 from django.core.files.base import ContentFile
 from django.core.validators import FileExtensionValidator
-from django.conf import settings
-from django.db.models import TextChoices, ForeignKey, CASCADE, URLField, FileField, SET_NULL, \
+from django.db.models import TextChoices, ForeignKey, CASCADE, FileField, SET_NULL, \
     CheckConstraint, Q, ImageField
 from django.db.models.fields import CharField, IntegerField, BooleanField, SmallIntegerField
 from django.db.models.fields.files import ImageFieldFile
 from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
+from moviepy import VideoFileClip
 
 from shared.models import CreatedBaseModel, OrderBaseModel, UUIDBaseModel
+from users.utils import convert_video_to_hls
 
 
 class Category(CreatedBaseModel):
@@ -86,6 +85,27 @@ class Course(CreatedBaseModel):
     def __str__(self):
         return self.name
 
+    @property
+    def course_lessons(self):
+        sections = self.sections.all()
+        count = 0
+        for section in sections:
+            count += section.count_lesson
+        return count
+
+    @property
+    def course_level(self):
+        return self.level.capitalize()
+
+    @property
+    def course_sections(self):
+        return self.sections.all().count()
+
+    @property
+    def course_durations(self):
+        sections = self.sections.all()
+        return sum([section.section_durations for section in sections]) / 60 / 60
+
 
 class About(UUIDBaseModel):
     text = CKEditor5Field(blank=True)
@@ -122,6 +142,21 @@ class Section(CreatedBaseModel, OrderBaseModel):
     def __str__(self):
         return self.name
 
+    @property
+    def count_lesson(self):
+        return self.lessons.all().count()
+
+    @property
+    def section_durations(self):
+        lessons = self.lessons.all()
+        return sum([lesson.video_duration for lesson in lessons])
+
+    @property
+    def duration_hours(self):
+        return self.section_durations / 60 / 60
+
+
+
 
 class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
     class Status(TextChoices):
@@ -147,64 +182,20 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
         verbose_name_plural = _('Lessons')
         ordering = 'order_number',
 
-
-    # def convert_video_to_hls(self):
-    #     # Faqat yangi yaratilganda ishga tushsin
-    #     if not self.created_at or not self.video:
-    #         return
-    #
-    #     input_path = self.video.path
-    #     print(self.video.name)
-    #     # videos / 2025 / 10 / 23 / example_video_kplirQO.mp4
-    #
-    #     url = self.video.name.removeprefix('courses/').split('.')[0]
-    #     print(url)
-    #
-    #     # Har bir video uchun unikal papka (uuid asosida)
-    #     base_dir = os.path.join(settings.MEDIA_ROOT, 'courses/hls', f"{url}")
-    #     os.makedirs(base_dir, exist_ok=True)
-    #
-    #     # --- Kalit yaratish ---
-    #     key_hex = os.urandom(16).hex()
-    #     key_file_path = os.path.join(base_dir, 'enc.key')
-    #     with open(key_file_path, 'wb') as f:
-    #         f.write(bytes.fromhex(key_hex))
-    #
-    #     # 🔥 MUHIM O‘ZGARISH: `key_uri` = to‘liq URL (foydalanuvchi uchun)
-    #     key_uri = f"http://127.0.0.1:8000/get_key/lesson/{self.id}/"
-    #
-    #     # 🔥 MUHIM O‘ZGARISH: `enc.keyinfo` faylga to‘liq *fayl yo‘li* yozish
-    #     key_info_path = os.path.join(base_dir, 'enc.keyinfo')
-    #     with open(key_info_path, 'w') as f:
-    #         f.write(f"{key_uri}\n{key_file_path}\n{key_hex}")
-    #
-    #     # --- FFmpeg yordamida HLS generatsiya ---
-    #     output_m3u8 = os.path.join(base_dir, 'master.m3u8')
-    #     segment_pattern = os.path.join(base_dir, 'segment_%03d.ts')
-    #
-    #     cmd = [
-    #         'ffmpeg', '-y', '-i', input_path,
-    #         '-c:v', 'libx264', '-c:a', 'aac',
-    #         '-hls_time', '6',
-    #         '-hls_playlist_type', 'vod',
-    #         '-hls_key_info_file', key_info_path,
-    #         '-hls_segment_filename', segment_pattern,
-    #         output_m3u8
-    #     ]
-    #
-    #     try:
-    #         subprocess.run(cmd, check=True, capture_output=True, text=True)
-    #         print("✅ FFmpeg muvofaqqiyatli HLS yaratdi")
-    #     except subprocess.CalledProcessError as e:
-    #         print("❌ FFmpeg xatolik berdi:")
-    #         print(e.stderr)
-    #         raise
-
-
     def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
         super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
-        # threading.Thread(target=self.convert_video_to_hls())
-
+        clip = VideoFileClip(self.video.path)
+        self.video_duration = clip.duration  # sec
+        clip.close()
+        super().save(update_fields=['video_duration'])
+        threading.Thread(target=convert_video_to_hls(self.video.path, self.video.name, self.id))
 
     def __str__(self):
         return self.name
+
+    @property
+    def duration_minutes(self):
+        if not self.video_duration:
+            return "Unknown"
+        minutes, seconds = divmod(int(self.video_duration), 60)
+        return f"{minutes:02d}:{seconds:02d}"
