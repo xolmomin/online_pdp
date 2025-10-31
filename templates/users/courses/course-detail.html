@@ -78,7 +78,17 @@
                         {{ course.short_description|safe }}
                     </p>
                     <div class="flex items-center mb-6">
-                        <div class="rating-stars text-2xl">★★★★★</div>
+                        {% if course.rating <= 1 %}
+                            <div class="rating-stars text-2xl">★</div>
+                        {% elif course.rating <= 2 %}
+                            <div class="rating-stars text-2xl">★★</div>
+                        {% elif course.rating <= 3 %}
+                            <div class="rating-stars text-2xl">★★★</div>
+                        {% elif course.rating <= 4 %}
+                            <div class="rating-stars text-2xl">★★★★</div>
+                        {% else %}
+                            <div class="rating-stars text-2xl">★★★★★</div>
+                        {% endif %}
                         <span class="ml-2 text-white text-opacity-90">{{ course.rating }} (2,341 reviews)</span>
                         <span class="ml-4 text-white text-opacity-90">15,847 students</span>
                     </div>
@@ -88,19 +98,19 @@
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                             </svg>
-                            52 hours of content
+                            {{ course.course_durations|floatformat:1 }} hours of content
                         </div>
                         <div class="flex items-center">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
                             </svg>
-                            156 lessons
+                            {{ course.course_lessons }} lessons
                         </div>
                         <div class="flex items-center">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
-                            Beginner Level
+                            {{ course.course_level }} Level
                         </div>
                     </div>
                 </div>
@@ -193,7 +203,7 @@
                     <div class="bg-white rounded-xl shadow-sm p-8">
                         <h2 class="text-2xl font-bold text-gray-900 mb-6">Course Curriculum</h2>
                         <div class="mb-4 text-sm text-gray-600">
-                            <span class="font-medium">Course Progress:</span> 3 Sections • 35 Lessons • 52 hours total
+                            <span class="font-medium">Course Progress:</span> {{ course.course_sections }} Sections • {{ course.course_lessons }} Lessons • {{ course.course_durations|floatformat:1 }} hours total
                         </div>
                         <div class="space-y-4">
                             {% for section in course.sections.all %}
@@ -212,7 +222,8 @@
                                                 <h3 class="font-semibold text-gray-900">
                                                     Section {{ section.order_number }}: {{ section.name }}</h3>
                                             </div>
-                                            <p class="text-sm text-gray-600">8 lessons • 6 hours •
+                                            <p class="text-sm text-gray-600">{{ section.count_lesson }} lessons • {{ section.duration_hours|floatformat:1 }}
+                                                hours •
                                                 Order: {{ section.order_number }}</p>
                                         </div>
                                         <svg id="section{{ section.id }}-icon"
@@ -251,7 +262,7 @@
                                                     </div>
                                                     <div class="flex items-center space-x-2">
                                                         <span class="text-xs text-gray-500">Order: {{ lesson.order_number }}</span>
-                                                        <span class="text-sm text-gray-500">12:34</span>
+                                                        <span class="text-sm text-gray-500">{{ lesson.duration_minutes }}</span>
                                                     </div>
                                                 </div>
                                             {% endfor %}
@@ -267,19 +278,19 @@
                             <h4 class="font-semibold text-gray-900 mb-3">Course Statistics</h4>
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                                 <div>
-                                    <div class="text-2xl font-bold text-purple-600">35</div>
+                                    <div class="text-2xl font-bold text-purple-600">{{ course.course_lessons }}</div>
                                     <div class="text-sm text-gray-600">Total Lessons</div>
                                 </div>
                                 <div>
-                                    <div class="text-2xl font-bold text-purple-600">52</div>
+                                    <div class="text-2xl font-bold text-purple-600">{{ course.course_durations|floatformat:1 }}</div>
                                     <div class="text-sm text-gray-600">Hours Content</div>
                                 </div>
                                 <div>
-                                    <div class="text-2xl font-bold text-purple-600">25</div>
+                                    <div class="text-2xl font-bold text-purple-600">{{ course.practice_count }}</div>
                                     <div class="text-sm text-gray-600">Practice Exercises</div>
                                 </div>
                                 <div>
-                                    <div class="text-2xl font-bold text-purple-600">365</div>
+                                    <div class="text-2xl font-bold text-purple-600">{{ course.valid_days }}</div>
                                     <div class="text-sm text-gray-600">Valid Days</div>
                                 </div>
                             </div>
@@ -446,32 +457,56 @@
                                 <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z"/>
                                 </svg>
-                                <span class="text-gray-700">52 hours on-demand video</span>
+                                <span class="text-gray-700">{{ course.course_durations|floatformat:1 }} hours on-demand video</span>
                             </div>
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                                </svg>
-                                <span class="text-gray-700">25 practice exercises</span>
-                            </div>
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                </svg>
-                                <span class="text-gray-700">Certificate of completion</span>
-                            </div>
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                </svg>
-                                <span class="text-gray-700">Instructor support included</span>
-                            </div>
+                            {% if not course.practice_count == 0 %}
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                    </svg>
+                                    <span class="text-gray-700">{{ course.practice_count }} practice exercises</span>
+                                </div>
+                            {% endif %}
+
+                            {% if course.has_certificate %}
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span class="text-gray-700">Certificate of Completion Available</span>
+                                </div>
+                            {% else %}
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span class="text-gray-700">No Certificate Offered for This Course</span>
+                                </div>
+                            {% endif %}
+
+                            {% if course.has_support %}
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    <span class="text-gray-700">Instructor support included</span>
+                                </div>
+                            {% else %}
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                    <span class="text-gray-700">Instructor support NOT included</span>
+                                </div>
+                            {% endif %}
+
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                                 </svg>
-                                <span class="text-gray-700">Access for 365 days</span>
+                                <span class="text-gray-700">Access for {{ course.valid_days }} days</span>
                             </div>
+
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 text-purple-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 2 2h12c1.11 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
@@ -484,17 +519,27 @@
                         <div class="mt-6 pt-4 border-t border-gray-200">
                             <div class="flex items-center justify-between mb-2">
                                 <span class="text-sm font-medium text-gray-600">Level:</span>
-                                <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-medium">Beginner</span>
+                                <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-medium">{{ course.course_level }}</span>
                             </div>
                             <div class="flex items-center justify-between mb-2">
                                 <span class="text-sm font-medium text-gray-600">Topic:</span>
-                                <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm font-medium">Web Development</span>
+                                <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm font-medium">{{ course.category.name }}</span>
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-sm font-medium text-gray-600">Rating:</span>
                                 <div class="flex items-center">
-                                    <div class="rating-stars text-sm mr-1">★★★★★</div>
-                                    <span class="text-sm text-gray-600">4.8/5.0</span>
+                                    {% if course.rating <= 1 %}
+                                        <div class="rating-stars text-sm mr-1">★</div>
+                                    {% elif course.rating <= 2 %}
+                                        <div class="rating-stars text-sm mr-1">★★</div>
+                                    {% elif course.rating <= 3 %}
+                                        <div class="rating-stars text-sm mr-1">★★★</div>
+                                    {% elif course.rating <= 4 %}
+                                        <div class="rating-stars text-sm mr-1">★★★★</div>
+                                    {% else %}
+                                        <div class="rating-stars text-sm mr-1">★★★★★</div>
+                                    {% endif %}
+                                    <span class="text-sm text-gray-600">{{ course.rating }}/5.0</span>
                                 </div>
                             </div>
                         </div>

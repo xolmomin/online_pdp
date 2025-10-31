@@ -142,13 +142,23 @@
                                     <h4 class="font-semibold text-gray-900 mb-2 text-lg">{{ course.name }}</h4>
                                     <p class="text-gray-600 text-sm mb-3">{{ course.short_description|safe }}</p>
                                     <div class="flex items-center mb-3">
-                                        <div class="rating-stars">★★★★★</div>
+                                        {% if course.rating <= 1 %}
+                                            <div class="rating-stars">★</div>
+                                        {% elif course.rating <= 2 %}
+                                            <div class="rating-stars">★★</div>
+                                        {% elif course.rating <= 3 %}
+                                            <div class="rating-stars">★★★</div>
+                                        {% elif course.rating <= 4 %}
+                                            <div class="rating-stars">★★★★</div>
+                                        {% else %}
+                                            <div class="rating-stars">★★★★★</div>
+                                        {% endif %}
                                         <span class="text-gray-600 text-sm ml-2">{{ course.rating }} (2,341)</span>
                                     </div>
                                     <div class="course-stats mb-3">
                                         <div class="flex items-center justify-between text-sm">
-                                            <span>⏱️ 52 hours</span>
-                                            <span>📚 156 lessons</span>
+                                            <span>⏱️ {{ course.course_durations|floatformat:1 }} hours</span>
+                                            <span>📚 {{ course.course_lessons }} lessons</span>
                                         </div>
                                     </div>
                                     <div class="flex items-center justify-between mb-4">
@@ -160,7 +170,7 @@
                                     </div>
                                 </div>
                                 <button
-                                   class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4 text-center block">
+                                        class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors font-medium mt-4 text-center block">
                                     Enroll Now
                                 </button>
                             </div>
