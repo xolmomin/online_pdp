@@ -42,13 +42,23 @@ class Example(Model):
     input = CharField(max_length=255)
     output = CharField(max_length=255)
     explanation = TextField(null=True, blank=True)
-    problem = ForeignKey(Problem, CASCADE, related_name='examples')
+    problem = ForeignKey('tasks.Problem', CASCADE, related_name='examples')
 
     class Meta:
         ordering = ['id']
 
 
 class Answers(Model):
-    problem = ForeignKey(Problem, CASCADE)
+    problem = ForeignKey('tasks.Problem', CASCADE)
     input = TextField()
     output = TextField(null=True)
+
+
+class Submission(Model):
+    class Status(TextChoices):
+        PENDING = 'Pending'
+        ACCEPTED = 'Accepted'
+        REJECTED = 'Rejected'
+    problem = ForeignKey('tasks.Problem', CASCADE)
+    user = ForeignKey('users.User', CASCADE)
+    status = CharField(max_length=15, choices=Status.choices)

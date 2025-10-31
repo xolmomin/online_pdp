@@ -1,0 +1,39 @@
+.problem-section {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 1.5rem;
+    margin-right: 0.75rem;
+}
+
+.problem-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.problem-container {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.problem-nav {
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.problem-nav button:hover {
+    color: #dbeafe;
+}
+

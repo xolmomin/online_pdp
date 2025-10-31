@@ -8,7 +8,7 @@ from django.views.generic import ListView, DetailView
 
 from tasks.models import Problem, Topic
 from tasks.utils import judge_submission
-from tasks.models.tasks import Answers
+from tasks.models import Answers
 
 
 class ProblemsListView(ListView):

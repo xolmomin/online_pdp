@@ -21,7 +21,7 @@ def run_submission(source_code: str, test_input: str):
     try:
         workspace = tmp / "workspace"
         workspace.mkdir()
-        code_file = workspace / "checker.py"
+        code_file = workspace / "main.py"
         code_file.write_text(source_code)
 
         docker_cmd = [
@@ -91,7 +91,9 @@ def judge_submission(code: str, problem_id):
             results.append({
                 "testcase": testcase.pk,
                 "verdict": "RE",  # runtime error
-                "stdout": progress_submission.get("stdout", ""),
+                "input": testcase.input,
+                "expected": testcase.output,
+                "actual": progress_submission.get("stdout", ""),
                 "stderr": progress_submission.get("stderr", "")
             })
             break
@@ -102,16 +104,19 @@ def judge_submission(code: str, problem_id):
             results.append({
                 "testcase": testcase.pk,
                 "verdict": "AC",
-                "stdout": progress_submission["stdout"]
+                "input": testcase.input,
+                "expected": testcase.output,
+                "actual": progress_submission["stdout"]
             })
         else:
             results.append({
                 "testcase": testcase.pk,
                 "verdict": "WA",
-                "stdout": progress_submission["stdout"],
+                "input": testcase.input,
                 "expected": testcase.output,
+                "actual": progress_submission["stdout"],
                 "diff": cmp.get("diff", "")
             })
-            break  
+            break
     return results
 

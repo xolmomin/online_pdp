@@ -1,0 +1,77 @@
+.main-container {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    height: 92vh;
+    background: #f1f5f9;
+    position: relative;
+}
+
+.resizable-section {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Horizontal resizer for left/right panels */
+.horizontal-resizer {
+    width: 8px;
+    background-color: #e5e7eb;
+    cursor: col-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.2s;
+    z-index: 10;
+}
+
+.horizontal-resizer:hover {
+    background-color: #d1d5db;
+}
+
+.horizontal-resizer::before {
+    content: "";
+    width: 4px;
+    height: 40px;
+    background-color: #9ca3af;
+    border-radius: 2px;
+}
+
+/* Vertical resizer for editor/output */
+.vertical-resizer {
+    height: 8px;
+    background-color: #e5e7eb;
+    cursor: row-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.vertical-resizer:hover {
+    background-color: #d1d5db;
+}
+
+.vertical-resizer::before {
+    content: "";
+    width: 40px;
+    height: 4px;
+    background-color: #9ca3af;
+    border-radius: 2px;
+}
+
+.resizing {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Right panel container */
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
