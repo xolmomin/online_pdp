@@ -8,7 +8,7 @@ require.config({
 
 require(['vs/editor/editor.main'], function () {
     editor = monaco.editor.create(document.getElementById('python-editor'), {
-        value: `# Write your Python code here\n\nclass Solution:\n  def {{problem.name|slugify_underscore}}(self, ...):\n`,
+        value: `# Write your Python code here\n`,
         language: "python",
         theme: "vs-light",
         automaticLayout: true,
