@@ -11,6 +11,289 @@
     <link rel="stylesheet" href="{% static 'tasks/css/problem.css' %}">
     <link rel="stylesheet" href="{% static 'tasks/css/layout.css' %}">
     <link rel="stylesheet" href="{% static 'tasks/css/output.css' %}">
+    <style>
+        /* Additional inline styles for enhanced UI */
+        .problem-header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.375rem 0.875rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .problem-header-badge:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        .solved-badge {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #86efac;
+        }
+
+        .problem-id-badge {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+        }
+
+        .topic-badge {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 0.375rem 0.875rem;
+            border-radius: 0.375rem;
+            border: 1px solid #bfdbfe;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .topic-badge:hover {
+            background: #dbeafe;
+            border-color: #93c5fd;
+        }
+
+        .example-container {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .example-container:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .example-label {
+            display: inline-block;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-right: 0.5rem;
+            min-width: 90px;
+        }
+
+        .example-code {
+            background: #ffffff;
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.375rem;
+            font-family: 'Fira Code', monospace;
+            color: #7c3aed;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .constraints-container {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #fcd34d;
+            border-radius: 0.875rem;
+            padding: 1.25rem;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+        }
+
+        .constraints-container h2 {
+            color: #92400e !important;
+            margin-top: 0 !important;
+        }
+
+        .followup-container {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 2px solid #bfdbfe;
+            border-left: 6px solid #3b82f6;
+            border-radius: 0.875rem;
+            padding: 1.25rem;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+        }
+
+        .followup-title {
+            font-weight: 700;
+            color: #1e40af;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-button {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .nav-button.active {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .problem-title {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .metadata-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        /* Unified Difficulty Badges - Matching problem.css */
+        .difficulty-easy {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #86efac;
+        }
+
+        .difficulty-medium {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+        }
+
+        .difficulty-hard {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        /* Content sections for tabs */
+        .content-section {
+            display: none;
+            animation: fadeInSlide 0.4s ease-out;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Submissions styling */
+        .submissions-container {
+            padding: 1.75rem;
+        }
+
+        .submission-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .submission-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .submission-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .submission-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .status-accepted {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-wrong {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status-runtime-error {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .submission-time {
+            color: #64748b;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .submission-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .detail-item {
+            background: #f8fafc;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.375rem;
+            border-left: 2px solid #cbd5e1;
+        }
+
+        .detail-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 0.125rem;
+        }
+
+        .detail-value {
+            font-size: 0.875rem;
+            color: #1e293b;
+            font-weight: 600;
+            font-family: 'Fira Code', monospace;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
@@ -18,67 +301,202 @@
         <!-- LEFT SIDE: Problem Section -->
         <div class="resizable-section" id="problem-section" style="width: 50%;">
             <div class="problem-section">
-                <!-- Blue Navigation Bar -->
-                <div class="bg-blue-600 text-white flex gap-6 px-6 py-3 font-medium text-sm rounded-t-xl">
-                    <button class="hover:text-blue-200">Description</button>
-                    <button class="hover:text-blue-200">Submissions</button>
+                <!-- Enhanced Navigation Bar -->
+                <div class="problem-nav">
+                    <button class="nav-button active">📋 Description</button>
+                    <button class="nav-button">📝 Submissions</button>
                 </div>
 
                 <!-- Problem Content -->
                 <div class="problem-content">
-                    <div class="flex justify-between items-center mb-4">
-                        <h1 class="text-3xl font-bold text-gray-900">{{ problem.name }}</h1>
-                        <span class="text-green-600 font-semibold text-sm">Solved ✅</span>
-                    </div>
+                    <!-- Description Section -->
+                    <div class="content-section active" id="description-section">
+                        <!-- Problem Header -->
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex-1">
+                                <h1 class="problem-title text-3xl mb-3">{{ problem.name }}</h1>
 
-                    <div class="flex items-center gap-3 mb-6 text-sm">
-                        <span class="text-gray-400">#{{ problem.pk }}</span>
+                                <div class="metadata-section">
+                                    <span class="problem-id-badge">#{{ problem.pk }}</span>
 
-                        <span class="px-3 py-1 rounded-full font-medium
-                      {% if problem.difficulty == 'Easy' %}bg-green-100 text-green-700
-                      {% elif problem.difficulty == 'Medium' %}bg-yellow-100 text-yellow-700
-                      {% else %}bg-red-100 text-red-700{% endif %}">
-                      {{ problem.difficulty }}
-                    </span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200">🧠 Topics</span>
-                    </div>
+                                    <span class="problem-header-badge
+                                        {% if problem.difficulty == 'Easy' %}difficulty-easy
+                                        {% elif problem.difficulty == 'Medium' %}difficulty-medium
+                                        {% else %}difficulty-hard{% endif %}">
+                                        {% if problem.difficulty == 'Easy' %}✨
+                                        {% elif problem.difficulty == 'Medium' %}⚡
+                                        {% else %}🔥{% endif %}
+                                        {{ problem.difficulty }}
+                                    </span>
 
-                    <article class="leading-relaxed mb-8 text-gray-700">
-                        {{ problem.description|safe }}
-                    </article>
-
-                    <div class="mb-8">
-                        {% for example in problem.examples.all %}
-                            <h2 class="text-lg font-semibold mb-2 text-gray-900">Example {{ forloop.counter }}:</h2>
-                            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
-                                <p><span class="font-semibold text-blue-600">Input:</span>
-                                    <code class="bg-gray-100 px-1 rounded">{{ example.input }}</code>
-                                </p>
-                                <p><span class="font-semibold text-blue-600">Output:</span>
-                                    <code class="bg-gray-100 px-1 rounded">{{ example.output }}</code>
-                                </p>
-                                {% if example.explanation %}
-                                    <p class="mt-1 text-gray-600">
-                                        <span class="font-semibold text-blue-600">Explanation:</span> {{ example.explanation }}
-                                    </p>
-                                {% endif %}
+                                    <span class="topic-badge">
+                                        🧠 Topics & Tags
+                                    </span>
+                                </div>
                             </div>
-                        {% endfor %}
+
+                            <span class="solved-badge problem-header-badge">
+                                ✅ Solved
+                            </span>
+                        </div>
+
+                        <!-- Problem Description -->
+                        <article class="leading-relaxed mb-8 text-gray-700">
+                            {{ problem.description|safe }}
+                        </article>
+
+                        <!-- Examples Section -->
+                        <div class="mb-8">
+                            <h2 class="text-xl font-bold mb-4 text-gray-900" style="color: #1e293b !important;">
+                                📚 Examples
+                            </h2>
+                            {% for example in problem.examples.all %}
+                                <div class="example-container">
+                                    <h3 class="text-base font-bold mb-3 text-gray-800">
+                                        Example {{ forloop.counter }}:
+                                    </h3>
+
+                                    <div class="space-y-2">
+                                        <p class="flex items-start">
+                                            <span class="example-label">📥 Input:</span>
+                                            <code class="example-code flex-1">{{ example.input }}</code>
+                                        </p>
+
+                                        <p class="flex items-start">
+                                            <span class="example-label">📤 Output:</span>
+                                            <code class="example-code flex-1">{{ example.output }}</code>
+                                        </p>
+
+                                        {% if example.explanation %}
+                                            <p class="flex items-start mt-3 text-gray-600">
+                                                <span class="example-label">💬 Explanation:</span>
+                                                <span class="flex-1">{{ example.explanation }}</span>
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Constraints Section -->
+                        {% if problem.constraints %}
+                            <div class="mb-8">
+                                <div class="constraints-container">
+                                    <h2 class="text-lg font-bold mb-3 flex items-center gap-2">
+                                        ⚠️ Constraints
+                                    </h2>
+                                    <div class="space-y-2 text-gray-700">
+                                        {{ problem.constraints|linebreaksbr }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <!-- Follow-up Section -->
+                        <div class="followup-container">
+                            <div class="followup-title">🚀 Follow-up Challenge:</div>
+                            <div class="text-gray-700">
+                                Can you come up with an algorithm that is less than
+                                <code class="example-code">O(n²)</code> time complexity?
+                            </div>
+                        </div>
                     </div>
 
-                    {% if problem.constraints %}
-                        <div class="mb-8">
-                            <h2 class="text-lg font-semibold mb-2 text-gray-900">Constraints:</h2>
-                            <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                {{ problem.constraints|linebreaksbr }}
-                            </ul>
-                        </div>
-                    {% endif %}
+                    <!-- Submissions Section -->
+                    <div class="content-section" id="submissions-section">
+                        <div class="submissions-container">
+                            <h1 class="problem-title text-3xl mb-6">📝 Your Submissions</h1>
 
-                    <div class="text-gray-600 text-sm border-t border-gray-200 pt-4">
-                        <span class="font-semibold text-gray-800">Follow-up:</span>
-                        Can you come up with an algorithm that is less than
-                        <code class="bg-gray-100 px-1 rounded">O(n²)</code> time complexity?
+                            <!-- Submission Card 1 - Accepted -->
+                            <div class="submission-card">
+                                <div class="submission-header">
+                                    <div class="submission-status status-accepted">
+                                        ✅ Accepted
+                                    </div>
+                                    <div class="submission-time">
+                                        🕐 2 hours ago
+                                    </div>
+                                </div>
+                                <div class="submission-details">
+                                    <div class="detail-item">
+                                        <div class="detail-label">Runtime</div>
+                                        <div class="detail-value">45 ms</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Memory</div>
+                                        <div class="detail-value">14.2 MB</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Language</div>
+                                        <div class="detail-value">Python 3</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Test Cases</div>
+                                        <div class="detail-value">21/21</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submission Card 2 - Wrong Answer -->
+                            <div class="submission-card">
+                                <div class="submission-header">
+                                    <div class="submission-status status-wrong">
+                                        ❌ Wrong Answer
+                                    </div>
+                                    <div class="submission-time">
+                                        🕐 5 hours ago
+                                    </div>
+                                </div>
+                                <div class="submission-details">
+                                    <div class="detail-item">
+                                        <div class="detail-label">Runtime</div>
+                                        <div class="detail-value">38 ms</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Memory</div>
+                                        <div class="detail-value">13.8 MB</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Language</div>
+                                        <div class="detail-value">Python 3</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Test Cases</div>
+                                        <div class="detail-value">18/21</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submission Card 3 - Runtime Error -->
+                            <div class="submission-card">
+                                <div class="submission-header">
+                                    <div class="submission-status status-runtime-error">
+                                        ⚠️ Runtime Error
+                                    </div>
+                                    <div class="submission-time">
+                                        🕐 Yesterday
+                                    </div>
+                                </div>
+                                <div class="submission-details">
+                                    <div class="detail-item">
+                                        <div class="detail-label">Runtime</div>
+                                        <div class="detail-value">N/A</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Memory</div>
+                                        <div class="detail-value">N/A</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Language</div>
+                                        <div class="detail-value">Python 3</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Test Cases</div>
+                                        <div class="detail-value">5/21</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,13 +511,15 @@
                 <!-- Code Editor -->
                 <div class="editor-container-right resizable-section" id="editor-section" style="height: 50%;">
                     <div class="editor-header-right">
-                        <span class="font-semibold">Python 3</span>
+                        <span class="font-semibold flex items-center gap-2">
+                            🐍 Python 3
+                        </span>
                         <div class="flex gap-2">
-                            <button class="run-button bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">
-                                Run
+                            <button class="run-button">
+                                ▶️ Run
                             </button>
-                            <button class="submit-button bg-blue-500 hover:bg-blue-700 px-3 py-1 rounded text-sm font-medium">
-                                Submit
+                            <button class="submit-button">
+                                📤 Submit
                             </button>
                         </div>
                     </div>
@@ -116,37 +536,45 @@
                 <div class="resizable-section" id="output-results-section" style="height: 50%;">
                     <div class="results-container-right" style="height: 100%;">
                         <div class="tabs">
-                            <div class="tab active" data-tab="output">Output</div>
-                            <div class="tab" data-tab="results">Test Results</div>
+                            <div class="tab active" data-tab="output">
+                                💻 Output
+                            </div>
+                            <div class="tab" data-tab="results">
+                                ✅ Test Results
+                            </div>
                         </div>
 
                         <!-- Output Tab -->
                         <div class="tab-content active" id="output-tab">
                             <div id="output-box"
-                                 class="bg-gray-50 text-sm font-mono text-gray-800 p-4 overflow-y-auto flex-1">
-                                Run your code to see output here...
+                                 class="p-6 overflow-y-auto flex-1"
+                                 style="background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+                                        font-family: 'Fira Code', monospace;
+                                        font-size: 0.9375rem;
+                                        color: #1e293b;
+                                        line-height: 1.7;">
+                                <div style="color: #94a3b8; text-align: center; padding: 2rem; font-style: italic;">
+                                    ▶️ Run your code to see output here...
+                                </div>
                             </div>
                         </div>
 
                         <!-- Test Results Tab -->
                         <div class="tab-content" id="results-tab">
                             <div class="results-content" id="test-results">
-                                <div class="text-gray-500 text-sm p-4 text-center">
-                                    Run your code to see test results...
+                                <div style="color: #94a3b8; text-align: center; padding: 2rem; font-style: italic;">
+                                    ✅ Submit your code to see test results...
                                 </div>
                             </div>
                             <div class="results-summary" id="results-summary" style="display: none;">
                                 <div class="summary-stats">
                                     <div class="stat stat-passed">
-                                        <span>✅</span>
                                         <span id="passed-count">0</span> passed
                                     </div>
                                     <div class="stat stat-failed">
-                                        <span>❌</span>
                                         <span id="failed-count">0</span> failed
                                     </div>
                                     <div class="stat stat-total">
-                                        <span>📊</span>
                                         <span id="total-count">0</span> total
                                     </div>
                                 </div>
@@ -168,6 +596,39 @@
             submitCode: "{% url 'submit_code' %}"
         };
         window.problemID = {{ problem.pk }};
+
+        // Enhanced navigation interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-button');
+            const sections = {
+                'Description': 'description-section',
+                'Submissions': 'submissions-section'
+            };
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Get button text to determine which section to show
+                    const buttonText = this.textContent.trim().split(' ')[1]; // Get text after emoji
+
+                    // Hide all sections
+                    document.querySelectorAll('.content-section').forEach(section => {
+                        section.classList.remove('active');
+                    });
+
+                    // Show the corresponding section
+                    const sectionId = sections[buttonText];
+                    if (sectionId) {
+                        document.getElementById(sectionId).classList.add('active');
+                    }
+                });
+            });
+        });
     </script>
     <script src="{% static 'tasks/js/editor.js' %}"></script>
     <script src="{% static 'tasks/js/resize_handlers.js' %}"></script>
