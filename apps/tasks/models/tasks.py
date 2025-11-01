@@ -1,9 +1,9 @@
 from django.db.models import ManyToManyField, ForeignKey, CASCADE, Model
 from django.db.models.enums import TextChoices
-from django.db.models.fields import CharField, DateTimeField, TextField
+from django.db.models.fields import CharField, DateTimeField, TextField, BigAutoField, SmallIntegerField
 from django_ckeditor_5.fields import CKEditor5Field
 
-from shared.models import SlugBaseModel
+from shared.models import SlugBaseModel, CreatedBaseModel
 
 
 # TODO - Profile - solved problems (Easy 10 / 100) (Leetcode), problems: success, in process, failed (robocontest.uz)
@@ -49,16 +49,25 @@ class Example(Model):
 
 
 class Answers(Model):
-    problem = ForeignKey('tasks.Problem', CASCADE)
+    problem = ForeignKey('tasks.Problem', CASCADE, related_name='answers')
     input = TextField()
     output = TextField(null=True)
 
 
-class Submission(Model):
+class Submission(CreatedBaseModel):
     class Status(TextChoices):
         PENDING = 'Pending'
         ACCEPTED = 'Accepted'
         REJECTED = 'Rejected'
-    problem = ForeignKey('tasks.Problem', CASCADE)
-    user = ForeignKey('users.User', CASCADE)
+
+    id = BigAutoField(primary_key=True)
+    problem = ForeignKey('tasks.Problem', CASCADE, related_name='submissions')
+    user = ForeignKey('users.User', CASCADE, related_name='submissions')
+    runtime = SmallIntegerField()
+    memory = SmallIntegerField()
+    language = ForeignKey('tasks.Language', CASCADE)
     status = CharField(max_length=15, choices=Status.choices)
+
+
+class Language(Model):
+    name = CharField(max_length=55)
