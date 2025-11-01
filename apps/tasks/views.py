@@ -3,6 +3,7 @@ import subprocess
 import tempfile
 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.http import JsonResponse
 from django.views import View
 from django.views.generic import ListView, DetailView
@@ -17,6 +18,24 @@ class ProblemsListView(ListView):
     template_name = 'tasks/task.html'
     paginate_by = 10
     context_object_name = 'problems'
+
+    def get_queryset(self):
+
+        # Handle search query
+        search_query = self.request.GET.get('q')
+        if search_query:
+            queryset = self.queryset.filter(
+                Q(name__icontains=search_query) |
+                Q(description__icontains=search_query) |
+                Q(topics__name__icontains=search_query)
+            ).distinct()
+
+        # Handle topic filtering
+        topic_slug = self.request.GET.get('topic')
+        if topic_slug:
+            queryset = self.queryset.filter(topics__slug=topic_slug).distinct()
+
+        return self.queryset.order_by('-created_at')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

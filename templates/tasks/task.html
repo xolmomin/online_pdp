@@ -7,69 +7,177 @@
 
 {% block custom_css %}
     <style>
-        .task-card {
-            background: white;
-            border-radius: 16px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            border-color: #c7d2fe;
-        }
-
-        .animate-slide-up {
-            animation: slideUp 0.6s ease-out forwards;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .task-badge {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 600;
-        }
-
-        .difficulty {
-            background: #f3f4f6;
-            color: #6b7280;
-            padding: 2px 8px;
-            border-radius: 8px;
-            font-size: 11px;
-            font-weight: 500;
-        }
-
         .hero-gradient {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
-        .pagination-button {
+        .topic-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
             transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
 
-        .pagination-button:hover {
-            background-color: #667eea;
+        .topic-chip:hover {
+            background: linear-gradient(135deg, #c7d2fe 0%, #a5b4fc 100%);
+            color: #4c1d95;
+            border-color: #8b5cf6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+        }
+
+        .topic-count {
+            background: white;
+            color: #7c3aed;
+            padding: 0.125rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .search-input {
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+            width: 20rem;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+
+        .search-button {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.3);
+        }
+
+        .search-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px -1px rgba(139, 92, 246, 0.4);
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .table-row {
+            cursor: pointer;
+            transition: background 0.2s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .table-row:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        .table-row:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .table-row:hover {
+            background: linear-gradient(90deg, #faf5ff 0%, #f5f3ff 100%) !important;
+        }
+
+        .difficulty-badge {
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            display: inline-block;
+        }
+
+        .difficulty-easy {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            color: #065f46;
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+        }
+
+        .difficulty-medium {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            color: #92400e;
+            box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
+        }
+
+        .difficulty-hard {
+            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+            color: #991b1b;
+            box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+        }
+
+        .topic-tag {
+            display: inline-block;
+            background: #f3f4f6;
+            color: #6b7280;
+            padding: 0.25rem 0.625rem;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .topic-tag:hover {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .pagination-button {
+            padding: 0.625rem 1rem;
+            border-radius: 0.75rem;
+            border: 2px solid #e5e7eb;
+            color: #6b7280;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .pagination-button:hover:not(.active) {
+            background: #f9fafb;
+            border-color: #8b5cf6;
+            color: #8b5cf6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .pagination-button.active {
-            background-color: #667eea;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
+            border-color: #8b5cf6;
+            box-shadow: 0 4px 6px rgba(139, 92, 246, 0.3);
         }
 
         .scrollbar-hide::-webkit-scrollbar {
@@ -81,7 +189,90 @@
             scrollbar-width: none;
         }
 
+        thead tr {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+        }
+
+        th {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .problem-id {
+            font-weight: 600;
+            color: #8b5cf6;
+            font-size: 0.875rem;
+        }
+
+        .problem-title {
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 0.9375rem;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .topics-container {
+            max-height: 120px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .topics-container.expanded {
+            max-height: 1000px;
+        }
+
+        .show-more-btn {
+            background: transparent;
+            color: #6b7280;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            font-size: 0.8125rem;
+            transition: all 0.2s ease;
+            border: 1px solid #e5e7eb;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+
+        .show-more-btn:hover {
+            background: #f3f4f6;
+            color: #374151;
+            border-color: #d1d5db;
+        }
+
     </style>
+
+    <script>
+        function toggleTopics() {
+            const container = document.getElementById('topicsContainer');
+            const btn = document.getElementById('toggleBtn');
+
+            if (container.classList.contains('expanded')) {
+                container.classList.remove('expanded');
+                btn.textContent = 'Show More Topics ▼';
+            } else {
+                container.classList.add('expanded');
+                btn.textContent = 'Show Less ▲';
+            }
+        }
+    </script>
 
 {% endblock %}
 
@@ -96,82 +287,94 @@
         </div>
     </section>
 
-    <section class="py-8">
-        <div class="container mx-auto">
+    <section class="py-10 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
             <!-- Tags bar -->
-            <div class="flex flex-wrap items-center gap-2 border-y border-gray-300 py-3 mb-4 overflow-x-auto scrollbar-hide">
-                {% for topic in topics %}
-                    <a href="?topic={{ topic.slug }}"
-                       class="flex items-center gap-2 bg-gray-100 hover:bg-purple-100 text-gray-700 hover:text-purple-700 px-3 py-1 rounded-full text-sm font-medium transition">
-                        <span>{{ topic.name }}</span>
-                        <span class="bg-purple-200 text-purple-800 px-2 py-0.5 rounded-full text-xs font-semibold">
-                              {{ topic.problem_count }}
-                            </span>
-                    </a>
-                {% endfor %}
+            <div class="mb-6">
+                <div id="topicsContainer" class="topics-container flex flex-wrap gap-3 py-6">
+                    {% for topic in topics %}
+                        <a href="?topic={{ topic.slug }}" class="topic-chip">
+                            <span>{{ topic.name }}</span>
+                            <span class="topic-count">{{ topic.problem_count }}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+                {% if topics|length > 10 %}
+                    <button onclick="toggleTopics()" id="toggleBtn" class="show-more-btn">
+                        Show More Topics ▼
+                    </button>
+                {% endif %}
             </div>
 
             <!-- Search box -->
-            <div class="flex justify-between items-center mb-4">
+            <div class="search-container" style="background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); border: 2px solid #e5e7eb;">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2" style="color: #1f2937;">All Problems</h2>
+                        <p class="text-sm text-gray-600 font-medium">Choose a problem to start solving</p>
+                    </div>
 
-                <h2 class="text-2xl font-bold text-gray-900">Problems</h2>
-
-                <form method="GET" class="flex items-center space-x-2">
-                    <input type="text" name="q" placeholder="Search problems..."
-                           value="{{ request.GET.q }}"
-                           class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 w-64 transition"/>
-                    <button type="submit"
-                            class="bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition">
-                        Search
-                    </button>
-                </form>
+                    <form method="GET" class="flex items-center gap-3">
+                        <input type="text" name="q" placeholder="Search problems..."
+                               value="{{ request.GET.q }}"
+                               class="search-input"/>
+                        <button type="submit" class="search-button">
+                            🔍 Search
+                        </button>
+                    </form>
+                </div>
             </div>
 
-            <div class="overflow-x-auto bg-white shadow rounded-lg">
+            <div class="table-container fade-in" style="background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%); border: 2px solid #e5e7eb;">
                 <table class="min-w-full text-left border-collapse">
                     <thead>
-                    <tr class="border-b bg-gray-50 text-gray-600 text-sm">
-                        <th class="py-3 px-4 font-semibold">#</th>
-                        <th class="py-3 px-4 font-semibold">Title</th>
-                        <th class="py-3 px-4 font-semibold">Difficulty</th>
-                        <th class="py-3 px-4 font-semibold">Topics</th>
-                        <th class="py-3 px-4 font-semibold text-right">Created</th>
+                    <tr class="text-gray-600">
+                        <th class="py-4 px-6" style="width: 60px;"></th>
+                        <th class="py-4 px-6">#</th>
+                        <th class="py-4 px-6">Problem</th>
+                        <th class="py-4 px-6">Difficulty</th>
+                        <th class="py-4 px-6">Topics</th>
+                        <th class="py-4 px-6 text-right">Date</th>
                     </tr>
                     </thead>
                     <tbody>
                     {% for problem in problems %}
-                        <tr class="border-b hover:bg-gray-50 transition">
-                            <td class="py-3 px-4 text-gray-500 text-sm">1</td>
-                            <td class="py-3 px-4">
-                                <a href="{% url 'problem_detail' problem.pk %}" class="font-medium text-gray-900 hover:text-purple-600 transition">
-                                    {{ problem.name }}
-                                </a>
-                                <p class="text-gray-500 text-xs mt-1 line-clamp-1">
-                                    {{ problem.description }}
-                                </p>
-                            </td>
-                            <td class="py-3 px-4">
-                                {% if problem.difficulty == 'Easy' %}
-                                    <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">
-                                        Easy
-                                    </span>
-                                {% elif problem.difficulty == 'Medium' %}
-                                    <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-green-700">
-                                        Medium
-                                    </span>
-                                {% else %}
-                                    <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-green-700">
-                                        Hard
-                                    </span>
+                        <tr class="table-row">
+                            <td class="py-4 px-6 text-center" onclick="window.location='{% url 'problem_detail' problem.pk %}'">
+                                {% if problem.user_status == 'accepted' %}
+                                    <svg class="w-5 h-5 text-green-500 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                {% elif problem.user_status == 'attempted' %}
+                                    <svg class="w-5 h-5 text-red-500 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
                                 {% endif %}
                             </td>
-                            <td class="py-3 px-4 text-sm text-gray-600">
-                                {% for topic in problem.topics.all %}
-                                    {{ topic.name }}
-                                {% endfor %}
+                            <td class="py-4 px-6" onclick="window.location='{% url 'problem_detail' problem.pk %}'">
+                                <span class="problem-id">{{ problem.pk }}</span>
                             </td>
-                            <td class="py-3 px-4 text-sm text-gray-500 text-right">
-                                {{ problem.created_at|date:"j M, Y" }}
+                            <td class="py-4 px-6" onclick="window.location='{% url 'problem_detail' problem.pk %}'">
+                                <span class="problem-title">{{ problem.name }}</span>
+                            </td>
+                            <td class="py-4 px-6" onclick="window.location='{% url 'problem_detail' problem.pk %}'">
+                                {% if problem.difficulty == 'Easy' %}
+                                    <span class="difficulty-badge difficulty-easy">Easy</span>
+                                {% elif problem.difficulty == 'Medium' %}
+                                    <span class="difficulty-badge difficulty-medium">Medium</span>
+                                {% else %}
+                                    <span class="difficulty-badge difficulty-hard">Hard</span>
+                                {% endif %}
+                            </td>
+                            <td class="py-4 px-6">
+                                <div class="flex flex-wrap gap-1">
+                                    {% for topic in problem.topics.all %}
+                                        <a href="?topic={{ topic.slug }}" class="topic-tag" onclick="event.stopPropagation()">{{ topic.name }}</a>
+                                    {% endfor %}
+                                </div>
+                            </td>
+                            <td class="py-4 px-6 text-sm text-gray-500 text-right" onclick="window.location='{% url 'problem_detail' problem.pk %}'">
+                                {{ problem.created_at|date:"M j, Y" }}
                             </td>
                         </tr>
                     {% endfor %}
@@ -183,47 +386,44 @@
 
 
     <!-- Pagination -->
-    <section class="py-8 bg-white border-t border-gray-200">
+    <section class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-center items-center space-x-2">
+            <div class="flex justify-center items-center gap-2">
                 <!-- Previous Page -->
                 {% if page_obj.has_previous %}
                     <a href="{% url 'task_list' %}?page={{ page_obj.previous_page_number }}"
-                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">Previous</a>
+                       class="pagination-button">← Previous</a>
                 {% endif %}
 
                 {% if page_obj.previous_page_number > 1 %}
                     <a href="{% url 'task_list' %}?page=1"
-                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">1</a>
-                    <span class="px-3 py-2 text-gray-500">...</span>
+                       class="pagination-button">1</a>
+                    <span class="px-3 py-2 text-gray-400">...</span>
                 {% endif %}
 
                 {% if page_obj.has_previous %}
                     <a href="{% url 'task_list' %}?page={{ page_obj.previous_page_number }}"
-                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">{{ page_obj.previous_page_number }}</a>
+                       class="pagination-button">{{ page_obj.previous_page_number }}</a>
                 {% endif %}
 
-                <a href="#"
-                   class="pagination-button active px-3 py-2 rounded-lg border border-gray-300 bg-purple-600 text-white">{{ page_obj.number }}</a>
+                <span class="pagination-button active">{{ page_obj.number }}</span>
 
                 {% if page_obj.has_next %}
                     <a href="{% url 'task_list' %}?page={{ page_obj.next_page_number }}"
-                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">{{ page_obj.next_page_number }}</a>
+                       class="pagination-button">{{ page_obj.next_page_number }}</a>
                 {% endif %}
 
                 {% if page_obj.next_page_number < page_obj.paginator.num_pages %}
-                    <span class="px-3 py-2 text-gray-500">...</span>
+                    <span class="px-3 py-2 text-gray-400">...</span>
                     <a href="{% url 'task_list' %}?page={{ page_obj.paginator.num_pages }}"
-                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">{{ page_obj.paginator.num_pages }}</a>
+                       class="pagination-button">{{ page_obj.paginator.num_pages }}</a>
                 {% endif %}
 
                 <!-- Next Page -->
                 {% if page_obj.has_next %}
                     <a href="{% url 'task_list' %}?page={{ page_obj.next_page_number }}"
-                       class="pagination-button px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-purple-600 hover:text-white transition-colors">Next</a>
+                       class="pagination-button">Next →</a>
                 {% endif %}
-
-
             </div>
         </div>
     </section>
