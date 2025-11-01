@@ -49,7 +49,7 @@ class Example(Model):
 
 
 class Answers(Model):
-    problem = ForeignKey('tasks.Problem', CASCADE, related_name='answers')
+    problem = ForeignKey('tasks.Problem', CASCADE)
     input = TextField()
     output = TextField(null=True)
 
@@ -63,8 +63,8 @@ class Submission(CreatedBaseModel):
     id = BigAutoField(primary_key=True)
     problem = ForeignKey('tasks.Problem', CASCADE, related_name='submissions')
     user = ForeignKey('users.User', CASCADE, related_name='submissions')
-    runtime = SmallIntegerField()
-    memory = SmallIntegerField()
+    runtime = SmallIntegerField(null=True, blank=True)
+    memory = SmallIntegerField(null=True, blank=True)
     language = ForeignKey('tasks.Language', CASCADE)
     status = CharField(max_length=15, choices=Status.choices)
 

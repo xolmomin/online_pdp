@@ -1,44 +1,10 @@
 import threading
 
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.models import Group
-from django.utils.translation import gettext_lazy as _
 from nested_inline.admin import NestedStackedInline, NestedModelAdmin
 
-from users.models import User, Course, Lesson, Section, Category, Blog, Interview, InterviewPart, Step
+from users.models import Course, Lesson, Section, Category, Blog, Interview, InterviewPart, Step
 from users.utils import convert_video_to_hls
-
-
-@admin.register(User)
-class UserModelAdmin(UserAdmin):
-    fieldsets = (
-        (None, {"fields": ("phone", "password")}),
-        (_("Personal info"), {"fields": ("first_name", "last_name", "email")}),
-        (
-            _("Permissions"),
-            {
-                "fields": (
-                    "is_active",
-                    "is_staff",
-                    "is_superuser",
-                    "groups",
-                    "user_permissions",
-                ),
-            },
-        ),
-        (_("Important dates"), {"fields": ("last_login", "date_joined")}),
-    )
-    add_fieldsets = (
-        (
-            None,
-            {
-                "classes": ("wide",),
-                "fields": ("phone", "usable_password", "password1", "password2"),
-            },
-        ),
-    )
-    ordering = ('phone',)
 
 
 @admin.register(Lesson)
@@ -107,8 +73,3 @@ class SectionInterviewModelAdmin(admin.ModelAdmin):
 @admin.register(Step)
 class StepModelAdmin(admin.ModelAdmin):
     pass
-
-
-admin.site.unregister(Group)
-
-# TODO bolimlar (Users, Blogs & Interview, Courses)

@@ -2,18 +2,19 @@ import json
 import subprocess
 import tempfile
 
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.views import View
 from django.views.generic import ListView, DetailView
 
 from tasks.models import Problem, Topic
+from tasks.models.tasks import Submission
 from tasks.utils import judge_submission
-from tasks.models import Answers
 
 
 class ProblemsListView(ListView):
     queryset = Problem.objects.all()
-    template_name = 'users/tasks/task.html'
+    template_name = 'tasks/task.html'
     paginate_by = 10
     context_object_name = 'problems'
 
@@ -25,7 +26,7 @@ class ProblemsListView(ListView):
 
 class ProblemDetailView(DetailView):
     queryset = Problem.objects.all()
-    template_name = 'users/tasks/problem_detail.html'
+    template_name = 'tasks/problem_detail.html'
     context_object_name = 'problem'
 
 
@@ -62,10 +63,15 @@ class SubmitCodeView(View):
             code = data.get("code", "")
             problem_id = data.get("problem_id")
 
-            if not problem_id:
-                return JsonResponse({"output": "❌ No problem ID provided."})
+            problem = Problem.objects.filter(pk=problem_id).first()
 
-            problem = Problem.objects.get(pk=problem_id)
+            if not problem:
+                return JsonResponse({"output": "❌ Problem not found."})
+
+        except Exception as e:
+            return JsonResponse({"output": f"Error: {str(e)}"})
+
+        try:
 
             results = judge_submission(code, problem.pk)
 
@@ -75,13 +81,27 @@ class SubmitCodeView(View):
                 verdict = failed["verdict"]
                 test_num = failed["testcase"]
                 msg = f"❌ Test #{test_num} failed ({verdict})"
+                status = Submission.Status.REJECTED
             else:
                 msg = "✅ All tests passed!"
+                status = Submission.Status.ACCEPTED
 
-            return JsonResponse({"output": msg, "results": results})
-
-        except Problem.DoesNotExist:
-            return JsonResponse({"output": "❌ Problem not found."})
+            output = msg
+            results = results
 
         except Exception as e:
-            return JsonResponse({"output": f"Error: {str(e)}"})
+            output = f"Error: {str(e)}"
+            results = None
+            status = Submission.Status.REJECTED
+
+        Submission.objects.create(
+            status=status,
+            problem=problem,
+            user=request.user,
+            language_id=1
+        )
+
+        return JsonResponse({
+            "output": output,
+            "results": results
+        })

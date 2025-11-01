@@ -160,6 +160,8 @@ login va register qoshish
 
 6. django debug toolbar
 7. adminkadagi UI togrilash (applarni dropdown qilish, ajratish)
+bolimlar (Users, Blogs & Interview, Courses) ✅ +
+
 8. videojs orqali frontda chiqadigan qilish (buttonlari bolsin) ✅
 9. What you'll Learn & Requirements modelini yozish ✅ +
 10. login qilgandan keyin (Sign In joyida dumaloq image turadi, ustiga oborgandan fullname chiqsin)
@@ -171,4 +173,4 @@ ustiga bosgandan profile page ga otsin
 topic boyicha filter
 search problem name, id
 15. adminka logout pagedagi rasmni togrilash
-16.
+16. created_at cursor pagination
