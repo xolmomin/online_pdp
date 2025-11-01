@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="uz">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>HLS video oynasi</title>
+</head>
+<body>
+<h3>HLS video namoyishi</h3>
+
+<!-- Video element -->
+<video id="player" controls playsinline width="720" height="405">
+    <!-- Safari uchun fallback (agar brauzer HLS ni oynata olsa) -->
+    <source id="hls-source"
+            src="media/courses/hls/videos/2025/10/25/example_video/f76151ae-24ca-4fc5-b940-213f3115d7d5/master.m3u8"
+            type="application/vnd.apple.mpegurl">
+    Sizning brauzeringiz video elementini qoʻllab-quvvatlamaydi.
+</video>
+
+<!-- hls.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+    (function () {
+        const video = document.getElementById('player');
+        const url = 'media/courses/hls/videos/2025/10/25/example_video/f76151ae-24ca-4fc5-b940-213f3115d7d5/master.m3u8';
+
+        // Agar brauzer HLS ni native qo'llasa (masalan Safari), to'g'ridan-to'g'ri src beramiz
+        if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = url;
+        } else if (window.Hls && Hls.isSupported()) {
+            // Hls.js yordamida o'rnatish
+            const hls = new Hls();
+            hls.loadSource(url);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                // agar autoplay kerak bo'lsa: video.play();
+                console.log('HLS manifest parsed, video tayyor.');
+            });
+            hls.on(Hls.Events.ERROR, function (event, data) {
+                console.error('HLS error', event, data);
+            });
+        } else {
+            // Agar na native, na hls.js qo'llab-quvvatlansa
+            console.error('HLS ni ijro etib bo\'lmaydi. Brauzeringizni yangilang yoki hls.js yuklanayotganiga ishonch hosil qiling.');
+        }
+    })();
+</script>
+</body>
+</html>

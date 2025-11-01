@@ -89,6 +89,11 @@ sudo certbot --nginx -d xolmomin.fil.uz
 
 
 
+task
+1. django command to delete unused images
+2. djangoda adminkadan youtube url qoyish
+
+
 
 
 
@@ -174,3 +179,71 @@ topic boyicha filter
 search problem name, id
 15. adminka logout pagedagi rasmni togrilash
 16. created_at cursor pagination
+
+
+    <script>
+        function convertMp4ToHls(mp4Path, lesson_id) {
+            if (!mp4Path.endsWith('.mp4')) {
+                console.error('Invalid MP4 path:', mp4Path);
+                return null;
+            }
+            const basePath = mp4Path.replace('/media/courses', '/media/courses/hls/').replace('.mp4', '');
+            return `${basePath}/${lesson_id}/master.m3u8`;
+        }
+
+        // Video.js player o‘rnatish
+        const existingPlayer = videojs.getPlayer('hls-video');
+        if (existingPlayer) {
+            existingPlayer.dispose();
+        }
+
+        const videoElement = document.getElementById('hls-video');
+        const player = videojs(videoElement, {
+            autoplay: false,
+            controls: true,
+            preload: 'auto',
+            fluid: true,
+            responsive: true
+        });
+
+        // 🎞 Video ochish funksiyasi
+        function openVideoFrame(videoUrl, lessonId) {
+            videoUrl = convertMp4ToHls(videoUrl, lessonId);
+            console.log(videoUrl);
+            if (!videoUrl) return;
+            const modal = document.getElementById('videoModal');
+            modal.classList.remove('hidden');
+
+            // Agar HLS.js qo‘llab-quvvatlansa
+            if (Hls.isSupported() && videoUrl.endsWith('.m3u8')) {
+                const hls = new Hls({
+                    xhrSetup: function (xhr, url) {
+                        xhr.withCredentials = true; // cookie/session yuborish uchun
+                    }
+                });
+                hls.loadSource(videoUrl);
+                hls.attachMedia(videoElement);
+                player.play();
+            }
+            // Safari yoki iOS (native HLS)
+            else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                player.src({
+                    src: videoUrl,
+                    type: 'application/x-mpegURL'
+                });
+                player.play();
+            }
+            // Oddiy MP4 fallback
+            else {
+                player.src({src: videoUrl, type: 'video/mp4'});
+                player.play();
+            }
+        }
+
+        // ❌ Video modalni yopish
+        function closeVideoModal() {
+            player.pause();
+            const modal = document.getElementById('videoModal');
+            modal.classList.add('hidden');
+        }
+    </script>
