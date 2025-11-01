@@ -188,7 +188,6 @@ class Lesson(CreatedBaseModel, OrderBaseModel):  # TODO Parts
         self.video_duration = clip.duration  # sec
         clip.close()
         super().save(update_fields=['video_duration'])
-        threading.Thread(target=convert_video_to_hls(self.video.path, self.video.name, self.id))
 
     def __str__(self):
         return self.name

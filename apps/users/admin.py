@@ -1,3 +1,5 @@
+import threading
+
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
@@ -5,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 from nested_inline.admin import NestedStackedInline, NestedModelAdmin
 
 from users.models import User, Course, Lesson, Section, Category, Blog, Interview, InterviewPart, Step
+from users.utils import convert_video_to_hls
 
 
 @admin.register(User)
@@ -41,6 +44,11 @@ class UserModelAdmin(UserAdmin):
 @admin.register(Lesson)
 class LessonModelAdmin(admin.ModelAdmin):
     list_display = ('id', 'name',)
+
+    def save_model(self, request, obj, form, change):
+        request.get_host()
+        super().save_model(request, obj, form, change)
+        threading.Thread(target=convert_video_to_hls(self.video.path, self.video.name, self.id))
 
 
 class LessonStackedInline(NestedStackedInline):
