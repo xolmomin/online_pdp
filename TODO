@@ -161,13 +161,14 @@ login va register qoshish
 6. django debug toolbar
 7. adminkadagi UI togrilash (applarni dropdown qilish, ajratish)
 8. videojs orqali frontda chiqadigan qilish (buttonlari bolsin) ✅
-9. What you'll Learn & Requirements modelini yozish ✅
+9. What you'll Learn & Requirements modelini yozish ✅ +
 10. login qilgandan keyin (Sign In joyida dumaloq image turadi, ustiga oborgandan fullname chiqsin)
-ustiga bosgandan profile page ga otsin ✅
-11. register page, detail page shular otadigan qilish ✅
-12. media ichida fixture dan qoshiladigan malumotlar yuborilsin ✅
+ustiga bosgandan profile page ga otsin
+11. register page, detail page shular otadigan qilish ✅ +
+12. media ichida fixture dan qoshiladigan malumotlar yuborilsin ✅ +
 13. barcha frontdagilarni i18n ga otkazish
 14. /problemset
 topic boyicha filter
 search problem name, id
-15.
+15. adminka logout pagedagi rasmni togrilash
+16.
