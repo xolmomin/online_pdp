@@ -1,58 +1,3 @@
-3) online pdp [django]
-https://videohub.uz/
-1. adminkada videolarni yuklash (har user uchun)
-    1.1 20Gb dan kichik bolishi
-
-2. adminkada API KEY kalitlar yaratish imkoniyati
-3. aiogram nomer orqali otish, 42.uz va botcommerce.io ga oxshash
-
-4. API orqali ishlatish
-mentorlar royhati bolishi (mentor rasmi, fio)
-tag bolishi ()
-
-course (name, short_description, full_description)
-
-
-
-domen
-server (termius)
-docker compose
-redis
-nginx
-
-docker
-docker compose
-docker swarm | k8s
-
-image
-container
-network
-volume
-
-------------------------------------
-project
-1. medcard [fastapi]
-Fayoz +
-Elyor
-Gulrux
-Abdulaziz
-
-2. online-booking [drf]
-Azimbek +
-Abror
-Salimjon
-Jahongir
-Abduravshan
-
-3. tour agency [fastapi]
-Sarvarbek +
-Shahobiddin
-Azizjon
-Habibulloh
-
-4. online-pdp [drf]
-xolmomin +
-mirjalol
 
 https://videohub.uz/course-detail/spring-core/b62b723f-b3d6-4118-a768-40008096a1ce
 	{
@@ -144,11 +89,6 @@ sudo certbot --nginx -d xolmomin.fil.uz
 
 
 
-task
-1. django command to delete unused images
-2. djangoda adminkadan youtube url qoyish
-
-
 
 
 
@@ -185,21 +125,6 @@ https://pypi.org/project/django-video-encoding/
 
 
 
-Jo'rayev Abdurahmon
-Dream house
-https://www.figma.com/design/e1dWEEkTgqjqBnkG8LpqSJ/65--Real-Estate-Website-Templates--Community-?node-id=0-1&p=f&t=kFITB1asVT8BrhNN-0
-
-
-Jahongir
-Online course
-https://www.figma.com/design/gFoTExaXHl19o8PoNNgGSL/Free-Education-Template-%7C-Online-Courses-%26-E-Learning-%7C-EduPress-(Community)?node-id=0-1&p=f&t=Hcgs4FwaDq8dna18-0
-
-
-Sulton
-RentCar
-https://www.figma.com/design/Ez76V48hoaMl5WEjed4L2t/Car-Rent-Website-Design---Pickolab-Studio-(Community)?node-id=1-5&p=f&t=ccmirZsYeAsMSfRd-0
-
-
 TASK
 muhammadamin
 0. menyuda problems (modelini ham yozish)
@@ -218,20 +143,31 @@ output.txt
 
 
 
+CodePro.uz
 
-mirjalol
-3. adminkadagi UI togrilash (applarni dropdown qilish, ajratish)
-4.✅ createsuperuser ni togrilash
-5. adminkada userlarni ajratish (admin, teacher)
-6.✅ media ichida fixture dan qoshiladigan malumotlar yuborilsin ()
-7.✅ login (phone orqali), (bot orqali)
-8.✅ register page, detail page shular otadigan qilish
-9. django debug toolbar
-10. https://videohub.uz/login va https://botcommerce.io/en/login qismdagi
+Task
+1.
+userlarni type ga qarab alohida chiqarish
+adminkada userlarni ajratish (admin, teacher) ✅ +
+2. email orqali verification bolishi kerak (one time link orqali)
+3. base.html ga ajratish ✅ +
+4. django command to delete unused files
+5.
+aiogram nomer orqali otish, 42.uz va botcommerce.io ga oxshash
+https://videohub.uz/login va https://botcommerce.io/en/login qismdagi
 telegram orqali kirish va telegram bot ga sms yuborish orqali kirishni
 login va register qoshish
-11.✅ login qilgandan keyin (Sign In joyida dumaloq image turadi, ustiga oborgandan fullname chiqsin)
-ustiga bosgandan profile page ga otsin
-12.✅ What you'll Learn & Requirements modelini yozish
-13.✅ videojs orqali frontda chiqadigan qilish (buttonlari bolsin)
 
+6. django debug toolbar
+7. adminkadagi UI togrilash (applarni dropdown qilish, ajratish)
+8. videojs orqali frontda chiqadigan qilish (buttonlari bolsin) ✅
+9. What you'll Learn & Requirements modelini yozish ✅
+10. login qilgandan keyin (Sign In joyida dumaloq image turadi, ustiga oborgandan fullname chiqsin)
+ustiga bosgandan profile page ga otsin ✅
+11. register page, detail page shular otadigan qilish ✅
+12. media ichida fixture dan qoshiladigan malumotlar yuborilsin ✅
+13. barcha frontdagilarni i18n ga otkazish
+14. /problemset
+topic boyicha filter
+search problem name, id
+15.

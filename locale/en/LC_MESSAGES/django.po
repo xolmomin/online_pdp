@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-14 09:11+0500\n"
+"POT-Creation-Date: 2025-11-01 10:15+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,54 +18,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: apps/users/admin.py:14
+#: apps/users/admin.py:17
 msgid "Personal info"
 msgstr ""
 
-#: apps/users/admin.py:16
+#: apps/users/admin.py:19
 msgid "Permissions"
 msgstr ""
 
-#: apps/users/admin.py:27
+#: apps/users/admin.py:30
 msgid "Important dates"
 msgstr ""
 
-#: apps/users/models/courses.py:19
+#: apps/users/models/courses.py:35
 msgid "Beginner"
 msgstr ""
 
-#: apps/users/models/courses.py:20
+#: apps/users/models/courses.py:36
 msgid "Elementary"
 msgstr ""
 
-#: apps/users/models/courses.py:21
+#: apps/users/models/courses.py:37
 msgid "Intermediate"
 msgstr ""
 
-#: apps/users/models/courses.py:22
+#: apps/users/models/courses.py:38
 msgid "Advanced"
 msgstr ""
 
-#: apps/users/models/courses.py:40
+#: apps/users/models/courses.py:58
 msgid "Course"
 msgstr ""
 
-#: apps/users/models/courses.py:41
+#: apps/users/models/courses.py:59
 msgid "Courses"
 msgstr ""
 
-#: apps/users/models/courses.py:64
+#: apps/users/models/courses.py:128
+msgid "Published"
+msgstr ""
+
+#: apps/users/models/courses.py:129
+msgid "Unpublished"
+msgstr ""
+
+#: apps/users/models/courses.py:138
 msgid "Section"
 msgstr ""
 
-#: apps/users/models/courses.py:65
+#: apps/users/models/courses.py:139
 msgid "Sections"
 msgstr ""
 
-#: apps/users/models/courses.py:92
+#: apps/users/models/courses.py:181
 msgid "Lesson"
 msgstr ""
 
-#: apps/users/models/courses.py:93
+#: apps/users/models/courses.py:182
 msgid "Lessons"
 msgstr ""
